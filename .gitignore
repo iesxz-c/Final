@@ -73,6 +73,11 @@ secrets/
 # ---- Local config overrides (do not commit personal paths) ----
 config/config.yaml
 
+# ---- Loose dataset annotation files (kept local, never committed) ----
+Anomaly_Train.txt
+ReadMe-Anomaly-Detection.txt
+Temporal_Anomaly_Annotation_for_Testing_Videos.txt
+
 # ---- OS / editor junk ----
 .DS_Store
 Thumbs.db

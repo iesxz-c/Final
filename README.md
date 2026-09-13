@@ -224,6 +224,37 @@ pipeline maps q/v onto their learned values and zeroes the
 (upstream-absent) key bias, recorded per-run as `model.weight_notes` in
 the manifest.
 
+## Phase 2C — VideoMAE fine-tuning on UCF-Crime (Colab GPU, in preparation)
+
+Fine-tunes the Phase 2B VideoMAE backbone (same q_bias/v_bias remap, fresh
+14-class head) on the **official** Action Recognition splits — Fold 2
+(`train_002.txt`/`test_002.txt`): 532 train / 168 test videos (effective
+532/167; `Arson/Arson019_x264.mp4` is the single locally missing file).
+No random splits; folder labels are training targets only for this
+fine-tuning stage, never model outputs elsewhere.
+
+```powershell
+# validate the official split (read-only, local)
+python -m src.pipeline.ucf_splits --split 002
+
+# clip-dataset smoke test (decodes 2 real videos, no model/training)
+python -m src.pipeline.activity_data --split 002 --num-videos 2
+
+# full run happens on Colab — see notebooks/phase2c_ucf_videomae_colab.ipynb
+```
+
+Colab cells in order: env check → install → Drive mount → paths →
+split validation → data smoke → load VideoMAE → 14-class head check →
+20/10-video 1-epoch sanity → sanity eval → **gated** full Fold-2 training
+(`RUN_FULL_TRAINING` must be set True) → full eval → metrics (accuracy,
+macro P/R/F1, per-class F1, confusion matrix) → copy artifacts to Drive.
+
+Training features: lazy 16-frame windows (train: seeded random window per
+epoch; eval: evenly spaced windows with per-video softmax averaging),
+CUDA + mixed precision, checkpoints every N steps + every epoch + best,
+resume from checkpoint, all metrics/checkpoints under the output dir
+(kept on Drive on Colab).
+
 ## Repository layout
 
 ```

@@ -99,6 +99,22 @@ activity_model:
   device: "auto"       # auto | cpu | cuda (falls back to cpu without GPU)
   output_dir: "data/evidence/phase2b"
 
+# Phase 2C VideoMAE fine-tuning on the official UCF-Crime splits (Colab GPU).
+# Mirrors the train_activity.py CLI defaults; CLI flags override these.
+training:
+  split: "002"         # official fold; never random splits
+  split_root: null     # null = <repo>/UCF_Crimes-Train-Test-Split/Action_Regnition_splits
+  epochs: 10
+  batch_size: 4
+  gradient_accumulation: 2
+  learning_rate: 0.00005
+  num_workers: 4
+  seed: 0
+  num_eval_clips: 5    # clips per video for video-level evaluation
+  save_every: 100      # step checkpoints (plus every epoch + best)
+  device: "auto"       # auto | cpu | cuda
+  output_dir: "data/evidence/phase2c"
+
 # Video processing -> object/activity/person/timestamp evidence (Phase 1+)
 pipeline:
   frame_sampling_rate: 1        # frames per second, unused until Phase 1
