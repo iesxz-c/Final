@@ -99,7 +99,7 @@ class TensorTest(unittest.TestCase):
         frames = [np.full((240, 320, 3), v, dtype="uint8") for v in (0, 128, 255)] * 6
         frames = frames[:16]
         tensor = data.preprocess_frames(frames, training=False)
-        self.assertEqual(tuple(tensor.shape), (3, 16, 224, 224))
+        self.assertEqual(tuple(tensor.shape), (16, 3, 224, 224))
         self.assertEqual(str(tensor.dtype), "torch.float32")
         self.assertGreaterEqual(float(tensor.min()), -3.0)
         self.assertLessEqual(float(tensor.max()), 3.0)
@@ -195,7 +195,7 @@ class ClipDatasetTest(unittest.TestCase):
             train_ds = data.UCFClipDataset(entries, root, root, mode="train", seed=0)
             train_ds.set_epoch(0)
             tensor, label, pos = train_ds[0]
-            self.assertEqual(tuple(tensor.shape), (3, 16, 224, 224))
+            self.assertEqual(tuple(tensor.shape), (16, 3, 224, 224))
             self.assertEqual(int(label), splits.LABEL_TO_INDEX["Abuse"])
             again = data.UCFClipDataset(entries, root, root, mode="train", seed=0)
             again.set_epoch(0)
@@ -204,7 +204,7 @@ class ClipDatasetTest(unittest.TestCase):
                                           num_eval_clips=2, seed=0)
             self.assertEqual(len(eval_ds), 2)
             tensor_e, _, pos_e = eval_ds[1]
-            self.assertEqual(tuple(tensor_e.shape), (3, 16, 224, 224))
+            self.assertEqual(tuple(tensor_e.shape), (16, 3, 224, 224))
             self.assertEqual(pos_e, 0)
 
 

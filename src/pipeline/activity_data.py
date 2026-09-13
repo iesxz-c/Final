@@ -106,7 +106,11 @@ def grab_frames(path: str, indices: list) -> tuple:
 
 
 def preprocess_frames(frames_bgr, training: bool, rng: random.Random | None = None):
-    """Resize/crop/flip/normalize a list of BGR frames to a (C,T,H,W) tensor."""
+    """Resize/crop/flip/normalize a list of BGR frames to a (T,C,H,W) tensor.
+
+    (T,C,H,W) matches the Hugging Face VideoMAE forward, which unpacks
+    pixel_values as (batch, num_frames, channels, height, width).
+    """
     import cv2
     import numpy as np
     import torch
@@ -138,7 +142,7 @@ def preprocess_frames(frames_bgr, training: bool, rng: random.Random | None = No
         std = np.array(KINETICS_STD, dtype="float32").reshape(1, 1, 3)
         processed.append((arr - mean) / std)
     stacked = np.stack(processed, axis=0)  # (T,H,W,C)
-    return torch.from_numpy(np.ascontiguousarray(stacked.transpose(0, 3, 1, 2))).permute(1, 0, 2, 3)
+    return torch.from_numpy(np.ascontiguousarray(stacked.transpose(0, 3, 1, 2)))  # (T,C,H,W)
 
 
 def video_frame_count(path: str) -> int:
