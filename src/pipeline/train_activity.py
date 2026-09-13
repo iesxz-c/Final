@@ -145,6 +145,34 @@ def latest_checkpoint(output_dir: Path) -> Path | None:
     return candidates[-1] if candidates else None
 
 
+def resolve_eval_checkpoint(output_dir: Path, resume_from: str | None) -> Path:
+    """Pick the checkpoint an eval-only run must load.
+
+    Precedence: explicit --resume-from, then checkpoint-best, final_model,
+    newest checkpoint-epoch*/checkpoint-step*. Raises FileNotFoundError when
+    the output dir holds no trained checkpoint (evaluating a fresh head
+    would silently report ~0 metrics).
+    """
+    if resume_from:
+        path = Path(resume_from)
+        if not (path / "checkpoint.pt").exists():
+            raise FileNotFoundError(f"no checkpoint.pt in --resume-from {path}")
+        return path
+    for name in ("checkpoint-best", "final_model"):
+        path = output_dir / name
+        if (path / "checkpoint.pt").exists():
+            return path
+    stepped = sorted(list(output_dir.glob("checkpoint-epoch*")) + list(output_dir.glob("checkpoint-step*")),
+                     key=lambda p: p.stat().st_mtime)
+    stepped = [p for p in stepped if (p / "checkpoint.pt").exists()]
+    if stepped:
+        return stepped[-1]
+    raise FileNotFoundError(
+        f"no trained checkpoint in {output_dir} (looked for checkpoint-best, "
+        f"final_model, checkpoint-epoch*/checkpoint-step*). Train first or "
+        f"pass --resume-from <checkpoint dir>.")
+
+
 def train_one_epoch(model, loader, optimizer, scheduler, scaler, device: str,
                     accum_steps: int, global_step: int, log, save_every: int = 0,
                     output_dir: Path | None = None, epoch: int = 0,
@@ -328,6 +356,11 @@ def main(argv: list | None = None) -> int:
                 save_checkpoint(output_dir / "checkpoint-best", model, optimizer,
                                 scheduler, scaler, epoch, global_step, best_acc)
         print(f"training done in {round(time.perf_counter() - t0, 1)}s, best_acc={best_acc}")
+
+    if args.eval_only:
+        eval_ckpt = resolve_eval_checkpoint(output_dir, args.resume_from)
+        load_checkpoint(eval_ckpt, model)
+        print(f"eval-only: loaded trained weights from {eval_ckpt}")
 
     final = evaluate(model, test_loader, device, len(CLASS_NAMES))
     final["weight_notes"] = weight_notes

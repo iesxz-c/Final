@@ -173,6 +173,78 @@ class CheckpointTest(unittest.TestCase):
                              (2, 50, 0.7))
 
 
+class EvalCheckpointTest(unittest.TestCase):
+    def _ckpt_dir(self, parent, name):
+        path = Path(parent) / name
+        path.mkdir(parents=True)
+        (path / "checkpoint.pt").write_bytes(b"fake")
+        return path
+
+    def test_precedence_best_then_final_then_latest(self):
+        import tempfile
+
+        from src.pipeline.train_activity import resolve_eval_checkpoint
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            self._ckpt_dir(root, "checkpoint-epoch0")
+            self._ckpt_dir(root, "final_model")
+            self._ckpt_dir(root, "checkpoint-best")
+            self.assertEqual(resolve_eval_checkpoint(root, None).name, "checkpoint-best")
+            import shutil
+
+            shutil.rmtree(root / "checkpoint-best")
+            self.assertEqual(resolve_eval_checkpoint(root, None).name, "final_model")
+
+    def test_explicit_resume_from(self):
+        import tempfile
+
+        from src.pipeline.train_activity import resolve_eval_checkpoint
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            custom = self._ckpt_dir(root, "custom")
+            self.assertEqual(resolve_eval_checkpoint(root, custom), custom)
+            with self.assertRaises(FileNotFoundError):
+                resolve_eval_checkpoint(root, root / "absent")
+
+    def test_empty_output_dir_raises(self):
+        import tempfile
+
+        from src.pipeline.train_activity import resolve_eval_checkpoint
+
+        with tempfile.TemporaryDirectory() as tmp:
+            with self.assertRaises(FileNotFoundError):
+                resolve_eval_checkpoint(Path(tmp), None)
+
+    def test_resolve_plus_load_restores_trained_head(self):
+        import tempfile
+
+        import torch
+
+        from src.pipeline.train_activity import load_checkpoint, resolve_eval_checkpoint, save_checkpoint
+
+        class TinyHead(torch.nn.Module):
+            def __init__(self):
+                super().__init__()
+                self.classifier = torch.nn.Linear(4, 3)
+
+        with tempfile.TemporaryDirectory() as tmp:
+            out = Path(tmp)
+            trained = TinyHead()
+            with torch.no_grad():
+                trained.classifier.weight.fill_(1.0)
+            save_checkpoint(out / "final_model", trained, None, None, None,
+                            epoch=0, global_step=10, best_acc=0.9)
+            fresh = TinyHead()  # random head, like a freshly built model
+            self.assertFalse(bool((fresh.classifier.weight == 1.0).all()))
+            ckpt = resolve_eval_checkpoint(out, None)
+            self.assertEqual(ckpt.name, "final_model")
+            load_checkpoint(ckpt, fresh)
+            self.assertTrue(bool((fresh.classifier.weight == 1.0).all()),
+                            "eval must load trained weights, not keep the fresh head")
+
+
 class ClipDatasetTest(unittest.TestCase):
     def _tiny_video(self, directory, name="tiny.mp4", frames=24):
         import cv2
