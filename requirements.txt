@@ -1,0 +1,13 @@
+# Phase 0: configuration support (always required).
+PyYAML>=6.0
+
+# Phase 2A: video sampling + pretrained detection (CPU by default).
+# ultralytics pulls its own runtime (torch, opencv-headless, numpy, Pillow).
+# For GPU runs, install a CUDA-enabled torch build separately; the code
+# falls back to CPU automatically when CUDA is unavailable.
+ultralytics>=8.2
+
+# Phase 2B: pretrained VideoMAE activity inference (CPU by default).
+# The Kinetics-400 checkpoint (~350MB) is fetched once from Hugging Face
+# into the HF cache (external, never committed) on first use.
+transformers>=4.40

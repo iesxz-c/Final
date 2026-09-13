@@ -1,0 +1,127 @@
+# ---------------------------------------------------------------------------
+# CCTV Investigation Framework — configuration example
+# ---------------------------------------------------------------------------
+# Copy this file to `config/config.yaml` (gitignored) and adjust paths for
+# your machine. The dataset lives OUTSIDE the repository; nothing below is
+# downloaded or committed.
+#
+# `project.root` is resolved automatically to the repository root.
+
+project:
+  name: Agentic_Framework_CCTV_Crime_Investigation
+
+# External dataset locations (Phase 0: existence is health-checked).
+# UCF-Crime anomaly videos are grouped into category subfolders (Abuse,
+# Arrest, Arson, Assault, Burglary, Explosion, Fighting, RoadAccidents,
+# Robbery, Shooting, Shoplifting, Stealing, Vandalism).
+datasets:
+  anomaly_videos:
+    path: "C:/Users/akash/Videos/Final/Anomaly-Videos-Part-1/Anomaly-Videos-Part-1"
+    categories:
+      - Abuse
+      - Arrest
+      - Arson
+      - Assault
+      - Burglary
+      - Explosion
+      - Fighting
+      - RoadAccidents
+      - Robbery
+      - Shooting
+      - Shoplifting
+      - Stealing
+      - Vandalism
+  normal_videos:
+    path: "C:/Users/akash/Videos/Final/Normal_Videos_for_Event_Recognition/Normal_Videos_for_Event_Recognition"
+
+# ---------------------------------------------------------------------------
+# The sections below are reserved for later phases of the FIXED pipeline.
+# They configure nothing yet — Phase 0 does not process or store anything.
+# ---------------------------------------------------------------------------
+
+# Dataset inventory outputs (Phase 1; written under data/, gitignored).
+# Paths in the inventory are stored relative to each dataset root so the
+# output stays portable across machines.
+inventory:
+  output_dir: "data/inventory"
+  store_absolute_paths: false
+
+# Phase 2A experiment: deterministic 40-video subset (Part A).
+# ground_truth_category here is dataset metadata, never model output.
+experiments:
+  phase2_subset:
+    inventory_file: "data/inventory/videos.json"  # relative to project root
+    output: "data/experiments/phase2_subset.json"
+    selection:
+      - category: Fighting
+        count: 5
+      - category: Assault
+        count: 5
+      - category: Robbery
+        count: 5
+      - category: Shooting
+        count: 5
+      - category: Shoplifting
+        count: 5
+      - category: Stealing
+        count: 5
+      - category: Vandalism
+        count: 5
+      - category: Normal
+        count: 5
+
+# Phase 2A video sampling (Part B): header reads + sequential frame grabs
+# only; whole videos are never loaded into memory.
+sampling:
+  fps: 1.0
+  save_debug_frames: 0   # small debugging stills per run; 0 = metadata only
+
+# Phase 2A object detection (Part C): pretrained detector only, never trained.
+detection:
+  model: "yolo11n"
+  weights_path: "data/models/yolo11n.pt"  # external/gitignored, cached locally
+  confidence_threshold: 0.4
+  device: "cpu"          # or "cuda" when a GPU is available
+
+# Phase 2A evidence outputs (Part E; written under data/, gitignored).
+evidence:
+  output_dir: "data/evidence/phase2"
+
+# Phase 2B activity inference: pretrained VideoMAE-Base/Kinetics-400 only,
+# never trained or fine-tuned. Labels come from the model's Kinetics-400
+# mapping, never from dataset folder names. CPU unless CUDA is available.
+activity_model:
+  name: "MCG-NJU/videomae-base-finetuned-kinetics"
+  num_frames: 16
+  sampling_fps: 8.0    # frame rate drawn into each 16-frame window
+  window_hop: 16       # sampled-frame hop between windows (= num_frames: no overlap)
+  top_k: 5
+  device: "auto"       # auto | cpu | cuda (falls back to cpu without GPU)
+  output_dir: "data/evidence/phase2b"
+
+# Video processing -> object/activity/person/timestamp evidence (Phase 1+)
+pipeline:
+  frame_sampling_rate: 1        # frames per second, unused until Phase 1
+
+# Structured events / case memory outputs (Phase 1+; written under data/)
+outputs:
+  evidence_dir: "data/evidence"
+  events_dir: "data/events"
+  case_memory_dir: "data/case_memory"
+
+# Pretrained models registry (Phase 1+; weights are downloaded to data/models,
+# never committed; the project does NOT invent new detectors).
+models:
+  object_detection:
+    name: "yolo"
+    weights_path: "data/models/yolov8n.pt"
+  activity_recognition:
+    name: "none-selected"
+    weights_path: null
+
+# LLM used only for evidence-grounded narration/investigation (Phase 2+).
+# Must cite stored evidence; must not invent facts beyond it.
+llm:
+  provider: null
+  model: null
+  temperature: 0.0

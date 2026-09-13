@@ -1,0 +1,82 @@
+# ---- Datasets (external, never committed) ----
+datasets/
+Dataset/
+ucf-crime/
+UCF-Crime/
+Anomaly-Videos-Part-1/
+Normal_Videos_for_Event_Recognition/
+
+# ---- Video files / generated clips ----
+*.mp4
+*.avi
+*.mkv
+*.mov
+*.wmv
+*.mxf
+*.ts
+clips/
+generated/
+renders/
+
+# ---- Model weights ----
+*.pt
+*.pth
+*.onnx
+*.engine
+*.bin
+*.safetensors
+weights/
+models-bin/
+checkpoints/
+
+# ---- Embeddings / vector stores / databases ----
+*.npy
+*.npz
+*.faiss
+*.hnsw
+*.index
+*.sqlite
+*.sqlite3
+*.db
+*.duckdb
+embeddings/
+vector_store/
+vectorstore/
+
+# ---- Project-local outputs ----
+data/
+
+# ---- Python cache / build ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+.mypy_cache/
+.ruff_cache/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# ---- Environment files / secrets ----
+.env
+.env.*
+*.key
+*.pem
+*.p12
+secrets/
+
+# ---- Local config overrides (do not commit personal paths) ----
+config/config.yaml
+
+# ---- OS / editor junk ----
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*~
