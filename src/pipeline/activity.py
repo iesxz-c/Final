@@ -154,6 +154,14 @@ def _load_kinetics_state_dict(model, model_id: str) -> str:
             remapped[key[: -len("v_bias")] + "value.bias"] = value
         else:
             remapped[key] = value
+    # Drop checkpoint tensors whose shape disagrees with the model (e.g. a
+    # 400-class Kinetics head when fine-tuning with a fresh 14-class head).
+    # strict=False tolerates missing/unexpected keys, but not shape clashes.
+    own_shapes = {k: tuple(v.shape) for k, v in model.state_dict().items()}
+    dropped = sorted(k for k, v in remapped.items()
+                     if k in own_shapes and tuple(v.shape) != own_shapes[k])
+    for key in dropped:
+        del remapped[key]
     missing, unexpected = model.load_state_dict(remapped, strict=False)
     zeroed = 0
     for name, param in model.named_parameters():
@@ -163,6 +171,7 @@ def _load_kinetics_state_dict(model, model_id: str) -> str:
     return (
         f"mapped q_bias->query.bias, v_bias->value.bias; "
         f"zeroed {zeroed} key.bias (absent upstream); "
+        f"dropped shape-mismatched={dropped}; "
         f"load missing={len(missing)} unexpected={len(unexpected)}"
     )
 

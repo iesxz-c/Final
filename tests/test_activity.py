@@ -214,6 +214,7 @@ class WeightRemapTest(unittest.TestCase):
             prefix + "q_bias": torch.ones(8),
             prefix + "v_bias": torch.ones(8) * 2,
             "classifier.bias": torch.zeros(3),
+            "classifier.weight": torch.ones(400, 8),
         }
 
         class FakeParam:
@@ -225,6 +226,11 @@ class WeightRemapTest(unittest.TestCase):
         class FakeModel:
             def __init__(self):
                 self.seen = None
+
+            def state_dict(self):
+                return {prefix + "query.bias": torch.zeros(8),
+                        prefix + "value.bias": torch.zeros(8),
+                        "classifier.weight": torch.zeros(14, 8)}
 
             def load_state_dict(self, state, strict=False):
                 self.seen = state
@@ -242,6 +248,8 @@ class WeightRemapTest(unittest.TestCase):
         self.assertTrue(torch.equal(model.seen[prefix + "value.bias"], torch.ones(8) * 2))
         self.assertTrue(torch.equal(key_param.data, torch.zeros(8)))
         self.assertIn("missing=1 unexpected=0", note)
+        self.assertNotIn("classifier.weight", model.seen)
+        self.assertIn("classifier.weight", note)
 
 
 class ConfigHandlingTest(unittest.TestCase):
