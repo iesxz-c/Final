@@ -169,7 +169,8 @@ class UCFClipDataset:
     yields num_eval_clips fixed windows per video for probability averaging."""
 
     def __init__(self, entries, anomaly_root, normal_root, num_frames=NUM_FRAMES,
-                 sampling_fps=8.0, mode="train", num_eval_clips=5, seed=0):
+                 sampling_fps=8.0, mode="train", num_eval_clips=5, seed=0,
+                 frame_counts: dict | None = None):
         if mode not in ("train", "eval"):
             raise ValueError(f"bad mode: {mode!r}")
         from src.pipeline.ucf_splits import LABEL_TO_INDEX, resolve_video_path
@@ -177,6 +178,9 @@ class UCFClipDataset:
         self.paths = [str(resolve_video_path(anomaly_root, normal_root, r)) for (r, _) in entries]
         self.labels = [LABEL_TO_INDEX[label] for (_, label) in entries]
         self.video_ids = [r for (r, _) in entries]
+        # Known frame counts (e.g. from the Phase 1 inventory) avoid a full
+        # sequential decode per item just to learn the video length.
+        self.frame_counts = dict(frame_counts or {})
         self.num_frames = num_frames
         self.sampling_fps = sampling_fps
         self.mode = mode
@@ -214,7 +218,7 @@ class UCFClipDataset:
 
         pos, clip_no = self.item_index[i]
         path = self.paths[pos]
-        total = video_frame_count(path)
+        total = self.frame_counts.get(self.video_ids[pos]) or video_frame_count(path)
         if total <= 0:
             raise RuntimeError(f"no decodable frames: {path}")
         stride = sampling_stride(self._video_fps(path), self.sampling_fps)

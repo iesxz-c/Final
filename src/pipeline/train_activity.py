@@ -95,6 +95,36 @@ def compute_metrics(true: list, pred: list, num_classes: int) -> dict:
     }
 
 
+def load_inventory_frame_counts(config: dict) -> dict:
+    """Map split-style references to known frame counts from Phase 1 inventory.
+
+    Returns {} when no inventory is available (dataset falls back to counting
+    by decoding). Keys are split references like 'Abuse/x.mp4' so lookups
+    need no path translation.
+    """
+    inventory_cfg = config.get("inventory") or {}
+    inventory_path = PROJECT_ROOT / inventory_cfg.get("output_dir", "data/inventory") / "videos.json"
+    if not inventory_path.exists():
+        return {}
+    try:
+        with inventory_path.open("r", encoding="utf-8") as fh:
+            records = json.load(fh)
+    except (OSError, ValueError):
+        return {}
+    counts = {}
+    for record in records:
+        rel = record.get("path", "")
+        category = record.get("category", "")
+        count = record.get("frame_count")
+        if not rel or not count:
+            continue
+        if category == "Normal":
+            counts["Normal_Videos_event/" + rel.split("/")[-1]] = int(count)
+        else:
+            counts[rel] = int(count)
+    return counts
+
+
 def save_checkpoint(path: Path, model, optimizer, scheduler, scaler, epoch: int,
                     global_step: int, best_acc: float) -> None:
     import numpy as np
@@ -302,10 +332,14 @@ def main(argv: list | None = None) -> int:
     model, weight_notes = build_model(args.model_id, device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.learning_rate)
 
+    frame_counts = load_inventory_frame_counts(config)
     train_ds = UCFClipDataset(train_entries, anomaly_root, normal_root, mode="train",
-                              seed=args.seed)
+                              seed=args.seed, frame_counts=frame_counts)
     test_ds = UCFClipDataset(test_entries, anomaly_root, normal_root, mode="eval",
-                             num_eval_clips=args.num_eval_clips, seed=args.seed)
+                             num_eval_clips=args.num_eval_clips, seed=args.seed,
+                             frame_counts=frame_counts)
+    print(f"frame counts known for {len(frame_counts)} videos "
+          f"(0 = fallback: decode to count)")
     train_loader = DataLoader(train_ds, batch_size=args.batch_size, shuffle=True,
                               num_workers=args.num_workers)
     test_loader = DataLoader(test_ds, batch_size=args.batch_size, shuffle=False,

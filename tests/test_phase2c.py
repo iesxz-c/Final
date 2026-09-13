@@ -114,6 +114,37 @@ class TensorTest(unittest.TestCase):
         self.assertTrue(bool((t1 == t2).all()))
 
 
+class FrameCountsTest(unittest.TestCase):
+    def test_known_counts_skip_full_decode(self):
+        import cv2
+        import numpy as np
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            (root / "Abuse").mkdir()
+            target = root / "Abuse" / "a.mp4"
+            writer = cv2.VideoWriter(str(target), cv2.VideoWriter_fourcc(*"mp4v"),
+                                     10, (64, 48))
+            for i in range(24):
+                writer.write(np.full((48, 64, 3), i * 10, np.uint8))
+            writer.release()
+            entries = [("Abuse/a.mp4", "Abuse")]
+            ds = data.UCFClipDataset(entries, root, root, mode="train", seed=0,
+                                     frame_counts={"Abuse/a.mp4": 24})
+            from unittest import mock
+
+            with mock.patch.object(data, "video_frame_count",
+                                   side_effect=AssertionError("must not decode")):
+                tensor, label, pos = ds[0]
+            self.assertEqual(tuple(tensor.shape), (16, 3, 224, 224))
+
+    def test_inventory_counts_keyed_by_split_reference(self):
+        from src.pipeline.train_activity import load_inventory_frame_counts
+
+        config = {"inventory": {"output_dir": "does-not-exist"}}
+        self.assertEqual(load_inventory_frame_counts(config), {})
+
+
 class AggregationMetricsTest(unittest.TestCase):
     def test_video_probability_averaging(self):
         import numpy as np
