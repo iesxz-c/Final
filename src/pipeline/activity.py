@@ -12,9 +12,11 @@ returns canned predictions for unit tests (no weights, no GPU).
 from __future__ import annotations
 
 MODEL_ID = "MCG-NJU/videomae-base-finetuned-kinetics"
+UCF_EVENT_MODEL_ID = "OPear/videomae-large-finetuned-UCF-Crime"
 
 from src.evidence.models import (
     ActivityObservation,
+    UCFEventObservation,
     activity_source_reference,
     frame_timestamp_seconds,
 )
@@ -241,3 +243,44 @@ class VideoMAEActivityModel:
 
     def close(self):
         pass
+
+
+def to_ucf_event_observation(video_id: str, window_index: int, frame_indices: list,
+                             start_time: float, end_time: float, prediction: dict,
+                             model_name: str, model_version: str,
+                             padded_frames: int = 0) -> UCFEventObservation:
+    """Convert a model prediction dict into a UCFEventObservation.
+
+    Labels pass through verbatim from the model's own id2label mapping;
+    ground-truth folder categories are never consulted here.
+    """
+    return UCFEventObservation(
+        observation_id=f"{video_id}:e{window_index}",
+        video_id=video_id,
+        start_time=start_time,
+        end_time=end_time,
+        label=str(prediction["label"]),
+        confidence=float(prediction["confidence"]),
+        model_name=model_name,
+        model_version=model_version,
+        top_k=[
+            {"label": str(e["label"]), "confidence": float(e["confidence"])}
+            for e in prediction.get("top_k", [])
+        ],
+        frame_indices=list(frame_indices),
+        padded_frames=padded_frames,
+        source_reference=activity_source_reference(video_id, start_time, end_time),
+    )
+
+
+class UCFEventModel(VideoMAEActivityModel):
+    """Pretrained UCF-Crime surveillance-event inference (no training).
+
+    Same VideoMAE machinery as the Kinetics backend (processor, windowing
+    contract, remap-aware weight loading); only the checkpoint — and hence
+    the native id2label vocabulary — differs. Labels are stored as
+    surveillance-event predictions, never as generic activities.
+    """
+
+    def __init__(self, model_id: str = UCF_EVENT_MODEL_ID, device: str = "auto"):
+        super().__init__(model_id=model_id, device=device)

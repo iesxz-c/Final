@@ -146,6 +146,64 @@ def activity_source_reference(video_id: str, start_time: float, end_time: float)
 
 
 @dataclass
+class UCFEventObservation:
+    """One temporal-window surveillance-event prediction from a UCF-Crime
+    fine-tuned video model. Terminology is deliberately *event*, not
+    *activity*: this is kept separate from the Kinetics ActivityObservation.
+
+    `label` and `top_k` hold the model's raw UCF-Crime class names verbatim.
+    Ground-truth folder categories are never stored here.
+    """
+
+    observation_id: str  # f"{video_id}:e{window_index}", deterministic
+    video_id: str
+    start_time: float
+    end_time: float
+    label: str  # raw model label, verbatim
+    confidence: float
+    model_name: str = "unknown"
+    model_version: str = "unknown"
+    top_k: list = field(default_factory=list)  # [{"label": str, "confidence": float}]
+    frame_indices: list = field(default_factory=list)  # sampled source frames
+    padded_frames: int = 0
+    source_reference: str = ""
+    schema_version: str = EVIDENCE_SCHEMA_VERSION
+
+    def __post_init__(self):
+        if not self.observation_id or not self.video_id:
+            raise ValueError("observation_id and video_id are required")
+        if not self.label:
+            raise ValueError("label is required")
+        if not 0.0 <= self.confidence <= 1.0:
+            raise ValueError(f"confidence out of range: {self.confidence}")
+        if self.start_time < 0 or self.end_time < self.start_time:
+            raise ValueError(
+                f"invalid window [{self.start_time}, {self.end_time}]"
+            )
+        if self.padded_frames < 0:
+            raise ValueError("padded_frames must be >= 0")
+        for entry in self.top_k:
+            if not 0.0 <= float(entry["confidence"]) <= 1.0:
+                raise ValueError(f"top-k confidence out of range: {entry}")
+        self.start_time = _round3(self.start_time)
+        self.end_time = _round3(self.end_time)
+        self.confidence = round(float(self.confidence), 4)
+        self.top_k = [
+            {"label": str(e["label"]), "confidence": round(float(e["confidence"]), 4)}
+            for e in self.top_k
+        ]
+        self.frame_indices = [int(i) for i in self.frame_indices]
+
+    def to_dict(self) -> dict:
+        return asdict(self)
+
+    @classmethod
+    def from_dict(cls, data: dict) -> "UCFEventObservation":
+        known = {f for f in cls.__dataclass_fields__}
+        return cls(**{k: v for k, v in data.items() if k in known})
+
+
+@dataclass
 class ActivityObservation:
     """One temporal-window activity prediction from a video model.
 
