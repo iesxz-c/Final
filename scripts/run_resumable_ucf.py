@@ -21,6 +21,7 @@ import json
 import subprocess
 import sys
 import tempfile
+import threading
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -114,16 +115,51 @@ def verify_batch(batch_dir: Path, expected_ids: list) -> tuple:
     return sorted(completed), sorted(missing)
 
 
-def _invoke_extract(batch_manifest: Path, batch_dir: Path, device: str) -> int:
-    proc = subprocess.run(
-        [sys.executable, "-m", "src.pipeline.extract_ucf_events",
-         "--input-manifest", str(batch_manifest),
-         "--output-dir", str(batch_dir),
-         "--device", device],
-        cwd=PROJECT_ROOT, capture_output=True, text=True, timeout=None)
-    sys.stdout.write(proc.stdout)
-    sys.stderr.write(proc.stderr)
-    return proc.returncode
+def _pump_lines(stream, emit) -> None:
+    """Forward stream lines to emit() immediately, one by one."""
+    for line in iter(stream.readline, ""):
+        emit(line)
+
+
+def _emit_stdout(line: str) -> None:
+    sys.stdout.write(line)
+    sys.stdout.flush()
+
+
+def _emit_stderr(line: str) -> None:
+    sys.stderr.write(line)
+    sys.stderr.flush()
+
+
+def _stream_and_wait(proc: "subprocess.Popen[str]", stdout_emit=None,
+                     stderr_emit=None) -> int:
+    """Forward a running process's stdout/stderr live; return its exit code."""
+    stdout_emit = stdout_emit or _emit_stdout
+    stderr_emit = stderr_emit or _emit_stderr
+    threads = [threading.Thread(target=_pump_lines, args=(proc.stdout, stdout_emit),
+                                daemon=True),
+               threading.Thread(target=_pump_lines, args=(proc.stderr, stderr_emit),
+                                daemon=True)]
+    for thread in threads:
+        thread.start()
+    code = proc.wait()
+    for thread in threads:
+        thread.join()
+    return code
+
+
+def _invoke_extract(batch_manifest: Path, batch_dir: Path, device: str,
+                    _argv: list | None = None, _stream=_stream_and_wait) -> int:
+    # -u forces the child interpreter unbuffered so progress lines arrive
+    # while the batch runs (works in Colab/non-interactive shells too).
+    # The executed module is untouched; only delivery is streamed.
+    argv = _argv or [sys.executable, "-u", "-m", "src.pipeline.extract_ucf_events",
+                     "--input-manifest", str(batch_manifest),
+                     "--output-dir", str(batch_dir),
+                     "--device", device]
+    proc = subprocess.Popen(argv, cwd=PROJECT_ROOT, stdout=subprocess.PIPE,
+                            stderr=subprocess.PIPE, text=True, bufsize=1)
+    return _stream(proc)
 
 
 def run_batches(input_manifest: Path, output_dir: Path, device: str,

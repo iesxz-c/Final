@@ -1,11 +1,16 @@
-"""Resumable UCF runner tests: checkpointing, resume, merge. No inference,
-no GPU, no subprocess - the extract CLI invocation is faked."""
+"""Resumable UCF runner tests: checkpointing, resume, merge, streaming. No
+inference, no GPU, no real subprocess - the extract CLI invocation is faked."""
 
 import importlib.util
 import json
+import subprocess
+import sys
+import time
 import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
+from unittest import mock
+from unittest import mock
 
 _SPEC = importlib.util.spec_from_file_location(
     "run_resumable_ucf",
@@ -166,6 +171,80 @@ class ResumableTest(unittest.TestCase):
                 json.dumps([{"video_id": "anomaly/Cat/v000.mp4"}]), encoding="utf-8")
             (out / "batch_002" / "ucf_events.json").write_text("[]", encoding="utf-8")
             self.assertEqual(R.merge_batches(out, tmp / "merged"), 2)
+
+
+STUB = (f"import sys, time; sys.stdout.write('out-1\\n'); sys.stdout.flush(); "
+        f"sys.stderr.write('err-1\\n'); sys.stderr.flush(); "
+        f"print('FIRST', flush=True); "
+        f"time.sleep(1.2); print('SECOND', flush=True)")
+
+
+class StreamingTest(unittest.TestCase):
+    def _run_stub(self, script, exit_note=None):
+        out, err = [], []
+        start = time.monotonic()
+
+        def emit_out(line):
+            out.append((time.monotonic() - start, line))
+
+        def emit_err(line):
+            err.append((time.monotonic() - start, line))
+
+        proc = subprocess.Popen(
+            [sys.executable, "-u", "-c", script],
+            stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+            text=True, bufsize=1)
+        code = R._stream_and_wait(proc, emit_out, emit_err)
+        return code, out, err
+
+    def test_stdout_forwarded_while_running(self):
+        code, out, err = self._run_stub(STUB)
+        self.assertEqual(code, 0)
+        first_at = next(t for t, line in out if "FIRST" in line)
+        second_at = next(t for t, line in out if "SECOND" in line)
+        self.assertGreater(second_at - first_at, 0.5)
+        self.assertTrue(any("out-1" in line for _, line in out))
+        self.assertTrue(any("err-1" in line for _, line in err))
+
+    def test_stderr_forwarded(self):
+        code, out, err = self._run_stub(
+            "import sys; sys.stderr.write('boom\\n')")
+        self.assertEqual(code, 0)
+        self.assertEqual([line for _, line in err], ["boom\n"])
+        self.assertEqual(out, [])
+
+    def test_return_code_preserved(self):
+        code, _, _ = self._run_stub("import sys; sys.exit(3)")
+        self.assertEqual(code, 3)
+
+    def test_invoke_uses_unbuffered_extract(self):
+        seen = {}
+
+        class _FakeProc:
+            def wait(self):
+                return 0
+
+            @property
+            def stdout(self):
+                return _empty_stream()
+
+            @property
+            def stderr(self):
+                return _empty_stream()
+
+        def _empty_stream():
+            import io
+            return io.StringIO("")
+
+        def _fake_popen(argv, **kwargs):
+            seen["argv"] = argv
+            return _FakeProc()
+
+        with mock.patch.object(R.subprocess, "Popen", _fake_popen):
+            code = R._invoke_extract(Path("in.json"), Path("out"), "cpu")
+        self.assertEqual(code, 0)
+        self.assertIn("-u", seen["argv"])
+        self.assertIn("src.pipeline.extract_ucf_events", seen["argv"])
 
 
 if __name__ == "__main__":
