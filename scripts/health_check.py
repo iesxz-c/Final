@@ -53,16 +53,26 @@ def check_layout() -> bool:
         "src/evidence",
         "src/agents",
         "src/agents/query_planning",
-        "src/agents/evidence_retrieval",
         "src/agents/temporal_correlation",
-        "src/agents/verification_report",
         "config",
         "scripts",
         "data",
     ]
+    expected_files = [
+        # Phases 3D/3F superseded the evidence_retrieval/verification_report
+        # placeholder packages with the real agent modules.
+        "src/agents/evidence_retrieval.py",
+        "src/agents/verification_report.py",
+    ]
     ok = True
     for rel in expected:
         if (PROJECT_ROOT / rel).is_dir():
+            print(f"  {rel}: [PASS]")
+        else:
+            print(f"  {rel}: [FAIL] missing")
+            ok = False
+    for rel in expected_files:
+        if (PROJECT_ROOT / rel).is_file():
             print(f"  {rel}: [PASS]")
         else:
             print(f"  {rel}: [FAIL] missing")
