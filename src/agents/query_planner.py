@@ -236,7 +236,7 @@ def load_llm_settings(config_path: str | os.PathLike | None = None) -> dict:
 def create_client(settings: dict | None = None,
                   config_path: str | os.PathLike | None = None,
                   api_key: str | None = None):
-    """Build the configured LLM client (currently OpenRouter only)."""
+    """Build the configured LLM client (OpenRouter)."""
     settings = settings or load_llm_settings(config_path)
     provider = (settings.get("provider") or "openrouter").lower()
     if provider != "openrouter":

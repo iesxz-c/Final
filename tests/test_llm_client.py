@@ -65,6 +65,14 @@ class MockClientTest(unittest.TestCase):
 
 
 class OpenRouterWireTest(unittest.TestCase):
+    def setUp(self):
+        self._env_patcher = mock.patch(
+            "src.agents.llm_client.load_env_file", lambda path=None: {})
+        self._env_patcher.start()
+
+    def tearDown(self):
+        self._env_patcher.stop()
+
     def _client(self):
         return C.OpenRouterClient(api_key="sk-test-key", model="test/model")
 
@@ -88,6 +96,23 @@ class OpenRouterWireTest(unittest.TestCase):
         with self._urlopen(_response("  ")):
             with self.assertRaises(C.EmptyResponseError):
                 self._client().generate_structured("s", "u")
+
+    def test_official_muse_model_keeps_structured_format(self):
+        client = C.OpenRouterClient(api_key="sk-test-key",
+                                    model="meta/muse-spark-1.3")
+        fmt = {"type": "json_schema",
+               "json_schema": {"name": "n", "strict": True, "schema": {"type": "object"}}}
+        with self._urlopen(_response('{"ok": true}')) as urlopen:
+            client.generate_structured("s", "u", temperature=0.0,
+                                       response_format=fmt, max_tokens=2048)
+        body = json.loads(urlopen.call_args[0][0].data.decode())
+        self.assertEqual(body["model"], "meta/muse-spark-1.3")
+        self.assertEqual(body["response_format"], fmt)
+        self.assertTrue(body["response_format"]["json_schema"]["strict"])
+        self.assertEqual(body["max_tokens"], 2048)
+        self.assertEqual(body["temperature"], 0.0)
+        self.assertNotIn("tools", body)
+        self.assertNotIn("tool_choice", body)
 
     def test_http_error_mapped_without_key(self):
         err = urllib.error.HTTPError("url", 429, "slow", {}, io.BytesIO(b"rate limited"))
@@ -123,6 +148,14 @@ class OpenRouterWireTest(unittest.TestCase):
 
 
 class ResponseFormatTest(unittest.TestCase):
+    def setUp(self):
+        self._env_patcher = mock.patch(
+            "src.agents.llm_client.load_env_file", lambda path=None: {})
+        self._env_patcher.start()
+
+    def tearDown(self):
+        self._env_patcher.stop()
+
     def _body(self, **kwargs):
         client = C.OpenRouterClient(api_key="sk-test-key", model="test/model")
         with mock.patch("urllib.request.urlopen") as urlopen:
@@ -152,9 +185,6 @@ class ResponseFormatTest(unittest.TestCase):
         body = self._body()
         self.assertNotIn("max_tokens", body)
 
-    def test_max_tokens_passed_through(self):
-        body = self._body(max_tokens=4096)
-        self.assertEqual(body["max_tokens"], 4096)
 
     def test_mock_records_format(self):
         client = C.MockLLMClient("{}")

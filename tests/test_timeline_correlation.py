@@ -311,5 +311,36 @@ class ModelComparisonContractTest(unittest.TestCase):
                 E.run_timeline(client, _fixtures())
 
 
+class ConsolidationTest(unittest.TestCase):
+    def _index(self):
+        return E.collect_evidence_index(_fixtures())
+
+    def test_adjacent_windows_one_item(self):
+        ids = [f"{VA}:f0", f"{VA}:f1", f"{VA}:f2"]
+        out = E.parse_and_validate_timeline(
+            _out(timeline=[_item(10.0, 16.0, ids, text="Persistent.")]),
+            self._index())
+        self.assertEqual(len(out["timeline"]), 1)
+        self.assertEqual(out["timeline"][0]["evidence_ids"], ids)
+
+    def test_consolidated_range_grounded(self):
+        ids = [f"{VA}:f0", f"{VA}:f1"]
+        out = E.parse_and_validate_timeline(
+            _out(timeline=[_item(10.0, 14.0, ids)]), self._index())
+        item = out["timeline"][0]
+        self.assertGreaterEqual(item["start_time"], 10.0)
+        self.assertLessEqual(item["end_time"], 14.0)
+
+    def test_consolidated_range_outside_rejected(self):
+        ids = [f"{VA}:f0", f"{VA}:f1"]
+        with self.assertRaises(E.TimelineValidationError):
+            E.parse_and_validate_timeline(
+                _out(timeline=[_item(5.0, 20.0, ids)]), self._index())
+
+    def test_prompt_requires_concise_consolidation(self):
+        for phrase in ("consolidat", "concise"):
+            self.assertIn(phrase, E.SYSTEM_PROMPT.lower())
+
+
 if __name__ == "__main__":
     unittest.main()

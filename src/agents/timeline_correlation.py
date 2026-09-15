@@ -70,6 +70,16 @@ Allowed correlation types (use exactly these strings):
 Keep evidence from different videos separate. Never create a correlation
 between different videos.
 
+Be concise. Timeline entries should represent meaningful temporal
+segments, not necessarily every individual evidence window: adjacent
+windows describing persistent activity SHOULD be consolidated into a
+single timeline item citing all of their evidence IDs. Do not repeat
+identical observations per window, and keep correlations, inferences,
+and limitations brief. Consolidation never changes the underlying
+evidence: keep every timestamp inside the union of the cited evidence,
+cite every ID the claim relies on, and never drop grounding IDs to
+shorten the response.
+
 If the supplied evidence is insufficient, say so in limitations rather
 than guessing.
 
@@ -176,8 +186,8 @@ def collect_evidence_index(result_3d: dict) -> dict:
     """Map every Phase 3D evidence_id to its video/incident/interval/sources."""
     index = {}
     for group in result_3d.get("merged_results", {}).get("groups", []) or []:
-        for record in (group.get("matched_evidence", []) or []
-                       + group.get("contextual_evidence", []) or []):
+        for record in ((group.get("matched_evidence", []) or [])
+                       + (group.get("contextual_evidence", []) or [])):
             index.setdefault(record["evidence_id"], {
                 "evidence_id": record["evidence_id"],
                 "video_id": record.get("video_id", ""),

@@ -118,6 +118,14 @@ class WiringTest(unittest.TestCase):
             client = create_client(settings, api_key="synthetic-test-key")
             self.assertEqual(client.model, model)
 
+    def test_official_default_model_is_muse(self):
+        import yaml
+
+        with (D.PROJECT_ROOT / "config" / "config.example.yaml").open(
+                "r", encoding="utf-8") as fh:
+            config = yaml.safe_load(fh)
+        self.assertEqual(config["llm"]["model"], "meta/muse-spark-1.3")
+
     def test_example_and_ignore_rules(self):
         import subprocess
 

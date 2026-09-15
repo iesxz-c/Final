@@ -1,0 +1,50 @@
+[
+  {
+    "id": "q01",
+    "question": "Show me the evidence behind the RoadAccidents hypothesis in anomaly/Fighting/Fighting006_x264.mp4 between 0 and 15 seconds. Target the model-generated RoadAccidents hypothesis, not the folder name.",
+    "evaluation_mode": "functional_end_to_end",
+    "disclaimer": "Evidence-targeted functional query selected from existing Phase 2D fused evidence. NOT a ground-truth label; MUST NOT be interpreted as retrieval/classification accuracy, precision, recall, or proof that a crime/event occurred."
+  },
+  {
+    "id": "q02",
+    "question": "What evidence supports the Assault hypothesis in anomaly/Assault/Assault005_x264.mp4 between 2 and 20 seconds?",
+    "evaluation_mode": "functional_end_to_end",
+    "disclaimer": "Evidence-targeted functional query selected from existing Phase 2D fused evidence. NOT a ground-truth label; MUST NOT be interpreted as retrieval/classification accuracy, precision, recall, or proof that a crime/event occurred."
+  },
+  {
+    "id": "q03",
+    "question": "Show me the evidence behind the Robbery hypothesis in anomaly/Robbery/Robbery004_x264.mp4 between 0 and 15 seconds.",
+    "evaluation_mode": "functional_end_to_end",
+    "disclaimer": "Evidence-targeted functional query selected from existing Phase 2D fused evidence. NOT a ground-truth label; MUST NOT be interpreted as retrieval/classification accuracy, precision, recall, or proof that a crime/event occurred."
+  },
+  {
+    "id": "q04",
+    "question": "What evidence supports the Shooting hypothesis in anomaly/Robbery/Robbery003_x264.mp4 between 17 and 24 seconds?",
+    "evaluation_mode": "functional_end_to_end",
+    "disclaimer": "Evidence-targeted functional query selected from existing Phase 2D fused evidence. NOT a ground-truth label; MUST NOT be interpreted as retrieval/classification accuracy, precision, recall, or proof that a crime/event occurred."
+  },
+  {
+    "id": "q05",
+    "question": "Show me the evidence behind the Shoplifting hypothesis in anomaly/Shoplifting/Shoplifting005_x264.mp4 between 12 and 20 seconds.",
+    "evaluation_mode": "functional_end_to_end",
+    "disclaimer": "Evidence-targeted functional query selected from existing Phase 2D fused evidence. NOT a ground-truth label; MUST NOT be interpreted as retrieval/classification accuracy, precision, recall, or proof that a crime/event occurred."
+  },
+  {
+    "id": "q06",
+    "question": "Show me the evidence behind the Burglary hypothesis in anomaly/Robbery/Robbery001_x264.mp4 between 0 and 15 seconds. Target the model-generated Burglary surveillance-event hypothesis, not the folder name Robbery or the ground-truth category.",
+    "evaluation_mode": "functional_end_to_end",
+    "disclaimer": "Evidence-targeted functional query selected from existing Phase 2D fused evidence. NOT a ground-truth label; MUST NOT be interpreted as retrieval/classification accuracy, precision, recall, or proof that a crime/event occurred."
+  },
+  {
+    "id": "q07",
+    "question": "Show me the evidence behind the Vandalism hypothesis in anomaly/Vandalism/Vandalism003_x264.mp4 between 10 and 20 seconds.",
+    "evaluation_mode": "functional_end_to_end",
+    "disclaimer": "Evidence-targeted functional query selected from existing Phase 2D fused evidence. NOT a ground-truth label; MUST NOT be interpreted as retrieval/classification accuracy, precision, recall, or proof that a crime/event occurred."
+  },
+  {
+    "id": "q08",
+    "question": "What hypotheses does the model produce for normal/Normal_Videos_100_x264.mp4 between 0 and 12 seconds, and what evidence supports them? Treat this explicitly as a mixed-label edge case, not a single-hypothesis query.",
+    "evaluation_mode": "functional_end_to_end",
+    "disclaimer": "Evidence-targeted functional query selected from existing Phase 2D fused evidence. NOT a ground-truth label; MUST NOT be interpreted as retrieval/classification accuracy, precision, recall, or proof that a crime/event occurred."
+  }
+]
