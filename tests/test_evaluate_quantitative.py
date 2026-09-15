@@ -149,5 +149,84 @@ class GroundingTest(unittest.TestCase):
                          json.dumps(second, sort_keys=True))
 
 
+def _large_event(video_id, start, end, label, conf=0.8):
+    return {"observation_id": video_id + ":e0", "video_id": video_id,
+            "start_time": start, "end_time": end, "label": label,
+            "confidence": conf, "model_name": "m", "model_version": "v",
+            "top_k": [], "frame_indices": [], "padded_frames": 0,
+            "source_reference": "r"}
+
+
+class ExpandedTest(unittest.TestCase):
+    def _manifest(self):
+        return [{"video_id": "anomaly/X/a.mp4"}, {"video_id": "normal/b.mp4"}]
+
+    def _annotations(self):
+        return {"a.mp4": [{"label": "X", "start_frame": 0, "end_frame": 60}],
+                "b.mp4": [{"label": "Normal", "start_frame": -1, "end_frame": -1}]}
+
+    def test_predicted_span_union(self):
+        events = [_large_event("v", 0.0, 2.0, "X"),
+                  _large_event("v", 4.0, 6.0, "Y"),
+                  _large_event("v", 8.0, 10.0, "Normal")]
+        self.assertEqual(Q.predicted_anomaly_span(events), [0.0, 6.0])
+
+    def test_predicted_span_none_without_non_normal(self):
+        events = [_large_event("v", 0.0, 2.0, "Normal")]
+        self.assertIsNone(Q.predicted_anomaly_span(events))
+        self.assertIsNone(Q.predicted_anomaly_span([]))
+
+    def test_top_k_ignored_for_span(self):
+        event = _large_event("v", 0.0, 2.0, "Normal")
+        event["top_k"] = [{"label": "X", "confidence": 0.99}]
+        self.assertIsNone(Q.predicted_anomaly_span([event]))
+
+    def test_expanded_counts(self):
+        events = [_large_event("anomaly/X/a.mp4", 0.0, 2.0, "X"),
+                  _large_event("normal/b.mp4", 0.0, 2.0, "Normal")]
+        result = Q.expanded_temporal_evaluation(
+            events, self._manifest(), self._annotations(), {"a.mp4": 30.0, "b.mp4": 30.0})
+        self.assertEqual(result["anomaly_videos"], 1)
+        self.assertEqual(result["normal_controls"], 1)
+        self.assertEqual(result["per_video"][0]["tiou"], 1.0)
+        self.assertEqual(result["non_zero_overlap_videos"], 1)
+        self.assertEqual(result["total_observations"], 2)
+        self.assertEqual(result["mean_observations_per_video"], 1.0)
+
+    def test_normal_incidence(self):
+        events = [_large_event("normal/b.mp4", 0.0, 2.0, "X")]
+        result = Q.expanded_temporal_evaluation(
+            events, self._manifest(), self._annotations(), {"a.mp4": 30.0, "b.mp4": 30.0})
+        control = result["normal_control_incidence"]
+        self.assertEqual(control["controls"], 1)
+        self.assertEqual(control["with_non_normal_span"], 1)
+        self.assertEqual(control["per_video"][0]["non_normal_hypotheses"], ["X"])
+
+    def test_missing_annotation_skipped(self):
+        manifest = [{"video_id": "anomaly/X/zzz.mp4"}]
+        result = Q.expanded_temporal_evaluation(
+            [], manifest, self._annotations(), {"zzz.mp4": 30.0})
+        self.assertEqual(result["anomaly_videos"], 0)
+        self.assertEqual(result["skipped_no_fps"][0]["video_id"],
+                         "anomaly/X/zzz.mp4")
+
+    def test_span_statistics(self):
+        events = [_large_event("anomaly/X/a.mp4", 0.0, 4.0, "X")]
+        result = Q.expanded_temporal_evaluation(
+            events, [{"video_id": "anomaly/X/a.mp4"}],
+            self._annotations(), {"a.mp4": 30.0})
+        self.assertEqual(result["prediction_span_seconds"]["max"], 4.0)
+
+    def test_expanded_deterministic(self):
+        events = [_large_event("anomaly/X/a.mp4", 0.0, 2.0, "X")]
+        first = Q.expanded_temporal_evaluation(
+            events, self._manifest(), self._annotations(), {"a.mp4": 30.0, "b.mp4": 30.0})
+        second = Q.expanded_temporal_evaluation(
+            list(reversed(events)), self._manifest(), self._annotations(),
+            {"a.mp4": 30.0, "b.mp4": 30.0})
+        self.assertEqual(json.dumps(first, sort_keys=True),
+                         json.dumps(second, sort_keys=True))
+
+
 if __name__ == "__main__":
     unittest.main()

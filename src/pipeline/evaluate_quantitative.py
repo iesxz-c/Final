@@ -31,6 +31,7 @@ PROJECT_ROOT = Path(__file__).resolve().parent.parent.parent
 from src.evidence.fusion import is_non_normal_hypothesis
 
 SCHEMA_VERSION = "phase4b/v1"
+EXPANDED_SCHEMA_VERSION = "phase4b-expanded/v1"
 
 DEFAULT_SUBSET = "data/experiments/phase2_subset.json"
 DEFAULT_INVENTORY = "data/inventory/videos.json"
@@ -215,6 +216,97 @@ def normal_control_check(incidents: list, annotations: dict) -> dict:
             "per_video": controls}
 
 
+def predicted_anomaly_span(observations: list) -> list | None:
+    """Union span over windows carrying a non-normal top-1 hypothesis label.
+
+    Uses only the stored top-1 `label` with the established NORMAL_LABELS
+    heuristic. No confidence thresholds, no window selection. Returns None
+    when no window carries a non-normal hypothesis.
+    """
+    spans = [(o["start_time"], o["end_time"]) for o in observations
+             if is_non_normal_hypothesis(o.get("label", ""))]
+    if not spans:
+        return None
+    return [_round4(min(s for s, _ in spans)), _round4(max(e for _, e in spans))]
+
+
+def expanded_temporal_evaluation(events: list, manifest_videos: list,
+                                 annotations: dict, fps_by_file: dict) -> dict:
+    """tIoU over the expanded population from raw UCF windows (no fusion).
+
+    Predicted span per video is the union of non-normal-hypothesis windows
+    (see predicted_anomaly_span). Annotation handling mirrors the pilot:
+    valid frame intervals score tIoU; -1/-1 files are normal controls with
+    hypothesis incidence only. Videos missing verified FPS are skipped and
+    listed, never estimated.
+    """
+    by_video: dict = {}
+    for event in events:
+        by_video.setdefault(event["video_id"], []).append(event)
+    manifest_ids = sorted(v["video_id"] for v in manifest_videos)
+    anomaly_rows, control_rows, skipped = [], [], []
+    for video_id in manifest_ids:
+        filename = video_id.split("/")[-1]
+        observations = sorted(by_video.get(video_id, []),
+                              key=lambda o: o.get("start_time", 0))
+        if filename not in annotations:
+            skipped.append({"video_id": video_id, "reason": "no annotation entry"})
+            continue
+        segments = annotations[filename]
+        valid = [s for s in segments if s["start_frame"] >= 0 and s["end_frame"] >= 0]
+        if filename not in fps_by_file:
+            skipped.append({"video_id": video_id, "reason": "no verified FPS"})
+            continue
+        fps = fps_by_file[filename]
+        span = predicted_anomaly_span(observations)
+        if valid:
+            for segment in valid:
+                lo = frames_to_seconds(segment["start_frame"], fps)
+                hi = frames_to_seconds(segment["end_frame"], fps)
+                row = {"video_id": video_id, "annotation_label": segment["label"],
+                       "annotation_seconds": [lo, hi],
+                       "predicted_span_seconds": span,
+                       "observations": len(observations)}
+                row["tiou"] = tiou(lo, hi, span[0], span[1]) if span else 0.0
+                anomaly_rows.append(row)
+        else:
+            labels = sorted({o.get("label", "") for o in observations})
+            non_normal = sorted(l for l in labels if is_non_normal_hypothesis(l))
+            control_rows.append({
+                "video_id": video_id,
+                "annotation": "-1/-1 (no anomaly interval)",
+                "observations": len(observations),
+                "hypothesis_labels": labels,
+                "non_normal_hypotheses": non_normal,
+                "has_non_normal_span": span is not None,
+            })
+    scored = [r["tiou"] for r in anomaly_rows]
+    span_lengths = [r["predicted_span_seconds"][1] - r["predicted_span_seconds"][0]
+                    for r in anomaly_rows if r["predicted_span_seconds"]]
+    total_obs = sum(len(by_video.get(v, [])) for v in manifest_ids)
+    return {
+        "anomaly_videos": len({r["video_id"] for r in anomaly_rows}),
+        "normal_controls": len(control_rows),
+        "per_video": anomaly_rows,
+        "mean_tiou": _round4(statistics.mean(scored)) if scored else 0.0,
+        "median_tiou": _round4(statistics.median(scored)) if scored else 0.0,
+        "min_tiou": _round4(min(scored)) if scored else 0.0,
+        "max_tiou": _round4(max(scored)) if scored else 0.0,
+        "non_zero_overlap_videos": sum(1 for r in anomaly_rows if r["tiou"] > 0),
+        "normal_control_incidence": {
+            "controls": len(control_rows),
+            "with_non_normal_span": sum(1 for c in control_rows
+                                        if c["has_non_normal_span"]),
+            "per_video": control_rows,
+        },
+        "total_observations": total_obs,
+        "mean_observations_per_video": _round4(total_obs / len(manifest_ids)
+                                               ) if manifest_ids else 0.0,
+        "prediction_span_seconds": _min_mean_median_max(sorted(span_lengths)),
+        "skipped_no_fps": skipped,
+    }
+
+
 def fusion_statistics(evidence: list, incidents: list) -> dict:
     """Coverage and source-support descriptives from stored structures."""
     per_video = Counter(r["video_id"] for r in evidence)
@@ -303,6 +395,11 @@ def main(argv: list | None = None) -> int:
     parser.add_argument("--evidence", default=None)
     parser.add_argument("--incidents", default=None)
     parser.add_argument("--annotations", default=None)
+    parser.add_argument("--large-events", default=None,
+                        help="expanded UCF events JSON (enables expanded section)")
+    parser.add_argument("--large-manifest", default=None,
+                        help="155-video manifest JSON (enables expanded section)")
+    parser.add_argument("--expanded-output", default=None)
     args = parser.parse_args(argv)
 
     def _resolve(override, default):
@@ -341,6 +438,35 @@ def main(argv: list | None = None) -> int:
     print(f"agreement: {agree['agreement_count']}/{agree['videos']} "
           f"({agree['agreement_rate']}) | pilot n={pilot['n']} "
           f"mean_tiou={pilot['mean_tiou']} -> {output}")
+    if bool(args.large_events) != bool(args.large_manifest):
+        print("quantitative error: --large-events and --large-manifest are required together")
+        return 2
+    if args.large_events:
+        try:
+            large_events = _read_json(Path(args.large_events))
+            large_manifest = _read_json(Path(args.large_manifest))["videos"]
+            inventory = _read_json(_resolve(args.inventory, DEFAULT_INVENTORY))
+            annotations = load_annotations(_resolve(args.annotations, DEFAULT_ANNOTATIONS))
+        except (OSError, ValueError, KeyError) as exc:
+            print(f"quantitative error: bad expanded input: {exc}")
+            return 2
+        expanded = expanded_temporal_evaluation(
+            large_events, large_manifest, annotations, _fps_map(inventory))
+        payload = {"schema_version": EXPANDED_SCHEMA_VERSION,
+                   "scope": {"videos": len(large_manifest),
+                             "note": "Expanded UCF-window population; predicted spans "
+                                     "are unions of non-normal-hypothesis windows, "
+                                     "never detections of confirmed crime."},
+                   "expanded_temporal_localization": expanded}
+        expanded_path = (Path(args.expanded_output) if args.expanded_output
+                         else PROJECT_ROOT / "data/evaluations/quantitative/expanded_metrics.json")
+        expanded_path.parent.mkdir(parents=True, exist_ok=True)
+        with expanded_path.open("w", encoding="utf-8") as fh:
+            json.dump(payload, fh, indent=2, sort_keys=True)
+        print(f"expanded: anomaly={expanded['anomaly_videos']} "
+              f"controls={expanded['normal_controls']} "
+              f"mean_tiou={expanded['mean_tiou']} "
+              f"nonzero={expanded['non_zero_overlap_videos']} -> {expanded_path}")
     return 0
 
 
