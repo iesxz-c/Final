@@ -1,0 +1,719 @@
+{
+  "schema_version": "retrieval_eval/v1",
+  "note": "INCOMPLETE BY DESIGN. relevant_evidence_ids must be entered manually per query after inspecting corpus records with the annotation utility. Every query carries a relevance_rule that is machine-checkable against one fused record using only stored fields. Rules never reference folder labels, model confidence, video identity beyond scope, or any retrieval output. This file intentionally fails benchmark validation until every query is completed or explicitly marked with empty_relevance_intended=true.",
+  "queries": [
+    {
+      "query_id": "Q01",
+      "query": "person in anomaly/Burglary/Burglary032_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Burglary/Burglary032_x264.mp4:f13",
+        "anomaly/Burglary/Burglary032_x264.mp4:f15",
+        "anomaly/Burglary/Burglary032_x264.mp4:f16",
+        "anomaly/Burglary/Burglary032_x264.mp4:f17",
+        "anomaly/Burglary/Burglary032_x264.mp4:f18",
+        "anomaly/Burglary/Burglary032_x264.mp4:f19",
+        "anomaly/Burglary/Burglary032_x264.mp4:f20",
+        "anomaly/Burglary/Burglary032_x264.mp4:f21",
+        "anomaly/Burglary/Burglary032_x264.mp4:f22",
+        "anomaly/Burglary/Burglary032_x264.mp4:f24",
+        "anomaly/Burglary/Burglary032_x264.mp4:f26",
+        "anomaly/Burglary/Burglary032_x264.mp4:f27",
+        "anomaly/Burglary/Burglary032_x264.mp4:f28"
+      ],
+      "pattern": "object",
+      "relevance_rule": "relevant iff 'person' is present in object_evidence class names",
+      "scope": {
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 60.0
+      },
+      "notes": "object search, opening segment of a long video"
+    },
+    {
+      "query_id": "Q02",
+      "query": "car in anomaly/RoadAccidents/RoadAccidents011_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f0",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f1",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f2",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f3",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f4",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f5",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f6",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f7",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f8",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f9",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f10",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f11",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f12",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f13",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f14",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f15",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f16",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f17",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f18",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f19",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f20",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f21",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f22",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f23",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f24",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f25",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f26",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f27",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f28",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f29",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f30",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f31",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f32",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f33"
+      ],
+      "pattern": "object",
+      "relevance_rule": "relevant iff 'car' is present in object_evidence class names",
+      "scope": {
+        "video_id": "anomaly/RoadAccidents/RoadAccidents011_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "object search, full short video"
+    },
+    {
+      "query_id": "Q03",
+      "query": "chair in anomaly/Shoplifting/Shoplifting034_x264.mp4",
+      "relevant_evidence_ids": [],
+      "pattern": "object",
+      "relevance_rule": "relevant iff 'chair' is present in object_evidence class names",
+      "scope": {
+        "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 120.0
+      },
+      "notes": "unusual object search",
+      "empty_relevance_intended": true
+    },
+    {
+      "query_id": "Q04",
+      "query": "truck in anomaly/Arrest/Arrest030_x264.mp4",
+      "relevant_evidence_ids": [],
+      "pattern": "object",
+      "relevance_rule": "relevant iff 'truck' is present in object_evidence class names",
+      "scope": {
+        "video_id": "anomaly/Arrest/Arrest030_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 120.0
+      },
+      "notes": "vehicle object search; no truck occurs in scope, expect marked-empty",
+      "empty_relevance_intended": true
+    },
+    {
+      "query_id": "Q05",
+      "query": "driving car in anomaly/RoadAccidents/RoadAccidents016_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f0",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f1",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f3",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f4",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f5",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f6",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f7",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f8",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f9",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f10",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f11",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f13",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f17",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f34"
+      ],
+      "pattern": "activity",
+      "relevance_rule": "relevant iff 'driving car' is present in generic_action_evidence labels",
+      "scope": {
+        "video_id": "anomaly/RoadAccidents/RoadAccidents016_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "generic-action search"
+    },
+    {
+      "query_id": "Q06",
+      "query": "garbage collecting in anomaly/Shoplifting/Shoplifting020_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Shoplifting/Shoplifting020_x264.mp4:f29",
+        "anomaly/Shoplifting/Shoplifting020_x264.mp4:f37"
+      ],
+      "pattern": "activity",
+      "relevance_rule": "relevant iff 'garbage collecting' is present in generic_action_evidence labels",
+      "scope": {
+        "video_id": "anomaly/Shoplifting/Shoplifting020_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 100.0
+      },
+      "notes": "replacement activity; label verified present in complete video scope"
+    },
+    {
+      "query_id": "Q07",
+      "query": "moving furniture in anomaly/Burglary/Burglary005_x264.mp4",
+      "relevant_evidence_ids": [],
+      "pattern": "activity",
+      "relevance_rule": "relevant iff 'moving furniture' is present in generic_action_evidence labels",
+      "scope": {
+        "video_id": "anomaly/Burglary/Burglary005_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 130.0
+      },
+      "notes": "replacement activity; label verified present in complete video scope",
+      "empty_relevance_intended": true
+    },
+    {
+      "query_id": "Q08",
+      "query": "extinguishing fire in anomaly/Arson/Arson041_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Arson/Arson041_x264.mp4:f55",
+        "anomaly/Arson/Arson041_x264.mp4:f56"
+      ],
+      "pattern": "activity",
+      "relevance_rule": "relevant iff 'extinguishing fire' is present in generic_action_evidence labels",
+      "scope": {
+        "video_id": "anomaly/Arson/Arson041_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "generic-action search"
+    },
+    {
+      "query_id": "Q09",
+      "query": "evidence between 80 and 88 seconds in anomaly/Shooting/Shooting010_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Shooting/Shooting010_x264.mp4:f37",
+        "anomaly/Shooting/Shooting010_x264.mp4:f38",
+        "anomaly/Shooting/Shooting010_x264.mp4:f39",
+        "anomaly/Shooting/Shooting010_x264.mp4:f40",
+        "anomaly/Shooting/Shooting010_x264.mp4:f41"
+      ],
+      "pattern": "temporal",
+      "relevance_rule": "relevant iff the evidence interval overlaps [80, 88] seconds",
+      "scope": {
+        "video_id": "anomaly/Shooting/Shooting010_x264.mp4",
+        "start_time": 80.0,
+        "end_time": 88.0
+      },
+      "notes": "explicit temporal-overlap; 5 of 42 video records overlap"
+    },
+    {
+      "query_id": "Q10",
+      "query": "evidence between 90 and 99.3 seconds in anomaly/Vandalism/Vandalism015_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Vandalism/Vandalism015_x264.mp4:f42",
+        "anomaly/Vandalism/Vandalism015_x264.mp4:f43",
+        "anomaly/Vandalism/Vandalism015_x264.mp4:f44",
+        "anomaly/Vandalism/Vandalism015_x264.mp4:f45",
+        "anomaly/Vandalism/Vandalism015_x264.mp4:f46"
+      ],
+      "pattern": "temporal",
+      "relevance_rule": "relevant iff the evidence interval overlaps [90, 99.3] seconds",
+      "scope": {
+        "video_id": "anomaly/Vandalism/Vandalism015_x264.mp4",
+        "start_time": 90.0,
+        "end_time": 99.3
+      },
+      "notes": "explicit temporal-overlap; 5 of 47 video records overlap"
+    },
+    {
+      "query_id": "Q11",
+      "query": "evidence between 170 and 177.4 seconds in anomaly/Explosion/Explosion036_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Explosion/Explosion036_x264.mp4:f79",
+        "anomaly/Explosion/Explosion036_x264.mp4:f80",
+        "anomaly/Explosion/Explosion036_x264.mp4:f81",
+        "anomaly/Explosion/Explosion036_x264.mp4:f82",
+        "anomaly/Explosion/Explosion036_x264.mp4:f83"
+      ],
+      "pattern": "temporal",
+      "relevance_rule": "relevant iff the evidence interval overlaps [170, 177.4] seconds",
+      "scope": {
+        "video_id": "anomaly/Explosion/Explosion036_x264.mp4",
+        "start_time": 170.0,
+        "end_time": 177.4
+      },
+      "notes": "explicit temporal-overlap; 5 of 84 video records overlap"
+    },
+    {
+      "query_id": "Q12",
+      "query": "person detections with Shooting evidence in anomaly/Shooting/Shooting008_x264.mp4",
+      "relevant_evidence_ids": [],
+      "pattern": "multi-source",
+      "relevance_rule": "relevant iff 'person' is present in object_evidence class names AND 'Shooting' is present in surveillance_event_evidence labels",
+      "scope": {
+        "video_id": "anomaly/Shooting/Shooting008_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "conjunctive object plus surveillance-event rule; no Shooting label in scope, expect marked-empty",
+      "empty_relevance_intended": true
+    },
+    {
+      "query_id": "Q13",
+      "query": "car detections with RoadAccidents evidence in anomaly/RoadAccidents/RoadAccidents001_x264.mp4",
+      "relevant_evidence_ids": [],
+      "pattern": "multi-source",
+      "relevance_rule": "relevant iff 'car' is present in object_evidence class names AND 'RoadAccidents' is present in surveillance_event_evidence labels",
+      "scope": {
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "conjunctive rule; no car in scope, expect marked-empty",
+      "empty_relevance_intended": true
+    },
+    {
+      "query_id": "Q14",
+      "query": "suitcase with Stealing evidence in anomaly/Stealing/Stealing019_x264.mp4 after 100 seconds",
+      "relevant_evidence_ids": [],
+      "pattern": "multi-source",
+      "relevance_rule": "relevant iff 'suitcase' is present in object_evidence class names AND 'Stealing' is present in surveillance_event_evidence labels AND end_time >= 100",
+      "scope": {
+        "video_id": "anomaly/Stealing/Stealing019_x264.mp4",
+        "start_time": 100.0,
+        "end_time": 163.6
+      },
+      "notes": "conjunctive object plus event plus temporal rule; neither label in scope, expect marked-empty",
+      "empty_relevance_intended": true
+    },
+    {
+      "query_id": "Q15",
+      "query": "Arrest evidence between 0 and 120 seconds in anomaly/Arrest/Arrest039_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Arrest/Arrest039_x264.mp4:f14",
+        "anomaly/Arrest/Arrest039_x264.mp4:f15",
+        "anomaly/Arrest/Arrest039_x264.mp4:f17",
+        "anomaly/Arrest/Arrest039_x264.mp4:f25",
+        "anomaly/Arrest/Arrest039_x264.mp4:f30",
+        "anomaly/Arrest/Arrest039_x264.mp4:f38",
+        "anomaly/Arrest/Arrest039_x264.mp4:f41",
+        "anomaly/Arrest/Arrest039_x264.mp4:f42",
+        "anomaly/Arrest/Arrest039_x264.mp4:f44",
+        "anomaly/Arrest/Arrest039_x264.mp4:f45",
+        "anomaly/Arrest/Arrest039_x264.mp4:f53"
+      ],
+      "pattern": "event",
+      "relevance_rule": "relevant iff 'Arrest' is present in surveillance_event_evidence labels AND the evidence interval overlaps [0, 120] seconds",
+      "scope": {
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 120.0
+      },
+      "notes": "replaces broad incident query; label verified present in scope"
+    },
+    {
+      "query_id": "Q16",
+      "query": "Shoplifting evidence between 0 and 60 seconds in anomaly/Shoplifting/Shoplifting044_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f0",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f2",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f5",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f6",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f7",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f8",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f9",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f10",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f11",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f12",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f13",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f14",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f15",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f16",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f17",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f18",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f19",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f20",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f21",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f22",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f23",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f27",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f28"
+      ],
+      "pattern": "event",
+      "relevance_rule": "relevant iff 'Shoplifting' is present in surveillance_event_evidence labels AND the evidence interval overlaps [0, 60] seconds",
+      "scope": {
+        "video_id": "anomaly/Shoplifting/Shoplifting044_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 60.0
+      },
+      "notes": "replaces broad incident query; label verified present in scope"
+    },
+    {
+      "query_id": "Q17",
+      "query": "RoadAccidents evidence between 0 and 60 seconds in anomaly/Fighting/Fighting047_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Fighting/Fighting047_x264.mp4:f4",
+        "anomaly/Fighting/Fighting047_x264.mp4:f15",
+        "anomaly/Fighting/Fighting047_x264.mp4:f16",
+        "anomaly/Fighting/Fighting047_x264.mp4:f17",
+        "anomaly/Fighting/Fighting047_x264.mp4:f18",
+        "anomaly/Fighting/Fighting047_x264.mp4:f19",
+        "anomaly/Fighting/Fighting047_x264.mp4:f20",
+        "anomaly/Fighting/Fighting047_x264.mp4:f21",
+        "anomaly/Fighting/Fighting047_x264.mp4:f22",
+        "anomaly/Fighting/Fighting047_x264.mp4:f24",
+        "anomaly/Fighting/Fighting047_x264.mp4:f26",
+        "anomaly/Fighting/Fighting047_x264.mp4:f27",
+        "anomaly/Fighting/Fighting047_x264.mp4:f28"
+      ],
+      "pattern": "event",
+      "relevance_rule": "relevant iff 'RoadAccidents' is present in surveillance_event_evidence labels AND the evidence interval overlaps [0, 60] seconds",
+      "scope": {
+        "video_id": "anomaly/Fighting/Fighting047_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 60.0
+      },
+      "notes": "replaces broad incident query; label verified present in scope"
+    },
+    {
+      "query_id": "Q18",
+      "query": "Burglary evidence between 90 and 110 seconds in anomaly/Burglary/Burglary032_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Burglary/Burglary032_x264.mp4:f42",
+        "anomaly/Burglary/Burglary032_x264.mp4:f43",
+        "anomaly/Burglary/Burglary032_x264.mp4:f44",
+        "anomaly/Burglary/Burglary032_x264.mp4:f45",
+        "anomaly/Burglary/Burglary032_x264.mp4:f46",
+        "anomaly/Burglary/Burglary032_x264.mp4:f47",
+        "anomaly/Burglary/Burglary032_x264.mp4:f48",
+        "anomaly/Burglary/Burglary032_x264.mp4:f49",
+        "anomaly/Burglary/Burglary032_x264.mp4:f50",
+        "anomaly/Burglary/Burglary032_x264.mp4:f51"
+      ],
+      "pattern": "temporal",
+      "relevance_rule": "relevant iff the evidence interval overlaps [90, 110] seconds AND 'Burglary' is present in surveillance_event_evidence labels",
+      "scope": {
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4",
+        "start_time": 90.0,
+        "end_time": 110.0
+      },
+      "notes": "temporal plus content conjunction"
+    },
+    {
+      "query_id": "Q19",
+      "query": "Explosion evidence at or after 400 seconds in anomaly/Explosion/Explosion007_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Explosion/Explosion007_x264.mp4:f187",
+        "anomaly/Explosion/Explosion007_x264.mp4:f188",
+        "anomaly/Explosion/Explosion007_x264.mp4:f189",
+        "anomaly/Explosion/Explosion007_x264.mp4:f192",
+        "anomaly/Explosion/Explosion007_x264.mp4:f193",
+        "anomaly/Explosion/Explosion007_x264.mp4:f194",
+        "anomaly/Explosion/Explosion007_x264.mp4:f204",
+        "anomaly/Explosion/Explosion007_x264.mp4:f205",
+        "anomaly/Explosion/Explosion007_x264.mp4:f218",
+        "anomaly/Explosion/Explosion007_x264.mp4:f221",
+        "anomaly/Explosion/Explosion007_x264.mp4:f226",
+        "anomaly/Explosion/Explosion007_x264.mp4:f230",
+        "anomaly/Explosion/Explosion007_x264.mp4:f234",
+        "anomaly/Explosion/Explosion007_x264.mp4:f239",
+        "anomaly/Explosion/Explosion007_x264.mp4:f240",
+        "anomaly/Explosion/Explosion007_x264.mp4:f243",
+        "anomaly/Explosion/Explosion007_x264.mp4:f246",
+        "anomaly/Explosion/Explosion007_x264.mp4:f249",
+        "anomaly/Explosion/Explosion007_x264.mp4:f250",
+        "anomaly/Explosion/Explosion007_x264.mp4:f251",
+        "anomaly/Explosion/Explosion007_x264.mp4:f252",
+        "anomaly/Explosion/Explosion007_x264.mp4:f253"
+      ],
+      "pattern": "temporal",
+      "relevance_rule": "relevant iff the evidence interval overlaps [400, 542.9] seconds AND 'Explosion' is present in surveillance_event_evidence labels",
+      "scope": {
+        "video_id": "anomaly/Explosion/Explosion007_x264.mp4",
+        "start_time": 400.0,
+        "end_time": 542.9
+      },
+      "notes": "replaces broad summary wording with explicit interval"
+    },
+    {
+      "query_id": "Q20",
+      "query": "Assault evidence between 200 and 300 seconds in anomaly/Assault/Assault010_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Assault/Assault010_x264.mp4:f93",
+        "anomaly/Assault/Assault010_x264.mp4:f95",
+        "anomaly/Assault/Assault010_x264.mp4:f96",
+        "anomaly/Assault/Assault010_x264.mp4:f97",
+        "anomaly/Assault/Assault010_x264.mp4:f98",
+        "anomaly/Assault/Assault010_x264.mp4:f99",
+        "anomaly/Assault/Assault010_x264.mp4:f101",
+        "anomaly/Assault/Assault010_x264.mp4:f102",
+        "anomaly/Assault/Assault010_x264.mp4:f103",
+        "anomaly/Assault/Assault010_x264.mp4:f104",
+        "anomaly/Assault/Assault010_x264.mp4:f105",
+        "anomaly/Assault/Assault010_x264.mp4:f106",
+        "anomaly/Assault/Assault010_x264.mp4:f107",
+        "anomaly/Assault/Assault010_x264.mp4:f108",
+        "anomaly/Assault/Assault010_x264.mp4:f109",
+        "anomaly/Assault/Assault010_x264.mp4:f110",
+        "anomaly/Assault/Assault010_x264.mp4:f111",
+        "anomaly/Assault/Assault010_x264.mp4:f112",
+        "anomaly/Assault/Assault010_x264.mp4:f113",
+        "anomaly/Assault/Assault010_x264.mp4:f114",
+        "anomaly/Assault/Assault010_x264.mp4:f115",
+        "anomaly/Assault/Assault010_x264.mp4:f116",
+        "anomaly/Assault/Assault010_x264.mp4:f117",
+        "anomaly/Assault/Assault010_x264.mp4:f118",
+        "anomaly/Assault/Assault010_x264.mp4:f121",
+        "anomaly/Assault/Assault010_x264.mp4:f122",
+        "anomaly/Assault/Assault010_x264.mp4:f123",
+        "anomaly/Assault/Assault010_x264.mp4:f124",
+        "anomaly/Assault/Assault010_x264.mp4:f125",
+        "anomaly/Assault/Assault010_x264.mp4:f126",
+        "anomaly/Assault/Assault010_x264.mp4:f133",
+        "anomaly/Assault/Assault010_x264.mp4:f134",
+        "anomaly/Assault/Assault010_x264.mp4:f135",
+        "anomaly/Assault/Assault010_x264.mp4:f136",
+        "anomaly/Assault/Assault010_x264.mp4:f137",
+        "anomaly/Assault/Assault010_x264.mp4:f138",
+        "anomaly/Assault/Assault010_x264.mp4:f139"
+      ],
+      "pattern": "temporal",
+      "relevance_rule": "relevant iff the evidence interval overlaps [200, 300] seconds AND 'Assault' is present in surveillance_event_evidence labels",
+      "scope": {
+        "video_id": "anomaly/Assault/Assault010_x264.mp4",
+        "start_time": 200.0,
+        "end_time": 300.0
+      },
+      "notes": "replaces broad segment wording with temporal plus content conjunction"
+    },
+    {
+      "query_id": "Q21",
+      "query": "RoadAccidents evidence in anomaly/RoadAccidents/RoadAccidents002_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f0",
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f1",
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f2",
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f3",
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f4",
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f5"
+      ],
+      "pattern": "event",
+      "relevance_rule": "relevant iff 'RoadAccidents' is present in surveillance_event_evidence labels",
+      "scope": {
+        "video_id": "anomaly/RoadAccidents/RoadAccidents002_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "replaces semantic paraphrase; label verified present in scope"
+    },
+    {
+      "query_id": "Q22",
+      "query": "person with Shoplifting evidence in anomaly/Shoplifting/Shoplifting031_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f0",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f1",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f2",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f3",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f4",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f5",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f6"
+      ],
+      "pattern": "multi-source",
+      "relevance_rule": "relevant iff 'person' is present in object_evidence class names AND 'Shoplifting' is present in surveillance_event_evidence labels",
+      "scope": {
+        "video_id": "anomaly/Shoplifting/Shoplifting031_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "replaces semantic paraphrase with stored-label conjunction"
+    },
+    {
+      "query_id": "Q23",
+      "query": "Burglary evidence in anomaly/Burglary/Burglary033_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Burglary/Burglary033_x264.mp4:f0",
+        "anomaly/Burglary/Burglary033_x264.mp4:f1",
+        "anomaly/Burglary/Burglary033_x264.mp4:f2",
+        "anomaly/Burglary/Burglary033_x264.mp4:f3",
+        "anomaly/Burglary/Burglary033_x264.mp4:f4",
+        "anomaly/Burglary/Burglary033_x264.mp4:f5",
+        "anomaly/Burglary/Burglary033_x264.mp4:f6",
+        "anomaly/Burglary/Burglary033_x264.mp4:f7",
+        "anomaly/Burglary/Burglary033_x264.mp4:f8",
+        "anomaly/Burglary/Burglary033_x264.mp4:f9",
+        "anomaly/Burglary/Burglary033_x264.mp4:f10",
+        "anomaly/Burglary/Burglary033_x264.mp4:f11",
+        "anomaly/Burglary/Burglary033_x264.mp4:f12",
+        "anomaly/Burglary/Burglary033_x264.mp4:f13",
+        "anomaly/Burglary/Burglary033_x264.mp4:f14",
+        "anomaly/Burglary/Burglary033_x264.mp4:f15",
+        "anomaly/Burglary/Burglary033_x264.mp4:f16",
+        "anomaly/Burglary/Burglary033_x264.mp4:f17",
+        "anomaly/Burglary/Burglary033_x264.mp4:f18",
+        "anomaly/Burglary/Burglary033_x264.mp4:f19"
+      ],
+      "pattern": "event",
+      "relevance_rule": "relevant iff 'Burglary' is present in surveillance_event_evidence labels",
+      "scope": {
+        "video_id": "anomaly/Burglary/Burglary033_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "replaces semantic paraphrase; label verified present in scope"
+    },
+    {
+      "query_id": "Q24",
+      "query": "boat in anomaly/Arson/Arson009_x264.mp4",
+      "relevant_evidence_ids": [],
+      "pattern": "sparse",
+      "relevance_rule": "relevant iff 'boat' is present in object_evidence class names",
+      "scope": {
+        "video_id": "anomaly/Arson/Arson009_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "rare object, likely sparse or absent; expect marked-empty",
+      "empty_relevance_intended": true
+    },
+    {
+      "query_id": "Q25",
+      "query": "bicycle in anomaly/Vandalism/Vandalism017_x264.mp4",
+      "relevant_evidence_ids": [],
+      "pattern": "sparse",
+      "relevance_rule": "relevant iff 'bicycle' is present in object_evidence class names",
+      "scope": {
+        "video_id": "anomaly/Vandalism/Vandalism017_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "rare object, likely sparse or absent; expect marked-empty",
+      "empty_relevance_intended": true
+    },
+    {
+      "query_id": "Q26",
+      "query": "car or motorcycle in anomaly/Arrest/Arrest024_x264.mp4 between 0 and 60 seconds",
+      "relevant_evidence_ids": [
+        "anomaly/Arrest/Arrest024_x264.mp4:f0",
+        "anomaly/Arrest/Arrest024_x264.mp4:f1",
+        "anomaly/Arrest/Arrest024_x264.mp4:f2",
+        "anomaly/Arrest/Arrest024_x264.mp4:f3",
+        "anomaly/Arrest/Arrest024_x264.mp4:f4",
+        "anomaly/Arrest/Arrest024_x264.mp4:f5",
+        "anomaly/Arrest/Arrest024_x264.mp4:f6",
+        "anomaly/Arrest/Arrest024_x264.mp4:f7",
+        "anomaly/Arrest/Arrest024_x264.mp4:f8",
+        "anomaly/Arrest/Arrest024_x264.mp4:f9",
+        "anomaly/Arrest/Arrest024_x264.mp4:f10",
+        "anomaly/Arrest/Arrest024_x264.mp4:f11",
+        "anomaly/Arrest/Arrest024_x264.mp4:f12",
+        "anomaly/Arrest/Arrest024_x264.mp4:f13",
+        "anomaly/Arrest/Arrest024_x264.mp4:f14",
+        "anomaly/Arrest/Arrest024_x264.mp4:f15",
+        "anomaly/Arrest/Arrest024_x264.mp4:f16",
+        "anomaly/Arrest/Arrest024_x264.mp4:f17",
+        "anomaly/Arrest/Arrest024_x264.mp4:f18",
+        "anomaly/Arrest/Arrest024_x264.mp4:f19",
+        "anomaly/Arrest/Arrest024_x264.mp4:f20",
+        "anomaly/Arrest/Arrest024_x264.mp4:f21",
+        "anomaly/Arrest/Arrest024_x264.mp4:f22",
+        "anomaly/Arrest/Arrest024_x264.mp4:f23",
+        "anomaly/Arrest/Arrest024_x264.mp4:f24",
+        "anomaly/Arrest/Arrest024_x264.mp4:f25",
+        "anomaly/Arrest/Arrest024_x264.mp4:f26",
+        "anomaly/Arrest/Arrest024_x264.mp4:f27",
+        "anomaly/Arrest/Arrest024_x264.mp4:f28"
+      ],
+      "pattern": "object",
+      "relevance_rule": "relevant iff 'car' OR 'motorcycle' is present in object_evidence class names",
+      "scope": {
+        "video_id": "anomaly/Arrest/Arrest024_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 60.0
+      },
+      "notes": "replaces ambiguous wording; both classes verified present in scope"
+    },
+    {
+      "query_id": "Q27",
+      "query": "Arson evidence or extinguishing-fire action in anomaly/Arson/Arson018_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Arson/Arson018_x264.mp4:f7",
+        "anomaly/Arson/Arson018_x264.mp4:f8"
+      ],
+      "pattern": "multi-source",
+      "relevance_rule": "relevant iff 'Arson' is present in surveillance_event_evidence labels OR 'extinguishing fire' is present in generic_action_evidence labels",
+      "scope": {
+        "video_id": "anomaly/Arson/Arson018_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "interpretive smoke component removed; both labels verified present in scope"
+    },
+    {
+      "query_id": "Q28",
+      "query": "evidence between 100 and 150 seconds in normal/Normal_Videos_247_x264.mp4",
+      "relevant_evidence_ids": [
+        "normal/Normal_Videos_247_x264.mp4:f46",
+        "normal/Normal_Videos_247_x264.mp4:f47",
+        "normal/Normal_Videos_247_x264.mp4:f48",
+        "normal/Normal_Videos_247_x264.mp4:f49",
+        "normal/Normal_Videos_247_x264.mp4:f50",
+        "normal/Normal_Videos_247_x264.mp4:f51",
+        "normal/Normal_Videos_247_x264.mp4:f52",
+        "normal/Normal_Videos_247_x264.mp4:f53",
+        "normal/Normal_Videos_247_x264.mp4:f54",
+        "normal/Normal_Videos_247_x264.mp4:f55",
+        "normal/Normal_Videos_247_x264.mp4:f56",
+        "normal/Normal_Videos_247_x264.mp4:f57",
+        "normal/Normal_Videos_247_x264.mp4:f58",
+        "normal/Normal_Videos_247_x264.mp4:f59",
+        "normal/Normal_Videos_247_x264.mp4:f60",
+        "normal/Normal_Videos_247_x264.mp4:f61",
+        "normal/Normal_Videos_247_x264.mp4:f62",
+        "normal/Normal_Videos_247_x264.mp4:f63",
+        "normal/Normal_Videos_247_x264.mp4:f64",
+        "normal/Normal_Videos_247_x264.mp4:f65",
+        "normal/Normal_Videos_247_x264.mp4:f66",
+        "normal/Normal_Videos_247_x264.mp4:f67",
+        "normal/Normal_Videos_247_x264.mp4:f68",
+        "normal/Normal_Videos_247_x264.mp4:f69",
+        "normal/Normal_Videos_247_x264.mp4:f70"
+      ],
+      "pattern": "temporal",
+      "relevance_rule": "relevant iff the evidence interval overlaps [100, 150] seconds",
+      "scope": {
+        "video_id": "normal/Normal_Videos_247_x264.mp4",
+        "start_time": 100.0,
+        "end_time": 150.0
+      },
+      "notes": "replaces vague activity wording with explicit interval on normal footage"
+    },
+    {
+      "query_id": "Q29",
+      "query": "person in normal/Normal_Videos_251_x264.mp4",
+      "relevant_evidence_ids": [
+        "normal/Normal_Videos_251_x264.mp4:f0",
+        "normal/Normal_Videos_251_x264.mp4:f1",
+        "normal/Normal_Videos_251_x264.mp4:f2",
+        "normal/Normal_Videos_251_x264.mp4:f3",
+        "normal/Normal_Videos_251_x264.mp4:f4",
+        "normal/Normal_Videos_251_x264.mp4:f5",
+        "normal/Normal_Videos_251_x264.mp4:f6"
+      ],
+      "pattern": "cautious",
+      "relevance_rule": "relevant iff 'person' is present in object_evidence class names",
+      "scope": {
+        "video_id": "normal/Normal_Videos_251_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "short normal video, correct behavior is restraint"
+    },
+    {
+      "query_id": "Q30",
+      "query": "suitcase in anomaly/Robbery/Robbery048_x264.mp4",
+      "relevant_evidence_ids": [
+        "anomaly/Robbery/Robbery048_x264.mp4:f9"
+      ],
+      "pattern": "object",
+      "relevance_rule": "relevant iff 'suitcase' is present in object_evidence class names",
+      "scope": {
+        "video_id": "anomaly/Robbery/Robbery048_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "notes": "replaces broad incident query; label verified present in scope"
+    }
+  ]
+}
