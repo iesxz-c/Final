@@ -97,6 +97,11 @@ class MetaDirectClient(LLMClient):
         # Overall bound for connect + slow-drip reads, which the socket
         # timeout alone cannot enforce. Defaults to the socket timeout.
         self.total_timeout = timeout if total_timeout is None else total_timeout
+        #: Usage block from the most recent response envelope, if the
+        #: provider supplied one ({input_tokens, output_tokens,
+        #: total_tokens}); otherwise None. Read-only observability for
+        #: evaluation harnesses; never affects requests.
+        self.last_usage: dict | None = None
 
     def __repr__(self) -> str:  # pragma: no cover - never leaks the key
         return (f"MetaDirectClient(model={self.model!r}, "
@@ -144,6 +149,7 @@ class MetaDirectClient(LLMClient):
         # travels as the leading input_text part; temperature/max_tokens are
         # accepted for caller compatibility but not sent (undocumented here).
         _ = temperature, max_tokens
+        self.last_usage = None  # reset so a failed call never replays stale usage
         payload = {
             "model": self.model,
             "input": [{"role": "user", "content": [
@@ -164,6 +170,7 @@ class MetaDirectClient(LLMClient):
             raise ProviderError("Meta returned non-JSON output") from exc
         if isinstance(data, dict) and data.get("error"):
             raise ProviderError(f"Meta error: {data['error']}")
+        self.last_usage = _extract_usage(data)
         return self._extract_text(data)
 
     @staticmethod
@@ -191,6 +198,23 @@ class MetaDirectClient(LLMClient):
             raise EmptyResponseError(
                 f"Meta returned no output text (status: {status})")
         return text
+
+
+def _extract_usage(data) -> dict | None:
+    """Pull token usage from a Responses envelope, if present.
+
+    Returns {input_tokens, output_tokens, total_tokens} with integer
+    values, else None. Never estimated.
+    """
+    usage = data.get("usage") if isinstance(data, dict) else None
+    if not isinstance(usage, dict):
+        return None
+    try:
+        values = {k: int(usage[k]) for k in
+                  ("input_tokens", "output_tokens", "total_tokens")}
+    except (KeyError, TypeError, ValueError):
+        return None
+    return values
 
 
 class MockLLMClient(LLMClient):

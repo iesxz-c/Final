@@ -1,0 +1,198 @@
+{
+  "benchmark_version": "api-benchmark/v1",
+  "note": "Evaluation workload only. These questions are NOT ground truth for factual correctness, and no Recall@K/MRR-style relevance judgments exist for them. expected_intent labels the investigation pattern each question exercises.",
+  "questions": [
+    {
+      "query_id": "q01",
+      "question": "Find Fighting events in anomaly/Fighting/Fighting006_x264.mp4 between 5 and 10 seconds.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Fighting/Fighting006_x264.mp4",
+      "temporal_constraint": [5, 10],
+      "purpose": "baseline constrained event search"
+    },
+    {
+      "query_id": "q02",
+      "question": "Show me Assault evidence in anomaly/Assault/Assault001_x264.mp4 between 30 and 35 seconds.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Assault/Assault001_x264.mp4",
+      "temporal_constraint": [30, 35],
+      "purpose": "baseline constrained evidence search"
+    },
+    {
+      "query_id": "q03",
+      "question": "Find Robbery events in anomaly/Robbery/Robbery002_x264.mp4 in the first 10 seconds.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Robbery/Robbery002_x264.mp4",
+      "temporal_constraint": [0, 10],
+      "purpose": "early-window temporal restriction"
+    },
+    {
+      "query_id": "q04",
+      "question": "Show person detections around the Shooting evidence in anomaly/Shooting/Shooting003_x264.mp4 between 30 and 40 seconds.",
+      "expected_intent": "find_person",
+      "video_constraint": "anomaly/Shooting/Shooting003_x264.mp4",
+      "temporal_constraint": [30, 40],
+      "purpose": "object search fused with event evidence"
+    },
+    {
+      "query_id": "q05",
+      "question": "Find Shoplifting events in anomaly/Shoplifting/Shoplifting004_x264.mp4 between 100 and 110 seconds.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Shoplifting/Shoplifting004_x264.mp4",
+      "temporal_constraint": [100, 110],
+      "purpose": "mid-video temporal restriction"
+    },
+    {
+      "query_id": "q06",
+      "question": "Show Stealing evidence in anomaly/Stealing/Stealing004_x264.mp4 between 50 and 60 seconds.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Stealing/Stealing004_x264.mp4",
+      "temporal_constraint": [50, 60],
+      "purpose": "baseline constrained evidence search"
+    },
+    {
+      "query_id": "q07",
+      "question": "Find Vandalism events in anomaly/Vandalism/Vandalism004_x264.mp4 between 40 and 50 seconds.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Vandalism/Vandalism004_x264.mp4",
+      "temporal_constraint": [40, 50],
+      "purpose": "baseline constrained event search"
+    },
+    {
+      "query_id": "q08",
+      "question": "What activity is visible in normal/Normal_Videos_050_x264.mp4 between 60 and 70 seconds?",
+      "expected_intent": "find_event",
+      "video_constraint": "normal/Normal_Videos_050_x264.mp4",
+      "temporal_constraint": [60, 70],
+      "purpose": "cautious behavior on normal footage"
+    },
+    {
+      "query_id": "q09",
+      "question": "What happened in anomaly/Fighting/Fighting004_x264.mp4?",
+      "expected_intent": "investigate_incident",
+      "video_constraint": "anomaly/Fighting/Fighting004_x264.mp4",
+      "temporal_constraint": null,
+      "purpose": "incident-level question with no temporal constraint on a long video"
+    },
+    {
+      "query_id": "q10",
+      "question": "Reconstruct the timeline of events in anomaly/Shoplifting/Shoplifting003_x264.mp4.",
+      "expected_intent": "investigate_incident",
+      "video_constraint": "anomaly/Shoplifting/Shoplifting003_x264.mp4",
+      "temporal_constraint": null,
+      "purpose": "timeline reasoning over a long video"
+    },
+    {
+      "query_id": "q11",
+      "question": "Relate the Assault evidence in anomaly/Assault/Assault002_x264.mp4 to the Assault evidence in anomaly/Assault/Assault003_x264.mp4.",
+      "expected_intent": "compare_events",
+      "video_constraint": null,
+      "temporal_constraint": null,
+      "purpose": "cross-video correlation handling"
+    },
+    {
+      "query_id": "q12",
+      "question": "Show person detections with Shoplifting evidence in anomaly/Shoplifting/Shoplifting001_x264.mp4 between 50 and 70 seconds.",
+      "expected_intent": "find_person",
+      "video_constraint": "anomaly/Shoplifting/Shoplifting001_x264.mp4",
+      "temporal_constraint": [50, 70],
+      "purpose": "multiple evidence sources in one question"
+    },
+    {
+      "query_id": "q13",
+      "question": "Find Stealing events in anomaly/Stealing/Stealing002_x264.mp4 in the first 5 seconds.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Stealing/Stealing002_x264.mp4",
+      "temporal_constraint": [0, 5],
+      "purpose": "tight temporal restriction"
+    },
+    {
+      "query_id": "q14",
+      "question": "What activity is visible in normal/Normal_Videos_100_x264.mp4?",
+      "expected_intent": "find_event",
+      "video_constraint": "normal/Normal_Videos_100_x264.mp4",
+      "temporal_constraint": null,
+      "purpose": "cautious behavior on short normal footage"
+    },
+    {
+      "query_id": "q15",
+      "question": "Show Vandalism evidence in anomaly/Vandalism/Vandalism001_x264.mp4 between 0 and 48 seconds.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Vandalism/Vandalism001_x264.mp4",
+      "temporal_constraint": [0, 48],
+      "purpose": "full-span temporal coverage"
+    },
+    {
+      "query_id": "q16",
+      "question": "Find Robbery events in anomaly/Robbery/Robbery005_x264.mp4 between 80 and 92 seconds.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Robbery/Robbery005_x264.mp4",
+      "temporal_constraint": [80, 92],
+      "purpose": "late-window temporal restriction"
+    },
+    {
+      "query_id": "q17",
+      "question": "Show Shooting evidence in anomaly/Shooting/Shooting001_x264.mp4.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Shooting/Shooting001_x264.mp4",
+      "temporal_constraint": null,
+      "purpose": "incident-level question on a very short video"
+    },
+    {
+      "query_id": "q18",
+      "question": "Find Fighting events in anomaly/Fighting/Fighting002_x264.mp4 between 0 and 5 seconds.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Fighting/Fighting002_x264.mp4",
+      "temporal_constraint": [0, 5],
+      "purpose": "sparse-evidence window requiring cautious output"
+    },
+    {
+      "query_id": "q19",
+      "question": "What objects appear with the Assault evidence in anomaly/Assault/Assault005_x264.mp4 between 10 and 20 seconds?",
+      "expected_intent": "find_object",
+      "video_constraint": "anomaly/Assault/Assault005_x264.mp4",
+      "temporal_constraint": [10, 20],
+      "purpose": "object search fused with event evidence"
+    },
+    {
+      "query_id": "q20",
+      "question": "Summarize the Robbery incident in anomaly/Robbery/Robbery004_x264.mp4 between 20 and 30 seconds.",
+      "expected_intent": "investigate_incident",
+      "video_constraint": "anomaly/Robbery/Robbery004_x264.mp4",
+      "temporal_constraint": [20, 30],
+      "purpose": "contextual incident summary"
+    },
+    {
+      "query_id": "q21",
+      "question": "Compare Stealing evidence in anomaly/Stealing/Stealing006_x264.mp4 and anomaly/Stealing/Stealing007_x264.mp4.",
+      "expected_intent": "compare_events",
+      "video_constraint": null,
+      "temporal_constraint": null,
+      "purpose": "explicit comparison across two videos"
+    },
+    {
+      "query_id": "q22",
+      "question": "Find Vandalism events in anomaly/Vandalism/Vandalism005_x264.mp4 between 50 and 60 seconds.",
+      "expected_intent": "search_evidence",
+      "video_constraint": "anomaly/Vandalism/Vandalism005_x264.mp4",
+      "temporal_constraint": [50, 60],
+      "purpose": "temporal window reaching past footage end, exercising cautious behavior"
+    },
+    {
+      "query_id": "q23",
+      "question": "Show person detections around the Shooting evidence in anomaly/Shooting/Shooting005_x264.mp4 between 150 and 170 seconds.",
+      "expected_intent": "find_person",
+      "video_constraint": "anomaly/Shooting/Shooting005_x264.mp4",
+      "temporal_constraint": [150, 170],
+      "purpose": "multiple evidence sources late in a long video"
+    },
+    {
+      "query_id": "q24",
+      "question": "Is there any crime visible in normal/Normal_Videos_129_x264.mp4 between 5 and 10 seconds?",
+      "expected_intent": "find_event",
+      "video_constraint": "normal/Normal_Videos_129_x264.mp4",
+      "temporal_constraint": [5, 10],
+      "purpose": "correct behavior is to remain cautious and not confirm crime"
+    }
+  ]
+}

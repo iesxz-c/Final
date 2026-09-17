@@ -86,3 +86,10 @@ Thumbs.db
 .vscode/
 *.swp
 *~
+
+# ---- Local run copies / upstream splits (Drive/local only) ----
+Crime_CCTV_Project/
+UCF_Crimes-Train-Test-Split/
+
+# ---- Colab session/scratch notebooks (run logs, not reproducible sources) ----
+notebooks/
