@@ -313,7 +313,8 @@ def main(argv: list | None = None) -> int:
     parser.add_argument("--incidents", default=None)
     parser.add_argument("--output-dir", default=None)
     parser.add_argument("--mock", action="store_true")
-    parser.add_argument("--model", default=None)
+    parser.add_argument("--model", default=None,
+                        help="must be muse-spark-1.3-contributor; anything else fails closed")
     parser.add_argument("--timeout", type=float, default=None,
                         help="overall LLM HTTP seconds per call (sets total_timeout)")
     parser.add_argument("--max-tokens", type=int, default=None,
