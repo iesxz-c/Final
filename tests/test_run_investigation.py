@@ -194,7 +194,7 @@ class IntegrityTest(unittest.TestCase):
         self.assertEqual((bundle["inputs"]["records"], bundle["inputs"]["incidents"]),
                          (2, 1))
         blob = json.dumps(bundle)
-        self.assertNotIn("OPENROUTER", blob)
+        self.assertNotIn("MODEL_API_KEY", blob)
 
 
 class EvaluateTest(unittest.TestCase):

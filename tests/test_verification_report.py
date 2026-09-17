@@ -1,6 +1,6 @@
 """Phase 3F tests: verification grounding, report rules, language safety.
 
-Synthetic fixtures only - no OpenRouter, no API key, mock LLM only."""
+Synthetic fixtures only - no Meta API, no API key, mock LLM only."""
 
 import json
 import os
@@ -359,13 +359,13 @@ class IntegrationTest(unittest.TestCase):
 
     def test_no_leakage(self):
         sentinel = "sk-test-sentinel-3f"
-        os.environ["OPENROUTER_API_KEY"] = sentinel
+        os.environ["MODEL_API_KEY"] = sentinel
         try:
             out = F.run_verification_report(self._valid_client(),
                                             _fixtures_3e(), _fixtures_3d())
             self.assertNotIn(sentinel, json.dumps(out))
         finally:
-            os.environ.pop("OPENROUTER_API_KEY", None)
+            os.environ.pop("MODEL_API_KEY", None)
 
     def test_bad_inputs_rejected(self):
         with self.assertRaises(F.ReportValidationError):

@@ -161,7 +161,7 @@ TIMELINE_JSON_SCHEMA = {
 
 
 def timeline_response_format() -> dict:
-    """OpenRouter structured-output request for phase3e/v1 outputs."""
+    """Meta Responses structured-output request for phase3e/v1 outputs."""
     return {"type": "json_schema",
             "json_schema": {"name": "phase3e_timeline", "strict": True,
                             "schema": TIMELINE_JSON_SCHEMA}}
@@ -468,7 +468,8 @@ def main(argv: list | None = None) -> int:
     parser = argparse.ArgumentParser(description="Phase 3E: timeline/correlation agent")
     parser.add_argument("--input", required=True, help="phase3d/v1 result JSON file")
     parser.add_argument("--question", default="")
-    parser.add_argument("--model", default=None)
+    parser.add_argument("--model", default=None,
+                        help="must be muse-spark-1.3-contributor; anything else fails closed")
     parser.add_argument("--output", default=None)
     parser.add_argument("--mock", action="store_true",
                         help="offline mode: deterministic mock LLM, no API key needed")

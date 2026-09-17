@@ -1,6 +1,6 @@
 """Phase 3E tests: timeline validation, correlation facts, grounding.
 
-Synthetic fixtures only - no OpenRouter, no API key, mock LLM only."""
+Synthetic fixtures only - no Meta API, no API key, mock LLM only."""
 
 import json
 import os
@@ -247,7 +247,7 @@ class IntegrityTest(unittest.TestCase):
 
     def test_no_leakage(self):
         sentinel = "sk-test-sentinel-3e"
-        os.environ["OPENROUTER_API_KEY"] = sentinel
+        os.environ["MODEL_API_KEY"] = sentinel
         try:
             out = _run(_out(inferences=[_inf([f"{VA}:f0"])]))
             self.assertNotIn(sentinel, json.dumps(out))
@@ -255,7 +255,7 @@ class IntegrityTest(unittest.TestCase):
                 E.run_timeline(MockLLMClient("x", error=ProviderError("down")), _fixtures())
             self.assertNotIn(sentinel, str(ctx.exception))
         finally:
-            os.environ.pop("OPENROUTER_API_KEY", None)
+            os.environ.pop("MODEL_API_KEY", None)
 
     def test_schema_and_format(self):
         self.assertFalse(E.TIMELINE_JSON_SCHEMA["additionalProperties"])
@@ -285,23 +285,20 @@ class IntegrityTest(unittest.TestCase):
             E.run_timeline(MockLLMClient(_out()), ["not", "a", "dict"])
 
 
-class ModelComparisonContractTest(unittest.TestCase):
-    MODELS = ("qwen/qwen3-30b-a3b-instruct-2507", "meta/muse-spark-1.3")
+class FrozenModelContractTest(unittest.TestCase):
+    MODELS = ("muse-spark-1.3-contributor",)
 
-    def test_each_configured_model_uses_identical_phase3e_request(self):
-        calls = []
-        for model in self.MODELS:
-            client = MockLLMClient(_out())
-            client.model = model
-            output = E.run_timeline(client, _fixtures())
-            self.assertEqual(output["schema_version"], E.SCHEMA_VERSION)
-            calls.append(client.calls[0])
-        self.assertEqual(calls[0], calls[1])
-        self.assertEqual(calls[0]["max_tokens"], 4096)
-        self.assertEqual(calls[0]["response_format"], E.timeline_response_format())
-        self.assertTrue(calls[0]["response_format"]["json_schema"]["strict"])
+    def test_frozen_model_uses_identical_phase3e_request(self):
+        client = MockLLMClient(_out())
+        client.model = "muse-spark-1.3-contributor"
+        output = E.run_timeline(client, _fixtures())
+        self.assertEqual(output["schema_version"], E.SCHEMA_VERSION)
+        call = client.calls[0]
+        self.assertEqual(call["max_tokens"], 4096)
+        self.assertEqual(call["response_format"], E.timeline_response_format())
+        self.assertTrue(call["response_format"]["json_schema"]["strict"])
 
-    def test_validator_rejects_unknown_field_for_each_model(self):
+    def test_validator_rejects_unknown_field_for_frozen_model(self):
         bad = json.loads(_out())
         bad["temporal_relationships"] = []
         for model in self.MODELS:

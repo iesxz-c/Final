@@ -1,7 +1,14 @@
-"""Phase 3C - Minimal provider-independent LLM client (stdlib only).
+"""Phase 3 - Minimal provider-independent LLM client (stdlib only).
 
-The planner depends on this abstraction; OpenRouter HTTP stays isolated
+The planner depends on this abstraction; Meta Model API HTTP stays isolated
 here. No API key is ever logged, printed, or included in exceptions.
+
+Sole provider: Meta Model API DIRECT (Responses API). There is no fallback
+provider and no router. Structured output uses the documented Responses
+parameter `text.format` (Meta docs: sending `response_format` to /v1/responses
+returns HTTP 400). The caller-supplied `strict` flag is intentionally not
+forwarded: Meta documents that omitting it still constrains decoding to the
+schema while avoiding HTTP 400 on schemas outside the strict subset.
 """
 
 from __future__ import annotations
@@ -14,12 +21,10 @@ import urllib.request
 
 from src.env_file import load_env_file
 
-API_KEY_ENV = "OPENROUTER_API_KEY"
-OPENROUTER_ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
+API_KEY_ENV = "MODEL_API_KEY"
+META_RESPONSES_ENDPOINT = "https://api.meta.ai/v1/responses"
+DEFAULT_MODEL = "muse-spark-1.3-contributor"
 REQUEST_TIMEOUT_SECONDS = 60
-
-#: Fallback structured-output request when the caller supplies no schema.
-JSON_OBJECT_FORMAT = {"type": "json_object"}
 
 
 class LLMError(RuntimeError):
@@ -48,21 +53,42 @@ class LLMClient:
         raise NotImplementedError
 
 
-class OpenRouterClient(LLMClient):
-    """OpenRouter chat-completions client over stdlib urllib."""
+def _text_format(response_format: dict | None) -> dict:
+    """Translate a caller response_format into Responses `text.format`.
+
+    Accepts the OpenAI-style shapes the agents already build:
+    {"type": "json_schema", "json_schema": {"name", "schema", ...}} or
+    {"type": "json_object"}. Anything else fails closed.
+    """
+    if response_format is None:
+        return {"type": "json_object"}
+    kind = response_format.get("type")
+    if kind == "json_object":
+        return {"type": "json_object"}
+    if kind == "json_schema":
+        spec = response_format.get("json_schema") or {}
+        name, schema = spec.get("name"), spec.get("schema")
+        if not name or not isinstance(schema, dict):
+            raise LLMError("json_schema format needs a name and a schema object")
+        return {"type": "json_schema", "name": str(name), "schema": schema}
+    raise LLMError(f"unsupported response_format for Meta Responses: {kind!r}")
+
+
+class MetaDirectClient(LLMClient):
+    """Meta Model API DIRECT client over stdlib urllib (Responses API)."""
 
     def __init__(self, api_key: str | None = None, model: str | None = None,
                  temperature: float = 0.0,
-                 endpoint: str = OPENROUTER_ENDPOINT,
+                 endpoint: str = META_RESPONSES_ENDPOINT,
                  timeout: int = REQUEST_TIMEOUT_SECONDS,
                  total_timeout: int | float | None = None):
         load_env_file()  # repo-root .env fills gaps only; real env always wins
         key = api_key if api_key is not None else os.environ.get(API_KEY_ENV, "")
         if not key or not str(key).strip():
             raise MissingAPIKeyError(
-                f"OpenRouter API key not set (expected {API_KEY_ENV})")
+                f"Meta Model API key not set (expected {API_KEY_ENV})")
         if not model or not str(model).strip():
-            raise LLMError("OpenRouter model is not configured")
+            raise LLMError("Meta model is not configured")
         self._api_key = str(key)
         self.model = str(model)
         self.temperature = float(temperature)
@@ -73,7 +99,7 @@ class OpenRouterClient(LLMClient):
         self.total_timeout = timeout if total_timeout is None else total_timeout
 
     def __repr__(self) -> str:  # pragma: no cover - never leaks the key
-        return (f"OpenRouterClient(model={self.model!r}, "
+        return (f"MetaDirectClient(model={self.model!r}, "
                 f"temperature={self.temperature!r}, endpoint={self.endpoint!r})")
 
     def _read_bounded(self, request: urllib.request.Request) -> str:
@@ -97,14 +123,14 @@ class OpenRouterClient(LLMClient):
         worker.join(self.total_timeout)
         if worker.is_alive():
             raise ProviderError(
-                f"OpenRouter request timed out after {self.total_timeout}s")
+                f"Meta request timed out after {self.total_timeout}s")
         exc = box.get("error")
         if isinstance(exc, urllib.error.HTTPError):
             raise ProviderError(
-                f"OpenRouter HTTP {exc.code}: {exc.read().decode('utf-8', 'replace')[:500]}"
+                f"Meta HTTP {exc.code}: {exc.read().decode('utf-8', 'replace')[:500]}"
             ) from exc
         if isinstance(exc, (urllib.error.URLError, OSError)):
-            raise ProviderError(f"OpenRouter request failed: {exc}") from exc
+            raise ProviderError(f"Meta request failed: {exc}") from exc
         if exc is not None:
             raise exc
         return box["body"]
@@ -113,15 +139,19 @@ class OpenRouterClient(LLMClient):
                             temperature: float | None = None,
                             response_format: dict | None = None,
                             max_tokens: int | None = None) -> str:
+        # Only documented Responses fields are sent: model, input (user role
+        # with input_text parts), stream, text.format. The system prompt
+        # travels as the leading input_text part; temperature/max_tokens are
+        # accepted for caller compatibility but not sent (undocumented here).
+        _ = temperature, max_tokens
         payload = {
             "model": self.model,
-            "temperature": self.temperature if temperature is None else float(temperature),
-            "messages": [{"role": "system", "content": system_prompt},
-                         {"role": "user", "content": user_prompt}],
-            "response_format": response_format or JSON_OBJECT_FORMAT,
+            "input": [{"role": "user", "content": [
+                {"type": "input_text", "text": str(system_prompt)},
+                {"type": "input_text", "text": str(user_prompt)}]}],
+            "stream": False,
+            "text": {"format": _text_format(response_format)},
         }
-        if max_tokens is not None:
-            payload["max_tokens"] = int(max_tokens)
         request = urllib.request.Request(
             self.endpoint, data=json.dumps(payload).encode("utf-8"),
             headers={"Content-Type": "application/json",
@@ -131,14 +161,36 @@ class OpenRouterClient(LLMClient):
         try:
             data = json.loads(body)
         except ValueError as exc:
-            raise ProviderError("OpenRouter returned non-JSON output") from exc
-        try:
-            content = data["choices"][0]["message"]["content"]
-        except (KeyError, IndexError, TypeError) as exc:
-            raise ProviderError("OpenRouter response has no message content") from exc
-        if content is None or not str(content).strip():
-            raise EmptyResponseError("OpenRouter returned empty content")
-        return str(content)
+            raise ProviderError("Meta returned non-JSON output") from exc
+        if isinstance(data, dict) and data.get("error"):
+            raise ProviderError(f"Meta error: {data['error']}")
+        return self._extract_text(data)
+
+    @staticmethod
+    def _extract_text(data) -> str:
+        """Pull assistant text from a Responses envelope.
+
+        Documented shape: output[].type == "message" with content[] parts of
+        type "output_text" carrying "text".
+        """
+        parts = []
+        output = data.get("output") if isinstance(data, dict) else None
+        if isinstance(output, list):
+            for item in output:
+                if not isinstance(item, dict) or item.get("type") != "message":
+                    continue
+                content = item.get("content") or []
+                for part in content:
+                    if (isinstance(part, dict)
+                            and part.get("type") == "output_text"
+                            and isinstance(part.get("text"), str)):
+                        parts.append(part["text"])
+        text = "".join(parts)
+        if not text.strip():
+            status = data.get("status") if isinstance(data, dict) else None
+            raise EmptyResponseError(
+                f"Meta returned no output text (status: {status})")
+        return text
 
 
 class MockLLMClient(LLMClient):

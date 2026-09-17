@@ -274,7 +274,7 @@ class RobustnessTest(unittest.TestCase):
         with mock.patch("src.pipeline.retrieve_temporal.retrieve_temporal",
                         side_effect=RuntimeError("store exploded")):
             res = E.execute_plan(_plan(), *_fixtures())
-        self.assertNotIn("OPENROUTER", json.dumps(res))
+        self.assertNotIn("MODEL_API_KEY", json.dumps(res))
         self.assertNotIn("sk-", json.dumps(res))
 
 

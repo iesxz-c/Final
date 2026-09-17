@@ -79,7 +79,7 @@ class LoadTest(unittest.TestCase):
 class WiringTest(unittest.TestCase):
     def setUp(self):
         self._saved = dict(os.environ)
-        os.environ.pop("OPENROUTER_API_KEY", None)
+        os.environ.pop("MODEL_API_KEY", None)
         self._dir = Path(os.environ.get("TEMP", "/tmp")) / "opencode_env_wire"
         self._dir.mkdir(parents=True, exist_ok=True)
 
@@ -91,11 +91,11 @@ class WiringTest(unittest.TestCase):
         os.environ.update(self._saved)
 
     def test_client_reads_env_file(self):
-        from src.agents.llm_client import OpenRouterClient
+        from src.agents.llm_client import MetaDirectClient
 
-        _write_tmp(self._dir / "w.env", "OPENROUTER_API_KEY=synthetic-test-key\n")
+        _write_tmp(self._dir / "w.env", "MODEL_API_KEY=synthetic-test-key\n")
         D.load_env_file(self._dir / "w.env")
-        client = OpenRouterClient(model="m")
+        client = MetaDirectClient(model="m")
         self.assertNotIn("synthetic-test-key", repr(client))
 
     def test_planner_settings_read_env_file(self):
@@ -108,15 +108,27 @@ class WiringTest(unittest.TestCase):
             settings = load_llm_settings()
         self.assertEqual(settings["model"], "synthetic/test-model")
 
-    def test_phase3e_comparison_models_select_through_existing_model_setting(self):
+    def test_frozen_model_selected_and_pinned(self):
+        from src.agents.llm_client import DEFAULT_MODEL, LLMError
         from src.agents.query_planner import MODEL_ENV, create_client, load_llm_settings
 
-        for model in ("qwen/qwen3-30b-a3b-instruct-2507", "meta/muse-spark-1.3"):
-            os.environ[MODEL_ENV] = model
-            with mock.patch("src.settings.load_config", return_value={}):
-                settings = load_llm_settings()
-            client = create_client(settings, api_key="synthetic-test-key")
-            self.assertEqual(client.model, model)
+        self.assertEqual(DEFAULT_MODEL, "muse-spark-1.3-contributor")
+        os.environ["CCTV_LLM_PROVIDER"] = "meta"
+        os.environ.pop(MODEL_ENV, None)
+        with mock.patch("src.agents.query_planner.load_env_file",
+                        lambda path=None: {}), \
+             mock.patch("src.settings.load_config", return_value={}):
+            settings = load_llm_settings()
+        self.assertEqual(settings["model"], "muse-spark-1.3-contributor")
+        client = create_client(settings, api_key="synthetic-test-key")
+        self.assertEqual(client.model, "muse-spark-1.3-contributor")
+        os.environ[MODEL_ENV] = "someone-else/model"
+        with mock.patch("src.agents.query_planner.load_env_file",
+                        lambda path=None: {}), \
+             mock.patch("src.settings.load_config", return_value={}):
+            settings = load_llm_settings()
+        with self.assertRaises(LLMError):
+            create_client(settings, api_key="synthetic-test-key")
 
     def test_official_default_model_is_muse(self):
         import yaml
@@ -124,14 +136,17 @@ class WiringTest(unittest.TestCase):
         with (D.PROJECT_ROOT / "config" / "config.example.yaml").open(
                 "r", encoding="utf-8") as fh:
             config = yaml.safe_load(fh)
-        self.assertEqual(config["llm"]["model"], "meta/muse-spark-1.3")
+        self.assertEqual(config["llm"]["provider"], "meta")
+        self.assertEqual(config["llm"]["model"], "muse-spark-1.3-contributor")
 
     def test_example_and_ignore_rules(self):
         import subprocess
 
         root = D.PROJECT_ROOT
         example = (root / ".env.example").read_text(encoding="utf-8")
-        self.assertIn("OPENROUTER_API_KEY=", example)
+        self.assertIn("MODEL_API_KEY=", example)
+        self.assertNotIn("OPENROUTER", example)
+        self.assertNotIn("openrouter.ai", example)
         self.assertNotIn("sk-", example)
         ignored = subprocess.run(
             ["git", "check-ignore", ".env", ".env.example"], cwd=root,

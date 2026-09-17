@@ -1,6 +1,6 @@
 """Phase 3C planner tests: validation, mock planning, error handling.
 
-No network access; no OPENROUTER_API_KEY required."""
+No network access; no MODEL_API_KEY required."""
 
 import json
 import os
@@ -131,7 +131,7 @@ class RejectionTest(unittest.TestCase):
 class PlannerBehaviorTest(unittest.TestCase):
     def test_mock_plans_without_key(self):
         env = dict(os.environ)
-        os.environ.pop("OPENROUTER_API_KEY", None)
+        os.environ.pop("MODEL_API_KEY", None)
         try:
             plan = _planned("Find fighting near the incident", _plan())
             self.assertEqual(plan["intent"], "search_evidence")
@@ -154,7 +154,7 @@ class PlannerBehaviorTest(unittest.TestCase):
 
     def test_key_never_in_output(self):
         sentinel = "sk-test-sentinel-key-12345"
-        os.environ["OPENROUTER_API_KEY"] = sentinel
+        os.environ["MODEL_API_KEY"] = sentinel
         try:
             plan = _planned("Find person", _plan(intent="find_person"))
             blob = json.dumps(plan)
@@ -164,7 +164,7 @@ class PlannerBehaviorTest(unittest.TestCase):
                 raise ProviderError("boom")
             self.assertNotIn(sentinel, str(ctx.exception))
         finally:
-            os.environ.pop("OPENROUTER_API_KEY", None)
+            os.environ.pop("MODEL_API_KEY", None)
 
     def test_system_prompt_constraints(self):
         for phrase in ("do not have access to evidence", "must not invent",

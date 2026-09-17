@@ -19,10 +19,10 @@ import sys
 from pathlib import Path
 
 from src.agents.llm_client import (
-    API_KEY_ENV,
+    DEFAULT_MODEL,
     LLMError,
+    MetaDirectClient,
     MockLLMClient,
-    OpenRouterClient,
 )
 from src.env_file import load_env_file
 
@@ -32,7 +32,7 @@ SCHEMA_VERSION = "phase3c/v1"
 MAX_CONTEXT_SECONDS = 300.0
 
 #: Output cap for planner calls: comfortably fits a plan JSON while
-#: staying inside small OpenRouter credit balances.
+#: staying inside modest per-call token budgets.
 PLAN_MAX_TOKENS = 2048
 
 INTENTS = ("search_evidence", "investigate_incident", "find_person",
@@ -81,11 +81,11 @@ Output contract (any violation causes rejection, so follow it exactly):
 - Output EXACTLY the JSON object above and nothing else: no Markdown, no code fences, no preamble, no commentary, no trailing prose."""
 
 
-#: JSON Schema describing phase3c/v1 for providers that support
-#: `response_format: {type: json_schema}` (e.g. OpenRouter). It mirrors the
-#: INTENTS/SOURCES vocabularies and the numeric ranges, but Python
-#: validation in parse_and_validate_plan() remains authoritative: the schema
-#: cannot express blank-string, end>=start, or unknown-field rejection.
+#: JSON Schema describing phase3c/v1 for the Meta Responses `text.format`
+#: structured-output parameter. It mirrors the INTENTS/SOURCES vocabularies
+#: and the numeric ranges, but Python validation in parse_and_validate_plan()
+#: remains authoritative: the schema cannot express blank-string, end>=start,
+#: or unknown-field rejection.
 PLAN_JSON_SCHEMA = {
     "type": "object",
     "properties": {
@@ -121,7 +121,7 @@ PLAN_JSON_SCHEMA = {
 
 
 def plan_response_format() -> dict:
-    """OpenRouter structured-output request for phase3c/v1 plans."""
+    """Structured-output request for phase3c/v1 plans (Meta text.format)."""
     return {"type": "json_schema",
             "json_schema": {"name": "phase3c_plan", "strict": True,
                             "schema": PLAN_JSON_SCHEMA}}
@@ -228,20 +228,30 @@ def load_llm_settings(config_path: str | os.PathLike | None = None) -> dict:
     except Exception:
         config = {}
     llm = (config.get("llm") or {}) if isinstance(config, dict) else {}
-    return {"provider": os.environ.get(PROVIDER_ENV) or llm.get("provider") or "openrouter",
-            "model": os.environ.get(MODEL_ENV) or llm.get("model"),
+    return {"provider": os.environ.get(PROVIDER_ENV) or llm.get("provider") or "meta",
+            "model": os.environ.get(MODEL_ENV) or llm.get("model") or DEFAULT_MODEL,
             "temperature": float(llm.get("temperature", 0.0) or 0.0)}
 
 
 def create_client(settings: dict | None = None,
                   config_path: str | os.PathLike | None = None,
                   api_key: str | None = None):
-    """Build the configured LLM client (OpenRouter)."""
+    """Build the configured LLM client (Meta Model API DIRECT only).
+
+    The project is frozen to a single model: any explicitly configured
+    model other than DEFAULT_MODEL fails closed instead of routing
+    elsewhere.
+    """
     settings = settings or load_llm_settings(config_path)
-    provider = (settings.get("provider") or "openrouter").lower()
-    if provider != "openrouter":
+    provider = (settings.get("provider") or "meta").lower()
+    if provider == "openrouter":
+        raise LLMError("OpenRouter is retired; the sole provider is Meta Model API DIRECT")
+    if provider != "meta":
         raise LLMError(f"unsupported LLM provider: {provider!r}")
-    return OpenRouterClient(api_key=api_key, model=settings.get("model"),
+    model = settings.get("model") or DEFAULT_MODEL
+    if model != DEFAULT_MODEL:
+        raise LLMError(f"only {DEFAULT_MODEL} is supported; got {model!r}")
+    return MetaDirectClient(api_key=api_key, model=DEFAULT_MODEL,
                             temperature=settings.get("temperature", 0.0))
 
 
@@ -257,7 +267,8 @@ def main(argv: list | None = None) -> int:
     parser = argparse.ArgumentParser(description="Phase 3C: query planning agent")
     parser.add_argument("--query", required=True)
     parser.add_argument("--config", default=None)
-    parser.add_argument("--model", default=None)
+    parser.add_argument("--model", default=None,
+                        help="must be muse-spark-1.3-contributor; anything else fails closed")
     parser.add_argument("--temperature", type=float, default=None)
     parser.add_argument("--output", default=None)
     parser.add_argument("--mock", action="store_true",

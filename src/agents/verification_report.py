@@ -30,7 +30,7 @@ EXPECTED_3E_SCHEMA = "phase3e/v1"
 EXPECTED_3D_SCHEMA = "phase3d/v1"
 
 #: Report output is verification + prose; 6000 tokens fits the full
-#: Shooting001-scale report inside the affordable OpenRouter balance.
+#: Shooting001-scale report in a single response.
 REPORT_MAX_TOKENS = 6000
 
 STATUSES = ("supported", "partially_supported", "unsupported")
@@ -151,7 +151,7 @@ REPORT_JSON_SCHEMA = {
 
 
 def report_response_format() -> dict:
-    """OpenRouter structured-output request for phase3f/v1 outputs."""
+    """Meta Responses structured-output request for phase3f/v1 outputs."""
     return {"type": "json_schema",
             "json_schema": {"name": "phase3f_report", "strict": True,
                             "schema": REPORT_JSON_SCHEMA}}
@@ -391,7 +391,8 @@ def main(argv: list | None = None) -> int:
     parser.add_argument("--input3e", required=True)
     parser.add_argument("--input3d", required=True)
     parser.add_argument("--question", default="")
-    parser.add_argument("--model", default=None)
+    parser.add_argument("--model", default=None,
+                        help="must be muse-spark-1.3-contributor; anything else fails closed")
     parser.add_argument("--output", default=None)
     parser.add_argument("--mock", action="store_true",
                         help="offline mode: deterministic mock LLM, no API key needed")
