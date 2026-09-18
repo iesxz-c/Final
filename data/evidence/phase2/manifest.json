@@ -1,0 +1,21 @@
+{
+  "schema_version": "phase2a/v1",
+  "subset": "/content/Final/Final/Final/Final/data/experiments/phase2_subset.json",
+  "sampling_fps": 1.0,
+  "detector": {
+    "model": "yolo11n",
+    "weights": "/content/Final/Final/Final/Final/data/models/yolo11n.pt",
+    "confidence_threshold": 0.4,
+    "device_requested": "cuda",
+    "device_used": "cuda",
+    "skipped": false
+  },
+  "started_utc": "2026-09-14T17:21:00.554199+00:00",
+  "elapsed_seconds": 102.1,
+  "videos_selected": 40,
+  "videos_processed": 40,
+  "videos_failed": 0,
+  "observations": 4094,
+  "detections": 11165,
+  "failures": []
+}

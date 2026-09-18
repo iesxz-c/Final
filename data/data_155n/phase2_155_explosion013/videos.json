@@ -1,0 +1,17 @@
+[
+  {
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "source_type": "anomaly",
+    "ground_truth_category": "Explosion",
+    "dataset_root": "/content/drive/MyDrive/Anomaly-Videos-Part-1/Anomaly-Videos-Part-1",
+    "path": "Explosion/Explosion013_x264.mp4",
+    "duration_seconds": 110.567,
+    "fps": 30.0,
+    "width": 320,
+    "height": 240,
+    "frame_count": 3317,
+    "file_size_bytes": 16418748,
+    "format": "mp4",
+    "schema_version": "phase2a/v1"
+  }
+]

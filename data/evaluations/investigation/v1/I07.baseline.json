@@ -1,0 +1,4914 @@
+{
+  "arm": "baseline",
+  "baseline_report": {
+    "evidence_records": [
+      {
+        "end_time": 31.867,
+        "event_labels": [
+          "Arrest"
+        ],
+        "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f14",
+        "start_time": 29.867,
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+      },
+      {
+        "end_time": 34.0,
+        "event_labels": [
+          "Arrest"
+        ],
+        "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f15",
+        "start_time": 32.0,
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+      },
+      {
+        "end_time": 36.133,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f16",
+        "start_time": 34.133,
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+      },
+      {
+        "end_time": 38.267,
+        "event_labels": [
+          "Arrest"
+        ],
+        "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f17",
+        "start_time": 36.267,
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+      },
+      {
+        "end_time": 55.333,
+        "event_labels": [
+          "Arrest"
+        ],
+        "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f25",
+        "start_time": 53.333,
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+      },
+      {
+        "end_time": 66.0,
+        "event_labels": [
+          "Arrest"
+        ],
+        "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f30",
+        "start_time": 64.0,
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+      },
+      {
+        "end_time": 83.067,
+        "event_labels": [
+          "Arrest"
+        ],
+        "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f38",
+        "start_time": 81.067,
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+      },
+      {
+        "end_time": 89.467,
+        "event_labels": [
+          "Arrest"
+        ],
+        "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f41",
+        "start_time": 87.467,
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+      },
+      {
+        "end_time": 95.867,
+        "event_labels": [
+          "Arrest"
+        ],
+        "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f44",
+        "start_time": 93.867,
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+      },
+      {
+        "end_time": 98.0,
+        "event_labels": [
+          "Arrest"
+        ],
+        "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f45",
+        "start_time": 96.0,
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+      }
+    ],
+    "limitations": [
+      "templated baseline: no timeline, correlation, verification, or inference was performed"
+    ],
+    "question": "Show Arrest evidence in anomaly/Arrest/Arrest039_x264.mp4 between 0 and 120 seconds.",
+    "schema_version": "phase5b-baseline/v1"
+  },
+  "failure": null,
+  "git_hash": "8ad1ce8",
+  "integrity_audit": {
+    "base_records": 7927,
+    "cross_video_violations": 0,
+    "input_unchanged": true,
+    "overall_pass": true,
+    "stages": {
+      "3d": {
+        "duplicates": false,
+        "evidence_ids": 10,
+        "pass": true,
+        "refs_preserved": true,
+        "unknown_ids": 0
+      }
+    }
+  },
+  "mode": "real",
+  "model": "muse-spark-1.3-contributor",
+  "pattern": "event",
+  "plan": {
+    "end_time": 120,
+    "intent": "search_evidence",
+    "needs_cross_evidence": false,
+    "needs_timeline": false,
+    "queries": [
+      {
+        "query": "Arrest",
+        "source": "surveillance_event"
+      }
+    ],
+    "schema_version": "phase3c/v1",
+    "start_time": 0,
+    "temporal_context_seconds": 0,
+    "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+  },
+  "query_id": "I07",
+  "question": "Show Arrest evidence in anomaly/Arrest/Arrest039_x264.mp4 between 0 and 120 seconds.",
+  "result_3d": {
+    "merged_results": {
+      "groups": [
+        {
+          "contextual_evidence": [],
+          "event_hypotheses": [
+            "Abuse",
+            "Arrest",
+            "RoadAccidents",
+            "Vandalism"
+          ],
+          "incident_end_time": 527.733,
+          "incident_id": "anomaly/Arrest/Arrest039_x264.mp4:i0",
+          "incident_start_time": 0.0,
+          "matched_evidence": [
+            {
+              "anomaly_score": 0.6944,
+              "end_time": 31.867,
+              "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f14",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1344,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a14",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=29.867s-31.867s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1344,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0504,
+                      "label": "tossing coin"
+                    },
+                    {
+                      "confidence": 0.0346,
+                      "label": "building cabinet"
+                    },
+                    {
+                      "confidence": 0.0312,
+                      "label": "moving furniture"
+                    },
+                    {
+                      "confidence": 0.0158,
+                      "label": "cleaning windows"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.6944,
+                  "confidence": 0.4906,
+                  "end_time": 31.867,
+                  "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f14",
+                  "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e14",
+                  "matched_label": "Arrest",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "Arrest",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=29.867s-31.867s",
+                  "start_time": 29.867,
+                  "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    231.4,
+                    63.7,
+                    259.0,
+                    106.7
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7674,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f900:d110",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f900",
+                  "timestamp_seconds": 30.0
+                },
+                {
+                  "bounding_box": [
+                    40.5,
+                    77.8,
+                    74.7,
+                    134.6
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7199,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f900:d111",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f900",
+                  "timestamp_seconds": 30.0
+                },
+                {
+                  "bounding_box": [
+                    175.2,
+                    53.3,
+                    202.5,
+                    95.0
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7032,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f900:d112",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f900",
+                  "timestamp_seconds": 30.0
+                },
+                {
+                  "bounding_box": [
+                    204.8,
+                    58.3,
+                    232.6,
+                    100.9
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6985,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f900:d113",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f900",
+                  "timestamp_seconds": 30.0
+                },
+                {
+                  "bounding_box": [
+                    231.4,
+                    63.6,
+                    258.9,
+                    107.5
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.828,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f930:d114",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f930",
+                  "timestamp_seconds": 31.0
+                },
+                {
+                  "bounding_box": [
+                    205.1,
+                    58.4,
+                    232.5,
+                    101.2
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7509,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f930:d115",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f930",
+                  "timestamp_seconds": 31.0
+                },
+                {
+                  "bounding_box": [
+                    175.5,
+                    53.2,
+                    202.4,
+                    94.3
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7103,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f930:d116",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f930",
+                  "timestamp_seconds": 31.0
+                },
+                {
+                  "bounding_box": [
+                    97.0,
+                    15.5,
+                    113.4,
+                    88.7
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.6882,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f930:d117",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f930",
+                  "timestamp_seconds": 31.0
+                },
+                {
+                  "bounding_box": [
+                    40.1,
+                    77.5,
+                    74.3,
+                    135.5
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.4103,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f930:d118",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f930",
+                  "timestamp_seconds": 31.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Arrest/Arrest039_x264.mp4@t=29.867s-31.867s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=30.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=31.0s"
+              ],
+              "start_time": 29.867,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4906,
+                  "label": "Arrest",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e14",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=29.867s-31.867s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4906,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.2601,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.1714,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0396,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0103,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 11,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6674,
+              "end_time": 34.0,
+              "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f15",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1307,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a15",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=32.0s-34.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1307,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0747,
+                      "label": "tossing coin"
+                    },
+                    {
+                      "confidence": 0.0227,
+                      "label": "moving furniture"
+                    },
+                    {
+                      "confidence": 0.0208,
+                      "label": "high kick"
+                    },
+                    {
+                      "confidence": 0.0187,
+                      "label": "drop kicking"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.6674,
+                  "confidence": 0.4457,
+                  "end_time": 34.0,
+                  "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f15",
+                  "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e15",
+                  "matched_label": "Arrest",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "Arrest",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=32.0s-34.0s",
+                  "start_time": 32.0,
+                  "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    164.6,
+                    30.9,
+                    202.0,
+                    126.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8699,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020:d128",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020",
+                  "timestamp_seconds": 34.0
+                },
+                {
+                  "bounding_box": [
+                    231.0,
+                    63.2,
+                    258.9,
+                    107.6
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.8077,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020:d129",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020",
+                  "timestamp_seconds": 34.0
+                },
+                {
+                  "bounding_box": [
+                    204.7,
+                    58.4,
+                    232.1,
+                    99.9
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6535,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020:d130",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020",
+                  "timestamp_seconds": 34.0
+                },
+                {
+                  "bounding_box": [
+                    231.3,
+                    63.8,
+                    258.9,
+                    107.1
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.8121,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f960:d119",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f960",
+                  "timestamp_seconds": 32.0
+                },
+                {
+                  "bounding_box": [
+                    204.6,
+                    58.5,
+                    232.3,
+                    100.9
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7432,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f960:d120",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f960",
+                  "timestamp_seconds": 32.0
+                },
+                {
+                  "bounding_box": [
+                    40.9,
+                    77.5,
+                    74.1,
+                    135.0
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7166,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f960:d121",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f960",
+                  "timestamp_seconds": 32.0
+                },
+                {
+                  "bounding_box": [
+                    175.4,
+                    53.1,
+                    202.5,
+                    94.9
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6328,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f960:d122",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f960",
+                  "timestamp_seconds": 32.0
+                },
+                {
+                  "bounding_box": [
+                    111.9,
+                    30.9,
+                    122.2,
+                    95.0
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.556,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f960:d123",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f960",
+                  "timestamp_seconds": 32.0
+                },
+                {
+                  "bounding_box": [
+                    231.0,
+                    63.3,
+                    259.0,
+                    107.3
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.8185,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f990:d124",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f990",
+                  "timestamp_seconds": 33.0
+                },
+                {
+                  "bounding_box": [
+                    148.3,
+                    23.9,
+                    168.7,
+                    111.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7521,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f990:d125",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f990",
+                  "timestamp_seconds": 33.0
+                },
+                {
+                  "bounding_box": [
+                    204.6,
+                    59.0,
+                    232.0,
+                    101.7
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7051,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f990:d126",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f990",
+                  "timestamp_seconds": 33.0
+                },
+                {
+                  "bounding_box": [
+                    175.0,
+                    53.3,
+                    202.5,
+                    94.7
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6709,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f990:d127",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f990",
+                  "timestamp_seconds": 33.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Arrest/Arrest039_x264.mp4@t=32.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=32.0s-34.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=33.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=34.0s"
+              ],
+              "start_time": 32.0,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4457,
+                  "label": "Arrest",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e15",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=32.0s-34.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4457,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.2692,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.1897,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0598,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0075,
+                      "label": "Shoplifting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 14,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6995,
+              "end_time": 36.133,
+              "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f16",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0836,
+                  "label": "headbutting",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a16",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=34.133s-36.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0836,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.0605,
+                      "label": "high kick"
+                    },
+                    {
+                      "confidence": 0.0563,
+                      "label": "slapping"
+                    },
+                    {
+                      "confidence": 0.0329,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0249,
+                      "label": "tossing coin"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.6995,
+                  "confidence": 0.364,
+                  "end_time": 36.133,
+                  "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f16",
+                  "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e16",
+                  "matched_label": "Arrest",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "Arrest",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=34.133s-36.133s",
+                  "start_time": 34.133,
+                  "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    173.1,
+                    42.2,
+                    212.5,
+                    159.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8467,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050:d131",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050",
+                  "timestamp_seconds": 35.0
+                },
+                {
+                  "bounding_box": [
+                    231.3,
+                    63.4,
+                    258.9,
+                    107.6
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7722,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050:d132",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050",
+                  "timestamp_seconds": 35.0
+                },
+                {
+                  "bounding_box": [
+                    40.8,
+                    77.4,
+                    74.7,
+                    134.9
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6911,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050:d133",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050",
+                  "timestamp_seconds": 35.0
+                },
+                {
+                  "bounding_box": [
+                    211.7,
+                    58.3,
+                    232.8,
+                    101.0
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.4724,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050:d134",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050",
+                  "timestamp_seconds": 35.0
+                },
+                {
+                  "bounding_box": [
+                    219.3,
+                    64.5,
+                    270.9,
+                    210.3
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7681,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080:d135",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080",
+                  "timestamp_seconds": 36.0
+                },
+                {
+                  "bounding_box": [
+                    205.0,
+                    58.3,
+                    233.0,
+                    99.3
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7635,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080:d136",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080",
+                  "timestamp_seconds": 36.0
+                },
+                {
+                  "bounding_box": [
+                    175.2,
+                    53.1,
+                    202.4,
+                    94.7
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.633,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080:d137",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080",
+                  "timestamp_seconds": 36.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Arrest/Arrest039_x264.mp4@t=34.133s-36.133s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=35.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=36.0s"
+              ],
+              "start_time": 34.133,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4991,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e16",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=34.133s-36.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4991,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.364,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0674,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0368,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0074,
+                      "label": "Shoplifting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 9,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6149,
+              "end_time": 38.267,
+              "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f17",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1012,
+                  "label": "building cabinet",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a17",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=36.267s-38.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1012,
+                      "label": "building cabinet"
+                    },
+                    {
+                      "confidence": 0.0301,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.02,
+                      "label": "moving furniture"
+                    },
+                    {
+                      "confidence": 0.0198,
+                      "label": "slapping"
+                    },
+                    {
+                      "confidence": 0.0153,
+                      "label": "high kick"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.6149,
+                  "confidence": 0.3581,
+                  "end_time": 38.267,
+                  "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f17",
+                  "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e17",
+                  "matched_label": "Arrest",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "Arrest",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=36.267s-38.267s",
+                  "start_time": 36.267,
+                  "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    225.3,
+                    77.0,
+                    280.8,
+                    210.7
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.9106,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110:d138",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110",
+                  "timestamp_seconds": 37.0
+                },
+                {
+                  "bounding_box": [
+                    231.9,
+                    63.8,
+                    258.5,
+                    102.0
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7721,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110:d139",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110",
+                  "timestamp_seconds": 37.0
+                },
+                {
+                  "bounding_box": [
+                    204.5,
+                    58.6,
+                    232.1,
+                    101.1
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7292,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110:d140",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110",
+                  "timestamp_seconds": 37.0
+                },
+                {
+                  "bounding_box": [
+                    175.8,
+                    53.1,
+                    202.5,
+                    95.0
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7028,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110:d141",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110",
+                  "timestamp_seconds": 37.0
+                },
+                {
+                  "bounding_box": [
+                    226.8,
+                    80.1,
+                    288.5,
+                    209.3
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8726,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140:d142",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140",
+                  "timestamp_seconds": 38.0
+                },
+                {
+                  "bounding_box": [
+                    231.7,
+                    63.8,
+                    258.8,
+                    102.6
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.807,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140:d143",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140",
+                  "timestamp_seconds": 38.0
+                },
+                {
+                  "bounding_box": [
+                    174.9,
+                    53.1,
+                    202.9,
+                    94.7
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.8011,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140:d144",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140",
+                  "timestamp_seconds": 38.0
+                },
+                {
+                  "bounding_box": [
+                    204.7,
+                    58.4,
+                    232.3,
+                    101.4
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7375,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140:d145",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140",
+                  "timestamp_seconds": 38.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Arrest/Arrest039_x264.mp4@t=36.267s-38.267s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=37.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=38.0s"
+              ],
+              "start_time": 36.267,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.3581,
+                  "label": "Arrest",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e17",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=36.267s-38.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3581,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.2677,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.2496,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0691,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0159,
+                      "label": "Shoplifting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 10,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6241,
+              "end_time": 55.333,
+              "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f25",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1103,
+                  "label": "high kick",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a25",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=53.333s-55.333s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1103,
+                      "label": "high kick"
+                    },
+                    {
+                      "confidence": 0.1024,
+                      "label": "side kick"
+                    },
+                    {
+                      "confidence": 0.056,
+                      "label": "robot dancing"
+                    },
+                    {
+                      "confidence": 0.0437,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.0274,
+                      "label": "tai chi"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.6241,
+                  "confidence": 0.3735,
+                  "end_time": 55.333,
+                  "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f25",
+                  "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e25",
+                  "matched_label": "Arrest",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "Arrest",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=53.333s-55.333s",
+                  "start_time": 53.333,
+                  "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    225.4,
+                    71.1,
+                    277.4,
+                    209.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8576,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620:d212",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620",
+                  "timestamp_seconds": 54.0
+                },
+                {
+                  "bounding_box": [
+                    205.0,
+                    58.4,
+                    232.7,
+                    101.8
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7702,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620:d213",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620",
+                  "timestamp_seconds": 54.0
+                },
+                {
+                  "bounding_box": [
+                    174.9,
+                    53.1,
+                    202.7,
+                    94.6
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7319,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620:d214",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620",
+                  "timestamp_seconds": 54.0
+                },
+                {
+                  "bounding_box": [
+                    231.2,
+                    63.2,
+                    257.3,
+                    103.1
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7246,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620:d215",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620",
+                  "timestamp_seconds": 54.0
+                },
+                {
+                  "bounding_box": [
+                    191.7,
+                    69.8,
+                    256.5,
+                    197.7
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.9097,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650:d216",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650",
+                  "timestamp_seconds": 55.0
+                },
+                {
+                  "bounding_box": [
+                    204.8,
+                    58.9,
+                    232.8,
+                    97.0
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7432,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650:d217",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650",
+                  "timestamp_seconds": 55.0
+                },
+                {
+                  "bounding_box": [
+                    175.6,
+                    53.1,
+                    202.5,
+                    94.5
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.5488,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650:d218",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650",
+                  "timestamp_seconds": 55.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Arrest/Arrest039_x264.mp4@t=53.333s-55.333s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=54.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=55.0s"
+              ],
+              "start_time": 53.333,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.3735,
+                  "label": "Arrest",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e25",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=53.333s-55.333s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3735,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.2909,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.1897,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0896,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0141,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 9,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6906,
+              "end_time": 66.0,
+              "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f30",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1297,
+                  "label": "side kick",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a30",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=64.0s-66.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1297,
+                      "label": "side kick"
+                    },
+                    {
+                      "confidence": 0.0702,
+                      "label": "tossing coin"
+                    },
+                    {
+                      "confidence": 0.0431,
+                      "label": "high kick"
+                    },
+                    {
+                      "confidence": 0.0332,
+                      "label": "drop kicking"
+                    },
+                    {
+                      "confidence": 0.0183,
+                      "label": "catching or throwing frisbee"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.6906,
+                  "confidence": 0.4844,
+                  "end_time": 66.0,
+                  "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f30",
+                  "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e30",
+                  "matched_label": "Arrest",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "Arrest",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=64.0s-66.0s",
+                  "start_time": 64.0,
+                  "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    98.6,
+                    36.5,
+                    141.9,
+                    148.0
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8793,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920:d250",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920",
+                  "timestamp_seconds": 64.0
+                },
+                {
+                  "bounding_box": [
+                    231.3,
+                    63.7,
+                    258.9,
+                    106.9
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7684,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920:d251",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920",
+                  "timestamp_seconds": 64.0
+                },
+                {
+                  "bounding_box": [
+                    204.8,
+                    59.3,
+                    231.9,
+                    101.7
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7317,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920:d252",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920",
+                  "timestamp_seconds": 64.0
+                },
+                {
+                  "bounding_box": [
+                    175.1,
+                    53.1,
+                    202.6,
+                    94.5
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.705,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920:d253",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920",
+                  "timestamp_seconds": 64.0
+                },
+                {
+                  "bounding_box": [
+                    41.0,
+                    77.6,
+                    74.2,
+                    135.5
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6934,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920:d254",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920",
+                  "timestamp_seconds": 64.0
+                },
+                {
+                  "bounding_box": [
+                    100.5,
+                    38.1,
+                    144.3,
+                    154.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8857,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950:d255",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950",
+                  "timestamp_seconds": 65.0
+                },
+                {
+                  "bounding_box": [
+                    231.3,
+                    63.7,
+                    258.8,
+                    106.8
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.8093,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950:d256",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950",
+                  "timestamp_seconds": 65.0
+                },
+                {
+                  "bounding_box": [
+                    205.1,
+                    58.4,
+                    232.6,
+                    101.7
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7283,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950:d257",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950",
+                  "timestamp_seconds": 65.0
+                },
+                {
+                  "bounding_box": [
+                    175.2,
+                    53.0,
+                    202.5,
+                    94.8
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6972,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950:d258",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950",
+                  "timestamp_seconds": 65.0
+                },
+                {
+                  "bounding_box": [
+                    40.8,
+                    77.9,
+                    74.6,
+                    135.4
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.5194,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950:d259",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950",
+                  "timestamp_seconds": 65.0
+                },
+                {
+                  "bounding_box": [
+                    100.7,
+                    38.7,
+                    147.1,
+                    159.8
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8994,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980:d260",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980",
+                  "timestamp_seconds": 66.0
+                },
+                {
+                  "bounding_box": [
+                    231.3,
+                    63.8,
+                    258.9,
+                    105.3
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7937,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980:d261",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980",
+                  "timestamp_seconds": 66.0
+                },
+                {
+                  "bounding_box": [
+                    204.8,
+                    59.0,
+                    231.8,
+                    101.2
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7196,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980:d262",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980",
+                  "timestamp_seconds": 66.0
+                },
+                {
+                  "bounding_box": [
+                    41.1,
+                    77.9,
+                    74.8,
+                    134.8
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.677,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980:d263",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980",
+                  "timestamp_seconds": 66.0
+                },
+                {
+                  "bounding_box": [
+                    174.6,
+                    52.8,
+                    202.5,
+                    94.4
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6039,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980:d264",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980",
+                  "timestamp_seconds": 66.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Arrest/Arrest039_x264.mp4@t=64.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=64.0s-66.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=65.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=66.0s"
+              ],
+              "start_time": 64.0,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4844,
+                  "label": "Arrest",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e30",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=64.0s-66.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4844,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.3516,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0718,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0533,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0112,
+                      "label": "Shoplifting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 17,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7031,
+              "end_time": 83.067,
+              "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f38",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0586,
+                  "label": "headbutting",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a38",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=81.067s-83.067s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0586,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.045,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0351,
+                      "label": "trimming or shaving beard"
+                    },
+                    {
+                      "confidence": 0.0331,
+                      "label": "shaving head"
+                    },
+                    {
+                      "confidence": 0.0327,
+                      "label": "unloading truck"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7031,
+                  "confidence": 0.5051,
+                  "end_time": 83.067,
+                  "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f38",
+                  "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e38",
+                  "matched_label": "Arrest",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "Arrest",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=81.067s-83.067s",
+                  "start_time": 81.067,
+                  "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    231.1,
+                    63.4,
+                    259.1,
+                    107.3
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.8324,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460:d330",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460",
+                  "timestamp_seconds": 82.0
+                },
+                {
+                  "bounding_box": [
+                    205.0,
+                    58.4,
+                    232.4,
+                    100.8
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7546,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460:d331",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460",
+                  "timestamp_seconds": 82.0
+                },
+                {
+                  "bounding_box": [
+                    175.5,
+                    53.2,
+                    202.4,
+                    94.8
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6649,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460:d332",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460",
+                  "timestamp_seconds": 82.0
+                },
+                {
+                  "bounding_box": [
+                    13.2,
+                    67.0,
+                    82.1,
+                    203.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4934,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460:d333",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460",
+                  "timestamp_seconds": 82.0
+                },
+                {
+                  "bounding_box": [
+                    13.5,
+                    68.6,
+                    60.5,
+                    161.8
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4705,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460:d334",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460",
+                  "timestamp_seconds": 82.0
+                },
+                {
+                  "bounding_box": [
+                    231.2,
+                    63.8,
+                    259.0,
+                    107.3
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.8028,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490:d335",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490",
+                  "timestamp_seconds": 83.0
+                },
+                {
+                  "bounding_box": [
+                    0.3,
+                    73.7,
+                    53.7,
+                    165.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7596,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490:d336",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490",
+                  "timestamp_seconds": 83.0
+                },
+                {
+                  "bounding_box": [
+                    204.9,
+                    58.3,
+                    232.4,
+                    101.6
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7183,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490:d337",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490",
+                  "timestamp_seconds": 83.0
+                },
+                {
+                  "bounding_box": [
+                    175.2,
+                    53.0,
+                    202.6,
+                    95.0
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6982,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490:d338",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490",
+                  "timestamp_seconds": 83.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Arrest/Arrest039_x264.mp4@t=81.067s-83.067s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=82.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=83.0s"
+              ],
+              "start_time": 81.067,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.5051,
+                  "label": "Arrest",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e38",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=81.067s-83.067s",
+                  "top_k": [
+                    {
+                      "confidence": 0.5051,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.1978,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.1382,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0976,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0182,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 11,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.694,
+              "end_time": 89.467,
+              "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f41",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1356,
+                  "label": "drop kicking",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a41",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=87.467s-89.467s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1356,
+                      "label": "drop kicking"
+                    },
+                    {
+                      "confidence": 0.0861,
+                      "label": "side kick"
+                    },
+                    {
+                      "confidence": 0.04,
+                      "label": "high kick"
+                    },
+                    {
+                      "confidence": 0.0293,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.0201,
+                      "label": "abseiling"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.694,
+                  "confidence": 0.49,
+                  "end_time": 89.467,
+                  "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f41",
+                  "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e41",
+                  "matched_label": "Arrest",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "Arrest",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=87.467s-89.467s",
+                  "start_time": 87.467,
+                  "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    30.2,
+                    50.5,
+                    81.8,
+                    164.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8815,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640:d357",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640",
+                  "timestamp_seconds": 88.0
+                },
+                {
+                  "bounding_box": [
+                    231.0,
+                    63.4,
+                    258.8,
+                    106.2
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7933,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640:d358",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640",
+                  "timestamp_seconds": 88.0
+                },
+                {
+                  "bounding_box": [
+                    204.6,
+                    59.2,
+                    231.8,
+                    100.7
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6843,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640:d359",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640",
+                  "timestamp_seconds": 88.0
+                },
+                {
+                  "bounding_box": [
+                    175.4,
+                    53.2,
+                    202.6,
+                    94.3
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6153,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640:d360",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640",
+                  "timestamp_seconds": 88.0
+                },
+                {
+                  "bounding_box": [
+                    27.9,
+                    51.0,
+                    82.0,
+                    164.0
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8823,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670:d361",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670",
+                  "timestamp_seconds": 89.0
+                },
+                {
+                  "bounding_box": [
+                    231.4,
+                    63.6,
+                    258.9,
+                    106.9
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7874,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670:d362",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670",
+                  "timestamp_seconds": 89.0
+                },
+                {
+                  "bounding_box": [
+                    205.0,
+                    59.0,
+                    231.9,
+                    100.8
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6811,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670:d363",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670",
+                  "timestamp_seconds": 89.0
+                },
+                {
+                  "bounding_box": [
+                    175.4,
+                    53.3,
+                    202.4,
+                    95.0
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6121,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670:d364",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670",
+                  "timestamp_seconds": 89.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Arrest/Arrest039_x264.mp4@t=87.467s-89.467s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=88.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=89.0s"
+              ],
+              "start_time": 87.467,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.49,
+                  "label": "Arrest",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e41",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=87.467s-89.467s",
+                  "top_k": [
+                    {
+                      "confidence": 0.49,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.2394,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.1646,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0588,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0129,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 10,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6783,
+              "end_time": 95.867,
+              "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f44",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0907,
+                  "label": "side kick",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a44",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=93.867s-95.867s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0907,
+                      "label": "side kick"
+                    },
+                    {
+                      "confidence": 0.0442,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0387,
+                      "label": "abseiling"
+                    },
+                    {
+                      "confidence": 0.0345,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0307,
+                      "label": "punching bag"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.6783,
+                  "confidence": 0.4638,
+                  "end_time": 95.867,
+                  "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f44",
+                  "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e44",
+                  "matched_label": "Arrest",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "Arrest",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=93.867s-95.867s",
+                  "start_time": 93.867,
+                  "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    32.8,
+                    46.7,
+                    72.8,
+                    164.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8481,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820:d381",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820",
+                  "timestamp_seconds": 94.0
+                },
+                {
+                  "bounding_box": [
+                    231.3,
+                    63.5,
+                    258.9,
+                    107.4
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.8244,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820:d382",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820",
+                  "timestamp_seconds": 94.0
+                },
+                {
+                  "bounding_box": [
+                    205.0,
+                    58.7,
+                    232.4,
+                    101.3
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7659,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820:d383",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820",
+                  "timestamp_seconds": 94.0
+                },
+                {
+                  "bounding_box": [
+                    175.6,
+                    52.8,
+                    203.0,
+                    95.1
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7311,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820:d384",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820",
+                  "timestamp_seconds": 94.0
+                },
+                {
+                  "bounding_box": [
+                    33.8,
+                    46.1,
+                    73.3,
+                    165.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8673,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850:d385",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850",
+                  "timestamp_seconds": 95.0
+                },
+                {
+                  "bounding_box": [
+                    231.7,
+                    63.3,
+                    258.9,
+                    107.9
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7713,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850:d386",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850",
+                  "timestamp_seconds": 95.0
+                },
+                {
+                  "bounding_box": [
+                    175.2,
+                    53.2,
+                    202.3,
+                    94.5
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7205,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850:d387",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850",
+                  "timestamp_seconds": 95.0
+                },
+                {
+                  "bounding_box": [
+                    205.1,
+                    58.9,
+                    232.1,
+                    101.5
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6812,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850:d388",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850",
+                  "timestamp_seconds": 95.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Arrest/Arrest039_x264.mp4@t=93.867s-95.867s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=94.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=95.0s"
+              ],
+              "start_time": 93.867,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4638,
+                  "label": "Arrest",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e44",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=93.867s-95.867s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4638,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.2854,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.1595,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0376,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.02,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 10,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6539,
+              "end_time": 98.0,
+              "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f45",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0939,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a45",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=96.0s-98.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0939,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0794,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0454,
+                      "label": "tossing coin"
+                    },
+                    {
+                      "confidence": 0.0242,
+                      "label": "moving furniture"
+                    },
+                    {
+                      "confidence": 0.0175,
+                      "label": "abseiling"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.6539,
+                  "confidence": 0.4232,
+                  "end_time": 98.0,
+                  "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f45",
+                  "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e45",
+                  "matched_label": "Arrest",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "Arrest",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=96.0s-98.0s",
+                  "start_time": 96.0,
+                  "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    34.0,
+                    45.8,
+                    72.8,
+                    165.3
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8588,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880:d389",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880",
+                  "timestamp_seconds": 96.0
+                },
+                {
+                  "bounding_box": [
+                    231.2,
+                    63.5,
+                    259.0,
+                    107.4
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7838,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880:d390",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880",
+                  "timestamp_seconds": 96.0
+                },
+                {
+                  "bounding_box": [
+                    204.9,
+                    58.1,
+                    232.3,
+                    101.0
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7572,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880:d391",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880",
+                  "timestamp_seconds": 96.0
+                },
+                {
+                  "bounding_box": [
+                    175.2,
+                    53.1,
+                    202.5,
+                    94.8
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6916,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880:d392",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880",
+                  "timestamp_seconds": 96.0
+                },
+                {
+                  "bounding_box": [
+                    31.6,
+                    48.0,
+                    72.2,
+                    152.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8258,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910:d393",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910",
+                  "timestamp_seconds": 97.0
+                },
+                {
+                  "bounding_box": [
+                    231.6,
+                    63.6,
+                    258.8,
+                    107.4
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.8006,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910:d394",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910",
+                  "timestamp_seconds": 97.0
+                },
+                {
+                  "bounding_box": [
+                    175.3,
+                    53.0,
+                    203.4,
+                    95.0
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.756,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910:d395",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910",
+                  "timestamp_seconds": 97.0
+                },
+                {
+                  "bounding_box": [
+                    204.9,
+                    58.1,
+                    232.3,
+                    100.0
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7189,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910:d396",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910",
+                  "timestamp_seconds": 97.0
+                },
+                {
+                  "bounding_box": [
+                    10.5,
+                    54.3,
+                    53.9,
+                    140.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8242,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940:d397",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940",
+                  "timestamp_seconds": 98.0
+                },
+                {
+                  "bounding_box": [
+                    231.5,
+                    63.4,
+                    259.0,
+                    107.3
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.7941,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940:d398",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940",
+                  "timestamp_seconds": 98.0
+                },
+                {
+                  "bounding_box": [
+                    204.7,
+                    58.8,
+                    232.0,
+                    100.6
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.6743,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940:d399",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940",
+                  "timestamp_seconds": 98.0
+                },
+                {
+                  "bounding_box": [
+                    175.6,
+                    53.5,
+                    202.4,
+                    94.4
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.654,
+                  "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940:d400",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940",
+                  "timestamp_seconds": 98.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Arrest/Arrest039_x264.mp4@t=96.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=96.0s-98.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=97.0s",
+                "anomaly/Arrest/Arrest039_x264.mp4@t=98.0s"
+              ],
+              "start_time": 96.0,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4232,
+                  "label": "Arrest",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e45",
+                  "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=96.0s-98.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4232,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.2633,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.1858,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0753,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.017,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 14,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+            }
+          ],
+          "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+        }
+      ],
+      "unmapped_hits": []
+    },
+    "plan": {
+      "end_time": 120,
+      "intent": "search_evidence",
+      "needs_cross_evidence": false,
+      "needs_timeline": false,
+      "queries": [
+        {
+          "query": "Arrest",
+          "source": "surveillance_event"
+        }
+      ],
+      "schema_version": "phase3c/v1",
+      "start_time": 0,
+      "temporal_context_seconds": 0,
+      "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+    },
+    "query_errors": [],
+    "query_results": [
+      {
+        "groups": [
+          {
+            "contextual_evidence": [],
+            "event_hypotheses": [
+              "Abuse",
+              "Arrest",
+              "RoadAccidents",
+              "Vandalism"
+            ],
+            "incident_end_time": 527.733,
+            "incident_id": "anomaly/Arrest/Arrest039_x264.mp4:i0",
+            "incident_start_time": 0.0,
+            "matched_evidence": [
+              {
+                "anomaly_score": 0.6944,
+                "end_time": 31.867,
+                "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f14",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1344,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a14",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=29.867s-31.867s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1344,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0504,
+                        "label": "tossing coin"
+                      },
+                      {
+                        "confidence": 0.0346,
+                        "label": "building cabinet"
+                      },
+                      {
+                        "confidence": 0.0312,
+                        "label": "moving furniture"
+                      },
+                      {
+                        "confidence": 0.0158,
+                        "label": "cleaning windows"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.6944,
+                    "confidence": 0.4906,
+                    "end_time": 31.867,
+                    "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f14",
+                    "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e14",
+                    "matched_label": "Arrest",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=29.867s-31.867s",
+                    "start_time": 29.867,
+                    "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      231.4,
+                      63.7,
+                      259.0,
+                      106.7
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7674,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f900:d110",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f900",
+                    "timestamp_seconds": 30.0
+                  },
+                  {
+                    "bounding_box": [
+                      40.5,
+                      77.8,
+                      74.7,
+                      134.6
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7199,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f900:d111",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f900",
+                    "timestamp_seconds": 30.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.2,
+                      53.3,
+                      202.5,
+                      95.0
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7032,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f900:d112",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f900",
+                    "timestamp_seconds": 30.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.8,
+                      58.3,
+                      232.6,
+                      100.9
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6985,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f900:d113",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f900",
+                    "timestamp_seconds": 30.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.4,
+                      63.6,
+                      258.9,
+                      107.5
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.828,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f930:d114",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f930",
+                    "timestamp_seconds": 31.0
+                  },
+                  {
+                    "bounding_box": [
+                      205.1,
+                      58.4,
+                      232.5,
+                      101.2
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7509,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f930:d115",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f930",
+                    "timestamp_seconds": 31.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.5,
+                      53.2,
+                      202.4,
+                      94.3
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7103,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f930:d116",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f930",
+                    "timestamp_seconds": 31.0
+                  },
+                  {
+                    "bounding_box": [
+                      97.0,
+                      15.5,
+                      113.4,
+                      88.7
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.6882,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f930:d117",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f930",
+                    "timestamp_seconds": 31.0
+                  },
+                  {
+                    "bounding_box": [
+                      40.1,
+                      77.5,
+                      74.3,
+                      135.5
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.4103,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f930:d118",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f930",
+                    "timestamp_seconds": 31.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=29.867s-31.867s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=30.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=31.0s"
+                ],
+                "start_time": 29.867,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4906,
+                    "label": "Arrest",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e14",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=29.867s-31.867s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4906,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.2601,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.1714,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0396,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0103,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 11,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6674,
+                "end_time": 34.0,
+                "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f15",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1307,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a15",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=32.0s-34.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1307,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0747,
+                        "label": "tossing coin"
+                      },
+                      {
+                        "confidence": 0.0227,
+                        "label": "moving furniture"
+                      },
+                      {
+                        "confidence": 0.0208,
+                        "label": "high kick"
+                      },
+                      {
+                        "confidence": 0.0187,
+                        "label": "drop kicking"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.6674,
+                    "confidence": 0.4457,
+                    "end_time": 34.0,
+                    "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f15",
+                    "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e15",
+                    "matched_label": "Arrest",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=32.0s-34.0s",
+                    "start_time": 32.0,
+                    "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      164.6,
+                      30.9,
+                      202.0,
+                      126.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8699,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020:d128",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020",
+                    "timestamp_seconds": 34.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.0,
+                      63.2,
+                      258.9,
+                      107.6
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.8077,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020:d129",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020",
+                    "timestamp_seconds": 34.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.7,
+                      58.4,
+                      232.1,
+                      99.9
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6535,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020:d130",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1020",
+                    "timestamp_seconds": 34.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.3,
+                      63.8,
+                      258.9,
+                      107.1
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.8121,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f960:d119",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f960",
+                    "timestamp_seconds": 32.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.6,
+                      58.5,
+                      232.3,
+                      100.9
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7432,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f960:d120",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f960",
+                    "timestamp_seconds": 32.0
+                  },
+                  {
+                    "bounding_box": [
+                      40.9,
+                      77.5,
+                      74.1,
+                      135.0
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7166,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f960:d121",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f960",
+                    "timestamp_seconds": 32.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.4,
+                      53.1,
+                      202.5,
+                      94.9
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6328,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f960:d122",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f960",
+                    "timestamp_seconds": 32.0
+                  },
+                  {
+                    "bounding_box": [
+                      111.9,
+                      30.9,
+                      122.2,
+                      95.0
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.556,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f960:d123",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f960",
+                    "timestamp_seconds": 32.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.0,
+                      63.3,
+                      259.0,
+                      107.3
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.8185,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f990:d124",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f990",
+                    "timestamp_seconds": 33.0
+                  },
+                  {
+                    "bounding_box": [
+                      148.3,
+                      23.9,
+                      168.7,
+                      111.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7521,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f990:d125",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f990",
+                    "timestamp_seconds": 33.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.6,
+                      59.0,
+                      232.0,
+                      101.7
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7051,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f990:d126",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f990",
+                    "timestamp_seconds": 33.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.0,
+                      53.3,
+                      202.5,
+                      94.7
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6709,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f990:d127",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f990",
+                    "timestamp_seconds": 33.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=32.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=32.0s-34.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=33.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=34.0s"
+                ],
+                "start_time": 32.0,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4457,
+                    "label": "Arrest",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e15",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=32.0s-34.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4457,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.2692,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.1897,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0598,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0075,
+                        "label": "Shoplifting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 14,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6995,
+                "end_time": 36.133,
+                "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f16",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0836,
+                    "label": "headbutting",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a16",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=34.133s-36.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0836,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.0605,
+                        "label": "high kick"
+                      },
+                      {
+                        "confidence": 0.0563,
+                        "label": "slapping"
+                      },
+                      {
+                        "confidence": 0.0329,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0249,
+                        "label": "tossing coin"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.6995,
+                    "confidence": 0.364,
+                    "end_time": 36.133,
+                    "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f16",
+                    "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e16",
+                    "matched_label": "Arrest",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=34.133s-36.133s",
+                    "start_time": 34.133,
+                    "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      173.1,
+                      42.2,
+                      212.5,
+                      159.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8467,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050:d131",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050",
+                    "timestamp_seconds": 35.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.3,
+                      63.4,
+                      258.9,
+                      107.6
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7722,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050:d132",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050",
+                    "timestamp_seconds": 35.0
+                  },
+                  {
+                    "bounding_box": [
+                      40.8,
+                      77.4,
+                      74.7,
+                      134.9
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6911,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050:d133",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050",
+                    "timestamp_seconds": 35.0
+                  },
+                  {
+                    "bounding_box": [
+                      211.7,
+                      58.3,
+                      232.8,
+                      101.0
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.4724,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050:d134",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1050",
+                    "timestamp_seconds": 35.0
+                  },
+                  {
+                    "bounding_box": [
+                      219.3,
+                      64.5,
+                      270.9,
+                      210.3
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7681,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080:d135",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080",
+                    "timestamp_seconds": 36.0
+                  },
+                  {
+                    "bounding_box": [
+                      205.0,
+                      58.3,
+                      233.0,
+                      99.3
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7635,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080:d136",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080",
+                    "timestamp_seconds": 36.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.2,
+                      53.1,
+                      202.4,
+                      94.7
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.633,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080:d137",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1080",
+                    "timestamp_seconds": 36.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=34.133s-36.133s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=35.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=36.0s"
+                ],
+                "start_time": 34.133,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4991,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e16",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=34.133s-36.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4991,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.364,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0674,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0368,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0074,
+                        "label": "Shoplifting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 9,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6149,
+                "end_time": 38.267,
+                "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f17",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1012,
+                    "label": "building cabinet",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a17",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=36.267s-38.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1012,
+                        "label": "building cabinet"
+                      },
+                      {
+                        "confidence": 0.0301,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.02,
+                        "label": "moving furniture"
+                      },
+                      {
+                        "confidence": 0.0198,
+                        "label": "slapping"
+                      },
+                      {
+                        "confidence": 0.0153,
+                        "label": "high kick"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.6149,
+                    "confidence": 0.3581,
+                    "end_time": 38.267,
+                    "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f17",
+                    "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e17",
+                    "matched_label": "Arrest",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=36.267s-38.267s",
+                    "start_time": 36.267,
+                    "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      225.3,
+                      77.0,
+                      280.8,
+                      210.7
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.9106,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110:d138",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110",
+                    "timestamp_seconds": 37.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.9,
+                      63.8,
+                      258.5,
+                      102.0
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7721,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110:d139",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110",
+                    "timestamp_seconds": 37.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.5,
+                      58.6,
+                      232.1,
+                      101.1
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7292,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110:d140",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110",
+                    "timestamp_seconds": 37.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.8,
+                      53.1,
+                      202.5,
+                      95.0
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7028,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110:d141",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1110",
+                    "timestamp_seconds": 37.0
+                  },
+                  {
+                    "bounding_box": [
+                      226.8,
+                      80.1,
+                      288.5,
+                      209.3
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8726,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140:d142",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140",
+                    "timestamp_seconds": 38.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.7,
+                      63.8,
+                      258.8,
+                      102.6
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.807,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140:d143",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140",
+                    "timestamp_seconds": 38.0
+                  },
+                  {
+                    "bounding_box": [
+                      174.9,
+                      53.1,
+                      202.9,
+                      94.7
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.8011,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140:d144",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140",
+                    "timestamp_seconds": 38.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.7,
+                      58.4,
+                      232.3,
+                      101.4
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7375,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140:d145",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1140",
+                    "timestamp_seconds": 38.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=36.267s-38.267s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=37.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=38.0s"
+                ],
+                "start_time": 36.267,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.3581,
+                    "label": "Arrest",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e17",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=36.267s-38.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3581,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.2677,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.2496,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0691,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0159,
+                        "label": "Shoplifting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 10,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6241,
+                "end_time": 55.333,
+                "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f25",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1103,
+                    "label": "high kick",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a25",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=53.333s-55.333s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1103,
+                        "label": "high kick"
+                      },
+                      {
+                        "confidence": 0.1024,
+                        "label": "side kick"
+                      },
+                      {
+                        "confidence": 0.056,
+                        "label": "robot dancing"
+                      },
+                      {
+                        "confidence": 0.0437,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.0274,
+                        "label": "tai chi"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.6241,
+                    "confidence": 0.3735,
+                    "end_time": 55.333,
+                    "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f25",
+                    "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e25",
+                    "matched_label": "Arrest",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=53.333s-55.333s",
+                    "start_time": 53.333,
+                    "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      225.4,
+                      71.1,
+                      277.4,
+                      209.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8576,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620:d212",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620",
+                    "timestamp_seconds": 54.0
+                  },
+                  {
+                    "bounding_box": [
+                      205.0,
+                      58.4,
+                      232.7,
+                      101.8
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7702,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620:d213",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620",
+                    "timestamp_seconds": 54.0
+                  },
+                  {
+                    "bounding_box": [
+                      174.9,
+                      53.1,
+                      202.7,
+                      94.6
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7319,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620:d214",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620",
+                    "timestamp_seconds": 54.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.2,
+                      63.2,
+                      257.3,
+                      103.1
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7246,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620:d215",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1620",
+                    "timestamp_seconds": 54.0
+                  },
+                  {
+                    "bounding_box": [
+                      191.7,
+                      69.8,
+                      256.5,
+                      197.7
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.9097,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650:d216",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650",
+                    "timestamp_seconds": 55.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.8,
+                      58.9,
+                      232.8,
+                      97.0
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7432,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650:d217",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650",
+                    "timestamp_seconds": 55.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.6,
+                      53.1,
+                      202.5,
+                      94.5
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.5488,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650:d218",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1650",
+                    "timestamp_seconds": 55.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=53.333s-55.333s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=54.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=55.0s"
+                ],
+                "start_time": 53.333,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.3735,
+                    "label": "Arrest",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e25",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=53.333s-55.333s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3735,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.2909,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.1897,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0896,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0141,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 9,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6906,
+                "end_time": 66.0,
+                "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f30",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1297,
+                    "label": "side kick",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a30",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=64.0s-66.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1297,
+                        "label": "side kick"
+                      },
+                      {
+                        "confidence": 0.0702,
+                        "label": "tossing coin"
+                      },
+                      {
+                        "confidence": 0.0431,
+                        "label": "high kick"
+                      },
+                      {
+                        "confidence": 0.0332,
+                        "label": "drop kicking"
+                      },
+                      {
+                        "confidence": 0.0183,
+                        "label": "catching or throwing frisbee"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.6906,
+                    "confidence": 0.4844,
+                    "end_time": 66.0,
+                    "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f30",
+                    "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e30",
+                    "matched_label": "Arrest",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=64.0s-66.0s",
+                    "start_time": 64.0,
+                    "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      98.6,
+                      36.5,
+                      141.9,
+                      148.0
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8793,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920:d250",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920",
+                    "timestamp_seconds": 64.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.3,
+                      63.7,
+                      258.9,
+                      106.9
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7684,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920:d251",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920",
+                    "timestamp_seconds": 64.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.8,
+                      59.3,
+                      231.9,
+                      101.7
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7317,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920:d252",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920",
+                    "timestamp_seconds": 64.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.1,
+                      53.1,
+                      202.6,
+                      94.5
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.705,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920:d253",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920",
+                    "timestamp_seconds": 64.0
+                  },
+                  {
+                    "bounding_box": [
+                      41.0,
+                      77.6,
+                      74.2,
+                      135.5
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6934,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920:d254",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1920",
+                    "timestamp_seconds": 64.0
+                  },
+                  {
+                    "bounding_box": [
+                      100.5,
+                      38.1,
+                      144.3,
+                      154.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8857,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950:d255",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950",
+                    "timestamp_seconds": 65.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.3,
+                      63.7,
+                      258.8,
+                      106.8
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.8093,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950:d256",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950",
+                    "timestamp_seconds": 65.0
+                  },
+                  {
+                    "bounding_box": [
+                      205.1,
+                      58.4,
+                      232.6,
+                      101.7
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7283,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950:d257",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950",
+                    "timestamp_seconds": 65.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.2,
+                      53.0,
+                      202.5,
+                      94.8
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6972,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950:d258",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950",
+                    "timestamp_seconds": 65.0
+                  },
+                  {
+                    "bounding_box": [
+                      40.8,
+                      77.9,
+                      74.6,
+                      135.4
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.5194,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950:d259",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1950",
+                    "timestamp_seconds": 65.0
+                  },
+                  {
+                    "bounding_box": [
+                      100.7,
+                      38.7,
+                      147.1,
+                      159.8
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8994,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980:d260",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980",
+                    "timestamp_seconds": 66.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.3,
+                      63.8,
+                      258.9,
+                      105.3
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7937,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980:d261",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980",
+                    "timestamp_seconds": 66.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.8,
+                      59.0,
+                      231.8,
+                      101.2
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7196,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980:d262",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980",
+                    "timestamp_seconds": 66.0
+                  },
+                  {
+                    "bounding_box": [
+                      41.1,
+                      77.9,
+                      74.8,
+                      134.8
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.677,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980:d263",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980",
+                    "timestamp_seconds": 66.0
+                  },
+                  {
+                    "bounding_box": [
+                      174.6,
+                      52.8,
+                      202.5,
+                      94.4
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6039,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980:d264",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f1980",
+                    "timestamp_seconds": 66.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=64.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=64.0s-66.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=65.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=66.0s"
+                ],
+                "start_time": 64.0,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4844,
+                    "label": "Arrest",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e30",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=64.0s-66.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4844,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.3516,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0718,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0533,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0112,
+                        "label": "Shoplifting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 17,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7031,
+                "end_time": 83.067,
+                "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f38",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0586,
+                    "label": "headbutting",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a38",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=81.067s-83.067s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0586,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.045,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0351,
+                        "label": "trimming or shaving beard"
+                      },
+                      {
+                        "confidence": 0.0331,
+                        "label": "shaving head"
+                      },
+                      {
+                        "confidence": 0.0327,
+                        "label": "unloading truck"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7031,
+                    "confidence": 0.5051,
+                    "end_time": 83.067,
+                    "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f38",
+                    "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e38",
+                    "matched_label": "Arrest",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=81.067s-83.067s",
+                    "start_time": 81.067,
+                    "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      231.1,
+                      63.4,
+                      259.1,
+                      107.3
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.8324,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460:d330",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460",
+                    "timestamp_seconds": 82.0
+                  },
+                  {
+                    "bounding_box": [
+                      205.0,
+                      58.4,
+                      232.4,
+                      100.8
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7546,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460:d331",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460",
+                    "timestamp_seconds": 82.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.5,
+                      53.2,
+                      202.4,
+                      94.8
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6649,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460:d332",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460",
+                    "timestamp_seconds": 82.0
+                  },
+                  {
+                    "bounding_box": [
+                      13.2,
+                      67.0,
+                      82.1,
+                      203.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4934,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460:d333",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460",
+                    "timestamp_seconds": 82.0
+                  },
+                  {
+                    "bounding_box": [
+                      13.5,
+                      68.6,
+                      60.5,
+                      161.8
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4705,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460:d334",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2460",
+                    "timestamp_seconds": 82.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.2,
+                      63.8,
+                      259.0,
+                      107.3
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.8028,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490:d335",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490",
+                    "timestamp_seconds": 83.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.3,
+                      73.7,
+                      53.7,
+                      165.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7596,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490:d336",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490",
+                    "timestamp_seconds": 83.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.9,
+                      58.3,
+                      232.4,
+                      101.6
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7183,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490:d337",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490",
+                    "timestamp_seconds": 83.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.2,
+                      53.0,
+                      202.6,
+                      95.0
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6982,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490:d338",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2490",
+                    "timestamp_seconds": 83.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=81.067s-83.067s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=82.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=83.0s"
+                ],
+                "start_time": 81.067,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.5051,
+                    "label": "Arrest",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e38",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=81.067s-83.067s",
+                    "top_k": [
+                      {
+                        "confidence": 0.5051,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.1978,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.1382,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0976,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0182,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 11,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.694,
+                "end_time": 89.467,
+                "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f41",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1356,
+                    "label": "drop kicking",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a41",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=87.467s-89.467s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1356,
+                        "label": "drop kicking"
+                      },
+                      {
+                        "confidence": 0.0861,
+                        "label": "side kick"
+                      },
+                      {
+                        "confidence": 0.04,
+                        "label": "high kick"
+                      },
+                      {
+                        "confidence": 0.0293,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.0201,
+                        "label": "abseiling"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.694,
+                    "confidence": 0.49,
+                    "end_time": 89.467,
+                    "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f41",
+                    "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e41",
+                    "matched_label": "Arrest",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=87.467s-89.467s",
+                    "start_time": 87.467,
+                    "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      30.2,
+                      50.5,
+                      81.8,
+                      164.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8815,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640:d357",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640",
+                    "timestamp_seconds": 88.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.0,
+                      63.4,
+                      258.8,
+                      106.2
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7933,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640:d358",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640",
+                    "timestamp_seconds": 88.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.6,
+                      59.2,
+                      231.8,
+                      100.7
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6843,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640:d359",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640",
+                    "timestamp_seconds": 88.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.4,
+                      53.2,
+                      202.6,
+                      94.3
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6153,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640:d360",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2640",
+                    "timestamp_seconds": 88.0
+                  },
+                  {
+                    "bounding_box": [
+                      27.9,
+                      51.0,
+                      82.0,
+                      164.0
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8823,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670:d361",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670",
+                    "timestamp_seconds": 89.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.4,
+                      63.6,
+                      258.9,
+                      106.9
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7874,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670:d362",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670",
+                    "timestamp_seconds": 89.0
+                  },
+                  {
+                    "bounding_box": [
+                      205.0,
+                      59.0,
+                      231.9,
+                      100.8
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6811,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670:d363",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670",
+                    "timestamp_seconds": 89.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.4,
+                      53.3,
+                      202.4,
+                      95.0
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6121,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670:d364",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2670",
+                    "timestamp_seconds": 89.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=87.467s-89.467s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=88.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=89.0s"
+                ],
+                "start_time": 87.467,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.49,
+                    "label": "Arrest",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e41",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=87.467s-89.467s",
+                    "top_k": [
+                      {
+                        "confidence": 0.49,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.2394,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.1646,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0588,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0129,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 10,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6783,
+                "end_time": 95.867,
+                "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f44",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0907,
+                    "label": "side kick",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a44",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=93.867s-95.867s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0907,
+                        "label": "side kick"
+                      },
+                      {
+                        "confidence": 0.0442,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0387,
+                        "label": "abseiling"
+                      },
+                      {
+                        "confidence": 0.0345,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0307,
+                        "label": "punching bag"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.6783,
+                    "confidence": 0.4638,
+                    "end_time": 95.867,
+                    "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f44",
+                    "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e44",
+                    "matched_label": "Arrest",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=93.867s-95.867s",
+                    "start_time": 93.867,
+                    "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      32.8,
+                      46.7,
+                      72.8,
+                      164.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8481,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820:d381",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820",
+                    "timestamp_seconds": 94.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.3,
+                      63.5,
+                      258.9,
+                      107.4
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.8244,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820:d382",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820",
+                    "timestamp_seconds": 94.0
+                  },
+                  {
+                    "bounding_box": [
+                      205.0,
+                      58.7,
+                      232.4,
+                      101.3
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7659,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820:d383",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820",
+                    "timestamp_seconds": 94.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.6,
+                      52.8,
+                      203.0,
+                      95.1
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7311,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820:d384",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2820",
+                    "timestamp_seconds": 94.0
+                  },
+                  {
+                    "bounding_box": [
+                      33.8,
+                      46.1,
+                      73.3,
+                      165.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8673,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850:d385",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850",
+                    "timestamp_seconds": 95.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.7,
+                      63.3,
+                      258.9,
+                      107.9
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7713,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850:d386",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850",
+                    "timestamp_seconds": 95.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.2,
+                      53.2,
+                      202.3,
+                      94.5
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7205,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850:d387",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850",
+                    "timestamp_seconds": 95.0
+                  },
+                  {
+                    "bounding_box": [
+                      205.1,
+                      58.9,
+                      232.1,
+                      101.5
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6812,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850:d388",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2850",
+                    "timestamp_seconds": 95.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=93.867s-95.867s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=94.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=95.0s"
+                ],
+                "start_time": 93.867,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4638,
+                    "label": "Arrest",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e44",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=93.867s-95.867s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4638,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.2854,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.1595,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0376,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.02,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 10,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6539,
+                "end_time": 98.0,
+                "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f45",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0939,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:a45",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=96.0s-98.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0939,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0794,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0454,
+                        "label": "tossing coin"
+                      },
+                      {
+                        "confidence": 0.0242,
+                        "label": "moving furniture"
+                      },
+                      {
+                        "confidence": 0.0175,
+                        "label": "abseiling"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.6539,
+                    "confidence": 0.4232,
+                    "end_time": 98.0,
+                    "evidence_id": "anomaly/Arrest/Arrest039_x264.mp4:f45",
+                    "matched_id": "anomaly/Arrest/Arrest039_x264.mp4:e45",
+                    "matched_label": "Arrest",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=96.0s-98.0s",
+                    "start_time": 96.0,
+                    "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      34.0,
+                      45.8,
+                      72.8,
+                      165.3
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8588,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880:d389",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880",
+                    "timestamp_seconds": 96.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.2,
+                      63.5,
+                      259.0,
+                      107.4
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7838,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880:d390",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880",
+                    "timestamp_seconds": 96.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.9,
+                      58.1,
+                      232.3,
+                      101.0
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7572,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880:d391",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880",
+                    "timestamp_seconds": 96.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.2,
+                      53.1,
+                      202.5,
+                      94.8
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6916,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880:d392",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2880",
+                    "timestamp_seconds": 96.0
+                  },
+                  {
+                    "bounding_box": [
+                      31.6,
+                      48.0,
+                      72.2,
+                      152.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8258,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910:d393",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910",
+                    "timestamp_seconds": 97.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.6,
+                      63.6,
+                      258.8,
+                      107.4
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.8006,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910:d394",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910",
+                    "timestamp_seconds": 97.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.3,
+                      53.0,
+                      203.4,
+                      95.0
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.756,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910:d395",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910",
+                    "timestamp_seconds": 97.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.9,
+                      58.1,
+                      232.3,
+                      100.0
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7189,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910:d396",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2910",
+                    "timestamp_seconds": 97.0
+                  },
+                  {
+                    "bounding_box": [
+                      10.5,
+                      54.3,
+                      53.9,
+                      140.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8242,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940:d397",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940",
+                    "timestamp_seconds": 98.0
+                  },
+                  {
+                    "bounding_box": [
+                      231.5,
+                      63.4,
+                      259.0,
+                      107.3
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.7941,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940:d398",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940",
+                    "timestamp_seconds": 98.0
+                  },
+                  {
+                    "bounding_box": [
+                      204.7,
+                      58.8,
+                      232.0,
+                      100.6
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.6743,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940:d399",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940",
+                    "timestamp_seconds": 98.0
+                  },
+                  {
+                    "bounding_box": [
+                      175.6,
+                      53.5,
+                      202.4,
+                      94.4
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.654,
+                    "detection_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940:d400",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:f2940",
+                    "timestamp_seconds": 98.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=96.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=96.0s-98.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=97.0s",
+                  "anomaly/Arrest/Arrest039_x264.mp4@t=98.0s"
+                ],
+                "start_time": 96.0,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4232,
+                    "label": "Arrest",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Arrest/Arrest039_x264.mp4:e45",
+                    "source_reference": "anomaly/Arrest/Arrest039_x264.mp4@t=96.0s-98.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4232,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.2633,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.1858,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0753,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.017,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 14,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+              }
+            ],
+            "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+          }
+        ],
+        "planner_query_index": 0,
+        "query": "Arrest",
+        "source": "surveillance_event",
+        "summary": {
+          "context_records": 0,
+          "incident_groups": 1,
+          "matched_hits": 10,
+          "matched_records": 10,
+          "unmapped_hits": 0
+        },
+        "unmapped_hits": []
+      }
+    ],
+    "schema_version": "phase3d/v1",
+    "summary": {
+      "context_records": 0,
+      "incident_groups": 1,
+      "matched_hits": 10,
+      "planner_queries": 1,
+      "query_errors": 0,
+      "unmapped_hits": 0
+    }
+  },
+  "result_3e": null,
+  "result_3f": null,
+  "retrieval": {
+    "constant": 60,
+    "method": "hybrid-rrf",
+    "top_k": 10
+  },
+  "retrieved_evidence_ids": [
+    "anomaly/Arrest/Arrest039_x264.mp4:f38",
+    "anomaly/Arrest/Arrest039_x264.mp4:f14",
+    "anomaly/Arrest/Arrest039_x264.mp4:f41",
+    "anomaly/Arrest/Arrest039_x264.mp4:f16",
+    "anomaly/Arrest/Arrest039_x264.mp4:f44",
+    "anomaly/Arrest/Arrest039_x264.mp4:f30",
+    "anomaly/Arrest/Arrest039_x264.mp4:f15",
+    "anomaly/Arrest/Arrest039_x264.mp4:f45",
+    "anomaly/Arrest/Arrest039_x264.mp4:f25",
+    "anomaly/Arrest/Arrest039_x264.mp4:f17"
+  ],
+  "run_utc": "2026-09-17T10:57:05.387033+00:00",
+  "schema_version": "investigation-eval/v1",
+  "settings": {
+    "model": "muse-spark-1.3-contributor",
+    "provider": "meta",
+    "temperature": 0.0
+  },
+  "timings": {
+    "3c": 7.715,
+    "3d": 0.002,
+    "report": 0.0,
+    "retr": 0.21,
+    "total": 7.928
+  },
+  "token_usage": {
+    "3c": {
+      "input_tokens": 449,
+      "output_tokens": 1309,
+      "total_tokens": 1758
+    },
+    "3e": null,
+    "3f": null
+  },
+  "validator_verdicts": {
+    "3c": "pass",
+    "3d": "pass",
+    "report": "pass",
+    "retr": "pass"
+  }
+}

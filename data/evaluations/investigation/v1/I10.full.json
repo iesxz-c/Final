@@ -1,0 +1,1994 @@
+{
+  "arm": "full",
+  "baseline_report": null,
+  "failure": null,
+  "git_hash": "8ad1ce8",
+  "integrity_audit": {
+    "base_records": 7927,
+    "cross_video_violations": 0,
+    "input_unchanged": true,
+    "overall_pass": true,
+    "stages": {
+      "3d": {
+        "duplicates": false,
+        "evidence_ids": 4,
+        "pass": true,
+        "refs_preserved": true,
+        "unknown_ids": 0
+      },
+      "3e": {
+        "cross_video": 0,
+        "duplicates": false,
+        "evidence_ids": 4,
+        "pass": true,
+        "refs_preserved": true,
+        "uncontained_ranges": 0,
+        "unknown_ids": 0
+      },
+      "3f": {
+        "cross_video": 0,
+        "duplicates": false,
+        "evidence_ids": 4,
+        "pass": true,
+        "refs_preserved": true,
+        "uncontained_ranges": 0,
+        "unknown_ids": 0
+      }
+    }
+  },
+  "mode": "real",
+  "model": "muse-spark-1.3-contributor",
+  "pattern": "temporal",
+  "plan": {
+    "end_time": 42,
+    "intent": "investigate_incident",
+    "needs_cross_evidence": false,
+    "needs_timeline": true,
+    "queries": [
+      {
+        "query": "shooting",
+        "source": "surveillance_event"
+      }
+    ],
+    "schema_version": "phase3c/v1",
+    "start_time": 36,
+    "temporal_context_seconds": 0,
+    "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+  },
+  "query_id": "I10",
+  "question": "Reconstruct the event order in anomaly/Shooting/Shooting010_x264.mp4 between 36 and 42 seconds.",
+  "result_3d": {
+    "merged_results": {
+      "groups": [
+        {
+          "contextual_evidence": [],
+          "event_hypotheses": [
+            "RoadAccidents",
+            "Shooting"
+          ],
+          "incident_end_time": 88.0,
+          "incident_id": "anomaly/Shooting/Shooting010_x264.mp4:i0",
+          "incident_start_time": 0.0,
+          "matched_evidence": [
+            {
+              "anomaly_score": 0.9972,
+              "end_time": 36.133,
+              "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f16",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2479,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:a16",
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=34.133s-36.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2479,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0921,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0423,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0251,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0098,
+                      "label": "texting"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9972,
+                  "confidence": 0.0012,
+                  "end_time": 36.133,
+                  "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f16",
+                  "matched_id": "anomaly/Shooting/Shooting010_x264.mp4:e16",
+                  "matched_label": "Shooting",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "shooting",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=34.133s-36.133s",
+                  "start_time": 34.133,
+                  "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    288.9,
+                    38.2,
+                    302.6,
+                    72.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7554,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050:d122",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050",
+                  "timestamp_seconds": 35.0
+                },
+                {
+                  "bounding_box": [
+                    61.6,
+                    29.9,
+                    87.2,
+                    44.7
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7433,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050:d123",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050",
+                  "timestamp_seconds": 35.0
+                },
+                {
+                  "bounding_box": [
+                    140.5,
+                    33.6,
+                    271.7,
+                    142.2
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7297,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050:d124",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050",
+                  "timestamp_seconds": 35.0
+                },
+                {
+                  "bounding_box": [
+                    102.0,
+                    11.2,
+                    124.4,
+                    31.2
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4124,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050:d125",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050",
+                  "timestamp_seconds": 35.0
+                },
+                {
+                  "bounding_box": [
+                    61.8,
+                    29.8,
+                    87.3,
+                    44.7
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7436,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080:d126",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080",
+                  "timestamp_seconds": 36.0
+                },
+                {
+                  "bounding_box": [
+                    263.8,
+                    45.3,
+                    281.8,
+                    93.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.6987,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080:d127",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080",
+                  "timestamp_seconds": 36.0
+                },
+                {
+                  "bounding_box": [
+                    140.5,
+                    33.2,
+                    264.3,
+                    144.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.5286,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080:d128",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080",
+                  "timestamp_seconds": 36.0
+                },
+                {
+                  "bounding_box": [
+                    102.7,
+                    11.0,
+                    124.3,
+                    31.5
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4258,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080:d129",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080",
+                  "timestamp_seconds": 36.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Shooting/Shooting010_x264.mp4@t=34.133s-36.133s",
+                "anomaly/Shooting/Shooting010_x264.mp4@t=35.0s",
+                "anomaly/Shooting/Shooting010_x264.mp4@t=36.0s"
+              ],
+              "start_time": 34.133,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9954,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:e16",
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=34.133s-36.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9954,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0016,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0012,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0005,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0004,
+                      "label": "Burglary"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 10,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9938,
+              "end_time": 38.267,
+              "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f17",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.102,
+                  "label": "pumping gas",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:a17",
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=36.267s-38.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.102,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0342,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0295,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0218,
+                      "label": "changing wheel"
+                    },
+                    {
+                      "confidence": 0.0144,
+                      "label": "cleaning floor"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9938,
+                  "confidence": 0.0037,
+                  "end_time": 38.267,
+                  "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f17",
+                  "matched_id": "anomaly/Shooting/Shooting010_x264.mp4:e17",
+                  "matched_label": "Shooting",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "shooting",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=36.267s-38.267s",
+                  "start_time": 36.267,
+                  "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    61.4,
+                    29.8,
+                    87.2,
+                    44.6
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7373,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110:d130",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110",
+                  "timestamp_seconds": 37.0
+                },
+                {
+                  "bounding_box": [
+                    139.9,
+                    33.4,
+                    269.6,
+                    146.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.6932,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110:d131",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110",
+                  "timestamp_seconds": 37.0
+                },
+                {
+                  "bounding_box": [
+                    252.9,
+                    45.9,
+                    281.2,
+                    112.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.5067,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110:d132",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110",
+                  "timestamp_seconds": 37.0
+                },
+                {
+                  "bounding_box": [
+                    139.9,
+                    33.5,
+                    280.7,
+                    146.9
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7577,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140:d133",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140",
+                  "timestamp_seconds": 38.0
+                },
+                {
+                  "bounding_box": [
+                    61.6,
+                    29.8,
+                    87.3,
+                    44.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7238,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140:d134",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140",
+                  "timestamp_seconds": 38.0
+                },
+                {
+                  "bounding_box": [
+                    102.9,
+                    11.2,
+                    124.1,
+                    31.4
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4463,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140:d135",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140",
+                  "timestamp_seconds": 38.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Shooting/Shooting010_x264.mp4@t=36.267s-38.267s",
+                "anomaly/Shooting/Shooting010_x264.mp4@t=37.0s",
+                "anomaly/Shooting/Shooting010_x264.mp4@t=38.0s"
+              ],
+              "start_time": 36.267,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9896,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:e17",
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=36.267s-38.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9896,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0037,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0033,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0009,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0009,
+                      "label": "Burglary"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 8,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9896,
+              "end_time": 40.4,
+              "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f18",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1311,
+                  "label": "pushing car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:a18",
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=38.4s-40.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1311,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.1271,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0684,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0095,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0093,
+                      "label": "changing wheel"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9896,
+                  "confidence": 0.0098,
+                  "end_time": 40.4,
+                  "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f18",
+                  "matched_id": "anomaly/Shooting/Shooting010_x264.mp4:e18",
+                  "matched_label": "Shooting",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "shooting",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=38.4s-40.4s",
+                  "start_time": 38.4,
+                  "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    279.6,
+                    39.1,
+                    300.9,
+                    72.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7996,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170:d136",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170",
+                  "timestamp_seconds": 39.0
+                },
+                {
+                  "bounding_box": [
+                    252.2,
+                    50.7,
+                    275.2,
+                    112.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7336,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170:d137",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170",
+                  "timestamp_seconds": 39.0
+                },
+                {
+                  "bounding_box": [
+                    62.2,
+                    29.8,
+                    87.3,
+                    44.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7298,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170:d138",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170",
+                  "timestamp_seconds": 39.0
+                },
+                {
+                  "bounding_box": [
+                    139.6,
+                    33.4,
+                    260.7,
+                    146.8
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7142,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170:d139",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170",
+                  "timestamp_seconds": 39.0
+                },
+                {
+                  "bounding_box": [
+                    102.8,
+                    11.0,
+                    124.4,
+                    31.2
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4266,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170:d140",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170",
+                  "timestamp_seconds": 39.0
+                },
+                {
+                  "bounding_box": [
+                    140.7,
+                    33.4,
+                    266.4,
+                    145.9
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8272,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1200:d141",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1200",
+                  "timestamp_seconds": 40.0
+                },
+                {
+                  "bounding_box": [
+                    62.3,
+                    29.9,
+                    87.3,
+                    44.4
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7436,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1200:d142",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1200",
+                  "timestamp_seconds": 40.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Shooting/Shooting010_x264.mp4@t=38.4s-40.4s",
+                "anomaly/Shooting/Shooting010_x264.mp4@t=39.0s",
+                "anomaly/Shooting/Shooting010_x264.mp4@t=40.0s"
+              ],
+              "start_time": 38.4,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9826,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:e18",
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=38.4s-40.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9826,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0098,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0032,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0013,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0008,
+                      "label": "Burglary"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 9,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9716,
+              "end_time": 42.533,
+              "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f19",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.3658,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:a19",
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=40.533s-42.533s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3658,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0556,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0347,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0274,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0192,
+                      "label": "motorcycling"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9716,
+                  "confidence": 0.0322,
+                  "end_time": 42.533,
+                  "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f19",
+                  "matched_id": "anomaly/Shooting/Shooting010_x264.mp4:e19",
+                  "matched_label": "Shooting",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "shooting",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=40.533s-42.533s",
+                  "start_time": 40.533,
+                  "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    62.1,
+                    30.0,
+                    87.3,
+                    44.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.731,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230:d143",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230",
+                  "timestamp_seconds": 41.0
+                },
+                {
+                  "bounding_box": [
+                    140.5,
+                    33.2,
+                    265.3,
+                    144.0
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7211,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230:d144",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230",
+                  "timestamp_seconds": 41.0
+                },
+                {
+                  "bounding_box": [
+                    102.7,
+                    11.1,
+                    124.4,
+                    31.4
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4889,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230:d145",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230",
+                  "timestamp_seconds": 41.0
+                },
+                {
+                  "bounding_box": [
+                    140.1,
+                    33.2,
+                    265.3,
+                    144.6
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8133,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260:d146",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260",
+                  "timestamp_seconds": 42.0
+                },
+                {
+                  "bounding_box": [
+                    62.1,
+                    30.0,
+                    87.3,
+                    44.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7453,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260:d147",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260",
+                  "timestamp_seconds": 42.0
+                },
+                {
+                  "bounding_box": [
+                    103.2,
+                    11.0,
+                    124.5,
+                    31.3
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4413,
+                  "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260:d148",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260",
+                  "timestamp_seconds": 42.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Shooting/Shooting010_x264.mp4@t=40.533s-42.533s",
+                "anomaly/Shooting/Shooting010_x264.mp4@t=41.0s",
+                "anomaly/Shooting/Shooting010_x264.mp4@t=42.0s"
+              ],
+              "start_time": 40.533,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9527,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:e19",
+                  "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=40.533s-42.533s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9527,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0322,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0058,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0027,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0023,
+                      "label": "Burglary"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 8,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+            }
+          ],
+          "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+        }
+      ],
+      "unmapped_hits": []
+    },
+    "plan": {
+      "end_time": 42,
+      "intent": "investigate_incident",
+      "needs_cross_evidence": false,
+      "needs_timeline": true,
+      "queries": [
+        {
+          "query": "shooting",
+          "source": "surveillance_event"
+        }
+      ],
+      "schema_version": "phase3c/v1",
+      "start_time": 36,
+      "temporal_context_seconds": 0,
+      "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+    },
+    "query_errors": [],
+    "query_results": [
+      {
+        "groups": [
+          {
+            "contextual_evidence": [],
+            "event_hypotheses": [
+              "RoadAccidents",
+              "Shooting"
+            ],
+            "incident_end_time": 88.0,
+            "incident_id": "anomaly/Shooting/Shooting010_x264.mp4:i0",
+            "incident_start_time": 0.0,
+            "matched_evidence": [
+              {
+                "anomaly_score": 0.9972,
+                "end_time": 36.133,
+                "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f16",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2479,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:a16",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=34.133s-36.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2479,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0921,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0423,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0251,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0098,
+                        "label": "texting"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9972,
+                    "confidence": 0.0012,
+                    "end_time": 36.133,
+                    "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f16",
+                    "matched_id": "anomaly/Shooting/Shooting010_x264.mp4:e16",
+                    "matched_label": "Shooting",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=34.133s-36.133s",
+                    "start_time": 34.133,
+                    "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      288.9,
+                      38.2,
+                      302.6,
+                      72.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7554,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050:d122",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050",
+                    "timestamp_seconds": 35.0
+                  },
+                  {
+                    "bounding_box": [
+                      61.6,
+                      29.9,
+                      87.2,
+                      44.7
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7433,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050:d123",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050",
+                    "timestamp_seconds": 35.0
+                  },
+                  {
+                    "bounding_box": [
+                      140.5,
+                      33.6,
+                      271.7,
+                      142.2
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7297,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050:d124",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050",
+                    "timestamp_seconds": 35.0
+                  },
+                  {
+                    "bounding_box": [
+                      102.0,
+                      11.2,
+                      124.4,
+                      31.2
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4124,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050:d125",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1050",
+                    "timestamp_seconds": 35.0
+                  },
+                  {
+                    "bounding_box": [
+                      61.8,
+                      29.8,
+                      87.3,
+                      44.7
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7436,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080:d126",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080",
+                    "timestamp_seconds": 36.0
+                  },
+                  {
+                    "bounding_box": [
+                      263.8,
+                      45.3,
+                      281.8,
+                      93.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.6987,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080:d127",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080",
+                    "timestamp_seconds": 36.0
+                  },
+                  {
+                    "bounding_box": [
+                      140.5,
+                      33.2,
+                      264.3,
+                      144.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.5286,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080:d128",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080",
+                    "timestamp_seconds": 36.0
+                  },
+                  {
+                    "bounding_box": [
+                      102.7,
+                      11.0,
+                      124.3,
+                      31.5
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4258,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080:d129",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1080",
+                    "timestamp_seconds": 36.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=34.133s-36.133s",
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=35.0s",
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=36.0s"
+                ],
+                "start_time": 34.133,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9954,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:e16",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=34.133s-36.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9954,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0016,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0012,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0005,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Burglary"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 10,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9938,
+                "end_time": 38.267,
+                "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f17",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.102,
+                    "label": "pumping gas",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:a17",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=36.267s-38.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.102,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0342,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0295,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0218,
+                        "label": "changing wheel"
+                      },
+                      {
+                        "confidence": 0.0144,
+                        "label": "cleaning floor"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9938,
+                    "confidence": 0.0037,
+                    "end_time": 38.267,
+                    "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f17",
+                    "matched_id": "anomaly/Shooting/Shooting010_x264.mp4:e17",
+                    "matched_label": "Shooting",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=36.267s-38.267s",
+                    "start_time": 36.267,
+                    "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      61.4,
+                      29.8,
+                      87.2,
+                      44.6
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7373,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110:d130",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110",
+                    "timestamp_seconds": 37.0
+                  },
+                  {
+                    "bounding_box": [
+                      139.9,
+                      33.4,
+                      269.6,
+                      146.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.6932,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110:d131",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110",
+                    "timestamp_seconds": 37.0
+                  },
+                  {
+                    "bounding_box": [
+                      252.9,
+                      45.9,
+                      281.2,
+                      112.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.5067,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110:d132",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1110",
+                    "timestamp_seconds": 37.0
+                  },
+                  {
+                    "bounding_box": [
+                      139.9,
+                      33.5,
+                      280.7,
+                      146.9
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7577,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140:d133",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140",
+                    "timestamp_seconds": 38.0
+                  },
+                  {
+                    "bounding_box": [
+                      61.6,
+                      29.8,
+                      87.3,
+                      44.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7238,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140:d134",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140",
+                    "timestamp_seconds": 38.0
+                  },
+                  {
+                    "bounding_box": [
+                      102.9,
+                      11.2,
+                      124.1,
+                      31.4
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4463,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140:d135",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1140",
+                    "timestamp_seconds": 38.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=36.267s-38.267s",
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=37.0s",
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=38.0s"
+                ],
+                "start_time": 36.267,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9896,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:e17",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=36.267s-38.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9896,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0037,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0033,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0009,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0009,
+                        "label": "Burglary"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 8,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9896,
+                "end_time": 40.4,
+                "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f18",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1311,
+                    "label": "pushing car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:a18",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=38.4s-40.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1311,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.1271,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0684,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0095,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0093,
+                        "label": "changing wheel"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9896,
+                    "confidence": 0.0098,
+                    "end_time": 40.4,
+                    "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f18",
+                    "matched_id": "anomaly/Shooting/Shooting010_x264.mp4:e18",
+                    "matched_label": "Shooting",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=38.4s-40.4s",
+                    "start_time": 38.4,
+                    "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      279.6,
+                      39.1,
+                      300.9,
+                      72.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7996,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170:d136",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170",
+                    "timestamp_seconds": 39.0
+                  },
+                  {
+                    "bounding_box": [
+                      252.2,
+                      50.7,
+                      275.2,
+                      112.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7336,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170:d137",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170",
+                    "timestamp_seconds": 39.0
+                  },
+                  {
+                    "bounding_box": [
+                      62.2,
+                      29.8,
+                      87.3,
+                      44.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7298,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170:d138",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170",
+                    "timestamp_seconds": 39.0
+                  },
+                  {
+                    "bounding_box": [
+                      139.6,
+                      33.4,
+                      260.7,
+                      146.8
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7142,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170:d139",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170",
+                    "timestamp_seconds": 39.0
+                  },
+                  {
+                    "bounding_box": [
+                      102.8,
+                      11.0,
+                      124.4,
+                      31.2
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4266,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170:d140",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1170",
+                    "timestamp_seconds": 39.0
+                  },
+                  {
+                    "bounding_box": [
+                      140.7,
+                      33.4,
+                      266.4,
+                      145.9
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8272,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1200:d141",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1200",
+                    "timestamp_seconds": 40.0
+                  },
+                  {
+                    "bounding_box": [
+                      62.3,
+                      29.9,
+                      87.3,
+                      44.4
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7436,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1200:d142",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1200",
+                    "timestamp_seconds": 40.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=38.4s-40.4s",
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=39.0s",
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=40.0s"
+                ],
+                "start_time": 38.4,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9826,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:e18",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=38.4s-40.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9826,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0098,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0032,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0013,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0008,
+                        "label": "Burglary"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 9,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9716,
+                "end_time": 42.533,
+                "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f19",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.3658,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:a19",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=40.533s-42.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3658,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0556,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0347,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0274,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0192,
+                        "label": "motorcycling"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9716,
+                    "confidence": 0.0322,
+                    "end_time": 42.533,
+                    "evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f19",
+                    "matched_id": "anomaly/Shooting/Shooting010_x264.mp4:e19",
+                    "matched_label": "Shooting",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=40.533s-42.533s",
+                    "start_time": 40.533,
+                    "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      62.1,
+                      30.0,
+                      87.3,
+                      44.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.731,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230:d143",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230",
+                    "timestamp_seconds": 41.0
+                  },
+                  {
+                    "bounding_box": [
+                      140.5,
+                      33.2,
+                      265.3,
+                      144.0
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7211,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230:d144",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230",
+                    "timestamp_seconds": 41.0
+                  },
+                  {
+                    "bounding_box": [
+                      102.7,
+                      11.1,
+                      124.4,
+                      31.4
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4889,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230:d145",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1230",
+                    "timestamp_seconds": 41.0
+                  },
+                  {
+                    "bounding_box": [
+                      140.1,
+                      33.2,
+                      265.3,
+                      144.6
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8133,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260:d146",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260",
+                    "timestamp_seconds": 42.0
+                  },
+                  {
+                    "bounding_box": [
+                      62.1,
+                      30.0,
+                      87.3,
+                      44.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7453,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260:d147",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260",
+                    "timestamp_seconds": 42.0
+                  },
+                  {
+                    "bounding_box": [
+                      103.2,
+                      11.0,
+                      124.5,
+                      31.3
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4413,
+                    "detection_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260:d148",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:f1260",
+                    "timestamp_seconds": 42.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=40.533s-42.533s",
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=41.0s",
+                  "anomaly/Shooting/Shooting010_x264.mp4@t=42.0s"
+                ],
+                "start_time": 40.533,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9527,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shooting/Shooting010_x264.mp4:e19",
+                    "source_reference": "anomaly/Shooting/Shooting010_x264.mp4@t=40.533s-42.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9527,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0322,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0058,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0027,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0023,
+                        "label": "Burglary"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 8,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+              }
+            ],
+            "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+          }
+        ],
+        "planner_query_index": 0,
+        "query": "shooting",
+        "source": "surveillance_event",
+        "summary": {
+          "context_records": 0,
+          "incident_groups": 1,
+          "matched_hits": 4,
+          "matched_records": 4,
+          "unmapped_hits": 0
+        },
+        "unmapped_hits": []
+      }
+    ],
+    "schema_version": "phase3d/v1",
+    "summary": {
+      "context_records": 0,
+      "incident_groups": 1,
+      "matched_hits": 4,
+      "planner_queries": 1,
+      "query_errors": 0,
+      "unmapped_hits": 0
+    }
+  },
+  "result_3e": {
+    "correlations": [
+      {
+        "description": "The model-produced RoadAccidents hypothesis persists across adjacent windows from 34.133s to 42.533s with 4 cars detected in each window, consistent with a persistent event.",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f16",
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "type": "persistent_event"
+      },
+      {
+        "description": "All four records belong to the same Phase 2D incident anomaly/Shooting/Shooting010_x264.mp4:i0.",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f16",
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "type": "same_incident"
+      },
+      {
+        "description": "The f17 interval 36.267s-38.267s occurs before f18 38.4s-40.4s which occurs before f19 40.533s-42.533s, establishing order between 36 and 42 seconds.",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "type": "temporal_sequence"
+      },
+      {
+        "description": "Object detections of cars and trucks temporally coincide with RoadAccidents hypotheses in the same windows, indicating source agreement only and not confirmation.",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f16",
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "type": "cross_source_support"
+      }
+    ],
+    "inferences": [
+      {
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "text": "The available evidence suggests the order between 36 and 42 seconds was f17 (36.267s-38.267s) then f18 (38.4s-40.4s) then f19 (40.533s-42.533s)."
+      },
+      {
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f16",
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "text": "The evidence indicates continued presence of 4 cars and 1-2 trucks across the period, with person detections in 34.133s-40.4s and no person detection in 40.533s-42.533s; person overlap with a RoadAccidents hypothesis does not mean the persons were involved."
+      }
+    ],
+    "limitations": [
+      "Small gaps exist between evidence windows (~0.13s) with no supplied evidence.",
+      "Generic action hypotheses have low confidence (0.10-0.37) and are insufficient to determine actions.",
+      "Model-produced RoadAccidents and Shooting hypotheses are not confirmed crimes and roles cannot be determined.",
+      "Reasoning is limited to supplied evidence windows without access to footage."
+    ],
+    "schema_version": "phase3e/v1",
+    "timeline": [
+      {
+        "end_time": 42.533,
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f16",
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "observation": {
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f16",
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "text": "The available evidence suggests a persistent RoadAccidents model hypothesis (confidences 0.9954 to 0.9527) from 34.133s to 42.533s with 4 cars in each window, trucks in each window (2,1,1,2), persons detected in 34.133s-40.4s (2,1,2 persons) and no person detection in 40.533s-42.533s, with varying low-confidence generic actions (driving car, pumping gas, pushing car)."
+        },
+        "start_time": 34.133
+      }
+    ]
+  },
+  "result_3f": {
+    "report": {
+      "findings": [
+        {
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f16",
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "text": "The retrieved evidence supports a persistent surveillance-event model-produced RoadAccidents hypothesis across 34.133s-42.533s, with confidences 0.9954 (34.133s-36.133s), 0.9896 (36.267s-38.267s), 0.9826 (38.4s-40.4s), and 0.9527 (40.533s-42.533s)."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f16",
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "text": "The available evidence is consistent with continued presence of 4 cars in each window and trucks in each window (2, 1, 1, 2) temporally coinciding with the RoadAccidents hypotheses, indicating source agreement only and not confirmation."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f16",
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "text": "The evidence indicates person detections overlapping the RoadAccidents hypothesis in 34.133s-40.4s (2 persons, 1 person, 2 persons) and no person detection in 40.533s-42.533s; person overlap with a hypothesis does not mean the persons were involved."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f16",
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "text": "The retrieved evidence supports that generic action hypotheses are low-confidence (driving car 0.2479, pumping gas 0.102, pushing car 0.1311, driving car 0.3658) and are insufficient to determine actions."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f16",
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "text": "The evidence indicates all four windows belong to the same incident anomaly/Shooting/Shooting010_x264.mp4:i0 and establish order between 36 and 42 seconds as 36.267s-38.267s, then 38.4s-40.4s, then 40.533s-42.533s."
+        }
+      ],
+      "limitations": [
+        "Small gaps exist between evidence windows (~0.13s) with no supplied evidence.",
+        "Generic action hypotheses have low confidence (0.10-0.37) and are insufficient to determine actions.",
+        "Model-produced RoadAccidents and Shooting hypotheses are not confirmed crimes and roles cannot be determined.",
+        "Reasoning is limited to supplied evidence windows without access to footage."
+      ],
+      "summary": "Retrieved evidence for 36-42 seconds shows three sequential windows (36.267s-38.267s, 38.4s-40.4s, 40.533s-42.533s) each with a surveillance-event model-produced RoadAccidents hypothesis and consistent 4-car detections, with varying truck and person detections and low-confidence generic actions.",
+      "timeline": [
+        {
+          "description": "36.267s-38.267s: surveillance-event model produced RoadAccidents hypothesis (0.9896) with 4 cars, 1 truck, 1 person and low-confidence pumping gas (0.102).",
+          "end_time": 38.267,
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f17"
+          ],
+          "start_time": 36.267
+        },
+        {
+          "description": "38.4s-40.4s: surveillance-event model produced RoadAccidents hypothesis (0.9826) with 4 cars, 1 truck, 2 persons and low-confidence pushing car (0.1311).",
+          "end_time": 40.4,
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f18"
+          ],
+          "start_time": 38.4
+        },
+        {
+          "description": "40.533s-42.533s: surveillance-event model produced RoadAccidents hypothesis (0.9527) with 4 cars, 2 trucks, no person detection and low-confidence driving car (0.3658).",
+          "end_time": 42.533,
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "start_time": 40.533
+        }
+      ],
+      "title": "Event Order Reconstruction: Shooting010 36-42s"
+    },
+    "schema_version": "phase3f/v1",
+    "verification": [
+      {
+        "claim": "The available evidence suggests a persistent RoadAccidents model hypothesis (confidences 0.9954 to 0.9527) from 34.133s to 42.533s with 4 cars in each window, trucks in each window (2,1,1,2), persons detected in 34.133s-40.4s (2,1,2 persons) and no person detection in 40.533s-42.533s, with varying low-confidence generic actions (driving car, pumping gas, pushing car).",
+        "claim_id": "claim_001",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f16",
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "reason": "Each window directly shows the stated RoadAccidents confidence, car/truck/person counts, and generic-action label: f16 0.9954/4/2/2 driving car, f17 0.9896/4/1/1 pumping gas, f18 0.9826/4/2/1 pushing car, f19 0.9527/4/2 trucks no person driving car.",
+        "status": "supported"
+      },
+      {
+        "claim": "persistent_event: The model-produced RoadAccidents hypothesis persists across adjacent windows from 34.133s to 42.533s with 4 cars detected in each window, consistent with a persistent event.",
+        "claim_id": "claim_002",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f16",
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "reason": "All four adjacent windows contain a RoadAccidents surveillance-event hypothesis and 4 cars, supporting persistence across windows as model output only.",
+        "status": "supported"
+      },
+      {
+        "claim": "same_incident: All four records belong to the same Phase 2D incident anomaly/Shooting/Shooting010_x264.mp4:i0.",
+        "claim_id": "claim_003",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f16",
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "reason": "Supplied incident i0 explicitly lists f16, f17, f18, f19 as its evidence.",
+        "status": "supported"
+      },
+      {
+        "claim": "temporal_sequence: The f17 interval 36.267s-38.267s occurs before f18 38.4s-40.4s which occurs before f19 40.533s-42.533s, establishing order between 36 and 42 seconds.",
+        "claim_id": "claim_004",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "reason": "Start/end times in evidence confirm f17 ends 38.267 before f18 starts 38.4, and f18 ends 40.4 before f19 starts 40.533.",
+        "status": "supported"
+      },
+      {
+        "claim": "cross_source_support: Object detections of cars and trucks temporally coincide with RoadAccidents hypotheses in the same windows, indicating source agreement only and not confirmation.",
+        "claim_id": "claim_005",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f16",
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "reason": "Each cited window contains both car/truck object detections and a RoadAccidents hypothesis in the same interval, with qualified language avoiding confirmation.",
+        "status": "supported"
+      },
+      {
+        "claim": "The available evidence suggests the order between 36 and 42 seconds was f17 (36.267s-38.267s) then f18 (38.4s-40.4s) then f19 (40.533s-42.533s).",
+        "claim_id": "claim_006",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "reason": "Evidence timestamps directly establish this chronological sequence.",
+        "status": "supported"
+      },
+      {
+        "claim": "The evidence indicates continued presence of 4 cars and 1-2 trucks across the period, with person detections in 34.133s-40.4s and no person detection in 40.533s-42.533s; person overlap with a RoadAccidents hypothesis does not mean the persons were involved.",
+        "claim_id": "claim_007",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting010_x264.mp4:f16",
+          "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        ],
+        "reason": "Object counts show 4 cars each window, trucks 2,1,1,2, persons 2,1,2 then none in f19, and the non-involvement qualifier is appropriate.",
+        "status": "supported"
+      }
+    ]
+  },
+  "retrieval": {
+    "constant": 60,
+    "method": "hybrid-rrf",
+    "top_k": 10
+  },
+  "retrieved_evidence_ids": [
+    "anomaly/Shooting/Shooting010_x264.mp4:f18",
+    "anomaly/Shooting/Shooting010_x264.mp4:f19",
+    "anomaly/Shooting/Shooting010_x264.mp4:f17",
+    "anomaly/Shooting/Shooting010_x264.mp4:f16"
+  ],
+  "run_utc": "2026-09-17T11:12:43.931166+00:00",
+  "schema_version": "investigation-eval/v1",
+  "settings": {
+    "model": "muse-spark-1.3-contributor",
+    "provider": "meta",
+    "temperature": 0.0
+  },
+  "timings": {
+    "3c": 12.166,
+    "3d": 0.002,
+    "3e": 33.259,
+    "3f": 31.843,
+    "retr": 0.209,
+    "total": 77.48
+  },
+  "token_usage": {
+    "3c": {
+      "input_tokens": 449,
+      "output_tokens": 1276,
+      "total_tokens": 1725
+    },
+    "3e": {
+      "input_tokens": 1772,
+      "output_tokens": 4247,
+      "total_tokens": 6019
+    },
+    "3f": {
+      "input_tokens": 2870,
+      "output_tokens": 5289,
+      "total_tokens": 8159
+    }
+  },
+  "validator_verdicts": {
+    "3c": "pass",
+    "3d": "pass",
+    "3e": "pass",
+    "3f": "pass",
+    "retr": "pass"
+  }
+}

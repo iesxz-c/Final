@@ -1,0 +1,29 @@
+{
+  "schema_version": "phase2a/v1",
+  "inputs": {
+    "batches": [
+      "batch_001",
+      "batch_002",
+      "batch_003",
+      "batch_004",
+      "batch_005",
+      "batch_006",
+      "batch_007",
+      "batch_008",
+      "batch_009",
+      "batch_010",
+      "batch_011",
+      "batch_012",
+      "batch_013",
+      "batch_014",
+      "batch_015"
+    ],
+    "state": "/content/drive/MyDrive/Crime_CCTV_Project/Phase2/phase2c_ucf_batches/state.json"
+  },
+  "videos_selected": 702,
+  "videos_processed": 702,
+  "videos_failed": 0,
+  "observations": 44716,
+  "failures": [],
+  "merged_utc": "2026-09-16T13:02:41.130012+00:00"
+}

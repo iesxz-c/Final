@@ -1,0 +1,2104 @@
+{
+  "arm": "baseline",
+  "baseline_report": {
+    "evidence_records": [
+      {
+        "end_time": 91.6,
+        "event_labels": [
+          "Burglary"
+        ],
+        "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f42",
+        "start_time": 89.6,
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+      },
+      {
+        "end_time": 93.733,
+        "event_labels": [
+          "Burglary"
+        ],
+        "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f43",
+        "start_time": 91.733,
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+      },
+      {
+        "end_time": 95.867,
+        "event_labels": [
+          "Burglary"
+        ],
+        "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f44",
+        "start_time": 93.867,
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+      },
+      {
+        "end_time": 98.0,
+        "event_labels": [
+          "Burglary"
+        ],
+        "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f45",
+        "start_time": 96.0,
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+      },
+      {
+        "end_time": 100.133,
+        "event_labels": [
+          "Burglary"
+        ],
+        "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f46",
+        "start_time": 98.133,
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+      },
+      {
+        "end_time": 102.267,
+        "event_labels": [
+          "Burglary"
+        ],
+        "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f47",
+        "start_time": 100.267,
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+      },
+      {
+        "end_time": 104.4,
+        "event_labels": [
+          "Burglary"
+        ],
+        "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f48",
+        "start_time": 102.4,
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+      },
+      {
+        "end_time": 106.533,
+        "event_labels": [
+          "Burglary"
+        ],
+        "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f49",
+        "start_time": 104.533,
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+      },
+      {
+        "end_time": 108.667,
+        "event_labels": [
+          "Burglary"
+        ],
+        "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f50",
+        "start_time": 106.667,
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+      },
+      {
+        "end_time": 110.8,
+        "event_labels": [
+          "Burglary"
+        ],
+        "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f51",
+        "start_time": 108.8,
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+      }
+    ],
+    "limitations": [
+      "templated baseline: no timeline, correlation, verification, or inference was performed"
+    ],
+    "question": "Show evidence around 100 seconds in anomaly/Burglary/Burglary032_x264.mp4.",
+    "schema_version": "phase5b-baseline/v1"
+  },
+  "failure": null,
+  "git_hash": "8ad1ce8",
+  "integrity_audit": {
+    "base_records": 7927,
+    "cross_video_violations": 0,
+    "input_unchanged": true,
+    "overall_pass": true,
+    "stages": {
+      "3d": {
+        "duplicates": false,
+        "evidence_ids": 10,
+        "pass": true,
+        "refs_preserved": true,
+        "unknown_ids": 0
+      }
+    }
+  },
+  "mode": "real",
+  "model": "muse-spark-1.3-contributor",
+  "pattern": "contextual",
+  "plan": {
+    "end_time": 100,
+    "intent": "search_evidence",
+    "needs_cross_evidence": false,
+    "needs_timeline": false,
+    "queries": [
+      {
+        "query": "Burglary",
+        "source": "surveillance_event"
+      }
+    ],
+    "schema_version": "phase3c/v1",
+    "start_time": 100,
+    "temporal_context_seconds": 10,
+    "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+  },
+  "query_id": "I16",
+  "question": "Show evidence around 100 seconds in anomaly/Burglary/Burglary032_x264.mp4.",
+  "result_3d": {
+    "merged_results": {
+      "groups": [
+        {
+          "contextual_evidence": [
+            {
+              "anomaly_score": 0.7996,
+              "end_time": 91.6,
+              "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f42",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2181,
+                  "label": "pumping gas",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a42",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=89.6s-91.6s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2181,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0395,
+                      "label": "testifying"
+                    },
+                    {
+                      "confidence": 0.0321,
+                      "label": "recording music"
+                    },
+                    {
+                      "confidence": 0.0253,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0243,
+                      "label": "sweeping floor"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Burglary/Burglary032_x264.mp4@t=89.6s-91.6s"
+              ],
+              "start_time": 89.6,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9993,
+                  "label": "Burglary",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e42",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=89.6s-91.6s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9993,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "RoadAccidents"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7993,
+              "end_time": 93.733,
+              "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f43",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.3836,
+                  "label": "pumping gas",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a43",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=91.733s-93.733s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3836,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0377,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0167,
+                      "label": "testifying"
+                    },
+                    {
+                      "confidence": 0.0142,
+                      "label": "washing dishes"
+                    },
+                    {
+                      "confidence": 0.0119,
+                      "label": "golf driving"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Burglary/Burglary032_x264.mp4@t=91.733s-93.733s"
+              ],
+              "start_time": 91.733,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9988,
+                  "label": "Burglary",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e43",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=91.733s-93.733s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9988,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0005,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "RoadAccidents"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.999,
+              "end_time": 95.867,
+              "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f44",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.4314,
+                  "label": "pumping gas",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a44",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=93.867s-95.867s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4314,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0336,
+                      "label": "high kick"
+                    },
+                    {
+                      "confidence": 0.0133,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0119,
+                      "label": "testifying"
+                    },
+                    {
+                      "confidence": 0.0111,
+                      "label": "dancing macarena"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    30.4,
+                    73.2,
+                    68.1,
+                    123.3
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4052,
+                  "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f2850:d39",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f2850",
+                  "timestamp_seconds": 95.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Burglary/Burglary032_x264.mp4@t=93.867s-95.867s",
+                "anomaly/Burglary/Burglary032_x264.mp4@t=95.0s"
+              ],
+              "start_time": 93.867,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9984,
+                  "label": "Burglary",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e44",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=93.867s-95.867s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9984,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0009,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9995,
+              "end_time": 98.0,
+              "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f45",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.3117,
+                  "label": "pumping gas",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a45",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=96.0s-98.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3117,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0484,
+                      "label": "golf driving"
+                    },
+                    {
+                      "confidence": 0.0445,
+                      "label": "recording music"
+                    },
+                    {
+                      "confidence": 0.0424,
+                      "label": "golf chipping"
+                    },
+                    {
+                      "confidence": 0.0217,
+                      "label": "ironing"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    3.6,
+                    101.8,
+                    44.5,
+                    174.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4948,
+                  "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f2940:d40",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f2940",
+                  "timestamp_seconds": 98.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Burglary/Burglary032_x264.mp4@t=96.0s-98.0s",
+                "anomaly/Burglary/Burglary032_x264.mp4@t=98.0s"
+              ],
+              "start_time": 96.0,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9992,
+                  "label": "Burglary",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e45",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=96.0s-98.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9992,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9995,
+              "end_time": 102.267,
+              "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f47",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.4261,
+                  "label": "testifying",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a47",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=100.267s-102.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4261,
+                      "label": "testifying"
+                    },
+                    {
+                      "confidence": 0.0616,
+                      "label": "recording music"
+                    },
+                    {
+                      "confidence": 0.0354,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0137,
+                      "label": "smoking"
+                    },
+                    {
+                      "confidence": 0.01,
+                      "label": "playing organ"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    40.3,
+                    139.4,
+                    73.7,
+                    169.6
+                  ],
+                  "class_name": "tv",
+                  "confidence": 0.4117,
+                  "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f3030:d41",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f3030",
+                  "timestamp_seconds": 101.0
+                },
+                {
+                  "bounding_box": [
+                    40.2,
+                    139.2,
+                    73.8,
+                    169.1
+                  ],
+                  "class_name": "tv",
+                  "confidence": 0.5596,
+                  "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f3060:d42",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f3060",
+                  "timestamp_seconds": 102.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Burglary/Burglary032_x264.mp4@t=100.267s-102.267s",
+                "anomaly/Burglary/Burglary032_x264.mp4@t=101.0s",
+                "anomaly/Burglary/Burglary032_x264.mp4@t=102.0s"
+              ],
+              "start_time": 100.267,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9991,
+                  "label": "Burglary",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e47",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=100.267s-102.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9991,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 4,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7995,
+              "end_time": 104.4,
+              "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f48",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0998,
+                  "label": "pumping gas",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a48",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=102.4s-104.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0998,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0902,
+                      "label": "recording music"
+                    },
+                    {
+                      "confidence": 0.0748,
+                      "label": "testifying"
+                    },
+                    {
+                      "confidence": 0.0206,
+                      "label": "smoking"
+                    },
+                    {
+                      "confidence": 0.0145,
+                      "label": "assembling computer"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Burglary/Burglary032_x264.mp4@t=102.4s-104.4s"
+              ],
+              "start_time": 102.4,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9992,
+                  "label": "Burglary",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e48",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=102.4s-104.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9992,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7994,
+              "end_time": 106.533,
+              "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f49",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2331,
+                  "label": "testifying",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a49",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=104.533s-106.533s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2331,
+                      "label": "testifying"
+                    },
+                    {
+                      "confidence": 0.1326,
+                      "label": "recording music"
+                    },
+                    {
+                      "confidence": 0.041,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0098,
+                      "label": "playing poker"
+                    },
+                    {
+                      "confidence": 0.0096,
+                      "label": "smoking"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Burglary/Burglary032_x264.mp4@t=104.533s-106.533s"
+              ],
+              "start_time": 104.533,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.999,
+                  "label": "Burglary",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e49",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=104.533s-106.533s",
+                  "top_k": [
+                    {
+                      "confidence": 0.999,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "RoadAccidents"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9995,
+              "end_time": 108.667,
+              "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f50",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.7036,
+                  "label": "testifying",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a50",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=106.667s-108.667s",
+                  "top_k": [
+                    {
+                      "confidence": 0.7036,
+                      "label": "testifying"
+                    },
+                    {
+                      "confidence": 0.0439,
+                      "label": "recording music"
+                    },
+                    {
+                      "confidence": 0.0087,
+                      "label": "smoking"
+                    },
+                    {
+                      "confidence": 0.0073,
+                      "label": "blowing nose"
+                    },
+                    {
+                      "confidence": 0.0062,
+                      "label": "pumping gas"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    28.9,
+                    130.7,
+                    61.5,
+                    161.8
+                  ],
+                  "class_name": "tv",
+                  "confidence": 0.4502,
+                  "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f3240:d43",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f3240",
+                  "timestamp_seconds": 108.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Burglary/Burglary032_x264.mp4@t=106.667s-108.667s",
+                "anomaly/Burglary/Burglary032_x264.mp4@t=108.0s"
+              ],
+              "start_time": 106.667,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9991,
+                  "label": "Burglary",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e50",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=106.667s-108.667s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9991,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Stealing"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "RoadAccidents"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9995,
+              "end_time": 110.8,
+              "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f51",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1376,
+                  "label": "testifying",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a51",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=108.8s-110.8s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1376,
+                      "label": "testifying"
+                    },
+                    {
+                      "confidence": 0.0963,
+                      "label": "recording music"
+                    },
+                    {
+                      "confidence": 0.0371,
+                      "label": "smoking"
+                    },
+                    {
+                      "confidence": 0.027,
+                      "label": "assembling computer"
+                    },
+                    {
+                      "confidence": 0.0219,
+                      "label": "laughing"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    29.5,
+                    131.0,
+                    61.7,
+                    162.3
+                  ],
+                  "class_name": "tv",
+                  "confidence": 0.5055,
+                  "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f3270:d44",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f3270",
+                  "timestamp_seconds": 109.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Burglary/Burglary032_x264.mp4@t=108.8s-110.8s",
+                "anomaly/Burglary/Burglary032_x264.mp4@t=109.0s"
+              ],
+              "start_time": 108.8,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9991,
+                  "label": "Burglary",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e51",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=108.8s-110.8s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9991,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+            }
+          ],
+          "event_hypotheses": [
+            "Burglary"
+          ],
+          "incident_end_time": 526.4,
+          "incident_id": "anomaly/Burglary/Burglary032_x264.mp4:i0",
+          "incident_start_time": 0.0,
+          "matched_evidence": [
+            {
+              "anomaly_score": 0.7996,
+              "end_time": 100.133,
+              "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f46",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.4208,
+                  "label": "testifying",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a46",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=98.133s-100.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4208,
+                      "label": "testifying"
+                    },
+                    {
+                      "confidence": 0.1444,
+                      "label": "recording music"
+                    },
+                    {
+                      "confidence": 0.0188,
+                      "label": "playing organ"
+                    },
+                    {
+                      "confidence": 0.0172,
+                      "label": "smoking"
+                    },
+                    {
+                      "confidence": 0.0168,
+                      "label": "pumping gas"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7996,
+                  "confidence": 0.9993,
+                  "end_time": 100.133,
+                  "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f46",
+                  "matched_id": "anomaly/Burglary/Burglary032_x264.mp4:e46",
+                  "matched_label": "Burglary",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "Burglary",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=98.133s-100.133s",
+                  "start_time": 98.133,
+                  "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Burglary/Burglary032_x264.mp4@t=98.133s-100.133s"
+              ],
+              "start_time": 98.133,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9993,
+                  "label": "Burglary",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e46",
+                  "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=98.133s-100.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9993,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0001,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+            }
+          ],
+          "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+        }
+      ],
+      "unmapped_hits": []
+    },
+    "plan": {
+      "end_time": 100,
+      "intent": "search_evidence",
+      "needs_cross_evidence": false,
+      "needs_timeline": false,
+      "queries": [
+        {
+          "query": "Burglary",
+          "source": "surveillance_event"
+        }
+      ],
+      "schema_version": "phase3c/v1",
+      "start_time": 100,
+      "temporal_context_seconds": 10,
+      "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+    },
+    "query_errors": [],
+    "query_results": [
+      {
+        "groups": [
+          {
+            "contextual_evidence": [
+              {
+                "anomaly_score": 0.7996,
+                "end_time": 91.6,
+                "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f42",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2181,
+                    "label": "pumping gas",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a42",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=89.6s-91.6s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2181,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0395,
+                        "label": "testifying"
+                      },
+                      {
+                        "confidence": 0.0321,
+                        "label": "recording music"
+                      },
+                      {
+                        "confidence": 0.0253,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0243,
+                        "label": "sweeping floor"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=89.6s-91.6s"
+                ],
+                "start_time": 89.6,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9993,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e42",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=89.6s-91.6s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9993,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "RoadAccidents"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7993,
+                "end_time": 93.733,
+                "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f43",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.3836,
+                    "label": "pumping gas",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a43",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=91.733s-93.733s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3836,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0377,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0167,
+                        "label": "testifying"
+                      },
+                      {
+                        "confidence": 0.0142,
+                        "label": "washing dishes"
+                      },
+                      {
+                        "confidence": 0.0119,
+                        "label": "golf driving"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=91.733s-93.733s"
+                ],
+                "start_time": 91.733,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9988,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e43",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=91.733s-93.733s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9988,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0005,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "RoadAccidents"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.999,
+                "end_time": 95.867,
+                "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f44",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.4314,
+                    "label": "pumping gas",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a44",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=93.867s-95.867s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4314,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0336,
+                        "label": "high kick"
+                      },
+                      {
+                        "confidence": 0.0133,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0119,
+                        "label": "testifying"
+                      },
+                      {
+                        "confidence": 0.0111,
+                        "label": "dancing macarena"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      30.4,
+                      73.2,
+                      68.1,
+                      123.3
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4052,
+                    "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f2850:d39",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f2850",
+                    "timestamp_seconds": 95.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=93.867s-95.867s",
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=95.0s"
+                ],
+                "start_time": 93.867,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9984,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e44",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=93.867s-95.867s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9984,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0009,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9995,
+                "end_time": 98.0,
+                "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f45",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.3117,
+                    "label": "pumping gas",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a45",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=96.0s-98.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3117,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0484,
+                        "label": "golf driving"
+                      },
+                      {
+                        "confidence": 0.0445,
+                        "label": "recording music"
+                      },
+                      {
+                        "confidence": 0.0424,
+                        "label": "golf chipping"
+                      },
+                      {
+                        "confidence": 0.0217,
+                        "label": "ironing"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      3.6,
+                      101.8,
+                      44.5,
+                      174.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4948,
+                    "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f2940:d40",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f2940",
+                    "timestamp_seconds": 98.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=96.0s-98.0s",
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=98.0s"
+                ],
+                "start_time": 96.0,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9992,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e45",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=96.0s-98.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9992,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9995,
+                "end_time": 102.267,
+                "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f47",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.4261,
+                    "label": "testifying",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a47",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=100.267s-102.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4261,
+                        "label": "testifying"
+                      },
+                      {
+                        "confidence": 0.0616,
+                        "label": "recording music"
+                      },
+                      {
+                        "confidence": 0.0354,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0137,
+                        "label": "smoking"
+                      },
+                      {
+                        "confidence": 0.01,
+                        "label": "playing organ"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      40.3,
+                      139.4,
+                      73.7,
+                      169.6
+                    ],
+                    "class_name": "tv",
+                    "confidence": 0.4117,
+                    "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f3030:d41",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f3030",
+                    "timestamp_seconds": 101.0
+                  },
+                  {
+                    "bounding_box": [
+                      40.2,
+                      139.2,
+                      73.8,
+                      169.1
+                    ],
+                    "class_name": "tv",
+                    "confidence": 0.5596,
+                    "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f3060:d42",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f3060",
+                    "timestamp_seconds": 102.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=100.267s-102.267s",
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=101.0s",
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=102.0s"
+                ],
+                "start_time": 100.267,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9991,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e47",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=100.267s-102.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9991,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7995,
+                "end_time": 104.4,
+                "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f48",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0998,
+                    "label": "pumping gas",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a48",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=102.4s-104.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0998,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0902,
+                        "label": "recording music"
+                      },
+                      {
+                        "confidence": 0.0748,
+                        "label": "testifying"
+                      },
+                      {
+                        "confidence": 0.0206,
+                        "label": "smoking"
+                      },
+                      {
+                        "confidence": 0.0145,
+                        "label": "assembling computer"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=102.4s-104.4s"
+                ],
+                "start_time": 102.4,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9992,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e48",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=102.4s-104.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9992,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7994,
+                "end_time": 106.533,
+                "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f49",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2331,
+                    "label": "testifying",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a49",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=104.533s-106.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2331,
+                        "label": "testifying"
+                      },
+                      {
+                        "confidence": 0.1326,
+                        "label": "recording music"
+                      },
+                      {
+                        "confidence": 0.041,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0098,
+                        "label": "playing poker"
+                      },
+                      {
+                        "confidence": 0.0096,
+                        "label": "smoking"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=104.533s-106.533s"
+                ],
+                "start_time": 104.533,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.999,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e49",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=104.533s-106.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.999,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "RoadAccidents"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9995,
+                "end_time": 108.667,
+                "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f50",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.7036,
+                    "label": "testifying",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a50",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=106.667s-108.667s",
+                    "top_k": [
+                      {
+                        "confidence": 0.7036,
+                        "label": "testifying"
+                      },
+                      {
+                        "confidence": 0.0439,
+                        "label": "recording music"
+                      },
+                      {
+                        "confidence": 0.0087,
+                        "label": "smoking"
+                      },
+                      {
+                        "confidence": 0.0073,
+                        "label": "blowing nose"
+                      },
+                      {
+                        "confidence": 0.0062,
+                        "label": "pumping gas"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      28.9,
+                      130.7,
+                      61.5,
+                      161.8
+                    ],
+                    "class_name": "tv",
+                    "confidence": 0.4502,
+                    "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f3240:d43",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f3240",
+                    "timestamp_seconds": 108.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=106.667s-108.667s",
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=108.0s"
+                ],
+                "start_time": 106.667,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9991,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e50",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=106.667s-108.667s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9991,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Stealing"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "RoadAccidents"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9995,
+                "end_time": 110.8,
+                "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f51",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1376,
+                    "label": "testifying",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a51",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=108.8s-110.8s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1376,
+                        "label": "testifying"
+                      },
+                      {
+                        "confidence": 0.0963,
+                        "label": "recording music"
+                      },
+                      {
+                        "confidence": 0.0371,
+                        "label": "smoking"
+                      },
+                      {
+                        "confidence": 0.027,
+                        "label": "assembling computer"
+                      },
+                      {
+                        "confidence": 0.0219,
+                        "label": "laughing"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      29.5,
+                      131.0,
+                      61.7,
+                      162.3
+                    ],
+                    "class_name": "tv",
+                    "confidence": 0.5055,
+                    "detection_id": "anomaly/Burglary/Burglary032_x264.mp4:f3270:d44",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:f3270",
+                    "timestamp_seconds": 109.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=108.8s-110.8s",
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=109.0s"
+                ],
+                "start_time": 108.8,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9991,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e51",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=108.8s-110.8s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9991,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+              }
+            ],
+            "event_hypotheses": [
+              "Burglary"
+            ],
+            "incident_end_time": 526.4,
+            "incident_id": "anomaly/Burglary/Burglary032_x264.mp4:i0",
+            "incident_start_time": 0.0,
+            "matched_evidence": [
+              {
+                "anomaly_score": 0.7996,
+                "end_time": 100.133,
+                "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f46",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.4208,
+                    "label": "testifying",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:a46",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=98.133s-100.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4208,
+                        "label": "testifying"
+                      },
+                      {
+                        "confidence": 0.1444,
+                        "label": "recording music"
+                      },
+                      {
+                        "confidence": 0.0188,
+                        "label": "playing organ"
+                      },
+                      {
+                        "confidence": 0.0172,
+                        "label": "smoking"
+                      },
+                      {
+                        "confidence": 0.0168,
+                        "label": "pumping gas"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7996,
+                    "confidence": 0.9993,
+                    "end_time": 100.133,
+                    "evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f46",
+                    "matched_id": "anomaly/Burglary/Burglary032_x264.mp4:e46",
+                    "matched_label": "Burglary",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=98.133s-100.133s",
+                    "start_time": 98.133,
+                    "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Burglary/Burglary032_x264.mp4@t=98.133s-100.133s"
+                ],
+                "start_time": 98.133,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9993,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Burglary/Burglary032_x264.mp4:e46",
+                    "source_reference": "anomaly/Burglary/Burglary032_x264.mp4@t=98.133s-100.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9993,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0001,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+              }
+            ],
+            "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+          }
+        ],
+        "planner_query_index": 0,
+        "query": "Burglary",
+        "source": "surveillance_event",
+        "summary": {
+          "context_records": 9,
+          "incident_groups": 1,
+          "matched_hits": 1,
+          "matched_records": 1,
+          "unmapped_hits": 0
+        },
+        "unmapped_hits": []
+      }
+    ],
+    "schema_version": "phase3d/v1",
+    "summary": {
+      "context_records": 9,
+      "incident_groups": 1,
+      "matched_hits": 1,
+      "planner_queries": 1,
+      "query_errors": 0,
+      "unmapped_hits": 0
+    }
+  },
+  "result_3e": null,
+  "result_3f": null,
+  "retrieval": {
+    "constant": 60,
+    "method": "hybrid-rrf",
+    "top_k": 10
+  },
+  "retrieved_evidence_ids": [
+    "anomaly/Burglary/Burglary032_x264.mp4:f50",
+    "anomaly/Burglary/Burglary032_x264.mp4:f42",
+    "anomaly/Burglary/Burglary032_x264.mp4:f46",
+    "anomaly/Burglary/Burglary032_x264.mp4:f48",
+    "anomaly/Burglary/Burglary032_x264.mp4:f49",
+    "anomaly/Burglary/Burglary032_x264.mp4:f47",
+    "anomaly/Burglary/Burglary032_x264.mp4:f51",
+    "anomaly/Burglary/Burglary032_x264.mp4:f43",
+    "anomaly/Burglary/Burglary032_x264.mp4:f44",
+    "anomaly/Burglary/Burglary032_x264.mp4:f45"
+  ],
+  "run_utc": "2026-09-17T10:59:13.749642+00:00",
+  "schema_version": "investigation-eval/v1",
+  "settings": {
+    "model": "muse-spark-1.3-contributor",
+    "provider": "meta",
+    "temperature": 0.0
+  },
+  "timings": {
+    "3c": 17.659,
+    "3d": 0.001,
+    "report": 0.0,
+    "retr": 0.459,
+    "total": 18.12
+  },
+  "token_usage": {
+    "3c": {
+      "input_tokens": 447,
+      "output_tokens": 2129,
+      "total_tokens": 2576
+    },
+    "3e": null,
+    "3f": null
+  },
+  "validator_verdicts": {
+    "3c": "pass",
+    "3d": "pass",
+    "report": "pass",
+    "retr": "pass"
+  }
+}

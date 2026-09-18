@@ -1,0 +1,26 @@
+{
+  "schema_version": "phase2a/v1",
+  "subset": "data/phase2c_155.json",
+  "sampling_fps": 1.0,
+  "detector": {
+    "model": "yolo11n",
+    "weights": "/content/Final/data/models/yolo11n.pt",
+    "confidence_threshold": 0.4,
+    "device_requested": "cuda",
+    "device_used": "cuda",
+    "skipped": false
+  },
+  "started_utc": "2026-09-17T07:01:21.426901+00:00",
+  "elapsed_seconds": 817.3,
+  "videos_selected": 155,
+  "videos_processed": 154,
+  "videos_failed": 1,
+  "observations": 16696,
+  "detections": 44318,
+  "failures": [
+    {
+      "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+      "error": "cannot open video: /content/drive/MyDrive/Anomaly-Videos-Part-1/Anomaly-Videos-Part-1/Explosion/Explosion013_x264.mp4"
+    }
+  ]
+}

@@ -1,0 +1,563 @@
+[
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f1110:d27",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f1110",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 37.0,
+    "class_name": "umbrella",
+    "confidence": 0.4012,
+    "bounding_box": [
+      0.2,
+      94.5,
+      40.8,
+      121.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f1140:d28",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f1140",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 38.0,
+    "class_name": "umbrella",
+    "confidence": 0.4193,
+    "bounding_box": [
+      0.2,
+      94.5,
+      40.8,
+      121.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f1200:d29",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f1200",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 40.0,
+    "class_name": "umbrella",
+    "confidence": 0.4409,
+    "bounding_box": [
+      0.2,
+      94.6,
+      40.9,
+      121.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f120:d4",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f120",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 4.0,
+    "class_name": "umbrella",
+    "confidence": 0.4065,
+    "bounding_box": [
+      0.6,
+      94.6,
+      41.0,
+      121.6
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f1260:d30",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f1260",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 42.0,
+    "class_name": "umbrella",
+    "confidence": 0.4265,
+    "bounding_box": [
+      0.2,
+      94.6,
+      40.9,
+      121.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f1290:d31",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f1290",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 43.0,
+    "class_name": "umbrella",
+    "confidence": 0.445,
+    "bounding_box": [
+      0.2,
+      94.6,
+      40.8,
+      121.2
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f1350:d32",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f1350",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 45.0,
+    "class_name": "umbrella",
+    "confidence": 0.4142,
+    "bounding_box": [
+      0.2,
+      94.6,
+      40.9,
+      121.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f150:d5",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f150",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 5.0,
+    "class_name": "umbrella",
+    "confidence": 0.5994,
+    "bounding_box": [
+      0.6,
+      95.2,
+      41.2,
+      121.1
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f180:d6",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f180",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 6.0,
+    "class_name": "umbrella",
+    "confidence": 0.6603,
+    "bounding_box": [
+      0.9,
+      95.1,
+      40.5,
+      121.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f180:d7",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f180",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 6.0,
+    "class_name": "person",
+    "confidence": 0.4262,
+    "bounding_box": [
+      24.8,
+      118.6,
+      43.2,
+      151.9
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f270:d8",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f270",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 9.0,
+    "class_name": "umbrella",
+    "confidence": 0.4838,
+    "bounding_box": [
+      0.5,
+      94.9,
+      43.1,
+      120.8
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f30:d0",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f30",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 1.0,
+    "class_name": "umbrella",
+    "confidence": 0.4322,
+    "bounding_box": [
+      0.5,
+      94.5,
+      40.5,
+      121.2
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f330:d9",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f330",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 11.0,
+    "class_name": "umbrella",
+    "confidence": 0.4491,
+    "bounding_box": [
+      0.6,
+      94.6,
+      40.8,
+      121.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f510:d10",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f510",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 17.0,
+    "class_name": "umbrella",
+    "confidence": 0.4387,
+    "bounding_box": [
+      0.2,
+      94.5,
+      40.8,
+      121.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f570:d11",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f570",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 19.0,
+    "class_name": "umbrella",
+    "confidence": 0.4685,
+    "bounding_box": [
+      0.2,
+      94.6,
+      40.8,
+      121.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f600:d12",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f600",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 20.0,
+    "class_name": "person",
+    "confidence": 0.7545,
+    "bounding_box": [
+      146.1,
+      159.6,
+      218.4,
+      200.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f60:d1",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f60",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 2.0,
+    "class_name": "bird",
+    "confidence": 0.7448,
+    "bounding_box": [
+      110.2,
+      51.3,
+      186.7,
+      100.6
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f60:d2",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f60",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 2.0,
+    "class_name": "bird",
+    "confidence": 0.6755,
+    "bounding_box": [
+      36.6,
+      146.5,
+      97.7,
+      189.5
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f630:d13",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f630",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 21.0,
+    "class_name": "person",
+    "confidence": 0.8604,
+    "bounding_box": [
+      132.7,
+      124.4,
+      191.7,
+      196.9
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f660:d14",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f660",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 22.0,
+    "class_name": "person",
+    "confidence": 0.8477,
+    "bounding_box": [
+      129.8,
+      106.3,
+      179.7,
+      181.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f690:d15",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f690",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 23.0,
+    "class_name": "person",
+    "confidence": 0.8414,
+    "bounding_box": [
+      132.3,
+      105.4,
+      179.1,
+      177.5
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f720:d16",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f720",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 24.0,
+    "class_name": "person",
+    "confidence": 0.8925,
+    "bounding_box": [
+      132.1,
+      105.9,
+      180.5,
+      177.5
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f750:d17",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f750",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 25.0,
+    "class_name": "person",
+    "confidence": 0.8936,
+    "bounding_box": [
+      133.0,
+      105.3,
+      182.1,
+      177.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f780:d18",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f780",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 26.0,
+    "class_name": "person",
+    "confidence": 0.9012,
+    "bounding_box": [
+      133.0,
+      105.0,
+      183.1,
+      177.6
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f810:d19",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f810",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 27.0,
+    "class_name": "person",
+    "confidence": 0.8709,
+    "bounding_box": [
+      132.9,
+      109.7,
+      187.5,
+      177.9
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f840:d20",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f840",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 28.0,
+    "class_name": "person",
+    "confidence": 0.6293,
+    "bounding_box": [
+      130.6,
+      121.4,
+      182.1,
+      176.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f840:d21",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f840",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 28.0,
+    "class_name": "umbrella",
+    "confidence": 0.4288,
+    "bounding_box": [
+      0.2,
+      94.6,
+      41.0,
+      121.2
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f900:d22",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f900",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 30.0,
+    "class_name": "bird",
+    "confidence": 0.5591,
+    "bounding_box": [
+      130.0,
+      130.0,
+      182.5,
+      177.1
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f90:d3",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f90",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 3.0,
+    "class_name": "umbrella",
+    "confidence": 0.4183,
+    "bounding_box": [
+      0.2,
+      94.5,
+      41.1,
+      121.3
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f930:d23",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f930",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 31.0,
+    "class_name": "person",
+    "confidence": 0.8083,
+    "bounding_box": [
+      132.4,
+      112.0,
+      190.0,
+      178.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f930:d24",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f930",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 31.0,
+    "class_name": "skateboard",
+    "confidence": 0.4815,
+    "bounding_box": [
+      101.0,
+      171.5,
+      148.6,
+      186.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f960:d25",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f960",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 32.0,
+    "class_name": "person",
+    "confidence": 0.8346,
+    "bounding_box": [
+      147.3,
+      113.9,
+      213.0,
+      180.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Abuse/Abuse028_x264.mp4:f990:d26",
+    "observation_id": "anomaly/Abuse/Abuse028_x264.mp4:f990",
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "timestamp_seconds": 33.0,
+    "class_name": "person",
+    "confidence": 0.4953,
+    "bounding_box": [
+      207.2,
+      126.4,
+      257.6,
+      189.5
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  }
+]

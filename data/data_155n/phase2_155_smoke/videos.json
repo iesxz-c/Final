@@ -1,0 +1,17 @@
+[
+  {
+    "video_id": "anomaly/Abuse/Abuse028_x264.mp4",
+    "source_type": "anomaly",
+    "ground_truth_category": "Abuse",
+    "dataset_root": "/content/drive/MyDrive/Anomaly-Videos-Part-1/Anomaly-Videos-Part-1",
+    "path": "Abuse/Abuse028_x264.mp4",
+    "duration_seconds": 47.067,
+    "fps": 30.0,
+    "width": 320,
+    "height": 240,
+    "frame_count": 1412,
+    "file_size_bytes": 8899758,
+    "format": "mp4",
+    "schema_version": "phase2a/v1"
+  }
+]

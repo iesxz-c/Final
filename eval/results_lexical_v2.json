@@ -1,0 +1,173 @@
+{
+  "aggregate": {
+    "mrr": {
+      "n": 22,
+      "n_queries": 30,
+      "value": 0.8181818181818182
+    },
+    "recall@10": {
+      "n": 22,
+      "n_queries": 30,
+      "value": 0.6044565484671636
+    },
+    "recall@5": {
+      "n": 22,
+      "n_queries": 30,
+      "value": 0.43145889210056326
+    }
+  },
+  "method": "lexical",
+  "per_query": {
+    "Q01": {
+      "mrr": 1.0,
+      "recall@10": 0.7692307692307693,
+      "recall@5": 0.38461538461538464
+    },
+    "Q02": {
+      "mrr": 1.0,
+      "recall@10": 0.29411764705882354,
+      "recall@5": 0.14705882352941177
+    },
+    "Q03": {
+      "mrr": null,
+      "recall@10": null,
+      "recall@5": null
+    },
+    "Q04": {
+      "mrr": null,
+      "recall@10": null,
+      "recall@5": null
+    },
+    "Q05": {
+      "mrr": 1.0,
+      "recall@10": 0.6428571428571429,
+      "recall@5": 0.35714285714285715
+    },
+    "Q06": {
+      "mrr": 1.0,
+      "recall@10": 1.0,
+      "recall@5": 1.0
+    },
+    "Q07": {
+      "mrr": null,
+      "recall@10": null,
+      "recall@5": null
+    },
+    "Q08": {
+      "mrr": 1.0,
+      "recall@10": 1.0,
+      "recall@5": 1.0
+    },
+    "Q09": {
+      "mrr": 0.0,
+      "recall@10": 0.0,
+      "recall@5": 0.0
+    },
+    "Q10": {
+      "mrr": 0.0,
+      "recall@10": 0.0,
+      "recall@5": 0.0
+    },
+    "Q11": {
+      "mrr": 0.0,
+      "recall@10": 0.0,
+      "recall@5": 0.0
+    },
+    "Q12": {
+      "mrr": null,
+      "recall@10": null,
+      "recall@5": null
+    },
+    "Q13": {
+      "mrr": null,
+      "recall@10": null,
+      "recall@5": null
+    },
+    "Q14": {
+      "mrr": null,
+      "recall@10": null,
+      "recall@5": null
+    },
+    "Q15": {
+      "mrr": 1.0,
+      "recall@10": 0.8181818181818182,
+      "recall@5": 0.45454545454545453
+    },
+    "Q16": {
+      "mrr": 1.0,
+      "recall@10": 0.43478260869565216,
+      "recall@5": 0.21739130434782608
+    },
+    "Q17": {
+      "mrr": 1.0,
+      "recall@10": 0.7692307692307693,
+      "recall@5": 0.38461538461538464
+    },
+    "Q18": {
+      "mrr": 1.0,
+      "recall@10": 1.0,
+      "recall@5": 0.5
+    },
+    "Q19": {
+      "mrr": 1.0,
+      "recall@10": 0.45454545454545453,
+      "recall@5": 0.22727272727272727
+    },
+    "Q20": {
+      "mrr": 1.0,
+      "recall@10": 0.2702702702702703,
+      "recall@5": 0.13513513513513514
+    },
+    "Q21": {
+      "mrr": 1.0,
+      "recall@10": 1.0,
+      "recall@5": 0.8333333333333334
+    },
+    "Q22": {
+      "mrr": 1.0,
+      "recall@10": 1.0,
+      "recall@5": 0.7142857142857143
+    },
+    "Q23": {
+      "mrr": 1.0,
+      "recall@10": 0.5,
+      "recall@5": 0.25
+    },
+    "Q24": {
+      "mrr": null,
+      "recall@10": null,
+      "recall@5": null
+    },
+    "Q25": {
+      "mrr": null,
+      "recall@10": null,
+      "recall@5": null
+    },
+    "Q26": {
+      "mrr": 1.0,
+      "recall@10": 0.3448275862068966,
+      "recall@5": 0.1724137931034483
+    },
+    "Q27": {
+      "mrr": 1.0,
+      "recall@10": 1.0,
+      "recall@5": 1.0
+    },
+    "Q28": {
+      "mrr": 0.0,
+      "recall@10": 0.0,
+      "recall@5": 0.0
+    },
+    "Q29": {
+      "mrr": 1.0,
+      "recall@10": 1.0,
+      "recall@5": 0.7142857142857143
+    },
+    "Q30": {
+      "mrr": 1.0,
+      "recall@10": 1.0,
+      "recall@5": 1.0
+    }
+  },
+  "schema_version": "retrieval_eval/v1"
+}

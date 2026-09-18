@@ -1,0 +1,21 @@
+{
+  "schema_version": "phase2a/v1",
+  "subset": "data/explosion013_manifest.json",
+  "sampling_fps": 1.0,
+  "detector": {
+    "model": "yolo11n",
+    "weights": "/content/Final/data/models/yolo11n.pt",
+    "confidence_threshold": 0.4,
+    "device_requested": "cuda",
+    "device_used": "cuda",
+    "skipped": false
+  },
+  "started_utc": "2026-09-17T07:17:39.066434+00:00",
+  "elapsed_seconds": 5.8,
+  "videos_selected": 1,
+  "videos_processed": 1,
+  "videos_failed": 0,
+  "observations": 111,
+  "detections": 62,
+  "failures": []
+}

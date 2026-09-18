@@ -1,0 +1,3486 @@
+{
+  "arm": "baseline",
+  "baseline_report": {
+    "evidence_records": [
+      {
+        "end_time": 2.0,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "normal/Normal_Videos_251_x264.mp4:f0",
+        "start_time": 0.0,
+        "video_id": "normal/Normal_Videos_251_x264.mp4"
+      },
+      {
+        "end_time": 4.133,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "normal/Normal_Videos_251_x264.mp4:f1",
+        "start_time": 2.133,
+        "video_id": "normal/Normal_Videos_251_x264.mp4"
+      },
+      {
+        "end_time": 6.267,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "normal/Normal_Videos_251_x264.mp4:f2",
+        "start_time": 4.267,
+        "video_id": "normal/Normal_Videos_251_x264.mp4"
+      },
+      {
+        "end_time": 8.4,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "normal/Normal_Videos_251_x264.mp4:f3",
+        "start_time": 6.4,
+        "video_id": "normal/Normal_Videos_251_x264.mp4"
+      },
+      {
+        "end_time": 10.533,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "normal/Normal_Videos_251_x264.mp4:f4",
+        "start_time": 8.533,
+        "video_id": "normal/Normal_Videos_251_x264.mp4"
+      },
+      {
+        "end_time": 12.667,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "normal/Normal_Videos_251_x264.mp4:f5",
+        "start_time": 10.667,
+        "video_id": "normal/Normal_Videos_251_x264.mp4"
+      },
+      {
+        "end_time": 13.467,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "normal/Normal_Videos_251_x264.mp4:f6",
+        "start_time": 12.8,
+        "video_id": "normal/Normal_Videos_251_x264.mp4"
+      }
+    ],
+    "limitations": [
+      "templated baseline: no timeline, correlation, verification, or inference was performed"
+    ],
+    "question": "Show person detections in normal/Normal_Videos_251_x264.mp4.",
+    "schema_version": "phase5b-baseline/v1"
+  },
+  "failure": null,
+  "git_hash": "8ad1ce8",
+  "integrity_audit": {
+    "base_records": 7927,
+    "cross_video_violations": 0,
+    "input_unchanged": true,
+    "overall_pass": true,
+    "stages": {
+      "3d": {
+        "duplicates": false,
+        "evidence_ids": 7,
+        "pass": true,
+        "refs_preserved": true,
+        "unknown_ids": 0
+      }
+    }
+  },
+  "mode": "real",
+  "model": "muse-spark-1.3-contributor",
+  "pattern": "direct-object",
+  "plan": {
+    "end_time": null,
+    "intent": "find_person",
+    "needs_cross_evidence": false,
+    "needs_timeline": false,
+    "queries": [
+      {
+        "query": "person",
+        "source": "object"
+      }
+    ],
+    "schema_version": "phase3c/v1",
+    "start_time": null,
+    "temporal_context_seconds": 0,
+    "video_id": "normal/Normal_Videos_251_x264.mp4"
+  },
+  "query_id": "I03",
+  "question": "Show person detections in normal/Normal_Videos_251_x264.mp4.",
+  "result_3d": {
+    "merged_results": {
+      "groups": [
+        {
+          "contextual_evidence": [],
+          "event_hypotheses": [
+            "RoadAccidents"
+          ],
+          "incident_end_time": 13.467,
+          "incident_id": "normal/Normal_Videos_251_x264.mp4:i0",
+          "incident_start_time": 0.0,
+          "matched_evidence": [
+            {
+              "anomaly_score": 0.963,
+              "end_time": 2.0,
+              "evidence_id": "normal/Normal_Videos_251_x264.mp4:f0",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.209,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:a0",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=0.0s-2.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.209,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1419,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0346,
+                      "label": "garbage collecting"
+                    },
+                    {
+                      "confidence": 0.0312,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0173,
+                      "label": "unloading truck"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.963,
+                  "confidence": 0.4069,
+                  "end_time": 2.0,
+                  "evidence_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                  "matched_id": "normal/Normal_Videos_251_x264.mp4:f60:d14",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=2.0s",
+                  "start_time": 0.0,
+                  "video_id": "normal/Normal_Videos_251_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    81.0,
+                    79.2,
+                    210.3,
+                    162.2
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.9016,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d0",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                  "timestamp_seconds": 0.0
+                },
+                {
+                  "bounding_box": [
+                    132.9,
+                    42.7,
+                    191.0,
+                    89.4
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.8233,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d1",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                  "timestamp_seconds": 0.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    52.9,
+                    70.4,
+                    207.4
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8107,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d2",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                  "timestamp_seconds": 0.0
+                },
+                {
+                  "bounding_box": [
+                    197.3,
+                    49.9,
+                    241.6,
+                    103.4
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.7421,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d3",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                  "timestamp_seconds": 0.0
+                },
+                {
+                  "bounding_box": [
+                    259.1,
+                    61.5,
+                    275.0,
+                    75.8
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7233,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d4",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                  "timestamp_seconds": 0.0
+                },
+                {
+                  "bounding_box": [
+                    268.4,
+                    100.8,
+                    285.2,
+                    138.9
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.4602,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d5",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                  "timestamp_seconds": 0.0
+                },
+                {
+                  "bounding_box": [
+                    268.3,
+                    100.6,
+                    285.0,
+                    138.7
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.4075,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f30:d10",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f30",
+                  "timestamp_seconds": 1.0
+                },
+                {
+                  "bounding_box": [
+                    81.9,
+                    79.6,
+                    210.1,
+                    161.8
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.9158,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f30:d6",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f30",
+                  "timestamp_seconds": 1.0
+                },
+                {
+                  "bounding_box": [
+                    0.2,
+                    53.3,
+                    70.5,
+                    207.2
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8468,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f30:d7",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f30",
+                  "timestamp_seconds": 1.0
+                },
+                {
+                  "bounding_box": [
+                    167.5,
+                    47.1,
+                    240.6,
+                    103.5
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4894,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f30:d8",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f30",
+                  "timestamp_seconds": 1.0
+                },
+                {
+                  "bounding_box": [
+                    196.3,
+                    50.6,
+                    241.2,
+                    103.6
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4685,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f30:d9",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f30",
+                  "timestamp_seconds": 1.0
+                },
+                {
+                  "bounding_box": [
+                    81.9,
+                    79.9,
+                    210.1,
+                    162.6
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.9189,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f60:d11",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f60",
+                  "timestamp_seconds": 2.0
+                },
+                {
+                  "bounding_box": [
+                    0.2,
+                    53.5,
+                    70.2,
+                    207.0
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8604,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f60:d12",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f60",
+                  "timestamp_seconds": 2.0
+                },
+                {
+                  "bounding_box": [
+                    196.1,
+                    47.9,
+                    242.0,
+                    104.2
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4396,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f60:d13",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f60",
+                  "timestamp_seconds": 2.0
+                },
+                {
+                  "bounding_box": [
+                    54.6,
+                    74.1,
+                    61.8,
+                    96.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4069,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f60:d14",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f60",
+                  "timestamp_seconds": 2.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "normal/Normal_Videos_251_x264.mp4@t=0.0s",
+                "normal/Normal_Videos_251_x264.mp4@t=0.0s-2.0s",
+                "normal/Normal_Videos_251_x264.mp4@t=1.0s",
+                "normal/Normal_Videos_251_x264.mp4@t=2.0s"
+              ],
+              "start_time": 0.0,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9384,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:e0",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=0.0s-2.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9384,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0412,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0058,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0039,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0032,
+                      "label": "Burglary"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 17,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "normal/Normal_Videos_251_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9385,
+              "end_time": 4.133,
+              "evidence_id": "normal/Normal_Videos_251_x264.mp4:f1",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0859,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:a1",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=2.133s-4.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0859,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0349,
+                      "label": "barbequing"
+                    },
+                    {
+                      "confidence": 0.027,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0234,
+                      "label": "changing oil"
+                    },
+                    {
+                      "confidence": 0.0223,
+                      "label": "pumping gas"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9385,
+                  "confidence": 0.8227,
+                  "end_time": 4.133,
+                  "evidence_id": "normal/Normal_Videos_251_x264.mp4:f1",
+                  "matched_id": "normal/Normal_Videos_251_x264.mp4:f120:d18",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=4.0s",
+                  "start_time": 2.133,
+                  "video_id": "normal/Normal_Videos_251_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    45.1,
+                    80.3,
+                    175.5,
+                    227.0
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8227,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d18",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                  "timestamp_seconds": 4.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    53.0,
+                    64.9,
+                    217.9
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8167,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d19",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                  "timestamp_seconds": 4.0
+                },
+                {
+                  "bounding_box": [
+                    111.9,
+                    81.3,
+                    210.3,
+                    164.4
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.623,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d20",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                  "timestamp_seconds": 4.0
+                },
+                {
+                  "bounding_box": [
+                    201.8,
+                    50.1,
+                    240.5,
+                    101.6
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4954,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d21",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                  "timestamp_seconds": 4.0
+                },
+                {
+                  "bounding_box": [
+                    201.6,
+                    50.4,
+                    267.6,
+                    102.3
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4428,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d22",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                  "timestamp_seconds": 4.0
+                },
+                {
+                  "bounding_box": [
+                    268.4,
+                    99.9,
+                    284.4,
+                    138.7
+                  ],
+                  "class_name": "chair",
+                  "confidence": 0.4294,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d23",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                  "timestamp_seconds": 4.0
+                },
+                {
+                  "bounding_box": [
+                    82.0,
+                    79.6,
+                    210.0,
+                    162.8
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.9213,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f90:d15",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f90",
+                  "timestamp_seconds": 3.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    53.2,
+                    70.3,
+                    206.8
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8564,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f90:d16",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f90",
+                  "timestamp_seconds": 3.0
+                },
+                {
+                  "bounding_box": [
+                    196.8,
+                    50.0,
+                    242.9,
+                    105.4
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.6487,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f90:d17",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f90",
+                  "timestamp_seconds": 3.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "normal/Normal_Videos_251_x264.mp4@t=2.133s-4.133s",
+                "normal/Normal_Videos_251_x264.mp4@t=3.0s",
+                "normal/Normal_Videos_251_x264.mp4@t=4.0s"
+              ],
+              "start_time": 2.133,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.8975,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:e1",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=2.133s-4.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.8975,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0847,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0058,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0032,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0023,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 11,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "normal/Normal_Videos_251_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.941,
+              "end_time": 6.267,
+              "evidence_id": "normal/Normal_Videos_251_x264.mp4:f2",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0616,
+                  "label": "spray painting",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:a2",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=4.267s-6.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0616,
+                      "label": "spray painting"
+                    },
+                    {
+                      "confidence": 0.0549,
+                      "label": "barbequing"
+                    },
+                    {
+                      "confidence": 0.0377,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0243,
+                      "label": "changing oil"
+                    },
+                    {
+                      "confidence": 0.0208,
+                      "label": "finger snapping"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.941,
+                  "confidence": 0.9315,
+                  "end_time": 6.267,
+                  "evidence_id": "normal/Normal_Videos_251_x264.mp4:f2",
+                  "matched_id": "normal/Normal_Videos_251_x264.mp4:f180:d28",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=6.0s",
+                  "start_time": 4.267,
+                  "video_id": "normal/Normal_Videos_251_x264.mp4"
+                },
+                {
+                  "anomaly_score": 0.941,
+                  "confidence": 0.9003,
+                  "end_time": 6.267,
+                  "evidence_id": "normal/Normal_Videos_251_x264.mp4:f2",
+                  "matched_id": "normal/Normal_Videos_251_x264.mp4:f150:d25",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=5.0s",
+                  "start_time": 4.267,
+                  "video_id": "normal/Normal_Videos_251_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    81.6,
+                    79.8,
+                    210.4,
+                    163.0
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.9103,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f150:d24",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f150",
+                  "timestamp_seconds": 5.0
+                },
+                {
+                  "bounding_box": [
+                    253.8,
+                    38.1,
+                    319.9,
+                    225.7
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.9003,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f150:d25",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f150",
+                  "timestamp_seconds": 5.0
+                },
+                {
+                  "bounding_box": [
+                    52.1,
+                    75.9,
+                    114.7,
+                    123.6
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8976,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f150:d26",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f150",
+                  "timestamp_seconds": 5.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    53.1,
+                    70.7,
+                    211.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8227,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f150:d27",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f150",
+                  "timestamp_seconds": 5.0
+                },
+                {
+                  "bounding_box": [
+                    155.0,
+                    10.7,
+                    269.7,
+                    226.1
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.9315,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f180:d28",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f180",
+                  "timestamp_seconds": 6.0
+                },
+                {
+                  "bounding_box": [
+                    82.1,
+                    80.3,
+                    182.0,
+                    163.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8319,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f180:d29",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f180",
+                  "timestamp_seconds": 6.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    52.6,
+                    70.5,
+                    215.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8121,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f180:d30",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f180",
+                  "timestamp_seconds": 6.0
+                },
+                {
+                  "bounding_box": [
+                    153.3,
+                    66.0,
+                    193.1,
+                    84.0
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.4664,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f180:d31",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f180",
+                  "timestamp_seconds": 6.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "normal/Normal_Videos_251_x264.mp4@t=4.267s-6.267s",
+                "normal/Normal_Videos_251_x264.mp4@t=5.0s",
+                "normal/Normal_Videos_251_x264.mp4@t=6.0s"
+              ],
+              "start_time": 4.267,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9017,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:e2",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=4.267s-6.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9017,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0827,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0068,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0018,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0013,
+                      "label": "Burglary"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 10,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "normal/Normal_Videos_251_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.8829,
+              "end_time": 8.4,
+              "evidence_id": "normal/Normal_Videos_251_x264.mp4:f3",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1509,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:a3",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=6.4s-8.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1509,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0408,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0277,
+                      "label": "checking tires"
+                    },
+                    {
+                      "confidence": 0.0263,
+                      "label": "barbequing"
+                    },
+                    {
+                      "confidence": 0.0254,
+                      "label": "changing oil"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.8829,
+                  "confidence": 0.8074,
+                  "end_time": 8.4,
+                  "evidence_id": "normal/Normal_Videos_251_x264.mp4:f3",
+                  "matched_id": "normal/Normal_Videos_251_x264.mp4:f210:d34",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=7.0s",
+                  "start_time": 6.4,
+                  "video_id": "normal/Normal_Videos_251_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    81.9,
+                    79.5,
+                    210.4,
+                    163.4
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.9078,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f210:d32",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f210",
+                  "timestamp_seconds": 7.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    52.6,
+                    70.6,
+                    216.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8453,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f210:d33",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f210",
+                  "timestamp_seconds": 7.0
+                },
+                {
+                  "bounding_box": [
+                    285.2,
+                    69.4,
+                    319.8,
+                    226.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8074,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f210:d34",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f210",
+                  "timestamp_seconds": 7.0
+                },
+                {
+                  "bounding_box": [
+                    209.7,
+                    68.0,
+                    222.3,
+                    84.1
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.5172,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f210:d35",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f210",
+                  "timestamp_seconds": 7.0
+                },
+                {
+                  "bounding_box": [
+                    81.9,
+                    78.8,
+                    210.2,
+                    162.7
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.9184,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f240:d36",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f240",
+                  "timestamp_seconds": 8.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    52.5,
+                    70.3,
+                    206.7
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8659,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f240:d37",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f240",
+                  "timestamp_seconds": 8.0
+                },
+                {
+                  "bounding_box": [
+                    219.9,
+                    49.9,
+                    269.5,
+                    97.2
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.478,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f240:d38",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f240",
+                  "timestamp_seconds": 8.0
+                },
+                {
+                  "bounding_box": [
+                    220.1,
+                    49.5,
+                    269.2,
+                    97.3
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.4654,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f240:d39",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f240",
+                  "timestamp_seconds": 8.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "normal/Normal_Videos_251_x264.mp4@t=6.4s-8.4s",
+                "normal/Normal_Videos_251_x264.mp4@t=7.0s",
+                "normal/Normal_Videos_251_x264.mp4@t=8.0s"
+              ],
+              "start_time": 6.4,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.8049,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:e3",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=6.4s-8.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.8049,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.1307,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0253,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0091,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.008,
+                      "label": "Burglary"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 10,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "normal/Normal_Videos_251_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.8962,
+              "end_time": 10.533,
+              "evidence_id": "normal/Normal_Videos_251_x264.mp4:f4",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2296,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:a4",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=8.533s-10.533s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2296,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0517,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0504,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0285,
+                      "label": "skateboarding"
+                    },
+                    {
+                      "confidence": 0.0284,
+                      "label": "checking tires"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.8962,
+                  "confidence": 0.9079,
+                  "end_time": 10.533,
+                  "evidence_id": "normal/Normal_Videos_251_x264.mp4:f4",
+                  "matched_id": "normal/Normal_Videos_251_x264.mp4:f300:d45",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=10.0s",
+                  "start_time": 8.533,
+                  "video_id": "normal/Normal_Videos_251_x264.mp4"
+                },
+                {
+                  "anomaly_score": 0.8962,
+                  "confidence": 0.6798,
+                  "end_time": 10.533,
+                  "evidence_id": "normal/Normal_Videos_251_x264.mp4:f4",
+                  "matched_id": "normal/Normal_Videos_251_x264.mp4:f270:d42",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=9.0s",
+                  "start_time": 8.533,
+                  "video_id": "normal/Normal_Videos_251_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    82.0,
+                    79.1,
+                    210.3,
+                    162.8
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.9175,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f270:d40",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f270",
+                  "timestamp_seconds": 9.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    52.9,
+                    70.6,
+                    204.6
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8105,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f270:d41",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f270",
+                  "timestamp_seconds": 9.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    113.7,
+                    35.2,
+                    226.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.6798,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f270:d42",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f270",
+                  "timestamp_seconds": 9.0
+                },
+                {
+                  "bounding_box": [
+                    219.4,
+                    49.9,
+                    269.1,
+                    97.4
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.5242,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f270:d43",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f270",
+                  "timestamp_seconds": 9.0
+                },
+                {
+                  "bounding_box": [
+                    219.6,
+                    49.7,
+                    268.7,
+                    97.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.4801,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f270:d44",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f270",
+                  "timestamp_seconds": 9.0
+                },
+                {
+                  "bounding_box": [
+                    79.7,
+                    87.8,
+                    133.5,
+                    227.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.9079,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f300:d45",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f300",
+                  "timestamp_seconds": 10.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    52.7,
+                    70.9,
+                    206.9
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.7989,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f300:d46",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f300",
+                  "timestamp_seconds": 10.0
+                },
+                {
+                  "bounding_box": [
+                    108.1,
+                    80.7,
+                    209.8,
+                    162.3
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.4616,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f300:d47",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f300",
+                  "timestamp_seconds": 10.0
+                },
+                {
+                  "bounding_box": [
+                    216.8,
+                    49.7,
+                    267.8,
+                    98.0
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4439,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f300:d48",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f300",
+                  "timestamp_seconds": 10.0
+                },
+                {
+                  "bounding_box": [
+                    49.2,
+                    80.7,
+                    209.6,
+                    164.9
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.4237,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f300:d49",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f300",
+                  "timestamp_seconds": 10.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "normal/Normal_Videos_251_x264.mp4@t=10.0s",
+                "normal/Normal_Videos_251_x264.mp4@t=8.533s-10.533s",
+                "normal/Normal_Videos_251_x264.mp4@t=9.0s"
+              ],
+              "start_time": 8.533,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.827,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:e4",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=8.533s-10.533s",
+                  "top_k": [
+                    {
+                      "confidence": 0.827,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.1419,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0102,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.005,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0045,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 12,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "normal/Normal_Videos_251_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.8813,
+              "end_time": 12.667,
+              "evidence_id": "normal/Normal_Videos_251_x264.mp4:f5",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1255,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:a5",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=10.667s-12.667s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1255,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0507,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0305,
+                      "label": "garbage collecting"
+                    },
+                    {
+                      "confidence": 0.0203,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0192,
+                      "label": "changing oil"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.8813,
+                  "confidence": 0.8649,
+                  "end_time": 12.667,
+                  "evidence_id": "normal/Normal_Videos_251_x264.mp4:f5",
+                  "matched_id": "normal/Normal_Videos_251_x264.mp4:f330:d51",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=11.0s",
+                  "start_time": 10.667,
+                  "video_id": "normal/Normal_Videos_251_x264.mp4"
+                },
+                {
+                  "anomaly_score": 0.8813,
+                  "confidence": 0.8609,
+                  "end_time": 12.667,
+                  "evidence_id": "normal/Normal_Videos_251_x264.mp4:f5",
+                  "matched_id": "normal/Normal_Videos_251_x264.mp4:f360:d55",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=12.0s",
+                  "start_time": 10.667,
+                  "video_id": "normal/Normal_Videos_251_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    81.4,
+                    79.5,
+                    210.7,
+                    163.5
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8743,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f330:d50",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f330",
+                  "timestamp_seconds": 11.0
+                },
+                {
+                  "bounding_box": [
+                    149.6,
+                    78.2,
+                    190.9,
+                    227.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8649,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f330:d51",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f330",
+                  "timestamp_seconds": 11.0
+                },
+                {
+                  "bounding_box": [
+                    0.2,
+                    52.2,
+                    70.5,
+                    206.3
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8536,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f330:d52",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f330",
+                  "timestamp_seconds": 11.0
+                },
+                {
+                  "bounding_box": [
+                    212.3,
+                    50.6,
+                    248.3,
+                    99.6
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.4939,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f330:d53",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f330",
+                  "timestamp_seconds": 11.0
+                },
+                {
+                  "bounding_box": [
+                    81.6,
+                    80.4,
+                    197.5,
+                    162.9
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.9026,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f360:d54",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f360",
+                  "timestamp_seconds": 12.0
+                },
+                {
+                  "bounding_box": [
+                    194.3,
+                    70.3,
+                    229.4,
+                    201.8
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8609,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f360:d55",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f360",
+                  "timestamp_seconds": 12.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    53.3,
+                    70.3,
+                    206.1
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8559,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f360:d56",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f360",
+                  "timestamp_seconds": 12.0
+                },
+                {
+                  "bounding_box": [
+                    208.8,
+                    50.5,
+                    247.3,
+                    102.5
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.6304,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f360:d57",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f360",
+                  "timestamp_seconds": 12.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "normal/Normal_Videos_251_x264.mp4@t=10.667s-12.667s",
+                "normal/Normal_Videos_251_x264.mp4@t=11.0s",
+                "normal/Normal_Videos_251_x264.mp4@t=12.0s"
+              ],
+              "start_time": 10.667,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.8022,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:e5",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=10.667s-12.667s",
+                  "top_k": [
+                    {
+                      "confidence": 0.8022,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.1828,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0041,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0034,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0015,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 10,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "normal/Normal_Videos_251_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7482,
+              "end_time": 13.467,
+              "evidence_id": "normal/Normal_Videos_251_x264.mp4:f6",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0794,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:a6",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=12.8s-13.467s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0794,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0698,
+                      "label": "checking tires"
+                    },
+                    {
+                      "confidence": 0.064,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0522,
+                      "label": "changing oil"
+                    },
+                    {
+                      "confidence": 0.0366,
+                      "label": "barbequing"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7482,
+                  "confidence": 0.8445,
+                  "end_time": 13.467,
+                  "evidence_id": "normal/Normal_Videos_251_x264.mp4:f6",
+                  "matched_id": "normal/Normal_Videos_251_x264.mp4:f390:d60",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=13.0s",
+                  "start_time": 12.8,
+                  "video_id": "normal/Normal_Videos_251_x264.mp4"
+                },
+                {
+                  "anomaly_score": 0.7482,
+                  "confidence": 0.5924,
+                  "end_time": 13.467,
+                  "evidence_id": "normal/Normal_Videos_251_x264.mp4:f6",
+                  "matched_id": "normal/Normal_Videos_251_x264.mp4:f390:d62",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=13.0s",
+                  "start_time": 12.8,
+                  "video_id": "normal/Normal_Videos_251_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    81.9,
+                    80.1,
+                    210.3,
+                    162.7
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.926,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f390:d58",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f390",
+                  "timestamp_seconds": 13.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    53.3,
+                    70.3,
+                    206.2
+                  ],
+                  "class_name": "car",
+                  "confidence": 0.8721,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f390:d59",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f390",
+                  "timestamp_seconds": 13.0
+                },
+                {
+                  "bounding_box": [
+                    224.8,
+                    69.3,
+                    253.6,
+                    171.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8445,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f390:d60",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f390",
+                  "timestamp_seconds": 13.0
+                },
+                {
+                  "bounding_box": [
+                    207.0,
+                    50.7,
+                    239.9,
+                    102.3
+                  ],
+                  "class_name": "truck",
+                  "confidence": 0.7035,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f390:d61",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f390",
+                  "timestamp_seconds": 13.0
+                },
+                {
+                  "bounding_box": [
+                    64.4,
+                    69.8,
+                    72.3,
+                    99.7
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.5924,
+                  "detection_id": "normal/Normal_Videos_251_x264.mp4:f390:d62",
+                  "model_name": "yolo11n",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:f390",
+                  "timestamp_seconds": 13.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "normal/Normal_Videos_251_x264.mp4@t=12.8s-13.467s",
+                "normal/Normal_Videos_251_x264.mp4@t=13.0s"
+              ],
+              "start_time": 12.8,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.5804,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "normal/Normal_Videos_251_x264.mp4:e6",
+                  "source_reference": "normal/Normal_Videos_251_x264.mp4@t=12.8s-13.467s",
+                  "top_k": [
+                    {
+                      "confidence": 0.5804,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.3561,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0344,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0077,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.005,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 7,
+                "num_source_types": 3,
+                "span_seconds": 0.667
+              },
+              "video_id": "normal/Normal_Videos_251_x264.mp4"
+            }
+          ],
+          "video_id": "normal/Normal_Videos_251_x264.mp4"
+        }
+      ],
+      "unmapped_hits": []
+    },
+    "plan": {
+      "end_time": null,
+      "intent": "find_person",
+      "needs_cross_evidence": false,
+      "needs_timeline": false,
+      "queries": [
+        {
+          "query": "person",
+          "source": "object"
+        }
+      ],
+      "schema_version": "phase3c/v1",
+      "start_time": null,
+      "temporal_context_seconds": 0,
+      "video_id": "normal/Normal_Videos_251_x264.mp4"
+    },
+    "query_errors": [],
+    "query_results": [
+      {
+        "groups": [
+          {
+            "contextual_evidence": [],
+            "event_hypotheses": [
+              "RoadAccidents"
+            ],
+            "incident_end_time": 13.467,
+            "incident_id": "normal/Normal_Videos_251_x264.mp4:i0",
+            "incident_start_time": 0.0,
+            "matched_evidence": [
+              {
+                "anomaly_score": 0.963,
+                "end_time": 2.0,
+                "evidence_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.209,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:a0",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=0.0s-2.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.209,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1419,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0346,
+                        "label": "garbage collecting"
+                      },
+                      {
+                        "confidence": 0.0312,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0173,
+                        "label": "unloading truck"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.963,
+                    "confidence": 0.4069,
+                    "end_time": 2.0,
+                    "evidence_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                    "matched_id": "normal/Normal_Videos_251_x264.mp4:f60:d14",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=2.0s",
+                    "start_time": 0.0,
+                    "video_id": "normal/Normal_Videos_251_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      81.0,
+                      79.2,
+                      210.3,
+                      162.2
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.9016,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d0",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                    "timestamp_seconds": 0.0
+                  },
+                  {
+                    "bounding_box": [
+                      132.9,
+                      42.7,
+                      191.0,
+                      89.4
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.8233,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d1",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                    "timestamp_seconds": 0.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      52.9,
+                      70.4,
+                      207.4
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8107,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d2",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                    "timestamp_seconds": 0.0
+                  },
+                  {
+                    "bounding_box": [
+                      197.3,
+                      49.9,
+                      241.6,
+                      103.4
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.7421,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d3",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                    "timestamp_seconds": 0.0
+                  },
+                  {
+                    "bounding_box": [
+                      259.1,
+                      61.5,
+                      275.0,
+                      75.8
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7233,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d4",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                    "timestamp_seconds": 0.0
+                  },
+                  {
+                    "bounding_box": [
+                      268.4,
+                      100.8,
+                      285.2,
+                      138.9
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.4602,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f0:d5",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f0",
+                    "timestamp_seconds": 0.0
+                  },
+                  {
+                    "bounding_box": [
+                      268.3,
+                      100.6,
+                      285.0,
+                      138.7
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.4075,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f30:d10",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f30",
+                    "timestamp_seconds": 1.0
+                  },
+                  {
+                    "bounding_box": [
+                      81.9,
+                      79.6,
+                      210.1,
+                      161.8
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.9158,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f30:d6",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f30",
+                    "timestamp_seconds": 1.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.2,
+                      53.3,
+                      70.5,
+                      207.2
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8468,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f30:d7",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f30",
+                    "timestamp_seconds": 1.0
+                  },
+                  {
+                    "bounding_box": [
+                      167.5,
+                      47.1,
+                      240.6,
+                      103.5
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4894,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f30:d8",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f30",
+                    "timestamp_seconds": 1.0
+                  },
+                  {
+                    "bounding_box": [
+                      196.3,
+                      50.6,
+                      241.2,
+                      103.6
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4685,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f30:d9",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f30",
+                    "timestamp_seconds": 1.0
+                  },
+                  {
+                    "bounding_box": [
+                      81.9,
+                      79.9,
+                      210.1,
+                      162.6
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.9189,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f60:d11",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f60",
+                    "timestamp_seconds": 2.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.2,
+                      53.5,
+                      70.2,
+                      207.0
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8604,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f60:d12",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f60",
+                    "timestamp_seconds": 2.0
+                  },
+                  {
+                    "bounding_box": [
+                      196.1,
+                      47.9,
+                      242.0,
+                      104.2
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4396,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f60:d13",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f60",
+                    "timestamp_seconds": 2.0
+                  },
+                  {
+                    "bounding_box": [
+                      54.6,
+                      74.1,
+                      61.8,
+                      96.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4069,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f60:d14",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f60",
+                    "timestamp_seconds": 2.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "normal/Normal_Videos_251_x264.mp4@t=0.0s",
+                  "normal/Normal_Videos_251_x264.mp4@t=0.0s-2.0s",
+                  "normal/Normal_Videos_251_x264.mp4@t=1.0s",
+                  "normal/Normal_Videos_251_x264.mp4@t=2.0s"
+                ],
+                "start_time": 0.0,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9384,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:e0",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=0.0s-2.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9384,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0412,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0058,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0039,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0032,
+                        "label": "Burglary"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 17,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "normal/Normal_Videos_251_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9385,
+                "end_time": 4.133,
+                "evidence_id": "normal/Normal_Videos_251_x264.mp4:f1",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0859,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:a1",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=2.133s-4.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0859,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0349,
+                        "label": "barbequing"
+                      },
+                      {
+                        "confidence": 0.027,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0234,
+                        "label": "changing oil"
+                      },
+                      {
+                        "confidence": 0.0223,
+                        "label": "pumping gas"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9385,
+                    "confidence": 0.8227,
+                    "end_time": 4.133,
+                    "evidence_id": "normal/Normal_Videos_251_x264.mp4:f1",
+                    "matched_id": "normal/Normal_Videos_251_x264.mp4:f120:d18",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=4.0s",
+                    "start_time": 2.133,
+                    "video_id": "normal/Normal_Videos_251_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      45.1,
+                      80.3,
+                      175.5,
+                      227.0
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8227,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d18",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                    "timestamp_seconds": 4.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      53.0,
+                      64.9,
+                      217.9
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8167,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d19",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                    "timestamp_seconds": 4.0
+                  },
+                  {
+                    "bounding_box": [
+                      111.9,
+                      81.3,
+                      210.3,
+                      164.4
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.623,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d20",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                    "timestamp_seconds": 4.0
+                  },
+                  {
+                    "bounding_box": [
+                      201.8,
+                      50.1,
+                      240.5,
+                      101.6
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4954,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d21",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                    "timestamp_seconds": 4.0
+                  },
+                  {
+                    "bounding_box": [
+                      201.6,
+                      50.4,
+                      267.6,
+                      102.3
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4428,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d22",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                    "timestamp_seconds": 4.0
+                  },
+                  {
+                    "bounding_box": [
+                      268.4,
+                      99.9,
+                      284.4,
+                      138.7
+                    ],
+                    "class_name": "chair",
+                    "confidence": 0.4294,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f120:d23",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f120",
+                    "timestamp_seconds": 4.0
+                  },
+                  {
+                    "bounding_box": [
+                      82.0,
+                      79.6,
+                      210.0,
+                      162.8
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.9213,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f90:d15",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f90",
+                    "timestamp_seconds": 3.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      53.2,
+                      70.3,
+                      206.8
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8564,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f90:d16",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f90",
+                    "timestamp_seconds": 3.0
+                  },
+                  {
+                    "bounding_box": [
+                      196.8,
+                      50.0,
+                      242.9,
+                      105.4
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.6487,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f90:d17",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f90",
+                    "timestamp_seconds": 3.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "normal/Normal_Videos_251_x264.mp4@t=2.133s-4.133s",
+                  "normal/Normal_Videos_251_x264.mp4@t=3.0s",
+                  "normal/Normal_Videos_251_x264.mp4@t=4.0s"
+                ],
+                "start_time": 2.133,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.8975,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:e1",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=2.133s-4.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.8975,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0847,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0058,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0032,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0023,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 11,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "normal/Normal_Videos_251_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.941,
+                "end_time": 6.267,
+                "evidence_id": "normal/Normal_Videos_251_x264.mp4:f2",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0616,
+                    "label": "spray painting",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:a2",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=4.267s-6.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0616,
+                        "label": "spray painting"
+                      },
+                      {
+                        "confidence": 0.0549,
+                        "label": "barbequing"
+                      },
+                      {
+                        "confidence": 0.0377,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0243,
+                        "label": "changing oil"
+                      },
+                      {
+                        "confidence": 0.0208,
+                        "label": "finger snapping"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.941,
+                    "confidence": 0.9315,
+                    "end_time": 6.267,
+                    "evidence_id": "normal/Normal_Videos_251_x264.mp4:f2",
+                    "matched_id": "normal/Normal_Videos_251_x264.mp4:f180:d28",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=6.0s",
+                    "start_time": 4.267,
+                    "video_id": "normal/Normal_Videos_251_x264.mp4"
+                  },
+                  {
+                    "anomaly_score": 0.941,
+                    "confidence": 0.9003,
+                    "end_time": 6.267,
+                    "evidence_id": "normal/Normal_Videos_251_x264.mp4:f2",
+                    "matched_id": "normal/Normal_Videos_251_x264.mp4:f150:d25",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=5.0s",
+                    "start_time": 4.267,
+                    "video_id": "normal/Normal_Videos_251_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      81.6,
+                      79.8,
+                      210.4,
+                      163.0
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.9103,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f150:d24",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f150",
+                    "timestamp_seconds": 5.0
+                  },
+                  {
+                    "bounding_box": [
+                      253.8,
+                      38.1,
+                      319.9,
+                      225.7
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.9003,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f150:d25",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f150",
+                    "timestamp_seconds": 5.0
+                  },
+                  {
+                    "bounding_box": [
+                      52.1,
+                      75.9,
+                      114.7,
+                      123.6
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8976,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f150:d26",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f150",
+                    "timestamp_seconds": 5.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      53.1,
+                      70.7,
+                      211.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8227,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f150:d27",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f150",
+                    "timestamp_seconds": 5.0
+                  },
+                  {
+                    "bounding_box": [
+                      155.0,
+                      10.7,
+                      269.7,
+                      226.1
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.9315,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f180:d28",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f180",
+                    "timestamp_seconds": 6.0
+                  },
+                  {
+                    "bounding_box": [
+                      82.1,
+                      80.3,
+                      182.0,
+                      163.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8319,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f180:d29",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f180",
+                    "timestamp_seconds": 6.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      52.6,
+                      70.5,
+                      215.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8121,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f180:d30",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f180",
+                    "timestamp_seconds": 6.0
+                  },
+                  {
+                    "bounding_box": [
+                      153.3,
+                      66.0,
+                      193.1,
+                      84.0
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.4664,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f180:d31",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f180",
+                    "timestamp_seconds": 6.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "normal/Normal_Videos_251_x264.mp4@t=4.267s-6.267s",
+                  "normal/Normal_Videos_251_x264.mp4@t=5.0s",
+                  "normal/Normal_Videos_251_x264.mp4@t=6.0s"
+                ],
+                "start_time": 4.267,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9017,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:e2",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=4.267s-6.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9017,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0827,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0068,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0018,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0013,
+                        "label": "Burglary"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 10,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "normal/Normal_Videos_251_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.8829,
+                "end_time": 8.4,
+                "evidence_id": "normal/Normal_Videos_251_x264.mp4:f3",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1509,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:a3",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=6.4s-8.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1509,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0408,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0277,
+                        "label": "checking tires"
+                      },
+                      {
+                        "confidence": 0.0263,
+                        "label": "barbequing"
+                      },
+                      {
+                        "confidence": 0.0254,
+                        "label": "changing oil"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.8829,
+                    "confidence": 0.8074,
+                    "end_time": 8.4,
+                    "evidence_id": "normal/Normal_Videos_251_x264.mp4:f3",
+                    "matched_id": "normal/Normal_Videos_251_x264.mp4:f210:d34",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=7.0s",
+                    "start_time": 6.4,
+                    "video_id": "normal/Normal_Videos_251_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      81.9,
+                      79.5,
+                      210.4,
+                      163.4
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.9078,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f210:d32",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f210",
+                    "timestamp_seconds": 7.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      52.6,
+                      70.6,
+                      216.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8453,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f210:d33",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f210",
+                    "timestamp_seconds": 7.0
+                  },
+                  {
+                    "bounding_box": [
+                      285.2,
+                      69.4,
+                      319.8,
+                      226.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8074,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f210:d34",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f210",
+                    "timestamp_seconds": 7.0
+                  },
+                  {
+                    "bounding_box": [
+                      209.7,
+                      68.0,
+                      222.3,
+                      84.1
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.5172,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f210:d35",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f210",
+                    "timestamp_seconds": 7.0
+                  },
+                  {
+                    "bounding_box": [
+                      81.9,
+                      78.8,
+                      210.2,
+                      162.7
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.9184,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f240:d36",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f240",
+                    "timestamp_seconds": 8.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      52.5,
+                      70.3,
+                      206.7
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8659,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f240:d37",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f240",
+                    "timestamp_seconds": 8.0
+                  },
+                  {
+                    "bounding_box": [
+                      219.9,
+                      49.9,
+                      269.5,
+                      97.2
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.478,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f240:d38",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f240",
+                    "timestamp_seconds": 8.0
+                  },
+                  {
+                    "bounding_box": [
+                      220.1,
+                      49.5,
+                      269.2,
+                      97.3
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.4654,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f240:d39",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f240",
+                    "timestamp_seconds": 8.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "normal/Normal_Videos_251_x264.mp4@t=6.4s-8.4s",
+                  "normal/Normal_Videos_251_x264.mp4@t=7.0s",
+                  "normal/Normal_Videos_251_x264.mp4@t=8.0s"
+                ],
+                "start_time": 6.4,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.8049,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:e3",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=6.4s-8.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.8049,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.1307,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0253,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0091,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.008,
+                        "label": "Burglary"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 10,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "normal/Normal_Videos_251_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.8962,
+                "end_time": 10.533,
+                "evidence_id": "normal/Normal_Videos_251_x264.mp4:f4",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2296,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:a4",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=8.533s-10.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2296,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0517,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0504,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0285,
+                        "label": "skateboarding"
+                      },
+                      {
+                        "confidence": 0.0284,
+                        "label": "checking tires"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.8962,
+                    "confidence": 0.9079,
+                    "end_time": 10.533,
+                    "evidence_id": "normal/Normal_Videos_251_x264.mp4:f4",
+                    "matched_id": "normal/Normal_Videos_251_x264.mp4:f300:d45",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=10.0s",
+                    "start_time": 8.533,
+                    "video_id": "normal/Normal_Videos_251_x264.mp4"
+                  },
+                  {
+                    "anomaly_score": 0.8962,
+                    "confidence": 0.6798,
+                    "end_time": 10.533,
+                    "evidence_id": "normal/Normal_Videos_251_x264.mp4:f4",
+                    "matched_id": "normal/Normal_Videos_251_x264.mp4:f270:d42",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=9.0s",
+                    "start_time": 8.533,
+                    "video_id": "normal/Normal_Videos_251_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      82.0,
+                      79.1,
+                      210.3,
+                      162.8
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.9175,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f270:d40",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f270",
+                    "timestamp_seconds": 9.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      52.9,
+                      70.6,
+                      204.6
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8105,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f270:d41",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f270",
+                    "timestamp_seconds": 9.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      113.7,
+                      35.2,
+                      226.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.6798,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f270:d42",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f270",
+                    "timestamp_seconds": 9.0
+                  },
+                  {
+                    "bounding_box": [
+                      219.4,
+                      49.9,
+                      269.1,
+                      97.4
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.5242,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f270:d43",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f270",
+                    "timestamp_seconds": 9.0
+                  },
+                  {
+                    "bounding_box": [
+                      219.6,
+                      49.7,
+                      268.7,
+                      97.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.4801,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f270:d44",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f270",
+                    "timestamp_seconds": 9.0
+                  },
+                  {
+                    "bounding_box": [
+                      79.7,
+                      87.8,
+                      133.5,
+                      227.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.9079,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f300:d45",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f300",
+                    "timestamp_seconds": 10.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      52.7,
+                      70.9,
+                      206.9
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.7989,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f300:d46",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f300",
+                    "timestamp_seconds": 10.0
+                  },
+                  {
+                    "bounding_box": [
+                      108.1,
+                      80.7,
+                      209.8,
+                      162.3
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.4616,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f300:d47",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f300",
+                    "timestamp_seconds": 10.0
+                  },
+                  {
+                    "bounding_box": [
+                      216.8,
+                      49.7,
+                      267.8,
+                      98.0
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4439,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f300:d48",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f300",
+                    "timestamp_seconds": 10.0
+                  },
+                  {
+                    "bounding_box": [
+                      49.2,
+                      80.7,
+                      209.6,
+                      164.9
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.4237,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f300:d49",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f300",
+                    "timestamp_seconds": 10.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "normal/Normal_Videos_251_x264.mp4@t=10.0s",
+                  "normal/Normal_Videos_251_x264.mp4@t=8.533s-10.533s",
+                  "normal/Normal_Videos_251_x264.mp4@t=9.0s"
+                ],
+                "start_time": 8.533,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.827,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:e4",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=8.533s-10.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.827,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.1419,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0102,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.005,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0045,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 12,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "normal/Normal_Videos_251_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.8813,
+                "end_time": 12.667,
+                "evidence_id": "normal/Normal_Videos_251_x264.mp4:f5",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1255,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:a5",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=10.667s-12.667s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1255,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0507,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0305,
+                        "label": "garbage collecting"
+                      },
+                      {
+                        "confidence": 0.0203,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0192,
+                        "label": "changing oil"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.8813,
+                    "confidence": 0.8649,
+                    "end_time": 12.667,
+                    "evidence_id": "normal/Normal_Videos_251_x264.mp4:f5",
+                    "matched_id": "normal/Normal_Videos_251_x264.mp4:f330:d51",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=11.0s",
+                    "start_time": 10.667,
+                    "video_id": "normal/Normal_Videos_251_x264.mp4"
+                  },
+                  {
+                    "anomaly_score": 0.8813,
+                    "confidence": 0.8609,
+                    "end_time": 12.667,
+                    "evidence_id": "normal/Normal_Videos_251_x264.mp4:f5",
+                    "matched_id": "normal/Normal_Videos_251_x264.mp4:f360:d55",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=12.0s",
+                    "start_time": 10.667,
+                    "video_id": "normal/Normal_Videos_251_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      81.4,
+                      79.5,
+                      210.7,
+                      163.5
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8743,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f330:d50",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f330",
+                    "timestamp_seconds": 11.0
+                  },
+                  {
+                    "bounding_box": [
+                      149.6,
+                      78.2,
+                      190.9,
+                      227.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8649,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f330:d51",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f330",
+                    "timestamp_seconds": 11.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.2,
+                      52.2,
+                      70.5,
+                      206.3
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8536,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f330:d52",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f330",
+                    "timestamp_seconds": 11.0
+                  },
+                  {
+                    "bounding_box": [
+                      212.3,
+                      50.6,
+                      248.3,
+                      99.6
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.4939,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f330:d53",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f330",
+                    "timestamp_seconds": 11.0
+                  },
+                  {
+                    "bounding_box": [
+                      81.6,
+                      80.4,
+                      197.5,
+                      162.9
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.9026,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f360:d54",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f360",
+                    "timestamp_seconds": 12.0
+                  },
+                  {
+                    "bounding_box": [
+                      194.3,
+                      70.3,
+                      229.4,
+                      201.8
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8609,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f360:d55",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f360",
+                    "timestamp_seconds": 12.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      53.3,
+                      70.3,
+                      206.1
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8559,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f360:d56",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f360",
+                    "timestamp_seconds": 12.0
+                  },
+                  {
+                    "bounding_box": [
+                      208.8,
+                      50.5,
+                      247.3,
+                      102.5
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.6304,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f360:d57",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f360",
+                    "timestamp_seconds": 12.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "normal/Normal_Videos_251_x264.mp4@t=10.667s-12.667s",
+                  "normal/Normal_Videos_251_x264.mp4@t=11.0s",
+                  "normal/Normal_Videos_251_x264.mp4@t=12.0s"
+                ],
+                "start_time": 10.667,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.8022,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:e5",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=10.667s-12.667s",
+                    "top_k": [
+                      {
+                        "confidence": 0.8022,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.1828,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0041,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0034,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0015,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 10,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "normal/Normal_Videos_251_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7482,
+                "end_time": 13.467,
+                "evidence_id": "normal/Normal_Videos_251_x264.mp4:f6",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0794,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:a6",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=12.8s-13.467s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0794,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0698,
+                        "label": "checking tires"
+                      },
+                      {
+                        "confidence": 0.064,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0522,
+                        "label": "changing oil"
+                      },
+                      {
+                        "confidence": 0.0366,
+                        "label": "barbequing"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7482,
+                    "confidence": 0.8445,
+                    "end_time": 13.467,
+                    "evidence_id": "normal/Normal_Videos_251_x264.mp4:f6",
+                    "matched_id": "normal/Normal_Videos_251_x264.mp4:f390:d60",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=13.0s",
+                    "start_time": 12.8,
+                    "video_id": "normal/Normal_Videos_251_x264.mp4"
+                  },
+                  {
+                    "anomaly_score": 0.7482,
+                    "confidence": 0.5924,
+                    "end_time": 13.467,
+                    "evidence_id": "normal/Normal_Videos_251_x264.mp4:f6",
+                    "matched_id": "normal/Normal_Videos_251_x264.mp4:f390:d62",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=13.0s",
+                    "start_time": 12.8,
+                    "video_id": "normal/Normal_Videos_251_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      81.9,
+                      80.1,
+                      210.3,
+                      162.7
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.926,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f390:d58",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f390",
+                    "timestamp_seconds": 13.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      53.3,
+                      70.3,
+                      206.2
+                    ],
+                    "class_name": "car",
+                    "confidence": 0.8721,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f390:d59",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f390",
+                    "timestamp_seconds": 13.0
+                  },
+                  {
+                    "bounding_box": [
+                      224.8,
+                      69.3,
+                      253.6,
+                      171.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8445,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f390:d60",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f390",
+                    "timestamp_seconds": 13.0
+                  },
+                  {
+                    "bounding_box": [
+                      207.0,
+                      50.7,
+                      239.9,
+                      102.3
+                    ],
+                    "class_name": "truck",
+                    "confidence": 0.7035,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f390:d61",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f390",
+                    "timestamp_seconds": 13.0
+                  },
+                  {
+                    "bounding_box": [
+                      64.4,
+                      69.8,
+                      72.3,
+                      99.7
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.5924,
+                    "detection_id": "normal/Normal_Videos_251_x264.mp4:f390:d62",
+                    "model_name": "yolo11n",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:f390",
+                    "timestamp_seconds": 13.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "normal/Normal_Videos_251_x264.mp4@t=12.8s-13.467s",
+                  "normal/Normal_Videos_251_x264.mp4@t=13.0s"
+                ],
+                "start_time": 12.8,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.5804,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "normal/Normal_Videos_251_x264.mp4:e6",
+                    "source_reference": "normal/Normal_Videos_251_x264.mp4@t=12.8s-13.467s",
+                    "top_k": [
+                      {
+                        "confidence": 0.5804,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.3561,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0344,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0077,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.005,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 7,
+                  "num_source_types": 3,
+                  "span_seconds": 0.667
+                },
+                "video_id": "normal/Normal_Videos_251_x264.mp4"
+              }
+            ],
+            "video_id": "normal/Normal_Videos_251_x264.mp4"
+          }
+        ],
+        "planner_query_index": 0,
+        "query": "person",
+        "source": "object",
+        "summary": {
+          "context_records": 0,
+          "incident_groups": 1,
+          "matched_hits": 11,
+          "matched_records": 7,
+          "unmapped_hits": 0
+        },
+        "unmapped_hits": []
+      }
+    ],
+    "schema_version": "phase3d/v1",
+    "summary": {
+      "context_records": 0,
+      "incident_groups": 1,
+      "matched_hits": 11,
+      "planner_queries": 1,
+      "query_errors": 0,
+      "unmapped_hits": 0
+    }
+  },
+  "result_3e": null,
+  "result_3f": null,
+  "retrieval": {
+    "constant": 60,
+    "method": "hybrid-rrf",
+    "top_k": 10
+  },
+  "retrieved_evidence_ids": [
+    "normal/Normal_Videos_251_x264.mp4:f4",
+    "normal/Normal_Videos_251_x264.mp4:f2",
+    "normal/Normal_Videos_251_x264.mp4:f6",
+    "normal/Normal_Videos_251_x264.mp4:f5",
+    "normal/Normal_Videos_251_x264.mp4:f3",
+    "normal/Normal_Videos_251_x264.mp4:f1",
+    "normal/Normal_Videos_251_x264.mp4:f0"
+  ],
+  "run_utc": "2026-09-17T10:56:16.185916+00:00",
+  "schema_version": "investigation-eval/v1",
+  "settings": {
+    "model": "muse-spark-1.3-contributor",
+    "provider": "meta",
+    "temperature": 0.0
+  },
+  "timings": {
+    "3c": 7.041,
+    "3d": 0.001,
+    "report": 0.0,
+    "retr": 0.229,
+    "total": 7.271
+  },
+  "token_usage": {
+    "3c": {
+      "input_tokens": 441,
+      "output_tokens": 1180,
+      "total_tokens": 1621
+    },
+    "3e": null,
+    "3f": null
+  },
+  "validator_verdicts": {
+    "3c": "pass",
+    "3d": "pass",
+    "report": "pass",
+    "retr": "pass"
+  }
+}

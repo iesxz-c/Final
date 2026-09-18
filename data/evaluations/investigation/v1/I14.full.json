@@ -1,0 +1,1575 @@
+{
+  "arm": "full",
+  "baseline_report": null,
+  "failure": null,
+  "git_hash": "8ad1ce8",
+  "integrity_audit": {
+    "base_records": 7927,
+    "cross_video_violations": 0,
+    "input_unchanged": true,
+    "overall_pass": true,
+    "stages": {
+      "3d": {
+        "duplicates": false,
+        "evidence_ids": 3,
+        "pass": true,
+        "refs_preserved": true,
+        "unknown_ids": 0
+      },
+      "3e": {
+        "cross_video": 0,
+        "duplicates": false,
+        "evidence_ids": 3,
+        "pass": true,
+        "refs_preserved": true,
+        "uncontained_ranges": 0,
+        "unknown_ids": 0
+      },
+      "3f": {
+        "cross_video": 0,
+        "duplicates": false,
+        "evidence_ids": 3,
+        "pass": true,
+        "refs_preserved": true,
+        "uncontained_ranges": 0,
+        "unknown_ids": 0
+      }
+    }
+  },
+  "mode": "real",
+  "model": "muse-spark-1.3-contributor",
+  "pattern": "sequence",
+  "plan": {
+    "end_time": 166,
+    "intent": "investigate_incident",
+    "needs_cross_evidence": false,
+    "needs_timeline": true,
+    "queries": [
+      {
+        "query": "shoplifting",
+        "source": "surveillance_event"
+      },
+      {
+        "query": "burglary",
+        "source": "surveillance_event"
+      }
+    ],
+    "schema_version": "phase3c/v1",
+    "start_time": 166,
+    "temporal_context_seconds": 30,
+    "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+  },
+  "query_id": "I14",
+  "question": "Describe the Shoplifting to Burglary transition in anomaly/Shoplifting/Shoplifting034_x264.mp4 around 166 seconds.",
+  "result_3d": {
+    "merged_results": {
+      "groups": [
+        {
+          "contextual_evidence": [
+            {
+              "anomaly_score": 0.9821,
+              "end_time": 164.133,
+              "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.3742,
+                  "label": "garbage collecting",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:a76",
+                  "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=162.133s-164.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3742,
+                      "label": "garbage collecting"
+                    },
+                    {
+                      "confidence": 0.0283,
+                      "label": "tango dancing"
+                    },
+                    {
+                      "confidence": 0.0245,
+                      "label": "carrying baby"
+                    },
+                    {
+                      "confidence": 0.0144,
+                      "label": "opening present"
+                    },
+                    {
+                      "confidence": 0.0131,
+                      "label": "kissing"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    151.3,
+                    22.8,
+                    212.2,
+                    161.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7349,
+                  "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890:d275",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890",
+                  "timestamp_seconds": 163.0
+                },
+                {
+                  "bounding_box": [
+                    37.5,
+                    99.9,
+                    84.8,
+                    135.8
+                  ],
+                  "class_name": "suitcase",
+                  "confidence": 0.4089,
+                  "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890:d276",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890",
+                  "timestamp_seconds": 163.0
+                },
+                {
+                  "bounding_box": [
+                    161.7,
+                    15.7,
+                    219.8,
+                    146.3
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7257,
+                  "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4920:d277",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4920",
+                  "timestamp_seconds": 164.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=162.133s-164.133s",
+                "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=163.0s",
+                "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.0s"
+              ],
+              "start_time": 162.133,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9701,
+                  "label": "Shoplifting",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e76",
+                  "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=162.133s-164.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9701,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0245,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0017,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0006,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0006,
+                      "label": "Vandalism"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 5,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.8078,
+              "end_time": 168.4,
+              "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.8296,
+                  "label": "garbage collecting",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:a78",
+                  "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=166.4s-168.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.8296,
+                      "label": "garbage collecting"
+                    },
+                    {
+                      "confidence": 0.0155,
+                      "label": "sweeping floor"
+                    },
+                    {
+                      "confidence": 0.0036,
+                      "label": "playing cricket"
+                    },
+                    {
+                      "confidence": 0.0035,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0033,
+                      "label": "skateboarding"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    173.5,
+                    14.4,
+                    204.4,
+                    117.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8338,
+                  "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010:d279",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010",
+                  "timestamp_seconds": 167.0
+                },
+                {
+                  "bounding_box": [
+                    136.9,
+                    19.7,
+                    175.2,
+                    131.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.5996,
+                  "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010:d280",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010",
+                  "timestamp_seconds": 167.0
+                },
+                {
+                  "bounding_box": [
+                    171.0,
+                    13.9,
+                    206.5,
+                    121.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.872,
+                  "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5040:d281",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5040",
+                  "timestamp_seconds": 168.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=166.4s-168.4s",
+                "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=167.0s",
+                "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=168.0s"
+              ],
+              "start_time": 166.4,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.6797,
+                  "label": "Burglary",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e78",
+                  "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=166.4s-168.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.6797,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.2922,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0112,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0063,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0023,
+                      "label": "Vandalism"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 5,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+            }
+          ],
+          "event_hypotheses": [
+            "Burglary",
+            "Shoplifting"
+          ],
+          "incident_end_time": 397.867,
+          "incident_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:i0",
+          "incident_start_time": 0.0,
+          "matched_evidence": [
+            {
+              "anomaly_score": 0.9423,
+              "end_time": 166.267,
+              "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.6237,
+                  "label": "garbage collecting",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:a77",
+                  "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.6237,
+                      "label": "garbage collecting"
+                    },
+                    {
+                      "confidence": 0.0233,
+                      "label": "riding unicycle"
+                    },
+                    {
+                      "confidence": 0.0117,
+                      "label": "sweeping floor"
+                    },
+                    {
+                      "confidence": 0.009,
+                      "label": "riding a bike"
+                    },
+                    {
+                      "confidence": 0.0062,
+                      "label": "kicking soccer ball"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9423,
+                  "confidence": 0.9039,
+                  "end_time": 166.267,
+                  "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+                  "matched_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e77",
+                  "matched_label": "Shoplifting",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "shoplifting",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                  "start_time": 164.267,
+                  "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+                },
+                {
+                  "anomaly_score": 0.9423,
+                  "confidence": 0.0841,
+                  "end_time": 166.267,
+                  "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+                  "matched_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e77",
+                  "matched_label": "Burglary",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "burglary",
+                  "planner_query_index": 1,
+                  "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                  "start_time": 164.267,
+                  "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    37.6,
+                    99.6,
+                    85.5,
+                    136.0
+                  ],
+                  "class_name": "suitcase",
+                  "confidence": 0.5861,
+                  "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4950:d278",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4950",
+                  "timestamp_seconds": 165.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=165.0s"
+              ],
+              "start_time": 164.267,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9039,
+                  "label": "Shoplifting",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e77",
+                  "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9039,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0841,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0047,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0015,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0014,
+                      "label": "Vandalism"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+            }
+          ],
+          "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+        }
+      ],
+      "unmapped_hits": []
+    },
+    "plan": {
+      "end_time": 166,
+      "intent": "investigate_incident",
+      "needs_cross_evidence": false,
+      "needs_timeline": true,
+      "queries": [
+        {
+          "query": "shoplifting",
+          "source": "surveillance_event"
+        },
+        {
+          "query": "burglary",
+          "source": "surveillance_event"
+        }
+      ],
+      "schema_version": "phase3c/v1",
+      "start_time": 166,
+      "temporal_context_seconds": 30,
+      "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+    },
+    "query_errors": [],
+    "query_results": [
+      {
+        "groups": [
+          {
+            "contextual_evidence": [
+              {
+                "anomaly_score": 0.9821,
+                "end_time": 164.133,
+                "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.3742,
+                    "label": "garbage collecting",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:a76",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=162.133s-164.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3742,
+                        "label": "garbage collecting"
+                      },
+                      {
+                        "confidence": 0.0283,
+                        "label": "tango dancing"
+                      },
+                      {
+                        "confidence": 0.0245,
+                        "label": "carrying baby"
+                      },
+                      {
+                        "confidence": 0.0144,
+                        "label": "opening present"
+                      },
+                      {
+                        "confidence": 0.0131,
+                        "label": "kissing"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      151.3,
+                      22.8,
+                      212.2,
+                      161.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7349,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890:d275",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890",
+                    "timestamp_seconds": 163.0
+                  },
+                  {
+                    "bounding_box": [
+                      37.5,
+                      99.9,
+                      84.8,
+                      135.8
+                    ],
+                    "class_name": "suitcase",
+                    "confidence": 0.4089,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890:d276",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890",
+                    "timestamp_seconds": 163.0
+                  },
+                  {
+                    "bounding_box": [
+                      161.7,
+                      15.7,
+                      219.8,
+                      146.3
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7257,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4920:d277",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4920",
+                    "timestamp_seconds": 164.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=162.133s-164.133s",
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=163.0s",
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.0s"
+                ],
+                "start_time": 162.133,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9701,
+                    "label": "Shoplifting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e76",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=162.133s-164.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9701,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0245,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0017,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0006,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0006,
+                        "label": "Vandalism"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 5,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.8078,
+                "end_time": 168.4,
+                "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.8296,
+                    "label": "garbage collecting",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:a78",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=166.4s-168.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.8296,
+                        "label": "garbage collecting"
+                      },
+                      {
+                        "confidence": 0.0155,
+                        "label": "sweeping floor"
+                      },
+                      {
+                        "confidence": 0.0036,
+                        "label": "playing cricket"
+                      },
+                      {
+                        "confidence": 0.0035,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0033,
+                        "label": "skateboarding"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      173.5,
+                      14.4,
+                      204.4,
+                      117.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8338,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010:d279",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010",
+                    "timestamp_seconds": 167.0
+                  },
+                  {
+                    "bounding_box": [
+                      136.9,
+                      19.7,
+                      175.2,
+                      131.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.5996,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010:d280",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010",
+                    "timestamp_seconds": 167.0
+                  },
+                  {
+                    "bounding_box": [
+                      171.0,
+                      13.9,
+                      206.5,
+                      121.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.872,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5040:d281",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5040",
+                    "timestamp_seconds": 168.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=166.4s-168.4s",
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=167.0s",
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=168.0s"
+                ],
+                "start_time": 166.4,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.6797,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e78",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=166.4s-168.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.6797,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.2922,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0112,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0063,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0023,
+                        "label": "Vandalism"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 5,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+              }
+            ],
+            "event_hypotheses": [
+              "Burglary",
+              "Shoplifting"
+            ],
+            "incident_end_time": 397.867,
+            "incident_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:i0",
+            "incident_start_time": 0.0,
+            "matched_evidence": [
+              {
+                "anomaly_score": 0.9423,
+                "end_time": 166.267,
+                "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.6237,
+                    "label": "garbage collecting",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:a77",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.6237,
+                        "label": "garbage collecting"
+                      },
+                      {
+                        "confidence": 0.0233,
+                        "label": "riding unicycle"
+                      },
+                      {
+                        "confidence": 0.0117,
+                        "label": "sweeping floor"
+                      },
+                      {
+                        "confidence": 0.009,
+                        "label": "riding a bike"
+                      },
+                      {
+                        "confidence": 0.0062,
+                        "label": "kicking soccer ball"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9423,
+                    "confidence": 0.9039,
+                    "end_time": 166.267,
+                    "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+                    "matched_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e77",
+                    "matched_label": "Shoplifting",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                    "start_time": 164.267,
+                    "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      37.6,
+                      99.6,
+                      85.5,
+                      136.0
+                    ],
+                    "class_name": "suitcase",
+                    "confidence": 0.5861,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4950:d278",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4950",
+                    "timestamp_seconds": 165.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=165.0s"
+                ],
+                "start_time": 164.267,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9039,
+                    "label": "Shoplifting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e77",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9039,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0841,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0047,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0015,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0014,
+                        "label": "Vandalism"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+              }
+            ],
+            "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+          }
+        ],
+        "planner_query_index": 0,
+        "query": "shoplifting",
+        "source": "surveillance_event",
+        "summary": {
+          "context_records": 2,
+          "incident_groups": 1,
+          "matched_hits": 1,
+          "matched_records": 1,
+          "unmapped_hits": 0
+        },
+        "unmapped_hits": []
+      },
+      {
+        "groups": [
+          {
+            "contextual_evidence": [
+              {
+                "anomaly_score": 0.9821,
+                "end_time": 164.133,
+                "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.3742,
+                    "label": "garbage collecting",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:a76",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=162.133s-164.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3742,
+                        "label": "garbage collecting"
+                      },
+                      {
+                        "confidence": 0.0283,
+                        "label": "tango dancing"
+                      },
+                      {
+                        "confidence": 0.0245,
+                        "label": "carrying baby"
+                      },
+                      {
+                        "confidence": 0.0144,
+                        "label": "opening present"
+                      },
+                      {
+                        "confidence": 0.0131,
+                        "label": "kissing"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      151.3,
+                      22.8,
+                      212.2,
+                      161.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7349,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890:d275",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890",
+                    "timestamp_seconds": 163.0
+                  },
+                  {
+                    "bounding_box": [
+                      37.5,
+                      99.9,
+                      84.8,
+                      135.8
+                    ],
+                    "class_name": "suitcase",
+                    "confidence": 0.4089,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890:d276",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4890",
+                    "timestamp_seconds": 163.0
+                  },
+                  {
+                    "bounding_box": [
+                      161.7,
+                      15.7,
+                      219.8,
+                      146.3
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7257,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4920:d277",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4920",
+                    "timestamp_seconds": 164.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=162.133s-164.133s",
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=163.0s",
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.0s"
+                ],
+                "start_time": 162.133,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9701,
+                    "label": "Shoplifting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e76",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=162.133s-164.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9701,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0245,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0017,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0006,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0006,
+                        "label": "Vandalism"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 5,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.8078,
+                "end_time": 168.4,
+                "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.8296,
+                    "label": "garbage collecting",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:a78",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=166.4s-168.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.8296,
+                        "label": "garbage collecting"
+                      },
+                      {
+                        "confidence": 0.0155,
+                        "label": "sweeping floor"
+                      },
+                      {
+                        "confidence": 0.0036,
+                        "label": "playing cricket"
+                      },
+                      {
+                        "confidence": 0.0035,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0033,
+                        "label": "skateboarding"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      173.5,
+                      14.4,
+                      204.4,
+                      117.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8338,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010:d279",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010",
+                    "timestamp_seconds": 167.0
+                  },
+                  {
+                    "bounding_box": [
+                      136.9,
+                      19.7,
+                      175.2,
+                      131.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.5996,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010:d280",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5010",
+                    "timestamp_seconds": 167.0
+                  },
+                  {
+                    "bounding_box": [
+                      171.0,
+                      13.9,
+                      206.5,
+                      121.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.872,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5040:d281",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f5040",
+                    "timestamp_seconds": 168.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=166.4s-168.4s",
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=167.0s",
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=168.0s"
+                ],
+                "start_time": 166.4,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.6797,
+                    "label": "Burglary",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e78",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=166.4s-168.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.6797,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.2922,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0112,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0063,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0023,
+                        "label": "Vandalism"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 5,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+              }
+            ],
+            "event_hypotheses": [
+              "Burglary",
+              "Shoplifting"
+            ],
+            "incident_end_time": 397.867,
+            "incident_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:i0",
+            "incident_start_time": 0.0,
+            "matched_evidence": [
+              {
+                "anomaly_score": 0.9423,
+                "end_time": 166.267,
+                "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.6237,
+                    "label": "garbage collecting",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:a77",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.6237,
+                        "label": "garbage collecting"
+                      },
+                      {
+                        "confidence": 0.0233,
+                        "label": "riding unicycle"
+                      },
+                      {
+                        "confidence": 0.0117,
+                        "label": "sweeping floor"
+                      },
+                      {
+                        "confidence": 0.009,
+                        "label": "riding a bike"
+                      },
+                      {
+                        "confidence": 0.0062,
+                        "label": "kicking soccer ball"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9423,
+                    "confidence": 0.0841,
+                    "end_time": 166.267,
+                    "evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+                    "matched_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e77",
+                    "matched_label": "Burglary",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                    "start_time": 164.267,
+                    "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      37.6,
+                      99.6,
+                      85.5,
+                      136.0
+                    ],
+                    "class_name": "suitcase",
+                    "confidence": 0.5861,
+                    "detection_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4950:d278",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f4950",
+                    "timestamp_seconds": 165.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                  "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=165.0s"
+                ],
+                "start_time": 164.267,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9039,
+                    "label": "Shoplifting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:e77",
+                    "source_reference": "anomaly/Shoplifting/Shoplifting034_x264.mp4@t=164.267s-166.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9039,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0841,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0047,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0015,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0014,
+                        "label": "Vandalism"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+              }
+            ],
+            "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+          }
+        ],
+        "planner_query_index": 1,
+        "query": "burglary",
+        "source": "surveillance_event",
+        "summary": {
+          "context_records": 2,
+          "incident_groups": 1,
+          "matched_hits": 1,
+          "matched_records": 1,
+          "unmapped_hits": 0
+        },
+        "unmapped_hits": []
+      }
+    ],
+    "schema_version": "phase3d/v1",
+    "summary": {
+      "context_records": 2,
+      "incident_groups": 1,
+      "matched_hits": 2,
+      "planner_queries": 2,
+      "query_errors": 0,
+      "unmapped_hits": 0
+    }
+  },
+  "result_3e": {
+    "correlations": [
+      {
+        "description": "Compatible Shoplifting hypotheses persist across adjacent windows from 162.133s-164.133s to 164.267s-166.267s with co-occurring suitcase detections and garbage collecting labels.",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77"
+        ],
+        "type": "persistent_event"
+      },
+      {
+        "description": "The Shoplifting hypothesis window ending at 166.267s occurs before the Burglary hypothesis window starting at 166.4s.",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "type": "temporal_sequence"
+      },
+      {
+        "description": "All three evidence records belong to the same Phase 2D incident anomaly/Shoplifting/Shoplifting034_x264.mp4:i0.",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "type": "same_incident"
+      },
+      {
+        "description": "Object detections for person and suitcase co-occur in the same windows as surveillance-event hypotheses and generic-action labels, indicating source co-occurrence only and not confirmation of involvement.",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "type": "cross_source_support"
+      }
+    ],
+    "inferences": [
+      {
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "text": "The available evidence suggests a change in model output from Shoplifting hypotheses before 166.267s to a Burglary hypothesis starting at 166.4s, consistent with a transition in hypotheses around 166 seconds, without establishing that crimes occurred or that detected persons were involved."
+      },
+      {
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "text": "The evidence is consistent with persistent activity labeled as garbage collecting across the interval with confidence increasing from 0.3742 to 0.8296, but model agreement does not confirm the nature of the activity."
+      }
+    ],
+    "limitations": [
+      "Reasoning is limited to supplied evidence without access to footage; model labels are hypotheses, not confirmed crimes.",
+      "Temporal gaps between windows (164.133s-164.267s and 166.267s-166.4s) are unobserved and activity during gaps cannot be determined.",
+      "Person and object detections overlapping hypotheses do not indicate involvement, and identities, roles, or causation cannot be determined."
+    ],
+    "schema_version": "phase3e/v1",
+    "timeline": [
+      {
+        "end_time": 166.267,
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77"
+        ],
+        "observation": {
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77"
+          ],
+          "text": "The evidence indicates model-produced Shoplifting hypotheses (confidence 0.9701 and 0.9039) with generic action labeled garbage collecting and object detections including suitcase in both windows and 2 persons in the earlier window."
+        },
+        "start_time": 162.133
+      },
+      {
+        "end_time": 168.4,
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "observation": {
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+          ],
+          "text": "The evidence indicates a model-produced Burglary hypothesis (confidence 0.6797) with generic action labeled garbage collecting (confidence 0.8296) and 3 person detections (max confidence 0.872)."
+        },
+        "start_time": 166.4
+      }
+    ]
+  },
+  "result_3f": {
+    "report": {
+      "findings": [
+        {
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77"
+          ],
+          "text": "The retrieved evidence supports persistent Shoplifting hypotheses across 162.133s-164.133s (confidence 0.9701) and 164.267s-166.267s (confidence 0.9039), with garbage collecting labels in both windows and suitcase detections in both windows plus 2 person detections in the earlier window. The surveillance-event model produced a hypothesis only; the available evidence is consistent with persistence but does not establish that a crime occurred."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+          ],
+          "text": "The retrieved evidence supports a surveillance-event model produced Burglary hypothesis (confidence 0.6797) in 166.4s-168.4s, with generic-action label garbage collecting (confidence 0.8296) and 3 person detections (max confidence 0.872). The evidence indicates model output only."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+          ],
+          "text": "The available evidence is consistent with a change in model output from Shoplifting hypotheses ending at 166.267s to a Burglary hypothesis starting at 166.4s, within the same incident anomaly/Shoplifting/Shoplifting034_x264.mp4:i0. The evidence indicates temporal sequence and source co-occurrence of object detections with hypotheses, which does not establish involvement, identity, or that crimes occurred."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+          ],
+          "text": "The evidence indicates garbage collecting labels across the interval with confidence increasing from 0.3742 to 0.6237 to 0.8296. The retrieved evidence supports label persistence, but model agreement does not confirm the nature of the activity."
+        }
+      ],
+      "limitations": [
+        "Reasoning is limited to supplied evidence without access to footage; model labels are hypotheses, not confirmed crimes.",
+        "Temporal gaps between windows (164.133s-164.267s and 166.267s-166.4s) are unobserved and activity during gaps cannot be determined.",
+        "Person and object detections overlapping hypotheses do not indicate involvement, and identities, roles, or causation cannot be determined."
+      ],
+      "summary": "The retrieved evidence supports a change in surveillance-event model output from Shoplifting hypotheses in 162.133s-166.267s to a Burglary hypothesis in 166.4s-168.4s, consistent with a transition in hypotheses around 166 seconds. All windows share garbage collecting labels and co-occurring person or suitcase detections within the same incident, without establishing that crimes occurred or that detected persons were involved.",
+      "timeline": [
+        {
+          "description": "The surveillance-event model produced a Shoplifting hypothesis (confidence 0.9701) with generic-action label garbage collecting (confidence 0.3742) and object detections for 2 persons (max 0.7349) and 1 suitcase (0.4089).",
+          "end_time": 164.133,
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76"
+          ],
+          "start_time": 162.133
+        },
+        {
+          "description": "The surveillance-event model produced a Shoplifting hypothesis (confidence 0.9039) with generic-action label garbage collecting (confidence 0.6237) and object detection for 1 suitcase (0.5861).",
+          "end_time": 166.267,
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77"
+          ],
+          "start_time": 164.267
+        },
+        {
+          "description": "The surveillance-event model produced a Burglary hypothesis (confidence 0.6797) with generic-action label garbage collecting (confidence 0.8296) and object detections for 3 persons (max 0.872).",
+          "end_time": 168.4,
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+          ],
+          "start_time": 166.4
+        }
+      ],
+      "title": "Shoplifting to Burglary model-hypothesis transition around 166s in Shoplifting034"
+    },
+    "schema_version": "phase3f/v1",
+    "verification": [
+      {
+        "claim": "The evidence indicates model-produced Shoplifting hypotheses (confidence 0.9701 and 0.9039) with generic action labeled garbage collecting and object detections including suitcase in both windows and 2 persons in the earlier window.",
+        "claim_id": "claim_001",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77"
+        ],
+        "reason": "Directly supported: f76 has Shoplifting 0.9701, garbage collecting, person count 2 and suitcase count 1; f77 has Shoplifting 0.9039, garbage collecting and suitcase count 1.",
+        "status": "supported"
+      },
+      {
+        "claim": "The evidence indicates a model-produced Burglary hypothesis (confidence 0.6797) with generic action labeled garbage collecting (confidence 0.8296) and 3 person detections (max confidence 0.872).",
+        "claim_id": "claim_002",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "reason": "Directly supported: f78 contains Burglary 0.6797, garbage collecting 0.8296, and person count 3 max 0.872.",
+        "status": "supported"
+      },
+      {
+        "claim": "persistent_event: Compatible Shoplifting hypotheses persist across adjacent windows from 162.133s-164.133s to 164.267s-166.267s with co-occurring suitcase detections and garbage collecting labels.",
+        "claim_id": "claim_003",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77"
+        ],
+        "reason": "Directly supported: both f76 (162.133-164.133) and f77 (164.267-166.267) have Shoplifting hypotheses, suitcase detections, and garbage collecting labels.",
+        "status": "supported"
+      },
+      {
+        "claim": "temporal_sequence: The Shoplifting hypothesis window ending at 166.267s occurs before the Burglary hypothesis window starting at 166.4s.",
+        "claim_id": "claim_004",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "reason": "Directly supported: f77 end_time 166.267 precedes f78 start_time 166.4.",
+        "status": "supported"
+      },
+      {
+        "claim": "same_incident: All three evidence records belong to the same Phase 2D incident anomaly/Shoplifting/Shoplifting034_x264.mp4:i0.",
+        "claim_id": "claim_005",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "reason": "Directly supported: incident i0 lists f76, f77, and f78 as its evidence.",
+        "status": "supported"
+      },
+      {
+        "claim": "cross_source_support: Object detections for person and suitcase co-occur in the same windows as surveillance-event hypotheses and generic-action labels, indicating source co-occurrence only and not confirmation of involvement.",
+        "claim_id": "claim_006",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "reason": "Directly supported: f76 has person+suitcase with Shoplifting and garbage collecting, f77 has suitcase with Shoplifting and garbage collecting, f78 has person with Burglary and garbage collecting, showing co-occurrence with appropriate qualification.",
+        "status": "supported"
+      },
+      {
+        "claim": "The available evidence suggests a change in model output from Shoplifting hypotheses before 166.267s to a Burglary hypothesis starting at 166.4s, consistent with a transition in hypotheses around 166 seconds, without establishing that crimes occurred or that detected persons were involved.",
+        "claim_id": "claim_007",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "reason": "Directly supported and appropriately qualified: f76 and f77 are Shoplifting before 166.267s, f78 is Burglary from 166.4s, described as model-output change without claiming crimes or involvement.",
+        "status": "supported"
+      },
+      {
+        "claim": "The evidence is consistent with persistent activity labeled as garbage collecting across the interval with confidence increasing from 0.3742 to 0.8296, but model agreement does not confirm the nature of the activity.",
+        "claim_id": "claim_008",
+        "evidence_ids": [
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        ],
+        "reason": "Directly supported and qualified: f76 0.3742, f77 0.6237, f78 0.8296 show increasing garbage collecting confidence, with disclaimer that it does not confirm activity nature.",
+        "status": "supported"
+      }
+    ]
+  },
+  "retrieval": {
+    "constant": 60,
+    "method": "hybrid-rrf",
+    "top_k": 10
+  },
+  "retrieved_evidence_ids": [
+    "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+    "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78",
+    "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77"
+  ],
+  "run_utc": "2026-09-17T11:18:28.290310+00:00",
+  "schema_version": "investigation-eval/v1",
+  "settings": {
+    "model": "muse-spark-1.3-contributor",
+    "provider": "meta",
+    "temperature": 0.0
+  },
+  "timings": {
+    "3c": 19.771,
+    "3d": 0.002,
+    "3e": 29.67,
+    "3f": 27.985,
+    "retr": 0.188,
+    "total": 77.616
+  },
+  "token_usage": {
+    "3c": {
+      "input_tokens": 455,
+      "output_tokens": 2667,
+      "total_tokens": 3122
+    },
+    "3e": {
+      "input_tokens": 1402,
+      "output_tokens": 4192,
+      "total_tokens": 5594
+    },
+    "3f": {
+      "input_tokens": 2458,
+      "output_tokens": 5460,
+      "total_tokens": 7918
+    }
+  },
+  "validator_verdicts": {
+    "3c": "pass",
+    "3d": "pass",
+    "3e": "pass",
+    "3f": "pass",
+    "retr": "pass"
+  }
+}

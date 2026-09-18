@@ -1,0 +1,23 @@
+{
+  "schema_version": "phase2a/v1",
+  "subset": "/content/Final/Final/Final/Final/data/experiments/phase2_subset.json",
+  "model": {
+    "name": "OPear/videomae-large-finetuned-UCF-Crime",
+    "version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+    "weight_notes": "mapped q_bias->query.bias, v_bias->value.bias; zeroed 24 key.bias (absent upstream); dropped shape-mismatched=[]; load missing=24 unexpected=0",
+    "num_frames": 16,
+    "input_resolution": 224,
+    "sampling_fps": 8.0,
+    "window_hop": 16,
+    "top_k": 5,
+    "device_requested": "cuda",
+    "device_used": "cuda"
+  },
+  "started_utc": "2026-09-14T16:19:48.804293+00:00",
+  "elapsed_seconds": 982.9,
+  "videos_selected": 40,
+  "videos_processed": 40,
+  "videos_failed": 0,
+  "observations": 1931,
+  "failures": []
+}

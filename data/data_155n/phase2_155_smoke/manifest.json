@@ -1,0 +1,21 @@
+{
+  "schema_version": "phase2a/v1",
+  "subset": "data/phase2c_155.json",
+  "sampling_fps": 1.0,
+  "detector": {
+    "model": "yolo11n",
+    "weights": "/content/Final/data/models/yolo11n.pt",
+    "confidence_threshold": 0.4,
+    "device_requested": "cuda",
+    "device_used": "cuda",
+    "skipped": false
+  },
+  "started_utc": "2026-09-17T07:00:27.891634+00:00",
+  "elapsed_seconds": 11.7,
+  "videos_selected": 1,
+  "videos_processed": 1,
+  "videos_failed": 0,
+  "observations": 48,
+  "detections": 33,
+  "failures": []
+}

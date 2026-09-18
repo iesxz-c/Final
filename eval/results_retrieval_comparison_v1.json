@@ -1,0 +1,653 @@
+{
+  "benchmark": {
+    "empty_queries": 8,
+    "file": "eval/retrieval_benchmark_v1.json",
+    "positive_queries": 22,
+    "queries": 30,
+    "relevance_judgments": 293
+  },
+  "corpus": {
+    "evidence": "data/data_155n/fused_155/evidence.json",
+    "records": 7927,
+    "videos": 155
+  },
+  "empty_query_handling": "queries with empty relevance sets are null in both result files and excluded from all aggregates (n=22 of 30)",
+  "latency_seconds": {
+    "lexical": {
+      "mean": 0.001,
+      "median": 0.001,
+      "n": 30,
+      "p95": 0.003,
+      "per_query": {
+        "Q01": 0.002,
+        "Q02": 0.003,
+        "Q03": 0.001,
+        "Q04": 0.001,
+        "Q05": 0.001,
+        "Q06": 0.001,
+        "Q07": 0.001,
+        "Q08": 0.001,
+        "Q09": 0.0,
+        "Q10": 0.0,
+        "Q11": 0.0,
+        "Q12": 0.002,
+        "Q13": 0.002,
+        "Q14": 0.002,
+        "Q15": 0.002,
+        "Q16": 0.001,
+        "Q17": 0.001,
+        "Q18": 0.001,
+        "Q19": 0.002,
+        "Q20": 0.002,
+        "Q21": 0.001,
+        "Q22": 0.002,
+        "Q23": 0.001,
+        "Q24": 0.001,
+        "Q25": 0.001,
+        "Q26": 0.003,
+        "Q27": 0.002,
+        "Q28": 0.0,
+        "Q29": 0.001,
+        "Q30": 0.001
+      }
+    },
+    "vector": {
+      "mean": 0.255,
+      "median": 0.221,
+      "n": 30,
+      "p95": 0.473,
+      "per_query": {
+        "Q01": 0.52,
+        "Q02": 0.207,
+        "Q03": 0.215,
+        "Q04": 0.424,
+        "Q05": 0.191,
+        "Q06": 0.216,
+        "Q07": 0.208,
+        "Q08": 0.2,
+        "Q09": 0.222,
+        "Q10": 0.214,
+        "Q11": 0.224,
+        "Q12": 0.398,
+        "Q13": 0.205,
+        "Q14": 0.201,
+        "Q15": 0.202,
+        "Q16": 0.23,
+        "Q17": 0.201,
+        "Q18": 0.22,
+        "Q19": 0.219,
+        "Q20": 0.233,
+        "Q21": 0.443,
+        "Q22": 0.228,
+        "Q23": 0.237,
+        "Q24": 0.231,
+        "Q25": 0.221,
+        "Q26": 0.221,
+        "Q27": 0.209,
+        "Q28": 0.212,
+        "Q29": 0.473,
+        "Q30": 0.223
+      }
+    }
+  },
+  "lexical": {
+    "aggregate": {
+      "mrr": {
+        "n": 22,
+        "n_queries": 30,
+        "value": 0.8181818181818182
+      },
+      "recall@10": {
+        "n": 22,
+        "n_queries": 30,
+        "value": 0.6044565484671636
+      },
+      "recall@5": {
+        "n": 22,
+        "n_queries": 30,
+        "value": 0.43145889210056326
+      }
+    },
+    "source": "eval/results_lexical_v2.json"
+  },
+  "per_query": {
+    "Q01": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 0.7692307692307693,
+        "recall@5": 0.38461538461538464
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 0.6923076923076923,
+        "recall@5": 0.3076923076923077
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "lexical",
+        "recall@5": "lexical"
+      }
+    },
+    "Q02": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 0.29411764705882354,
+        "recall@5": 0.14705882352941177
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 0.29411764705882354,
+        "recall@5": 0.14705882352941177
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "tie",
+        "recall@5": "tie"
+      }
+    },
+    "Q03": {
+      "lexical": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "vector": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "winner": {
+        "mrr": "n/a",
+        "recall@10": "n/a",
+        "recall@5": "n/a"
+      }
+    },
+    "Q04": {
+      "lexical": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "vector": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "winner": {
+        "mrr": "n/a",
+        "recall@10": "n/a",
+        "recall@5": "n/a"
+      }
+    },
+    "Q05": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 0.6428571428571429,
+        "recall@5": 0.35714285714285715
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 0.5714285714285714,
+        "recall@5": 0.2857142857142857
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "lexical",
+        "recall@5": "lexical"
+      }
+    },
+    "Q06": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "vector": {
+        "mrr": 0.2,
+        "recall@10": 1.0,
+        "recall@5": 0.5
+      },
+      "winner": {
+        "mrr": "lexical",
+        "recall@10": "tie",
+        "recall@5": "lexical"
+      }
+    },
+    "Q07": {
+      "lexical": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "vector": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "winner": {
+        "mrr": "n/a",
+        "recall@10": "n/a",
+        "recall@5": "n/a"
+      }
+    },
+    "Q08": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "tie",
+        "recall@5": "tie"
+      }
+    },
+    "Q09": {
+      "lexical": {
+        "mrr": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "winner": {
+        "mrr": "vector",
+        "recall@10": "vector",
+        "recall@5": "vector"
+      }
+    },
+    "Q10": {
+      "lexical": {
+        "mrr": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "winner": {
+        "mrr": "vector",
+        "recall@10": "vector",
+        "recall@5": "vector"
+      }
+    },
+    "Q11": {
+      "lexical": {
+        "mrr": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "winner": {
+        "mrr": "vector",
+        "recall@10": "vector",
+        "recall@5": "vector"
+      }
+    },
+    "Q12": {
+      "lexical": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "vector": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "winner": {
+        "mrr": "n/a",
+        "recall@10": "n/a",
+        "recall@5": "n/a"
+      }
+    },
+    "Q13": {
+      "lexical": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "vector": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "winner": {
+        "mrr": "n/a",
+        "recall@10": "n/a",
+        "recall@5": "n/a"
+      }
+    },
+    "Q14": {
+      "lexical": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "vector": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "winner": {
+        "mrr": "n/a",
+        "recall@10": "n/a",
+        "recall@5": "n/a"
+      }
+    },
+    "Q15": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 0.8181818181818182,
+        "recall@5": 0.45454545454545453
+      },
+      "vector": {
+        "mrr": 0.5,
+        "recall@10": 0.2727272727272727,
+        "recall@5": 0.18181818181818182
+      },
+      "winner": {
+        "mrr": "lexical",
+        "recall@10": "lexical",
+        "recall@5": "lexical"
+      }
+    },
+    "Q16": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 0.43478260869565216,
+        "recall@5": 0.21739130434782608
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 0.391304347826087,
+        "recall@5": 0.21739130434782608
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "lexical",
+        "recall@5": "tie"
+      }
+    },
+    "Q17": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 0.7692307692307693,
+        "recall@5": 0.38461538461538464
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 0.46153846153846156,
+        "recall@5": 0.23076923076923078
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "lexical",
+        "recall@5": "lexical"
+      }
+    },
+    "Q18": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 0.5
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 0.5
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "tie",
+        "recall@5": "tie"
+      }
+    },
+    "Q19": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 0.45454545454545453,
+        "recall@5": 0.22727272727272727
+      },
+      "vector": {
+        "mrr": 0.5,
+        "recall@10": 0.045454545454545456,
+        "recall@5": 0.045454545454545456
+      },
+      "winner": {
+        "mrr": "lexical",
+        "recall@10": "lexical",
+        "recall@5": "lexical"
+      }
+    },
+    "Q20": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 0.2702702702702703,
+        "recall@5": 0.13513513513513514
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 0.24324324324324326,
+        "recall@5": 0.13513513513513514
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "lexical",
+        "recall@5": "tie"
+      }
+    },
+    "Q21": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 0.8333333333333334
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 0.8333333333333334
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "tie",
+        "recall@5": "tie"
+      }
+    },
+    "Q22": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 0.7142857142857143
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 0.7142857142857143
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "tie",
+        "recall@5": "tie"
+      }
+    },
+    "Q23": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 0.5,
+        "recall@5": 0.25
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 0.5,
+        "recall@5": 0.25
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "tie",
+        "recall@5": "tie"
+      }
+    },
+    "Q24": {
+      "lexical": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "vector": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "winner": {
+        "mrr": "n/a",
+        "recall@10": "n/a",
+        "recall@5": "n/a"
+      }
+    },
+    "Q25": {
+      "lexical": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "vector": {
+        "mrr": null,
+        "recall@10": null,
+        "recall@5": null
+      },
+      "winner": {
+        "mrr": "n/a",
+        "recall@10": "n/a",
+        "recall@5": "n/a"
+      }
+    },
+    "Q26": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 0.3448275862068966,
+        "recall@5": 0.1724137931034483
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 0.3448275862068966,
+        "recall@5": 0.1724137931034483
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "tie",
+        "recall@5": "tie"
+      }
+    },
+    "Q27": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "vector": {
+        "mrr": 0.14285714285714285,
+        "recall@10": 1.0,
+        "recall@5": 0.0
+      },
+      "winner": {
+        "mrr": "lexical",
+        "recall@10": "tie",
+        "recall@5": "lexical"
+      }
+    },
+    "Q28": {
+      "lexical": {
+        "mrr": 0.0,
+        "recall@10": 0.0,
+        "recall@5": 0.0
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 0.4,
+        "recall@5": 0.2
+      },
+      "winner": {
+        "mrr": "vector",
+        "recall@10": "vector",
+        "recall@5": "vector"
+      }
+    },
+    "Q29": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 0.7142857142857143
+      },
+      "vector": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 0.7142857142857143
+      },
+      "winner": {
+        "mrr": "tie",
+        "recall@10": "tie",
+        "recall@5": "tie"
+      }
+    },
+    "Q30": {
+      "lexical": {
+        "mrr": 1.0,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "vector": {
+        "mrr": 0.5,
+        "recall@10": 1.0,
+        "recall@5": 1.0
+      },
+      "winner": {
+        "mrr": "lexical",
+        "recall@10": "tie",
+        "recall@5": "tie"
+      }
+    }
+  },
+  "schema_version": "retrieval-comparison/v1",
+  "scope": "descriptive comparison only; no overall winner is computed",
+  "temporal_scope_note": "temporal-only queries succeed via the shared evaluation scope filter, not via semantic temporal understanding",
+  "vector": {
+    "aggregate": {
+      "mrr": {
+        "n": 22,
+        "n_queries": 30,
+        "value": 0.8564935064935064
+      },
+      "recall@10": {
+        "n": 22,
+        "n_queries": 30,
+        "value": 0.6916795167177997
+      },
+      "recall@5": {
+        "n": 22,
+        "n_queries": 30,
+        "value": 0.47433419861223336
+      }
+    },
+    "source": "eval/results_vector_v1.json"
+  },
+  "vector_minus_lexical": {
+    "mrr": 0.0383,
+    "recall@10": 0.0872,
+    "recall@5": 0.0429
+  }
+}

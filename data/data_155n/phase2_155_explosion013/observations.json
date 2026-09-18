@@ -1,0 +1,1001 @@
+[
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f0",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 0.0,
+    "frame_index": 0,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=0.0s#f0",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f30",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 1.0,
+    "frame_index": 30,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=1.0s#f30",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f60",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 2.0,
+    "frame_index": 60,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=2.0s#f60",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f90",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 3.0,
+    "frame_index": 90,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=3.0s#f90",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f120",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 4.0,
+    "frame_index": 120,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=4.0s#f120",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f150",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 5.0,
+    "frame_index": 150,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=5.0s#f150",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f180",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 6.0,
+    "frame_index": 180,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=6.0s#f180",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f210",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 7.0,
+    "frame_index": 210,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=7.0s#f210",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f240",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 8.0,
+    "frame_index": 240,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=8.0s#f240",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f270",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 9.0,
+    "frame_index": 270,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=9.0s#f270",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f300",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 10.0,
+    "frame_index": 300,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=10.0s#f300",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f330",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 11.0,
+    "frame_index": 330,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=11.0s#f330",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f360",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 12.0,
+    "frame_index": 360,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=12.0s#f360",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f390",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 13.0,
+    "frame_index": 390,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=13.0s#f390",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f420",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 14.0,
+    "frame_index": 420,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=14.0s#f420",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f450",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 15.0,
+    "frame_index": 450,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=15.0s#f450",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f480",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 16.0,
+    "frame_index": 480,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=16.0s#f480",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f510",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 17.0,
+    "frame_index": 510,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=17.0s#f510",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f540",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 18.0,
+    "frame_index": 540,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=18.0s#f540",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f570",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 19.0,
+    "frame_index": 570,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=19.0s#f570",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f600",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 20.0,
+    "frame_index": 600,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=20.0s#f600",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f630",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 21.0,
+    "frame_index": 630,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=21.0s#f630",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f660",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 22.0,
+    "frame_index": 660,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=22.0s#f660",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f690",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 23.0,
+    "frame_index": 690,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=23.0s#f690",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f720",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 24.0,
+    "frame_index": 720,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=24.0s#f720",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f750",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 25.0,
+    "frame_index": 750,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=25.0s#f750",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f780",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 26.0,
+    "frame_index": 780,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=26.0s#f780",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f810",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 27.0,
+    "frame_index": 810,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=27.0s#f810",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f840",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 28.0,
+    "frame_index": 840,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=28.0s#f840",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f870",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 29.0,
+    "frame_index": 870,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=29.0s#f870",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f900",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 30.0,
+    "frame_index": 900,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=30.0s#f900",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f930",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 31.0,
+    "frame_index": 930,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=31.0s#f930",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f960",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 32.0,
+    "frame_index": 960,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=32.0s#f960",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f990",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 33.0,
+    "frame_index": 990,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=33.0s#f990",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1020",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 34.0,
+    "frame_index": 1020,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=34.0s#f1020",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1050",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 35.0,
+    "frame_index": 1050,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=35.0s#f1050",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1080",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 36.0,
+    "frame_index": 1080,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=36.0s#f1080",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1110",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 37.0,
+    "frame_index": 1110,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=37.0s#f1110",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1140",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 38.0,
+    "frame_index": 1140,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=38.0s#f1140",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1170",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 39.0,
+    "frame_index": 1170,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=39.0s#f1170",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1200",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 40.0,
+    "frame_index": 1200,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=40.0s#f1200",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1230",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 41.0,
+    "frame_index": 1230,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=41.0s#f1230",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1260",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 42.0,
+    "frame_index": 1260,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=42.0s#f1260",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1290",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 43.0,
+    "frame_index": 1290,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=43.0s#f1290",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1320",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 44.0,
+    "frame_index": 1320,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=44.0s#f1320",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1350",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 45.0,
+    "frame_index": 1350,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=45.0s#f1350",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1380",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 46.0,
+    "frame_index": 1380,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=46.0s#f1380",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1410",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 47.0,
+    "frame_index": 1410,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=47.0s#f1410",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1440",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 48.0,
+    "frame_index": 1440,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=48.0s#f1440",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1470",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 49.0,
+    "frame_index": 1470,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=49.0s#f1470",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1500",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 50.0,
+    "frame_index": 1500,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=50.0s#f1500",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1530",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 51.0,
+    "frame_index": 1530,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=51.0s#f1530",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1560",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 52.0,
+    "frame_index": 1560,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=52.0s#f1560",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1590",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 53.0,
+    "frame_index": 1590,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=53.0s#f1590",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1620",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 54.0,
+    "frame_index": 1620,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=54.0s#f1620",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1650",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 55.0,
+    "frame_index": 1650,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=55.0s#f1650",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1680",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 56.0,
+    "frame_index": 1680,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=56.0s#f1680",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1710",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 57.0,
+    "frame_index": 1710,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=57.0s#f1710",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1740",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 58.0,
+    "frame_index": 1740,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=58.0s#f1740",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1770",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 59.0,
+    "frame_index": 1770,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=59.0s#f1770",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1800",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 60.0,
+    "frame_index": 1800,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=60.0s#f1800",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1830",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 61.0,
+    "frame_index": 1830,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=61.0s#f1830",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1860",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 62.0,
+    "frame_index": 1860,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=62.0s#f1860",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1890",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 63.0,
+    "frame_index": 1890,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=63.0s#f1890",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1920",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 64.0,
+    "frame_index": 1920,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=64.0s#f1920",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1950",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 65.0,
+    "frame_index": 1950,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=65.0s#f1950",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1980",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 66.0,
+    "frame_index": 1980,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=66.0s#f1980",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2010",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 67.0,
+    "frame_index": 2010,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=67.0s#f2010",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2040",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 68.0,
+    "frame_index": 2040,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=68.0s#f2040",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2070",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 69.0,
+    "frame_index": 2070,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=69.0s#f2070",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2100",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 70.0,
+    "frame_index": 2100,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=70.0s#f2100",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2130",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 71.0,
+    "frame_index": 2130,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=71.0s#f2130",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2160",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 72.0,
+    "frame_index": 2160,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=72.0s#f2160",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2190",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 73.0,
+    "frame_index": 2190,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=73.0s#f2190",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2220",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 74.0,
+    "frame_index": 2220,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=74.0s#f2220",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2250",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 75.0,
+    "frame_index": 2250,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=75.0s#f2250",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2280",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 76.0,
+    "frame_index": 2280,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=76.0s#f2280",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2310",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 77.0,
+    "frame_index": 2310,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=77.0s#f2310",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2340",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 78.0,
+    "frame_index": 2340,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=78.0s#f2340",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2370",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 79.0,
+    "frame_index": 2370,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=79.0s#f2370",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2400",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 80.0,
+    "frame_index": 2400,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=80.0s#f2400",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2430",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 81.0,
+    "frame_index": 2430,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=81.0s#f2430",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2460",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 82.0,
+    "frame_index": 2460,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=82.0s#f2460",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2490",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 83.0,
+    "frame_index": 2490,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=83.0s#f2490",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2520",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 84.0,
+    "frame_index": 2520,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=84.0s#f2520",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2550",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 85.0,
+    "frame_index": 2550,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=85.0s#f2550",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2580",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 86.0,
+    "frame_index": 2580,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=86.0s#f2580",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2610",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 87.0,
+    "frame_index": 2610,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=87.0s#f2610",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2640",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 88.0,
+    "frame_index": 2640,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=88.0s#f2640",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2670",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 89.0,
+    "frame_index": 2670,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=89.0s#f2670",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2700",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 90.0,
+    "frame_index": 2700,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=90.0s#f2700",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2730",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 91.0,
+    "frame_index": 2730,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=91.0s#f2730",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2760",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 92.0,
+    "frame_index": 2760,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=92.0s#f2760",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2790",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 93.0,
+    "frame_index": 2790,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=93.0s#f2790",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2820",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 94.0,
+    "frame_index": 2820,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=94.0s#f2820",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2850",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 95.0,
+    "frame_index": 2850,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=95.0s#f2850",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2880",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 96.0,
+    "frame_index": 2880,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=96.0s#f2880",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2910",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 97.0,
+    "frame_index": 2910,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=97.0s#f2910",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2940",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 98.0,
+    "frame_index": 2940,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=98.0s#f2940",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2970",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 99.0,
+    "frame_index": 2970,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=99.0s#f2970",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3000",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 100.0,
+    "frame_index": 3000,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=100.0s#f3000",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3030",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 101.0,
+    "frame_index": 3030,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=101.0s#f3030",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3060",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 102.0,
+    "frame_index": 3060,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=102.0s#f3060",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3090",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 103.0,
+    "frame_index": 3090,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=103.0s#f3090",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3120",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 104.0,
+    "frame_index": 3120,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=104.0s#f3120",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3150",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 105.0,
+    "frame_index": 3150,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=105.0s#f3150",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3180",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 106.0,
+    "frame_index": 3180,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=106.0s#f3180",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3210",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 107.0,
+    "frame_index": 3210,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=107.0s#f3210",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3240",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 108.0,
+    "frame_index": 3240,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=108.0s#f3240",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3270",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 109.0,
+    "frame_index": 3270,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=109.0s#f3270",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3300",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 110.0,
+    "frame_index": 3300,
+    "source_reference": "anomaly/Explosion/Explosion013_x264.mp4@t=110.0s#f3300",
+    "sample_fps": 1.0,
+    "schema_version": "phase2a/v1"
+  }
+]

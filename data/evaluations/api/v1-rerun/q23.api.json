@@ -1,0 +1,77 @@
+{
+  "api_status": "ok",
+  "claims": {
+    "partially_supported": 0,
+    "supported": 12,
+    "unsupported": 0
+  },
+  "cost_usd": null,
+  "end_to_end_latency": 235.658,
+  "expected_intent": "find_person",
+  "failure": null,
+  "grounding": {
+    "audit_pass": true,
+    "claims_cited": 12,
+    "claims_total": 12,
+    "cross_video_violations": 0,
+    "temporal_uncontained_ranges": 0
+  },
+  "llm_called": {
+    "3c": true,
+    "3e": true,
+    "3f": true
+  },
+  "mode": "real",
+  "model": "muse-spark-1.3-contributor",
+  "provider": "meta",
+  "purpose": "multiple evidence sources late in a long video",
+  "query_id": "q23",
+  "question": "Show person detections around the Shooting evidence in anomaly/Shooting/Shooting005_x264.mp4 between 150 and 170 seconds.",
+  "retrieval": {
+    "matched_hits": 4,
+    "query_errors": 0,
+    "unmapped_hits": 0
+  },
+  "safety_violations": {
+    "causality": 0,
+    "identity": 0,
+    "unsupported_crime_confirmation": 0
+  },
+  "schema_valid": true,
+  "schema_version": "api-eval/v1",
+  "stage_latencies": {
+    "3c": 24.193,
+    "3d": 0.001,
+    "3e": 117.704,
+    "3f": 93.76
+  },
+  "stage_results": {
+    "3c": "pass",
+    "3d": "pass",
+    "3e": "pass",
+    "3f": "pass"
+  },
+  "temporal_constraint": [
+    150,
+    170
+  ],
+  "timestamp": "2026-09-17T06:06:28.648081+00:00",
+  "token_usage": {
+    "3c": {
+      "input_tokens": 451,
+      "output_tokens": 2288,
+      "total_tokens": 2739
+    },
+    "3e": {
+      "input_tokens": 15646,
+      "output_tokens": 14106,
+      "total_tokens": 29752
+    },
+    "3f": {
+      "input_tokens": 18899,
+      "output_tokens": 12767,
+      "total_tokens": 31666
+    }
+  },
+  "video_constraint": "anomaly/Shooting/Shooting005_x264.mp4"
+}

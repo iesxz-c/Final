@@ -1,0 +1,47 @@
+{
+  "failure": {
+    "error": "OpenRouter HTTP 402: {\"error\":{\"message\":\"This request would exceed your available credits given your current in-flight requests. Retry after in-flight requests settle, or add credits.\",\"code\":402,\"metadata\":{\"reason\":\"in_flight_budget_exhausted\",\"limit_source\":\"openrouter_in_flight_budget\",\"remedy_hint\":\"Retry after your in-flight requests settle (see the Retry-After header). Adding credits at https://openrouter.ai/settings/credits raises your in-flight budget, up to a capped ceiling.\",\"headers",
+    "stage": "3c",
+    "type": "provider"
+  },
+  "git_hash": "b9ba5ab",
+  "inputs": {
+    "evidence_path": "C:\\Users\\akash\\Videos\\Final\\data\\evidence\\fused\\evidence.json",
+    "incidents": 40,
+    "incidents_path": "C:\\Users\\akash\\Videos\\Final\\data\\evidence\\fused\\incidents.json",
+    "records": 1931
+  },
+  "integrity_audit": {
+    "base_records": 1931,
+    "cross_video_violations": 0,
+    "input_unchanged": true,
+    "overall_pass": true,
+    "stages": {}
+  },
+  "max_token_exposure": {
+    "3c": 2048,
+    "3e": 4096,
+    "3f": 6000
+  },
+  "mode": "real",
+  "model": "meta/muse-spark-1.3",
+  "plan": null,
+  "question": "Show me the evidence behind the Shoplifting hypothesis in anomaly/Shoplifting/Shoplifting005_x264.mp4 between 12 and 20 seconds.",
+  "result_3d": null,
+  "result_3e": null,
+  "result_3f": null,
+  "run_utc": "2026-09-15T11:38:37.926375+00:00",
+  "schema_version": "phase4/v1",
+  "settings": {
+    "model": "meta/muse-spark-1.3",
+    "provider": "openrouter",
+    "temperature": 0.0
+  },
+  "timings": {
+    "3c": 0.345,
+    "total": 0.345
+  },
+  "validator_verdicts": {
+    "3c": "error"
+  }
+}

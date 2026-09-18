@@ -1,0 +1,1483 @@
+{
+  "failure": null,
+  "git_hash": "3da7d6f",
+  "inputs": {
+    "evidence_path": "",
+    "incidents": 40,
+    "incidents_path": "",
+    "records": 1931
+  },
+  "integrity_audit": {
+    "base_records": 1931,
+    "cross_video_violations": 0,
+    "input_unchanged": true,
+    "overall_pass": true,
+    "stages": {
+      "3d": {
+        "duplicates": false,
+        "evidence_ids": 4,
+        "pass": true,
+        "refs_preserved": true,
+        "unknown_ids": 0
+      },
+      "3e": {
+        "cross_video": 0,
+        "duplicates": false,
+        "evidence_ids": 4,
+        "pass": true,
+        "refs_preserved": true,
+        "uncontained_ranges": 0,
+        "unknown_ids": 0
+      },
+      "3f": {
+        "cross_video": 0,
+        "duplicates": false,
+        "evidence_ids": 4,
+        "pass": true,
+        "refs_preserved": true,
+        "uncontained_ranges": 0,
+        "unknown_ids": 0
+      }
+    }
+  },
+  "max_token_exposure": {
+    "3c": 2048,
+    "3e": 4096,
+    "3f": 6000
+  },
+  "mode": "real",
+  "model": "muse-spark-1.3-contributor",
+  "plan": {
+    "end_time": null,
+    "intent": "search_evidence",
+    "needs_cross_evidence": false,
+    "needs_timeline": false,
+    "queries": [
+      {
+        "query": "shooting",
+        "source": "surveillance_event"
+      }
+    ],
+    "schema_version": "phase3c/v1",
+    "start_time": null,
+    "temporal_context_seconds": 0,
+    "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+  },
+  "question": "Show Shooting evidence in anomaly/Shooting/Shooting001_x264.mp4.",
+  "result_3d": {
+    "merged_results": {
+      "groups": [
+        {
+          "contextual_evidence": [],
+          "event_hypotheses": [
+            "Shooting"
+          ],
+          "incident_end_time": 8.4,
+          "incident_id": "anomaly/Shooting/Shooting001_x264.mp4:i0",
+          "incident_start_time": 0.0,
+          "matched_evidence": [
+            {
+              "anomaly_score": 0.9402,
+              "end_time": 2.0,
+              "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f0",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1127,
+                  "label": "playing chess",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:a0",
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=0.0s-2.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1127,
+                      "label": "playing chess"
+                    },
+                    {
+                      "confidence": 0.0292,
+                      "label": "smoking"
+                    },
+                    {
+                      "confidence": 0.024,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0223,
+                      "label": "applauding"
+                    },
+                    {
+                      "confidence": 0.0176,
+                      "label": "crying"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9402,
+                  "confidence": 0.9003,
+                  "end_time": 2.0,
+                  "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f0",
+                  "matched_id": "anomaly/Shooting/Shooting001_x264.mp4:e0",
+                  "matched_label": "Shooting",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "shooting",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=0.0s-2.0s",
+                  "start_time": 0.0,
+                  "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    0.5,
+                    30.7,
+                    117.6,
+                    207.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7086,
+                  "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f60:d0",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f60",
+                  "timestamp_seconds": 2.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Shooting/Shooting001_x264.mp4@t=0.0s-2.0s",
+                "anomaly/Shooting/Shooting001_x264.mp4@t=2.0s"
+              ],
+              "start_time": 0.0,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9003,
+                  "label": "Shooting",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:e0",
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=0.0s-2.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9003,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0805,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0119,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0022,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0016,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9762,
+              "end_time": 4.133,
+              "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f1",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1136,
+                  "label": "playing chess",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:a1",
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=2.133s-4.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1136,
+                      "label": "playing chess"
+                    },
+                    {
+                      "confidence": 0.0419,
+                      "label": "smoking"
+                    },
+                    {
+                      "confidence": 0.0269,
+                      "label": "playing harmonica"
+                    },
+                    {
+                      "confidence": 0.0239,
+                      "label": "playing poker"
+                    },
+                    {
+                      "confidence": 0.0199,
+                      "label": "crying"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9762,
+                  "confidence": 0.9603,
+                  "end_time": 4.133,
+                  "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f1",
+                  "matched_id": "anomaly/Shooting/Shooting001_x264.mp4:e1",
+                  "matched_label": "Shooting",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "shooting",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=2.133s-4.133s",
+                  "start_time": 2.133,
+                  "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    194.5,
+                    31.8,
+                    246.9,
+                    160.0
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7538,
+                  "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f120:d1",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f120",
+                  "timestamp_seconds": 4.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Shooting/Shooting001_x264.mp4@t=2.133s-4.133s",
+                "anomaly/Shooting/Shooting001_x264.mp4@t=4.0s"
+              ],
+              "start_time": 2.133,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9603,
+                  "label": "Shooting",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:e1",
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=2.133s-4.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9603,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0253,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0077,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.003,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0013,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9851,
+              "end_time": 6.266,
+              "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f2",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0987,
+                  "label": "smoking",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:a2",
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=4.266s-6.266s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0987,
+                      "label": "smoking"
+                    },
+                    {
+                      "confidence": 0.0552,
+                      "label": "playing poker"
+                    },
+                    {
+                      "confidence": 0.0458,
+                      "label": "playing chess"
+                    },
+                    {
+                      "confidence": 0.0271,
+                      "label": "washing feet"
+                    },
+                    {
+                      "confidence": 0.0182,
+                      "label": "laughing"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9851,
+                  "confidence": 0.9752,
+                  "end_time": 6.266,
+                  "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f2",
+                  "matched_id": "anomaly/Shooting/Shooting001_x264.mp4:e2",
+                  "matched_label": "Shooting",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "shooting",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=4.266s-6.266s",
+                  "start_time": 4.266,
+                  "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    227.5,
+                    42.4,
+                    278.1,
+                    172.0
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7938,
+                  "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f150:d2",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f150",
+                  "timestamp_seconds": 5.0
+                },
+                {
+                  "bounding_box": [
+                    0.4,
+                    31.1,
+                    130.6,
+                    207.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8216,
+                  "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f180:d3",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f180",
+                  "timestamp_seconds": 6.0
+                },
+                {
+                  "bounding_box": [
+                    225.3,
+                    33.1,
+                    288.0,
+                    185.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4465,
+                  "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f180:d4",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f180",
+                  "timestamp_seconds": 6.0
+                },
+                {
+                  "bounding_box": [
+                    185.4,
+                    30.4,
+                    254.2,
+                    167.1
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4048,
+                  "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f180:d5",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f180",
+                  "timestamp_seconds": 6.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Shooting/Shooting001_x264.mp4@t=4.266s-6.266s",
+                "anomaly/Shooting/Shooting001_x264.mp4@t=5.0s",
+                "anomaly/Shooting/Shooting001_x264.mp4@t=6.0s"
+              ],
+              "start_time": 4.266,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9752,
+                  "label": "Shooting",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:e2",
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=4.266s-6.266s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9752,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0169,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0035,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0013,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.001,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 6,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.98,
+              "end_time": 8.4,
+              "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f3",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0561,
+                  "label": "drop kicking",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:a3",
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=6.4s-8.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0561,
+                      "label": "drop kicking"
+                    },
+                    {
+                      "confidence": 0.0496,
+                      "label": "smoking"
+                    },
+                    {
+                      "confidence": 0.0431,
+                      "label": "kissing"
+                    },
+                    {
+                      "confidence": 0.0374,
+                      "label": "faceplanting"
+                    },
+                    {
+                      "confidence": 0.0341,
+                      "label": "playing poker"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.98,
+                  "confidence": 0.9666,
+                  "end_time": 8.4,
+                  "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f3",
+                  "matched_id": "anomaly/Shooting/Shooting001_x264.mp4:e3",
+                  "matched_label": "Shooting",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "shooting",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=6.4s-8.4s",
+                  "start_time": 6.4,
+                  "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    214.1,
+                    89.9,
+                    272.4,
+                    206.7
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.6938,
+                  "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f210:d6",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f210",
+                  "timestamp_seconds": 7.0
+                },
+                {
+                  "bounding_box": [
+                    50.9,
+                    30.9,
+                    134.9,
+                    205.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.5237,
+                  "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f240:d7",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f240",
+                  "timestamp_seconds": 8.0
+                },
+                {
+                  "bounding_box": [
+                    196.3,
+                    30.4,
+                    264.1,
+                    207.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.5083,
+                  "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f240:d8",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f240",
+                  "timestamp_seconds": 8.0
+                },
+                {
+                  "bounding_box": [
+                    0.5,
+                    72.3,
+                    51.6,
+                    185.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4125,
+                  "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f240:d9",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f240",
+                  "timestamp_seconds": 8.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Shooting/Shooting001_x264.mp4@t=6.4s-8.4s",
+                "anomaly/Shooting/Shooting001_x264.mp4@t=7.0s",
+                "anomaly/Shooting/Shooting001_x264.mp4@t=8.0s"
+              ],
+              "start_time": 6.4,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9666,
+                  "label": "Shooting",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:e3",
+                  "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=6.4s-8.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9666,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0148,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0142,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0011,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.001,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 6,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+            }
+          ],
+          "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+        }
+      ],
+      "unmapped_hits": []
+    },
+    "plan": {
+      "end_time": null,
+      "intent": "search_evidence",
+      "needs_cross_evidence": false,
+      "needs_timeline": false,
+      "queries": [
+        {
+          "query": "shooting",
+          "source": "surveillance_event"
+        }
+      ],
+      "schema_version": "phase3c/v1",
+      "start_time": null,
+      "temporal_context_seconds": 0,
+      "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+    },
+    "query_errors": [],
+    "query_results": [
+      {
+        "groups": [
+          {
+            "contextual_evidence": [],
+            "event_hypotheses": [
+              "Shooting"
+            ],
+            "incident_end_time": 8.4,
+            "incident_id": "anomaly/Shooting/Shooting001_x264.mp4:i0",
+            "incident_start_time": 0.0,
+            "matched_evidence": [
+              {
+                "anomaly_score": 0.9402,
+                "end_time": 2.0,
+                "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f0",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1127,
+                    "label": "playing chess",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:a0",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=0.0s-2.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1127,
+                        "label": "playing chess"
+                      },
+                      {
+                        "confidence": 0.0292,
+                        "label": "smoking"
+                      },
+                      {
+                        "confidence": 0.024,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0223,
+                        "label": "applauding"
+                      },
+                      {
+                        "confidence": 0.0176,
+                        "label": "crying"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9402,
+                    "confidence": 0.9003,
+                    "end_time": 2.0,
+                    "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f0",
+                    "matched_id": "anomaly/Shooting/Shooting001_x264.mp4:e0",
+                    "matched_label": "Shooting",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=0.0s-2.0s",
+                    "start_time": 0.0,
+                    "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      0.5,
+                      30.7,
+                      117.6,
+                      207.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7086,
+                    "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f60:d0",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f60",
+                    "timestamp_seconds": 2.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shooting/Shooting001_x264.mp4@t=0.0s-2.0s",
+                  "anomaly/Shooting/Shooting001_x264.mp4@t=2.0s"
+                ],
+                "start_time": 0.0,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9003,
+                    "label": "Shooting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:e0",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=0.0s-2.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9003,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0805,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0119,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0022,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0016,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9762,
+                "end_time": 4.133,
+                "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f1",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1136,
+                    "label": "playing chess",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:a1",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=2.133s-4.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1136,
+                        "label": "playing chess"
+                      },
+                      {
+                        "confidence": 0.0419,
+                        "label": "smoking"
+                      },
+                      {
+                        "confidence": 0.0269,
+                        "label": "playing harmonica"
+                      },
+                      {
+                        "confidence": 0.0239,
+                        "label": "playing poker"
+                      },
+                      {
+                        "confidence": 0.0199,
+                        "label": "crying"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9762,
+                    "confidence": 0.9603,
+                    "end_time": 4.133,
+                    "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f1",
+                    "matched_id": "anomaly/Shooting/Shooting001_x264.mp4:e1",
+                    "matched_label": "Shooting",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=2.133s-4.133s",
+                    "start_time": 2.133,
+                    "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      194.5,
+                      31.8,
+                      246.9,
+                      160.0
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7538,
+                    "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f120:d1",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f120",
+                    "timestamp_seconds": 4.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shooting/Shooting001_x264.mp4@t=2.133s-4.133s",
+                  "anomaly/Shooting/Shooting001_x264.mp4@t=4.0s"
+                ],
+                "start_time": 2.133,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9603,
+                    "label": "Shooting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:e1",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=2.133s-4.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9603,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0253,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0077,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.003,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0013,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9851,
+                "end_time": 6.266,
+                "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f2",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0987,
+                    "label": "smoking",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:a2",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=4.266s-6.266s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0987,
+                        "label": "smoking"
+                      },
+                      {
+                        "confidence": 0.0552,
+                        "label": "playing poker"
+                      },
+                      {
+                        "confidence": 0.0458,
+                        "label": "playing chess"
+                      },
+                      {
+                        "confidence": 0.0271,
+                        "label": "washing feet"
+                      },
+                      {
+                        "confidence": 0.0182,
+                        "label": "laughing"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9851,
+                    "confidence": 0.9752,
+                    "end_time": 6.266,
+                    "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f2",
+                    "matched_id": "anomaly/Shooting/Shooting001_x264.mp4:e2",
+                    "matched_label": "Shooting",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=4.266s-6.266s",
+                    "start_time": 4.266,
+                    "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      227.5,
+                      42.4,
+                      278.1,
+                      172.0
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7938,
+                    "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f150:d2",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f150",
+                    "timestamp_seconds": 5.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.4,
+                      31.1,
+                      130.6,
+                      207.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8216,
+                    "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f180:d3",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f180",
+                    "timestamp_seconds": 6.0
+                  },
+                  {
+                    "bounding_box": [
+                      225.3,
+                      33.1,
+                      288.0,
+                      185.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4465,
+                    "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f180:d4",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f180",
+                    "timestamp_seconds": 6.0
+                  },
+                  {
+                    "bounding_box": [
+                      185.4,
+                      30.4,
+                      254.2,
+                      167.1
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4048,
+                    "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f180:d5",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f180",
+                    "timestamp_seconds": 6.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shooting/Shooting001_x264.mp4@t=4.266s-6.266s",
+                  "anomaly/Shooting/Shooting001_x264.mp4@t=5.0s",
+                  "anomaly/Shooting/Shooting001_x264.mp4@t=6.0s"
+                ],
+                "start_time": 4.266,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9752,
+                    "label": "Shooting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:e2",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=4.266s-6.266s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9752,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0169,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0035,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0013,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.001,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 6,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.98,
+                "end_time": 8.4,
+                "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f3",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0561,
+                    "label": "drop kicking",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:a3",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=6.4s-8.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0561,
+                        "label": "drop kicking"
+                      },
+                      {
+                        "confidence": 0.0496,
+                        "label": "smoking"
+                      },
+                      {
+                        "confidence": 0.0431,
+                        "label": "kissing"
+                      },
+                      {
+                        "confidence": 0.0374,
+                        "label": "faceplanting"
+                      },
+                      {
+                        "confidence": 0.0341,
+                        "label": "playing poker"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.98,
+                    "confidence": 0.9666,
+                    "end_time": 8.4,
+                    "evidence_id": "anomaly/Shooting/Shooting001_x264.mp4:f3",
+                    "matched_id": "anomaly/Shooting/Shooting001_x264.mp4:e3",
+                    "matched_label": "Shooting",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=6.4s-8.4s",
+                    "start_time": 6.4,
+                    "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      214.1,
+                      89.9,
+                      272.4,
+                      206.7
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.6938,
+                    "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f210:d6",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f210",
+                    "timestamp_seconds": 7.0
+                  },
+                  {
+                    "bounding_box": [
+                      50.9,
+                      30.9,
+                      134.9,
+                      205.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.5237,
+                    "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f240:d7",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f240",
+                    "timestamp_seconds": 8.0
+                  },
+                  {
+                    "bounding_box": [
+                      196.3,
+                      30.4,
+                      264.1,
+                      207.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.5083,
+                    "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f240:d8",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f240",
+                    "timestamp_seconds": 8.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.5,
+                      72.3,
+                      51.6,
+                      185.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4125,
+                    "detection_id": "anomaly/Shooting/Shooting001_x264.mp4:f240:d9",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:f240",
+                    "timestamp_seconds": 8.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Shooting/Shooting001_x264.mp4@t=6.4s-8.4s",
+                  "anomaly/Shooting/Shooting001_x264.mp4@t=7.0s",
+                  "anomaly/Shooting/Shooting001_x264.mp4@t=8.0s"
+                ],
+                "start_time": 6.4,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9666,
+                    "label": "Shooting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Shooting/Shooting001_x264.mp4:e3",
+                    "source_reference": "anomaly/Shooting/Shooting001_x264.mp4@t=6.4s-8.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9666,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0148,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0142,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0011,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.001,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 6,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+              }
+            ],
+            "video_id": "anomaly/Shooting/Shooting001_x264.mp4"
+          }
+        ],
+        "planner_query_index": 0,
+        "query": "shooting",
+        "source": "surveillance_event",
+        "summary": {
+          "context_records": 0,
+          "incident_groups": 1,
+          "matched_hits": 4,
+          "matched_records": 4,
+          "unmapped_hits": 0
+        },
+        "unmapped_hits": []
+      }
+    ],
+    "schema_version": "phase3d/v1",
+    "summary": {
+      "context_records": 0,
+      "incident_groups": 1,
+      "matched_hits": 4,
+      "planner_queries": 1,
+      "query_errors": 0,
+      "unmapped_hits": 0
+    }
+  },
+  "result_3e": {
+    "correlations": [
+      {
+        "description": "The evidence indicates the surveillance-event hypothesis of Shooting persists across adjacent windows from early to late coverage.",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "type": "persistent_event"
+      },
+      {
+        "description": "The available evidence suggests all four records belong to the same Phase 2D incident anomaly/Shooting/Shooting001_x264.mp4:i0.",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "type": "same_incident"
+      },
+      {
+        "description": "The evidence indicates early windows precede later windows in the same video.",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "type": "temporal_sequence"
+      },
+      {
+        "description": "The evidence indicates person object detections co-occur in time with Shooting hypotheses in the same windows; this is source agreement only and never confirmation of involvement or of a crime.",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "type": "cross_source_support"
+      }
+    ],
+    "inferences": [
+      {
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "text": "The available evidence suggests a persistent Shooting hypothesis produced by the surveillance-event model with confidences 0.9003 to 0.9752, but the evidence is consistent with a hypothesis only and does not establish that a shooting occurred."
+      },
+      {
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "text": "The evidence indicates person detections were present throughout, 1 person in early windows and 4 persons in later windows, but temporal overlap with the Shooting hypothesis does not mean any detected person was involved."
+      }
+    ],
+    "limitations": [
+      "No access to footage; model hypotheses cannot be treated as confirmed crimes and no suspects or victims can be identified.",
+      "Generic-action labels are low-confidence (0.0561-0.1136) and inconsistent, providing no reliable support.",
+      "Small temporal gaps exist between cited windows; activity in gaps is not covered by the supplied evidence.",
+      "Temporal co-occurrence does not establish causation or role."
+    ],
+    "schema_version": "phase3e/v1",
+    "timeline": [
+      {
+        "end_time": 8.4,
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "observation": {
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting001_x264.mp4:f0",
+            "anomaly/Shooting/Shooting001_x264.mp4:f1",
+            "anomaly/Shooting/Shooting001_x264.mp4:f2",
+            "anomaly/Shooting/Shooting001_x264.mp4:f3"
+          ],
+          "text": "The evidence indicates a persistent surveillance-event hypothesis of Shooting (confidences 0.9003-0.9752) with person detections present throughout (1 person early, 4 persons later). The generic-action model produced low-confidence labels of playing chess, smoking, and drop kicking. The evidence is consistent with temporal co-occurrence only."
+        },
+        "start_time": 0.0
+      }
+    ]
+  },
+  "result_3f": {
+    "report": {
+      "findings": [
+        {
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting001_x264.mp4:f0",
+            "anomaly/Shooting/Shooting001_x264.mp4:f1",
+            "anomaly/Shooting/Shooting001_x264.mp4:f2",
+            "anomaly/Shooting/Shooting001_x264.mp4:f3"
+          ],
+          "text": "The surveillance-event model produced a persistent Shooting hypothesis across all four windows with confidences 0.9003 to 0.9752. The retrieved evidence supports hypothesis only and does not establish that a shooting occurred."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting001_x264.mp4:f0",
+            "anomaly/Shooting/Shooting001_x264.mp4:f1",
+            "anomaly/Shooting/Shooting001_x264.mp4:f2",
+            "anomaly/Shooting/Shooting001_x264.mp4:f3"
+          ],
+          "text": "The evidence indicates person detections co-occurred in the same windows as the Shooting hypotheses: 1 person in early windows and 4 persons in later windows. The available evidence is consistent with temporal co-occurrence only and does not establish involvement of any detected person."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting001_x264.mp4:f0",
+            "anomaly/Shooting/Shooting001_x264.mp4:f1",
+            "anomaly/Shooting/Shooting001_x264.mp4:f2",
+            "anomaly/Shooting/Shooting001_x264.mp4:f3"
+          ],
+          "text": "The generic-action model produced low-confidence, inconsistent labels of playing chess, smoking, and drop kicking (0.0561-0.1136). The evidence does not establish reliable activity information from these labels."
+        }
+      ],
+      "limitations": [
+        "No access to footage; model hypotheses cannot be treated as confirmed crimes and no suspects or victims can be identified.",
+        "Generic-action labels are low-confidence (0.0561-0.1136) and inconsistent, providing no reliable support.",
+        "Small temporal gaps exist between cited windows (e.g., 2.0-2.133s, 4.133-4.266s, 6.266-6.4s); activity in gaps is not covered by the supplied evidence.",
+        "Temporal co-occurrence does not establish causation, involvement, or role."
+      ],
+      "summary": "The retrieved evidence supports a persistent surveillance-event model hypothesis of Shooting across 0.0-8.4s in anomaly/Shooting/Shooting001_x264.mp4 with co-occurring person detections. The evidence is consistent with hypothesis and co-occurrence only and does not establish that a shooting occurred or any person's involvement.",
+      "timeline": [
+        {
+          "description": "The surveillance-event model produced a Shooting hypothesis (confidence 0.9003) with 1 person detection and generic-action label playing chess (0.1127).",
+          "end_time": 2.0,
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting001_x264.mp4:f0"
+          ],
+          "start_time": 0.0
+        },
+        {
+          "description": "The surveillance-event model produced a Shooting hypothesis (confidence 0.9603) with 1 person detection and generic-action label playing chess (0.1136).",
+          "end_time": 4.133,
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting001_x264.mp4:f1"
+          ],
+          "start_time": 2.133
+        },
+        {
+          "description": "The surveillance-event model produced a Shooting hypothesis (confidence 0.9752) with 4 person detections and generic-action label smoking (0.0987).",
+          "end_time": 6.266,
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting001_x264.mp4:f2"
+          ],
+          "start_time": 4.266
+        },
+        {
+          "description": "The surveillance-event model produced a Shooting hypothesis (confidence 0.9666) with 4 person detections and generic-action label drop kicking (0.0561).",
+          "end_time": 8.4,
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting001_x264.mp4:f3"
+          ],
+          "start_time": 6.4
+        }
+      ],
+      "title": "Surveillance-Event Review: Shooting Hypothesis in Shooting001_x264.mp4"
+    },
+    "schema_version": "phase3f/v1",
+    "verification": [
+      {
+        "claim": "The evidence indicates a persistent surveillance-event hypothesis of Shooting (confidences 0.9003-0.9752) with person detections present throughout (1 person early, 4 persons later). The generic-action model produced low-confidence labels of playing chess, smoking, and drop kicking. The evidence is consistent with temporal co-occurrence only.",
+        "claim_id": "claim_001",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "reason": "All components directly match evidence: Shooting confidences 0.9003, 0.9603, 0.9752, 0.9666; person counts 1,1,4,4; generic labels playing chess, smoking, drop kicking; qualified as co-occurrence only.",
+        "status": "supported"
+      },
+      {
+        "claim": "persistent_event: The evidence indicates the surveillance-event hypothesis of Shooting persists across adjacent windows from early to late coverage.",
+        "claim_id": "claim_002",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "reason": "Each of the four sequential windows contains a Shooting surveillance-event hypothesis, supporting persistence from early to late coverage.",
+        "status": "supported"
+      },
+      {
+        "claim": "same_incident: The available evidence suggests all four records belong to the same Phase 2D incident anomaly/Shooting/Shooting001_x264.mp4:i0.",
+        "claim_id": "claim_003",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "reason": "Incident i0 explicitly lists f0-f3 as its evidence within 0.0-8.4s.",
+        "status": "supported"
+      },
+      {
+        "claim": "temporal_sequence: The evidence indicates early windows precede later windows in the same video.",
+        "claim_id": "claim_004",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "reason": "Timestamps increase sequentially: 0.0-2.0, 2.133-4.133, 4.266-6.266, 6.4-8.4 in the same video.",
+        "status": "supported"
+      },
+      {
+        "claim": "cross_source_support: The evidence indicates person object detections co-occur in time with Shooting hypotheses in the same windows; this is source agreement only and never confirmation of involvement or of a crime.",
+        "claim_id": "claim_005",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "reason": "Each window contains both person object detections and Shooting hypothesis; claim is appropriately qualified as agreement only.",
+        "status": "supported"
+      },
+      {
+        "claim": "The available evidence suggests a persistent Shooting hypothesis produced by the surveillance-event model with confidences 0.9003 to 0.9752, but the evidence is consistent with a hypothesis only and does not establish that a shooting occurred.",
+        "claim_id": "claim_006",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "reason": "Confidence range matches evidence min 0.9003 and max 0.9752 across f0-f3, with appropriate qualification that hypothesis does not establish occurrence.",
+        "status": "supported"
+      },
+      {
+        "claim": "The evidence indicates person detections were present throughout, 1 person in early windows and 4 persons in later windows, but temporal overlap with the Shooting hypothesis does not mean any detected person was involved.",
+        "claim_id": "claim_007",
+        "evidence_ids": [
+          "anomaly/Shooting/Shooting001_x264.mp4:f0",
+          "anomaly/Shooting/Shooting001_x264.mp4:f1",
+          "anomaly/Shooting/Shooting001_x264.mp4:f2",
+          "anomaly/Shooting/Shooting001_x264.mp4:f3"
+        ],
+        "reason": "Person counts match f0=1, f1=1, f2=4, f3=4, and non-involvement qualifier is consistent with evidence limits.",
+        "status": "supported"
+      }
+    ]
+  },
+  "run_utc": "2026-09-17T04:59:40.642392+00:00",
+  "schema_version": "phase4/v1",
+  "settings": {
+    "model": "muse-spark-1.3-contributor",
+    "provider": "meta",
+    "temperature": 0.0
+  },
+  "timings": {
+    "3c": 12.017,
+    "3d": 0.002,
+    "3e": 36.283,
+    "3f": 29.417,
+    "total": 77.719
+  },
+  "validator_verdicts": {
+    "3c": "pass",
+    "3d": "pass",
+    "3e": "pass",
+    "3f": "pass"
+  }
+}

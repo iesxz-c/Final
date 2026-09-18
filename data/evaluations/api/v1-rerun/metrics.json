@@ -1,0 +1,200 @@
+{
+  "3c_latency": {
+    "mean": 18.775,
+    "median": 16.804,
+    "n": 7,
+    "p95": 29.776
+  },
+  "3c_success_rate": {
+    "denominator": 7,
+    "numerator": 7,
+    "value": 1.0
+  },
+  "3e_latency": {
+    "mean": 83.671,
+    "median": 70.903,
+    "n": 7,
+    "p95": 117.704
+  },
+  "3e_success_rate": {
+    "denominator": 7,
+    "numerator": 6,
+    "value": 0.8571
+  },
+  "3f_latency": {
+    "mean": 81.912,
+    "median": 68.178,
+    "n": 6,
+    "p95": 146.802
+  },
+  "3f_success_rate": {
+    "denominator": 6,
+    "numerator": 5,
+    "value": 0.8333
+  },
+  "api_success_rate": {
+    "denominator": 7,
+    "numerator": 5,
+    "value": 0.7143
+  },
+  "base": {
+    "audit_pass_rate": 1.0,
+    "citation_coverage": 1.0,
+    "cross_video_violations": 0,
+    "end_to_end_success_rate": 0.7143,
+    "failure_taxonomy": {
+      "validation": 2
+    },
+    "max_token_exposure": {
+      "3c": 2048,
+      "3e": 4096,
+      "3f": 6000
+    },
+    "modes": {
+      "real": 7
+    },
+    "partially_supported": 0,
+    "per_stage_success": {
+      "3c": {
+        "pass": 7,
+        "rate": 1.0,
+        "total": 7
+      },
+      "3d": {
+        "pass": 7,
+        "rate": 1.0,
+        "total": 7
+      },
+      "3e": {
+        "pass": 6,
+        "rate": 0.8571,
+        "total": 7
+      },
+      "3f": {
+        "pass": 5,
+        "rate": 0.8333,
+        "total": 6
+      }
+    },
+    "schema_version": "phase4-eval/v1",
+    "stage_latency": {
+      "3c": {
+        "max": 29.776,
+        "mean": 18.775,
+        "n": 7,
+        "p50": 16.804
+      },
+      "3d": {
+        "max": 0.027,
+        "mean": 0.011,
+        "n": 7,
+        "p50": 0.01
+      },
+      "3e": {
+        "max": 117.704,
+        "mean": 83.671,
+        "n": 7,
+        "p50": 70.903
+      },
+      "3f": {
+        "max": 146.802,
+        "mean": 81.912,
+        "n": 6,
+        "p50": 68.178
+      }
+    },
+    "successful_runs": 5,
+    "supported": 86,
+    "supported_note": "'supported' means structurally grounded/cited by the deterministic validators, NOT a factual truth judgment.",
+    "supported_structural_only": true,
+    "timestamp_containment_rate": 1.0,
+    "total_latency": {
+      "max": 277.119,
+      "mean": 172.668,
+      "n": 7,
+      "p50": 153.119
+    },
+    "total_runs": 7,
+    "unmapped_hit_rate": 0.0,
+    "unmapped_hits": 0,
+    "unsupported": 0
+  },
+  "causality_violation_count": 0,
+  "cost_usd": {
+    "reason": "no authoritative Meta pricing configured",
+    "status": "unavailable",
+    "value": null
+  },
+  "end_to_end_latency": {
+    "mean": 172.668,
+    "median": 153.119,
+    "n": 7,
+    "p95": 277.119
+  },
+  "grounding_rate": {
+    "denominator": 86,
+    "numerator": 86,
+    "value": 1.0
+  },
+  "identity_violation_count": 0,
+  "investigation_success_rate": {
+    "denominator": 7,
+    "numerator": 5,
+    "value": 0.7143
+  },
+  "meta": {
+    "benchmark_version": "api-benchmark/v1",
+    "endpoint": "https://api.meta.ai/v1/responses",
+    "execution": {
+      "max_tokens_3f": 6000,
+      "pricing_supplied": false,
+      "socket_timeout_unbounded": true,
+      "temperature": 0.0,
+      "timeout": null,
+      "total_timeout_unbounded": true
+    },
+    "git_revision": "3da7d6f",
+    "model": "muse-spark-1.3-contributor",
+    "n_questions": 7,
+    "provider": "meta",
+    "run_utc": "2026-09-17T05:50:12.582921+00:00"
+  },
+  "partial_claim_rate": {
+    "denominator": 86,
+    "numerator": 0,
+    "value": 0.0
+  },
+  "schema_valid_response_rate": {
+    "denominator": 7,
+    "numerator": 5,
+    "value": 0.7143
+  },
+  "schema_version": "api-eval/v1",
+  "successful_investigations": 5,
+  "supported_claim_rate": {
+    "denominator": 86,
+    "numerator": 86,
+    "value": 1.0
+  },
+  "temporal_grounding_rate": {
+    "denominator": 7,
+    "numerator": 7,
+    "value": 1.0
+  },
+  "token_usage": {
+    "investigations_total": 7,
+    "investigations_with_usage": 7,
+    "mean_input_tokens": 25851,
+    "mean_output_tokens": 8343.8,
+    "status": "available",
+    "total_input_tokens": 517020,
+    "total_output_tokens": 166875
+  },
+  "total_investigations": 7,
+  "unsupported_claim_rate": {
+    "denominator": 86,
+    "numerator": 0,
+    "value": 0.0
+  },
+  "unsupported_crime_confirmation_violation_count": 1
+}

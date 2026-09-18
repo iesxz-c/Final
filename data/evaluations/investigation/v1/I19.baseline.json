@@ -1,0 +1,3149 @@
+{
+  "arm": "baseline",
+  "baseline_report": {
+    "evidence_records": [
+      {
+        "end_time": 8.4,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f3",
+        "start_time": 6.4,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+      },
+      {
+        "end_time": 10.533,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4",
+        "start_time": 8.533,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+      },
+      {
+        "end_time": 14.8,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+        "start_time": 12.8,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+      },
+      {
+        "end_time": 16.933,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f7",
+        "start_time": 14.933,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+      },
+      {
+        "end_time": 19.067,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f8",
+        "start_time": 17.067,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+      },
+      {
+        "end_time": 21.2,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f9",
+        "start_time": 19.2,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+      },
+      {
+        "end_time": 23.333,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f10",
+        "start_time": 21.333,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+      },
+      {
+        "end_time": 27.6,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f12",
+        "start_time": 25.6,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+      },
+      {
+        "end_time": 31.866,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f14",
+        "start_time": 29.866,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+      },
+      {
+        "end_time": 34.0,
+        "event_labels": [
+          "RoadAccidents"
+        ],
+        "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f15",
+        "start_time": 32.0,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+      }
+    ],
+    "limitations": [
+      "templated baseline: no timeline, correlation, verification, or inference was performed"
+    ],
+    "question": "Show person detections with RoadAccidents evidence in anomaly/RoadAccidents/RoadAccidents001_x264.mp4.",
+    "schema_version": "phase5b-baseline/v1"
+  },
+  "failure": null,
+  "git_hash": "8ad1ce8",
+  "integrity_audit": {
+    "base_records": 7927,
+    "cross_video_violations": 0,
+    "input_unchanged": true,
+    "overall_pass": true,
+    "stages": {
+      "3d": {
+        "duplicates": false,
+        "evidence_ids": 10,
+        "pass": true,
+        "refs_preserved": true,
+        "unknown_ids": 0
+      }
+    }
+  },
+  "mode": "real",
+  "model": "muse-spark-1.3-contributor",
+  "pattern": "multi-source",
+  "plan": {
+    "end_time": null,
+    "intent": "search_evidence",
+    "needs_cross_evidence": true,
+    "needs_timeline": false,
+    "queries": [
+      {
+        "query": "person",
+        "source": "object"
+      },
+      {
+        "query": "RoadAccidents",
+        "source": "surveillance_event"
+      }
+    ],
+    "schema_version": "phase3c/v1",
+    "start_time": null,
+    "temporal_context_seconds": 0,
+    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+  },
+  "query_id": "I19",
+  "question": "Show person detections with RoadAccidents evidence in anomaly/RoadAccidents/RoadAccidents001_x264.mp4.",
+  "result_3d": {
+    "merged_results": {
+      "groups": [
+        {
+          "contextual_evidence": [],
+          "event_hypotheses": [
+            "RoadAccidents"
+          ],
+          "incident_end_time": 45.466,
+          "incident_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:i0",
+          "incident_start_time": 0.0,
+          "matched_evidence": [
+            {
+              "anomaly_score": 0.7974,
+              "end_time": 8.4,
+              "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f3",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.4824,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a3",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=6.4s-8.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4824,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1228,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0351,
+                      "label": "snowmobiling"
+                    },
+                    {
+                      "confidence": 0.0202,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0162,
+                      "label": "riding scooter"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7974,
+                  "confidence": 0.9956,
+                  "end_time": 8.4,
+                  "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f3",
+                  "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e3",
+                  "matched_label": "RoadAccidents",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "RoadAccidents",
+                  "planner_query_index": 1,
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=6.4s-8.4s",
+                  "start_time": 6.4,
+                  "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=6.4s-8.4s"
+              ],
+              "start_time": 6.4,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9956,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e3",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=6.4s-8.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9956,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0013,
+                      "label": "Explosion"
+                    },
+                    {
+                      "confidence": 0.001,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0004,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0004,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7502,
+              "end_time": 10.533,
+              "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.236,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a4",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=8.533s-10.533s",
+                  "top_k": [
+                    {
+                      "confidence": 0.236,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1672,
+                      "label": "faceplanting"
+                    },
+                    {
+                      "confidence": 0.0704,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0478,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0472,
+                      "label": "drop kicking"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7502,
+                  "confidence": 0.917,
+                  "end_time": 10.533,
+                  "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4",
+                  "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e4",
+                  "matched_label": "RoadAccidents",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "RoadAccidents",
+                  "planner_query_index": 1,
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=8.533s-10.533s",
+                  "start_time": 8.533,
+                  "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=8.533s-10.533s"
+              ],
+              "start_time": 8.533,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.917,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e4",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=8.533s-10.533s",
+                  "top_k": [
+                    {
+                      "confidence": 0.917,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0543,
+                      "label": "Explosion"
+                    },
+                    {
+                      "confidence": 0.0134,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0061,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0018,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9929,
+              "end_time": 14.8,
+              "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.4457,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a6",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=12.8s-14.8s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4457,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0778,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0575,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0345,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0197,
+                      "label": "snowmobiling"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9929,
+                  "confidence": 0.4574,
+                  "end_time": 14.8,
+                  "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+                  "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f420:d1",
+                  "matched_label": "person",
+                  "matched_source": "object",
+                  "planner_query": "person",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.0s",
+                  "start_time": 12.8,
+                  "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                },
+                {
+                  "anomaly_score": 0.9929,
+                  "confidence": 0.9882,
+                  "end_time": 14.8,
+                  "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+                  "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e6",
+                  "matched_label": "RoadAccidents",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "RoadAccidents",
+                  "planner_query_index": 1,
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=12.8s-14.8s",
+                  "start_time": 12.8,
+                  "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    65.6,
+                    173.5,
+                    108.8,
+                    204.4
+                  ],
+                  "class_name": "backpack",
+                  "confidence": 0.4609,
+                  "detection_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f390:d0",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f390",
+                  "timestamp_seconds": 13.0
+                },
+                {
+                  "bounding_box": [
+                    160.9,
+                    28.2,
+                    258.6,
+                    135.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4574,
+                  "detection_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f420:d1",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f420",
+                  "timestamp_seconds": 14.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=12.8s-14.8s",
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=13.0s",
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.0s"
+              ],
+              "start_time": 12.8,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9882,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e6",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=12.8s-14.8s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9882,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0042,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0028,
+                      "label": "Explosion"
+                    },
+                    {
+                      "confidence": 0.0016,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0007,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 4,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7984,
+              "end_time": 16.933,
+              "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f7",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.5472,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a7",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.933s-16.933s",
+                  "top_k": [
+                    {
+                      "confidence": 0.5472,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0613,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0567,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0522,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.01,
+                      "label": "pushing cart"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7984,
+                  "confidence": 0.9973,
+                  "end_time": 16.933,
+                  "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f7",
+                  "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e7",
+                  "matched_label": "RoadAccidents",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "RoadAccidents",
+                  "planner_query_index": 1,
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.933s-16.933s",
+                  "start_time": 14.933,
+                  "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.933s-16.933s"
+              ],
+              "start_time": 14.933,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9973,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e7",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.933s-16.933s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9973,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0008,
+                      "label": "Explosion"
+                    },
+                    {
+                      "confidence": 0.0005,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Shooting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.799,
+              "end_time": 19.067,
+              "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f8",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.5727,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a8",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=17.067s-19.067s",
+                  "top_k": [
+                    {
+                      "confidence": 0.5727,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0926,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0474,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0221,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0089,
+                      "label": "faceplanting"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.799,
+                  "confidence": 0.9983,
+                  "end_time": 19.067,
+                  "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f8",
+                  "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e8",
+                  "matched_label": "RoadAccidents",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "RoadAccidents",
+                  "planner_query_index": 1,
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=17.067s-19.067s",
+                  "start_time": 17.067,
+                  "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=17.067s-19.067s"
+              ],
+              "start_time": 17.067,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9983,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e8",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=17.067s-19.067s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9983,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0004,
+                      "label": "Explosion"
+                    },
+                    {
+                      "confidence": 0.0004,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Abuse"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Shooting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7984,
+              "end_time": 21.2,
+              "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f9",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.4811,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a9",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=19.2s-21.2s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4811,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1524,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0311,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0175,
+                      "label": "faceplanting"
+                    },
+                    {
+                      "confidence": 0.0119,
+                      "label": "riding scooter"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7984,
+                  "confidence": 0.9973,
+                  "end_time": 21.2,
+                  "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f9",
+                  "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e9",
+                  "matched_label": "RoadAccidents",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "RoadAccidents",
+                  "planner_query_index": 1,
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=19.2s-21.2s",
+                  "start_time": 19.2,
+                  "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=19.2s-21.2s"
+              ],
+              "start_time": 19.2,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9973,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e9",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=19.2s-21.2s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9973,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0009,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0005,
+                      "label": "Explosion"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7986,
+              "end_time": 23.333,
+              "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f10",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2674,
+                  "label": "motorcycling",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a10",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=21.333s-23.333s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2674,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.205,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0258,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0218,
+                      "label": "faceplanting"
+                    },
+                    {
+                      "confidence": 0.0186,
+                      "label": "pumping gas"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7986,
+                  "confidence": 0.9976,
+                  "end_time": 23.333,
+                  "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f10",
+                  "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e10",
+                  "matched_label": "RoadAccidents",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "RoadAccidents",
+                  "planner_query_index": 1,
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=21.333s-23.333s",
+                  "start_time": 21.333,
+                  "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=21.333s-23.333s"
+              ],
+              "start_time": 21.333,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9976,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e10",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=21.333s-23.333s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9976,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0008,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Explosion"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7987,
+              "end_time": 27.6,
+              "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f12",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2424,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a12",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=25.6s-27.6s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2424,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1047,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.1024,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0464,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0309,
+                      "label": "faceplanting"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7987,
+                  "confidence": 0.9978,
+                  "end_time": 27.6,
+                  "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f12",
+                  "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e12",
+                  "matched_label": "RoadAccidents",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "RoadAccidents",
+                  "planner_query_index": 1,
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=25.6s-27.6s",
+                  "start_time": 25.6,
+                  "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=25.6s-27.6s"
+              ],
+              "start_time": 25.6,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9978,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e12",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=25.6s-27.6s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9978,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0007,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0004,
+                      "label": "Explosion"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7971,
+              "end_time": 31.866,
+              "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f14",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.361,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a14",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=29.866s-31.866s",
+                  "top_k": [
+                    {
+                      "confidence": 0.361,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1326,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.042,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0356,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0182,
+                      "label": "biking through snow"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7971,
+                  "confidence": 0.9952,
+                  "end_time": 31.866,
+                  "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f14",
+                  "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e14",
+                  "matched_label": "RoadAccidents",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "RoadAccidents",
+                  "planner_query_index": 1,
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=29.866s-31.866s",
+                  "start_time": 29.866,
+                  "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=29.866s-31.866s"
+              ],
+              "start_time": 29.866,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9952,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e14",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=29.866s-31.866s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9952,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0015,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0014,
+                      "label": "Explosion"
+                    },
+                    {
+                      "confidence": 0.0006,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7978,
+              "end_time": 34.0,
+              "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f15",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.3021,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a15",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=32.0s-34.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3021,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1977,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0639,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0368,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0217,
+                      "label": "faceplanting"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7978,
+                  "confidence": 0.9963,
+                  "end_time": 34.0,
+                  "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f15",
+                  "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e15",
+                  "matched_label": "RoadAccidents",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "RoadAccidents",
+                  "planner_query_index": 1,
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=32.0s-34.0s",
+                  "start_time": 32.0,
+                  "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=32.0s-34.0s"
+              ],
+              "start_time": 32.0,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9963,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e15",
+                  "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=32.0s-34.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9963,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0016,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0006,
+                      "label": "Explosion"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0002,
+                      "label": "Abuse"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+            }
+          ],
+          "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+        }
+      ],
+      "unmapped_hits": []
+    },
+    "plan": {
+      "end_time": null,
+      "intent": "search_evidence",
+      "needs_cross_evidence": true,
+      "needs_timeline": false,
+      "queries": [
+        {
+          "query": "person",
+          "source": "object"
+        },
+        {
+          "query": "RoadAccidents",
+          "source": "surveillance_event"
+        }
+      ],
+      "schema_version": "phase3c/v1",
+      "start_time": null,
+      "temporal_context_seconds": 0,
+      "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+    },
+    "query_errors": [],
+    "query_results": [
+      {
+        "groups": [
+          {
+            "contextual_evidence": [
+              {
+                "anomaly_score": 0.7974,
+                "end_time": 8.4,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f3",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.4824,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a3",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=6.4s-8.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4824,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1228,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0351,
+                        "label": "snowmobiling"
+                      },
+                      {
+                        "confidence": 0.0202,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0162,
+                        "label": "riding scooter"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=6.4s-8.4s"
+                ],
+                "start_time": 6.4,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9956,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e3",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=6.4s-8.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9956,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0013,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.001,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7502,
+                "end_time": 10.533,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.236,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a4",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=8.533s-10.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.236,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1672,
+                        "label": "faceplanting"
+                      },
+                      {
+                        "confidence": 0.0704,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0478,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0472,
+                        "label": "drop kicking"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=8.533s-10.533s"
+                ],
+                "start_time": 8.533,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.917,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e4",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=8.533s-10.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.917,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0543,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0134,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0061,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0018,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7984,
+                "end_time": 16.933,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f7",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.5472,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a7",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.933s-16.933s",
+                    "top_k": [
+                      {
+                        "confidence": 0.5472,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0613,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0567,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0522,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.01,
+                        "label": "pushing cart"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.933s-16.933s"
+                ],
+                "start_time": 14.933,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9973,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e7",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.933s-16.933s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9973,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0008,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0005,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Shooting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.799,
+                "end_time": 19.067,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f8",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.5727,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a8",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=17.067s-19.067s",
+                    "top_k": [
+                      {
+                        "confidence": 0.5727,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0926,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0474,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0221,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0089,
+                        "label": "faceplanting"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=17.067s-19.067s"
+                ],
+                "start_time": 17.067,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9983,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e8",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=17.067s-19.067s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9983,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Shooting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7984,
+                "end_time": 21.2,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f9",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.4811,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a9",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=19.2s-21.2s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4811,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1524,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0311,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0175,
+                        "label": "faceplanting"
+                      },
+                      {
+                        "confidence": 0.0119,
+                        "label": "riding scooter"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=19.2s-21.2s"
+                ],
+                "start_time": 19.2,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9973,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e9",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=19.2s-21.2s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9973,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0009,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0005,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7986,
+                "end_time": 23.333,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f10",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2674,
+                    "label": "motorcycling",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a10",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=21.333s-23.333s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2674,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.205,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0258,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0218,
+                        "label": "faceplanting"
+                      },
+                      {
+                        "confidence": 0.0186,
+                        "label": "pumping gas"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=21.333s-23.333s"
+                ],
+                "start_time": 21.333,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9976,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e10",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=21.333s-23.333s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9976,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0008,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7987,
+                "end_time": 27.6,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f12",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2424,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a12",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=25.6s-27.6s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2424,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1047,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.1024,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0464,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0309,
+                        "label": "faceplanting"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=25.6s-27.6s"
+                ],
+                "start_time": 25.6,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9978,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e12",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=25.6s-27.6s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9978,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0007,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7971,
+                "end_time": 31.866,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f14",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.361,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a14",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=29.866s-31.866s",
+                    "top_k": [
+                      {
+                        "confidence": 0.361,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1326,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.042,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0356,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0182,
+                        "label": "biking through snow"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=29.866s-31.866s"
+                ],
+                "start_time": 29.866,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9952,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e14",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=29.866s-31.866s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9952,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0015,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0014,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0006,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7978,
+                "end_time": 34.0,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f15",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.3021,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a15",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=32.0s-34.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3021,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1977,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0639,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0368,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0217,
+                        "label": "faceplanting"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=32.0s-34.0s"
+                ],
+                "start_time": 32.0,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9963,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e15",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=32.0s-34.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9963,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0016,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0006,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              }
+            ],
+            "event_hypotheses": [
+              "RoadAccidents"
+            ],
+            "incident_end_time": 45.466,
+            "incident_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:i0",
+            "incident_start_time": 0.0,
+            "matched_evidence": [
+              {
+                "anomaly_score": 0.9929,
+                "end_time": 14.8,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.4457,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a6",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=12.8s-14.8s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4457,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0778,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0575,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0345,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0197,
+                        "label": "snowmobiling"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9929,
+                    "confidence": 0.4574,
+                    "end_time": 14.8,
+                    "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+                    "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f420:d1",
+                    "matched_label": "person",
+                    "matched_source": "object",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.0s",
+                    "start_time": 12.8,
+                    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      65.6,
+                      173.5,
+                      108.8,
+                      204.4
+                    ],
+                    "class_name": "backpack",
+                    "confidence": 0.4609,
+                    "detection_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f390:d0",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f390",
+                    "timestamp_seconds": 13.0
+                  },
+                  {
+                    "bounding_box": [
+                      160.9,
+                      28.2,
+                      258.6,
+                      135.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4574,
+                    "detection_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f420:d1",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f420",
+                    "timestamp_seconds": 14.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=12.8s-14.8s",
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=13.0s",
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.0s"
+                ],
+                "start_time": 12.8,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9882,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e6",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=12.8s-14.8s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9882,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0042,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0028,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0016,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0007,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              }
+            ],
+            "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+          }
+        ],
+        "planner_query_index": 0,
+        "query": "person",
+        "source": "object",
+        "summary": {
+          "context_records": 9,
+          "incident_groups": 1,
+          "matched_hits": 1,
+          "matched_records": 1,
+          "unmapped_hits": 0
+        },
+        "unmapped_hits": []
+      },
+      {
+        "groups": [
+          {
+            "contextual_evidence": [],
+            "event_hypotheses": [
+              "RoadAccidents"
+            ],
+            "incident_end_time": 45.466,
+            "incident_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:i0",
+            "incident_start_time": 0.0,
+            "matched_evidence": [
+              {
+                "anomaly_score": 0.7974,
+                "end_time": 8.4,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f3",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.4824,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a3",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=6.4s-8.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4824,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1228,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0351,
+                        "label": "snowmobiling"
+                      },
+                      {
+                        "confidence": 0.0202,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0162,
+                        "label": "riding scooter"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7974,
+                    "confidence": 0.9956,
+                    "end_time": 8.4,
+                    "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f3",
+                    "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e3",
+                    "matched_label": "RoadAccidents",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=6.4s-8.4s",
+                    "start_time": 6.4,
+                    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=6.4s-8.4s"
+                ],
+                "start_time": 6.4,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9956,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e3",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=6.4s-8.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9956,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0013,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.001,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7502,
+                "end_time": 10.533,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.236,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a4",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=8.533s-10.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.236,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1672,
+                        "label": "faceplanting"
+                      },
+                      {
+                        "confidence": 0.0704,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0478,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0472,
+                        "label": "drop kicking"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7502,
+                    "confidence": 0.917,
+                    "end_time": 10.533,
+                    "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4",
+                    "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e4",
+                    "matched_label": "RoadAccidents",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=8.533s-10.533s",
+                    "start_time": 8.533,
+                    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=8.533s-10.533s"
+                ],
+                "start_time": 8.533,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.917,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e4",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=8.533s-10.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.917,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0543,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0134,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0061,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0018,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9929,
+                "end_time": 14.8,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.4457,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a6",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=12.8s-14.8s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4457,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0778,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0575,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0345,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0197,
+                        "label": "snowmobiling"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9929,
+                    "confidence": 0.9882,
+                    "end_time": 14.8,
+                    "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+                    "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e6",
+                    "matched_label": "RoadAccidents",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=12.8s-14.8s",
+                    "start_time": 12.8,
+                    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      65.6,
+                      173.5,
+                      108.8,
+                      204.4
+                    ],
+                    "class_name": "backpack",
+                    "confidence": 0.4609,
+                    "detection_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f390:d0",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f390",
+                    "timestamp_seconds": 13.0
+                  },
+                  {
+                    "bounding_box": [
+                      160.9,
+                      28.2,
+                      258.6,
+                      135.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4574,
+                    "detection_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f420:d1",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f420",
+                    "timestamp_seconds": 14.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=12.8s-14.8s",
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=13.0s",
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.0s"
+                ],
+                "start_time": 12.8,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9882,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e6",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=12.8s-14.8s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9882,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0042,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0028,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0016,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0007,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7984,
+                "end_time": 16.933,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f7",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.5472,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a7",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.933s-16.933s",
+                    "top_k": [
+                      {
+                        "confidence": 0.5472,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0613,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0567,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0522,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.01,
+                        "label": "pushing cart"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7984,
+                    "confidence": 0.9973,
+                    "end_time": 16.933,
+                    "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f7",
+                    "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e7",
+                    "matched_label": "RoadAccidents",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.933s-16.933s",
+                    "start_time": 14.933,
+                    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.933s-16.933s"
+                ],
+                "start_time": 14.933,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9973,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e7",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=14.933s-16.933s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9973,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0008,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0005,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Shooting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.799,
+                "end_time": 19.067,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f8",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.5727,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a8",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=17.067s-19.067s",
+                    "top_k": [
+                      {
+                        "confidence": 0.5727,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0926,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0474,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0221,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0089,
+                        "label": "faceplanting"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.799,
+                    "confidence": 0.9983,
+                    "end_time": 19.067,
+                    "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f8",
+                    "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e8",
+                    "matched_label": "RoadAccidents",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=17.067s-19.067s",
+                    "start_time": 17.067,
+                    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=17.067s-19.067s"
+                ],
+                "start_time": 17.067,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9983,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e8",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=17.067s-19.067s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9983,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Abuse"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Shooting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7984,
+                "end_time": 21.2,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f9",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.4811,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a9",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=19.2s-21.2s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4811,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1524,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0311,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0175,
+                        "label": "faceplanting"
+                      },
+                      {
+                        "confidence": 0.0119,
+                        "label": "riding scooter"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7984,
+                    "confidence": 0.9973,
+                    "end_time": 21.2,
+                    "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f9",
+                    "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e9",
+                    "matched_label": "RoadAccidents",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=19.2s-21.2s",
+                    "start_time": 19.2,
+                    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=19.2s-21.2s"
+                ],
+                "start_time": 19.2,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9973,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e9",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=19.2s-21.2s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9973,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0009,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0005,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7986,
+                "end_time": 23.333,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f10",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2674,
+                    "label": "motorcycling",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a10",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=21.333s-23.333s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2674,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.205,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0258,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0218,
+                        "label": "faceplanting"
+                      },
+                      {
+                        "confidence": 0.0186,
+                        "label": "pumping gas"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7986,
+                    "confidence": 0.9976,
+                    "end_time": 23.333,
+                    "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f10",
+                    "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e10",
+                    "matched_label": "RoadAccidents",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=21.333s-23.333s",
+                    "start_time": 21.333,
+                    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=21.333s-23.333s"
+                ],
+                "start_time": 21.333,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9976,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e10",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=21.333s-23.333s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9976,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0008,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7987,
+                "end_time": 27.6,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f12",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2424,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a12",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=25.6s-27.6s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2424,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1047,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.1024,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0464,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0309,
+                        "label": "faceplanting"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7987,
+                    "confidence": 0.9978,
+                    "end_time": 27.6,
+                    "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f12",
+                    "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e12",
+                    "matched_label": "RoadAccidents",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=25.6s-27.6s",
+                    "start_time": 25.6,
+                    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=25.6s-27.6s"
+                ],
+                "start_time": 25.6,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9978,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e12",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=25.6s-27.6s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9978,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0007,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7971,
+                "end_time": 31.866,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f14",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.361,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a14",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=29.866s-31.866s",
+                    "top_k": [
+                      {
+                        "confidence": 0.361,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1326,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.042,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0356,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0182,
+                        "label": "biking through snow"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7971,
+                    "confidence": 0.9952,
+                    "end_time": 31.866,
+                    "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f14",
+                    "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e14",
+                    "matched_label": "RoadAccidents",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=29.866s-31.866s",
+                    "start_time": 29.866,
+                    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=29.866s-31.866s"
+                ],
+                "start_time": 29.866,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9952,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e14",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=29.866s-31.866s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9952,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0015,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0014,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0006,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7978,
+                "end_time": 34.0,
+                "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f15",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.3021,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:a15",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=32.0s-34.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3021,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1977,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0639,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0368,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0217,
+                        "label": "faceplanting"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7978,
+                    "confidence": 0.9963,
+                    "end_time": 34.0,
+                    "evidence_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f15",
+                    "matched_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e15",
+                    "matched_label": "RoadAccidents",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=32.0s-34.0s",
+                    "start_time": 32.0,
+                    "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=32.0s-34.0s"
+                ],
+                "start_time": 32.0,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9963,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:e15",
+                    "source_reference": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4@t=32.0s-34.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9963,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0016,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0006,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0002,
+                        "label": "Abuse"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+              }
+            ],
+            "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+          }
+        ],
+        "planner_query_index": 1,
+        "query": "RoadAccidents",
+        "source": "surveillance_event",
+        "summary": {
+          "context_records": 0,
+          "incident_groups": 1,
+          "matched_hits": 10,
+          "matched_records": 10,
+          "unmapped_hits": 0
+        },
+        "unmapped_hits": []
+      }
+    ],
+    "schema_version": "phase3d/v1",
+    "summary": {
+      "context_records": 0,
+      "incident_groups": 1,
+      "matched_hits": 11,
+      "planner_queries": 2,
+      "query_errors": 0,
+      "unmapped_hits": 0
+    }
+  },
+  "result_3e": null,
+  "result_3f": null,
+  "retrieval": {
+    "constant": 60,
+    "method": "hybrid-rrf",
+    "top_k": 10
+  },
+  "retrieved_evidence_ids": [
+    "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f12",
+    "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f8",
+    "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f10",
+    "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+    "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f9",
+    "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f15",
+    "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f7",
+    "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f3",
+    "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4",
+    "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f14"
+  ],
+  "run_utc": "2026-09-17T10:59:59.247701+00:00",
+  "schema_version": "investigation-eval/v1",
+  "settings": {
+    "model": "muse-spark-1.3-contributor",
+    "provider": "meta",
+    "temperature": 0.0
+  },
+  "timings": {
+    "3c": 18.831,
+    "3d": 0.003,
+    "report": 0.0,
+    "retr": 0.215,
+    "total": 19.049
+  },
+  "token_usage": {
+    "3c": {
+      "input_tokens": 449,
+      "output_tokens": 2463,
+      "total_tokens": 2912
+    },
+    "3e": null,
+    "3f": null
+  },
+  "validator_verdicts": {
+    "3c": "pass",
+    "3d": "pass",
+    "report": "pass",
+    "retr": "pass"
+  }
+}

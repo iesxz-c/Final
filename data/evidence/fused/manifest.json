@@ -1,0 +1,33 @@
+{
+  "schema_version": "phase2d/v1",
+  "inputs": {
+    "phase2_detections": "/content/Final/Final/Final/Final/data/evidence/phase2/detections.json",
+    "phase2b_activities": "/content/Final/Final/Final/Final/data/evidence/phase2b/activities.json",
+    "phase2c_events": "/content/Final/Final/Final/Final/data/evidence/phase2c_ucf/ucf_events.json",
+    "subset": "/content/Final/Final/Final/Final/data/experiments/phase2_subset.json"
+  },
+  "missing_sources": [],
+  "videos": 40,
+  "observations": {
+    "yolo_detections": 11165,
+    "kinetics_activities": 1931,
+    "ucf_events": 1931
+  },
+  "fused_records": 1931,
+  "incident_regions": 40,
+  "unaligned_detections": 332,
+  "scoring": {
+    "record": "min(1, 0.6*E + 0.1*has_action + 0.1*has_object + 0.1*(num_types-1)); E = max non-normal UCF hypothesis confidence",
+    "video": "min(1, 0.4*strength + 0.25*persistence + 0.2*concentration + 0.15*agreement); persistence saturates at 10.0s, concentration at 5.0 records",
+    "normal_labels": [
+      "background",
+      "normal",
+      "normal_videos",
+      "normalvideos"
+    ],
+    "max_gap_seconds": 1.0,
+    "note": "evidence aggregation only; NOT a probability of crime"
+  },
+  "started_utc": "2026-09-14T17:24:28.765523+00:00",
+  "elapsed_seconds": 2.0
+}

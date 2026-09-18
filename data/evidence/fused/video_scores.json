@@ -1,0 +1,562 @@
+[
+  {
+    "video_id": "anomaly/Assault/Assault001_x264.mp4",
+    "score": 0.9996,
+    "components": {
+      "strength": 0.9989,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 39,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Assault/Assault002_x264.mp4",
+    "score": 0.9977,
+    "components": {
+      "strength": 0.9943,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 40,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Assault/Assault003_x264.mp4",
+    "score": 0.9863,
+    "components": {
+      "strength": 0.9657,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 70,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Assault/Assault004_x264.mp4",
+    "score": 0.9998,
+    "components": {
+      "strength": 0.9995,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 51,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Assault/Assault005_x264.mp4",
+    "score": 0.9992,
+    "components": {
+      "strength": 0.998,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 20,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Fighting/Fighting002_x264.mp4",
+    "score": 0.9946,
+    "components": {
+      "strength": 0.9864,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 42,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Fighting/Fighting003_x264.mp4",
+    "score": 0.9969,
+    "components": {
+      "strength": 0.9923,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 49,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Fighting/Fighting004_x264.mp4",
+    "score": 0.9882,
+    "components": {
+      "strength": 0.9705,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 263,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Fighting/Fighting005_x264.mp4",
+    "score": 0.8972,
+    "components": {
+      "strength": 0.7429,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 28,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Fighting/Fighting006_x264.mp4",
+    "score": 0.9964,
+    "components": {
+      "strength": 0.9911,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 15,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Robbery/Robbery001_x264.mp4",
+    "score": 0.9793,
+    "components": {
+      "strength": 0.9483,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 16,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Robbery/Robbery002_x264.mp4",
+    "score": 0.9908,
+    "components": {
+      "strength": 0.9769,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 51,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Robbery/Robbery003_x264.mp4",
+    "score": 0.9648,
+    "components": {
+      "strength": 0.9121,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 16,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Robbery/Robbery004_x264.mp4",
+    "score": 0.9966,
+    "components": {
+      "strength": 0.9914,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 24,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Robbery/Robbery005_x264.mp4",
+    "score": 0.9826,
+    "components": {
+      "strength": 0.9566,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 44,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Shooting/Shooting001_x264.mp4",
+    "score": 0.914,
+    "components": {
+      "strength": 0.9851,
+      "persistence": 0.84,
+      "concentration": 0.8,
+      "agreement": 1.0
+    },
+    "num_fused_records": 4,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Shooting/Shooting002_x264.mp4",
+    "score": 0.9905,
+    "components": {
+      "strength": 0.9762,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 19,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Shooting/Shooting003_x264.mp4",
+    "score": 0.9978,
+    "components": {
+      "strength": 0.9944,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 36,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Shooting/Shooting004_x264.mp4",
+    "score": 0.9988,
+    "components": {
+      "strength": 0.9971,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 29,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Shooting/Shooting005_x264.mp4",
+    "score": 0.9974,
+    "components": {
+      "strength": 0.9936,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 84,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Shoplifting/Shoplifting001_x264.mp4",
+    "score": 0.9996,
+    "components": {
+      "strength": 0.999,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 68,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Shoplifting/Shoplifting003_x264.mp4",
+    "score": 0.9977,
+    "components": {
+      "strength": 0.9943,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 170,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Shoplifting/Shoplifting004_x264.mp4",
+    "score": 0.989,
+    "components": {
+      "strength": 0.9725,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 105,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Shoplifting/Shoplifting005_x264.mp4",
+    "score": 0.9994,
+    "components": {
+      "strength": 0.9984,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 31,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Shoplifting/Shoplifting006_x264.mp4",
+    "score": 0.9979,
+    "components": {
+      "strength": 0.9948,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 50,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Stealing/Stealing002_x264.mp4",
+    "score": 0.9978,
+    "components": {
+      "strength": 0.9944,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 55,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Stealing/Stealing003_x264.mp4",
+    "score": 0.9982,
+    "components": {
+      "strength": 0.9954,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 56,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Stealing/Stealing004_x264.mp4",
+    "score": 0.9989,
+    "components": {
+      "strength": 0.9973,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 104,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Stealing/Stealing006_x264.mp4",
+    "score": 0.9989,
+    "components": {
+      "strength": 0.9973,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 51,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Stealing/Stealing007_x264.mp4",
+    "score": 0.9996,
+    "components": {
+      "strength": 0.999,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 49,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Vandalism/Vandalism001_x264.mp4",
+    "score": 0.9913,
+    "components": {
+      "strength": 0.9782,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 23,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Vandalism/Vandalism002_x264.mp4",
+    "score": 0.9996,
+    "components": {
+      "strength": 0.9991,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 29,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Vandalism/Vandalism003_x264.mp4",
+    "score": 0.9987,
+    "components": {
+      "strength": 0.9967,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 23,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Vandalism/Vandalism004_x264.mp4",
+    "score": 0.9978,
+    "components": {
+      "strength": 0.9946,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 45,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "anomaly/Vandalism/Vandalism005_x264.mp4",
+    "score": 0.9996,
+    "components": {
+      "strength": 0.9991,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 26,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "normal/Normal_Videos_015_x264.mp4",
+    "score": 0.9316,
+    "components": {
+      "strength": 0.8291,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 8,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "normal/Normal_Videos_050_x264.mp4",
+    "score": 0.9998,
+    "components": {
+      "strength": 0.9996,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 66,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "normal/Normal_Videos_100_x264.mp4",
+    "score": 0.9624,
+    "components": {
+      "strength": 0.906,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 10,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "normal/Normal_Videos_129_x264.mp4",
+    "score": 0.9997,
+    "components": {
+      "strength": 0.9992,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 8,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  },
+  {
+    "video_id": "normal/Normal_Videos_150_x264.mp4",
+    "score": 0.9902,
+    "components": {
+      "strength": 0.9756,
+      "persistence": 1.0,
+      "concentration": 1.0,
+      "agreement": 1.0
+    },
+    "num_fused_records": 14,
+    "num_incidents": 1,
+    "interpretation": "evidence aggregation score; NOT a probability of crime",
+    "schema_version": "phase2d/v1"
+  }
+]

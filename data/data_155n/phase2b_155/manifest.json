@@ -1,0 +1,22 @@
+{
+  "schema_version": "phase2a/v1",
+  "subset": "data/phase2c_155.json",
+  "model": {
+    "name": "MCG-NJU/videomae-base-finetuned-kinetics",
+    "version": "488eb9a0565f257b32866000305c8178965eb9f6",
+    "weight_notes": "mapped q_bias->query.bias, v_bias->value.bias; zeroed 12 key.bias (absent upstream); dropped shape-mismatched=[]; load missing=12 unexpected=0",
+    "num_frames": 16,
+    "sampling_fps": 8.0,
+    "window_hop": 16,
+    "top_k": 5,
+    "device_requested": "cuda",
+    "device_used": "cuda"
+  },
+  "started_utc": "2026-09-17T07:23:28.710508+00:00",
+  "elapsed_seconds": 1439.0,
+  "videos_selected": 155,
+  "videos_processed": 155,
+  "videos_failed": 0,
+  "activities": 7927,
+  "failures": []
+}

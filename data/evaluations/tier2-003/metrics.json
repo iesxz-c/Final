@@ -1,0 +1,78 @@
+{
+  "audit_pass_rate": 1.0,
+  "citation_coverage": 0.0,
+  "cross_video_violations": 0,
+  "end_to_end_success_rate": 0.0,
+  "failure_taxonomy": {
+    "parse": 2,
+    "provider": 6
+  },
+  "max_token_exposure": {
+    "3c": 2048,
+    "3e": 4096,
+    "3f": 6000
+  },
+  "modes": {
+    "real": 8
+  },
+  "partially_supported": 0,
+  "per_stage_success": {
+    "3c": {
+      "pass": 5,
+      "rate": 0.625,
+      "total": 8
+    },
+    "3d": {
+      "pass": 5,
+      "rate": 1.0,
+      "total": 5
+    },
+    "3e": {
+      "pass": 0,
+      "rate": 0.0,
+      "total": 5
+    }
+  },
+  "schema_version": "phase4-eval/v1",
+  "stage_latency": {
+    "3c": {
+      "max": 15.374,
+      "mean": 7.015,
+      "n": 8,
+      "p50": 7.473
+    },
+    "3d": {
+      "max": 0.003,
+      "mean": 0.002,
+      "n": 5,
+      "p50": 0.001
+    },
+    "3e": {
+      "max": 40.53,
+      "mean": 13.768,
+      "n": 5,
+      "p50": 0.339
+    },
+    "3f": {
+      "max": 0.0,
+      "mean": 0.0,
+      "n": 0,
+      "p50": 0.0
+    }
+  },
+  "successful_runs": 0,
+  "supported": 0,
+  "supported_note": "'supported' means structurally grounded/cited by the deterministic validators, NOT a factual truth judgment.",
+  "supported_structural_only": true,
+  "timestamp_containment_rate": 0.0,
+  "total_latency": {
+    "max": 55.906,
+    "mean": 15.621,
+    "n": 8,
+    "p50": 7.794
+  },
+  "total_runs": 8,
+  "unmapped_hit_rate": 0.0,
+  "unmapped_hits": 0,
+  "unsupported": 0
+}

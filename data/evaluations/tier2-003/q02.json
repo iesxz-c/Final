@@ -1,0 +1,4343 @@
+{
+  "failure": {
+    "error": "output is not valid JSON: Unterminated string starting at: line 111 column 17 (char 5166)",
+    "stage": "3e",
+    "type": "parse"
+  },
+  "git_hash": "b9ba5ab",
+  "inputs": {
+    "evidence_path": "C:\\Users\\akash\\Videos\\Final\\data\\evidence\\fused\\evidence.json",
+    "incidents": 40,
+    "incidents_path": "C:\\Users\\akash\\Videos\\Final\\data\\evidence\\fused\\incidents.json",
+    "records": 1931
+  },
+  "integrity_audit": {
+    "base_records": 1931,
+    "cross_video_violations": 0,
+    "input_unchanged": true,
+    "overall_pass": true,
+    "stages": {
+      "3d": {
+        "duplicates": false,
+        "evidence_ids": 20,
+        "pass": true,
+        "refs_preserved": true,
+        "unknown_ids": 0
+      }
+    }
+  },
+  "max_token_exposure": {
+    "3c": 2048,
+    "3e": 4096,
+    "3f": 6000
+  },
+  "mode": "real",
+  "model": "meta/muse-spark-1.3",
+  "plan": {
+    "end_time": 20,
+    "intent": "investigate_incident",
+    "needs_cross_evidence": false,
+    "needs_timeline": false,
+    "queries": [
+      {
+        "query": "assault",
+        "source": "surveillance_event"
+      }
+    ],
+    "schema_version": "phase3c/v1",
+    "start_time": 2,
+    "temporal_context_seconds": 0,
+    "video_id": "anomaly/Assault/Assault005_x264.mp4"
+  },
+  "question": "What evidence supports the Assault hypothesis in anomaly/Assault/Assault005_x264.mp4 between 2 and 20 seconds?",
+  "result_3d": {
+    "merged_results": {
+      "groups": [
+        {
+          "contextual_evidence": [
+            {
+              "anomaly_score": 0.7573,
+              "end_time": 23.334,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f10",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2329,
+                  "label": "pumping gas",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a10",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=21.334s-23.334s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2329,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.2199,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0718,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0366,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0295,
+                      "label": "motorcycling"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=21.334s-23.334s"
+              ],
+              "start_time": 21.334,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9289,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e10",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=21.334s-23.334s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9289,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0541,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0057,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0044,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0023,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9858,
+              "end_time": 25.467,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f11",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2164,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a11",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=23.467s-25.467s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2164,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1053,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.1024,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0536,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.043,
+                      "label": "headbutting"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    207.8,
+                    28.8,
+                    237.2,
+                    84.0
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.6241,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f720:d13",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f720",
+                  "timestamp_seconds": 24.0
+                },
+                {
+                  "bounding_box": [
+                    132.7,
+                    30.4,
+                    190.1,
+                    113.8
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.5952,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f720:d14",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f720",
+                  "timestamp_seconds": 24.0
+                },
+                {
+                  "bounding_box": [
+                    106.8,
+                    32.7,
+                    137.8,
+                    95.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4026,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f720:d15",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f720",
+                  "timestamp_seconds": 24.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=23.467s-25.467s",
+                "anomaly/Assault/Assault005_x264.mp4@t=24.0s"
+              ],
+              "start_time": 23.467,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9764,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e11",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=23.467s-25.467s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9764,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0143,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0034,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0022,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0014,
+                      "label": "Vandalism"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 5,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7385,
+              "end_time": 27.6,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f12",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2347,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a12",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=25.6s-27.6s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2347,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0991,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0634,
+                      "label": "drop kicking"
+                    },
+                    {
+                      "confidence": 0.0619,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0508,
+                      "label": "headbutting"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=25.6s-27.6s"
+              ],
+              "start_time": 25.6,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.8975,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e12",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=25.6s-27.6s",
+                  "top_k": [
+                    {
+                      "confidence": 0.8975,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0812,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0098,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0045,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0022,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9245,
+              "end_time": 29.734,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f13",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.3447,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a13",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=27.734s-29.734s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3447,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0925,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.064,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0335,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0315,
+                      "label": "feeding birds"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    116.8,
+                    31.7,
+                    177.8,
+                    104.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4908,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f840:d16",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f840",
+                  "timestamp_seconds": 28.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=27.734s-29.734s",
+                "anomaly/Assault/Assault005_x264.mp4@t=28.0s"
+              ],
+              "start_time": 27.734,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.8742,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e13",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=27.734s-29.734s",
+                  "top_k": [
+                    {
+                      "confidence": 0.8742,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0646,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.033,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0121,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0072,
+                      "label": "Shooting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9819,
+              "end_time": 31.867,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f14",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1876,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a14",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=29.867s-31.867s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1876,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.1416,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0369,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0285,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0236,
+                      "label": "headbutting"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    115.9,
+                    30.5,
+                    177.8,
+                    103.8
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.5019,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f900:d17",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f900",
+                  "timestamp_seconds": 30.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=29.867s-31.867s",
+                "anomaly/Assault/Assault005_x264.mp4@t=30.0s"
+              ],
+              "start_time": 29.867,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9698,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e14",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=29.867s-31.867s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9698,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0134,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0067,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0056,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0024,
+                      "label": "Shooting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9578,
+              "end_time": 34.0,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f15",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2446,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a15",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=32.0s-34.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2446,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0791,
+                      "label": "drop kicking"
+                    },
+                    {
+                      "confidence": 0.0696,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0581,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.0261,
+                      "label": "driving car"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    120.8,
+                    30.2,
+                    183.4,
+                    113.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.6955,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f1020:d19",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f1020",
+                  "timestamp_seconds": 34.0
+                },
+                {
+                  "bounding_box": [
+                    164.2,
+                    35.0,
+                    242.7,
+                    148.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4629,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f960:d18",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f960",
+                  "timestamp_seconds": 32.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=32.0s",
+                "anomaly/Assault/Assault005_x264.mp4@t=32.0s-34.0s",
+                "anomaly/Assault/Assault005_x264.mp4@t=34.0s"
+              ],
+              "start_time": 32.0,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9296,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e15",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=32.0s-34.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9296,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0501,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.008,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0071,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0024,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 4,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9944,
+              "end_time": 36.134,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f16",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.275,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a16",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=34.134s-36.134s",
+                  "top_k": [
+                    {
+                      "confidence": 0.275,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.1716,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.0967,
+                      "label": "drop kicking"
+                    },
+                    {
+                      "confidence": 0.0326,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0255,
+                      "label": "pumping gas"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    127.5,
+                    105.9,
+                    224.3,
+                    183.5
+                  ],
+                  "class_name": "umbrella",
+                  "confidence": 0.4737,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f1080:d20",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f1080",
+                  "timestamp_seconds": 36.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=34.134s-36.134s",
+                "anomaly/Assault/Assault005_x264.mp4@t=36.0s"
+              ],
+              "start_time": 34.134,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9906,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e16",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=34.134s-36.134s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9906,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0039,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0016,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0015,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0011,
+                      "label": "Vandalism"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7935,
+              "end_time": 38.267,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f17",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2693,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a17",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=36.267s-38.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2693,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.2496,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1036,
+                      "label": "building shed"
+                    },
+                    {
+                      "confidence": 0.0207,
+                      "label": "moving furniture"
+                    },
+                    {
+                      "confidence": 0.0202,
+                      "label": "pumping gas"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=36.267s-38.267s"
+              ],
+              "start_time": 36.267,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9892,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e17",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=36.267s-38.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9892,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0071,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0019,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0005,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6009,
+              "end_time": 40.4,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f18",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.3849,
+                  "label": "building shed",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a18",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=38.4s-40.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3849,
+                      "label": "building shed"
+                    },
+                    {
+                      "confidence": 0.1781,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0429,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.022,
+                      "label": "building cabinet"
+                    },
+                    {
+                      "confidence": 0.0128,
+                      "label": "moving furniture"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=38.4s-40.4s"
+              ],
+              "start_time": 38.4,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.6681,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e18",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=38.4s-40.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.6681,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.2952,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0156,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0085,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0043,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7218,
+              "end_time": 40.534,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f19",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.3842,
+                  "label": "pumping gas",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a19",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=40.534s-40.534s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3842,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0587,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0435,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0249,
+                      "label": "motorcycling"
+                    },
+                    {
+                      "confidence": 0.0138,
+                      "label": "riding unicycle"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=40.534s-40.534s"
+              ],
+              "start_time": 40.534,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.8696,
+                  "label": "Vandalism",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e19",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=40.534s-40.534s",
+                  "top_k": [
+                    {
+                      "confidence": 0.8696,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.1206,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0051,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0019,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0006,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 0.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            }
+          ],
+          "event_hypotheses": [
+            "Assault",
+            "Vandalism"
+          ],
+          "incident_end_time": 40.534,
+          "incident_id": "anomaly/Assault/Assault005_x264.mp4:i0",
+          "incident_start_time": 0.0,
+          "matched_evidence": [
+            {
+              "anomaly_score": 0.6783,
+              "end_time": 2.0,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f0",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2537,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a0",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=0.0s-2.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2537,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0988,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0687,
+                      "label": "building shed"
+                    },
+                    {
+                      "confidence": 0.041,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0373,
+                      "label": "spraying"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.6783,
+                  "confidence": 0.4413,
+                  "end_time": 2.0,
+                  "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f0",
+                  "matched_id": "anomaly/Assault/Assault005_x264.mp4:e0",
+                  "matched_label": "Assault",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "assault",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=0.0s-2.0s",
+                  "start_time": 0.0,
+                  "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    127.0,
+                    105.1,
+                    262.8,
+                    207.7
+                  ],
+                  "class_name": "umbrella",
+                  "confidence": 0.5578,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f0:d0",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f0",
+                  "timestamp_seconds": 0.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=0.0s",
+                "anomaly/Assault/Assault005_x264.mp4@t=0.0s-2.0s"
+              ],
+              "start_time": 0.0,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4638,
+                  "label": "Vandalism",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e0",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=0.0s-2.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4638,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.4413,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0586,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0114,
+                      "label": "Explosion"
+                    },
+                    {
+                      "confidence": 0.0101,
+                      "label": "Shooting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9956,
+              "end_time": 4.133,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f1",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1918,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a1",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=2.133s-4.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1918,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.1834,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0931,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0638,
+                      "label": "moving furniture"
+                    },
+                    {
+                      "confidence": 0.029,
+                      "label": "garbage collecting"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9956,
+                  "confidence": 0.9926,
+                  "end_time": 4.133,
+                  "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f1",
+                  "matched_id": "anomaly/Assault/Assault005_x264.mp4:e1",
+                  "matched_label": "Assault",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "assault",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=2.133s-4.133s",
+                  "start_time": 2.133,
+                  "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    254.4,
+                    39.6,
+                    319.8,
+                    132.7
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.402,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f120:d1",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f120",
+                  "timestamp_seconds": 4.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=2.133s-4.133s",
+                "anomaly/Assault/Assault005_x264.mp4@t=4.0s"
+              ],
+              "start_time": 2.133,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9926,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e1",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=2.133s-4.133s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9926,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0038,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.002,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0005,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Shooting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9939,
+              "end_time": 6.267,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f2",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.3301,
+                  "label": "moving furniture",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a2",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=4.267s-6.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3301,
+                      "label": "moving furniture"
+                    },
+                    {
+                      "confidence": 0.1818,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0346,
+                      "label": "building shed"
+                    },
+                    {
+                      "confidence": 0.0249,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0129,
+                      "label": "headbutting"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9939,
+                  "confidence": 0.9898,
+                  "end_time": 6.267,
+                  "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f2",
+                  "matched_id": "anomaly/Assault/Assault005_x264.mp4:e2",
+                  "matched_label": "Assault",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "assault",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=4.267s-6.267s",
+                  "start_time": 4.267,
+                  "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    123.7,
+                    29.8,
+                    153.4,
+                    105.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4622,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f150:d2",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f150",
+                  "timestamp_seconds": 5.0
+                },
+                {
+                  "bounding_box": [
+                    66.4,
+                    32.6,
+                    112.5,
+                    115.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.6543,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f180:d3",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f180",
+                  "timestamp_seconds": 6.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=4.267s-6.267s",
+                "anomaly/Assault/Assault005_x264.mp4@t=5.0s",
+                "anomaly/Assault/Assault005_x264.mp4@t=6.0s"
+              ],
+              "start_time": 4.267,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9898,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e2",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=4.267s-6.267s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9898,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.006,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0017,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0007,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0005,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 4,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.7413,
+              "end_time": 8.4,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f3",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.359,
+                  "label": "pumping gas",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a3",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=6.4s-8.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.359,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.1698,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0591,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.026,
+                      "label": "moving furniture"
+                    },
+                    {
+                      "confidence": 0.0129,
+                      "label": "pushing car"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.7413,
+                  "confidence": 0.9022,
+                  "end_time": 8.4,
+                  "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f3",
+                  "matched_id": "anomaly/Assault/Assault005_x264.mp4:e3",
+                  "matched_label": "Assault",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "assault",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=6.4s-8.4s",
+                  "start_time": 6.4,
+                  "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=6.4s-8.4s"
+              ],
+              "start_time": 6.4,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9022,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e3",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=6.4s-8.4s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9022,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0753,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0096,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0041,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0033,
+                      "label": "Shooting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9601,
+              "end_time": 10.533,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f4",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.7088,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a4",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=8.533s-10.533s",
+                  "top_k": [
+                    {
+                      "confidence": 0.7088,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0373,
+                      "label": "building shed"
+                    },
+                    {
+                      "confidence": 0.0309,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.0229,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0158,
+                      "label": "drop kicking"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9601,
+                  "confidence": 0.9335,
+                  "end_time": 10.533,
+                  "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f4",
+                  "matched_id": "anomaly/Assault/Assault005_x264.mp4:e4",
+                  "matched_label": "Assault",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "assault",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=8.533s-10.533s",
+                  "start_time": 8.533,
+                  "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    106.4,
+                    134.0,
+                    211.1,
+                    208.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4353,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f270:d4",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f270",
+                  "timestamp_seconds": 9.0
+                },
+                {
+                  "bounding_box": [
+                    80.7,
+                    49.6,
+                    144.0,
+                    157.1
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7589,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f300:d5",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f300",
+                  "timestamp_seconds": 10.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=10.0s",
+                "anomaly/Assault/Assault005_x264.mp4@t=8.533s-10.533s",
+                "anomaly/Assault/Assault005_x264.mp4@t=9.0s"
+              ],
+              "start_time": 8.533,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9335,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e4",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=8.533s-10.533s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9335,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0433,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0088,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0045,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.004,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 4,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9959,
+              "end_time": 12.667,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f5",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1918,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a5",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=10.667s-12.667s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1918,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.143,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.1365,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0793,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.037,
+                      "label": "headbutting"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9959,
+                  "confidence": 0.9932,
+                  "end_time": 12.667,
+                  "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f5",
+                  "matched_id": "anomaly/Assault/Assault005_x264.mp4:e5",
+                  "matched_label": "Assault",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "assault",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=10.667s-12.667s",
+                  "start_time": 10.667,
+                  "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    73.0,
+                    31.5,
+                    109.9,
+                    131.3
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.5159,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f330:d6",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f330",
+                  "timestamp_seconds": 11.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=10.667s-12.667s",
+                "anomaly/Assault/Assault005_x264.mp4@t=11.0s"
+              ],
+              "start_time": 10.667,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9932,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e5",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=10.667s-12.667s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9932,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0034,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0011,
+                      "label": "Vandalism"
+                    },
+                    {
+                      "confidence": 0.0008,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0005,
+                      "label": "Shooting"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9951,
+              "end_time": 14.8,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f6",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1978,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a6",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=12.8s-14.8s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1978,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.1247,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1223,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.1058,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.026,
+                      "label": "motorcycling"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9951,
+                  "confidence": 0.9918,
+                  "end_time": 14.8,
+                  "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f6",
+                  "matched_id": "anomaly/Assault/Assault005_x264.mp4:e6",
+                  "matched_label": "Assault",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "assault",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=12.8s-14.8s",
+                  "start_time": 12.8,
+                  "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    91.2,
+                    41.8,
+                    131.0,
+                    141.0
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.6767,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f420:d7",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f420",
+                  "timestamp_seconds": 14.0
+                },
+                {
+                  "bounding_box": [
+                    122.4,
+                    29.9,
+                    159.2,
+                    116.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.5573,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f420:d8",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f420",
+                  "timestamp_seconds": 14.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=12.8s-14.8s",
+                "anomaly/Assault/Assault005_x264.mp4@t=14.0s"
+              ],
+              "start_time": 12.8,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9918,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e6",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=12.8s-14.8s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9918,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0059,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0007,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0004,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Vandalism"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 4,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.979,
+              "end_time": 16.933,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f7",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2018,
+                  "label": "unloading truck",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a7",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=14.933s-16.933s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2018,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.1499,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.0976,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.0824,
+                      "label": "drop kicking"
+                    },
+                    {
+                      "confidence": 0.0303,
+                      "label": "pumping gas"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.979,
+                  "confidence": 0.965,
+                  "end_time": 16.933,
+                  "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f7",
+                  "matched_id": "anomaly/Assault/Assault005_x264.mp4:e7",
+                  "matched_label": "Assault",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "assault",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=14.933s-16.933s",
+                  "start_time": 14.933,
+                  "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    102.6,
+                    34.6,
+                    157.6,
+                    124.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.6528,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f480:d9",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f480",
+                  "timestamp_seconds": 16.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=14.933s-16.933s",
+                "anomaly/Assault/Assault005_x264.mp4@t=16.0s"
+              ],
+              "start_time": 14.933,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.965,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e7",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=14.933s-16.933s",
+                  "top_k": [
+                    {
+                      "confidence": 0.965,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0222,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0054,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0027,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0015,
+                      "label": "Vandalism"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.998,
+              "end_time": 19.067,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f8",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2086,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a8",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=17.067s-19.067s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2086,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1761,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0764,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0542,
+                      "label": "pushing car"
+                    },
+                    {
+                      "confidence": 0.0483,
+                      "label": "headbutting"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.998,
+                  "confidence": 0.9966,
+                  "end_time": 19.067,
+                  "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f8",
+                  "matched_id": "anomaly/Assault/Assault005_x264.mp4:e8",
+                  "matched_label": "Assault",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "assault",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=17.067s-19.067s",
+                  "start_time": 17.067,
+                  "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    100.9,
+                    41.7,
+                    177.4,
+                    128.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7712,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f540:d10",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f540",
+                  "timestamp_seconds": 18.0
+                },
+                {
+                  "bounding_box": [
+                    102.8,
+                    31.0,
+                    136.2,
+                    121.0
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.6191,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f570:d11",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f570",
+                  "timestamp_seconds": 19.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=17.067s-19.067s",
+                "anomaly/Assault/Assault005_x264.mp4@t=18.0s",
+                "anomaly/Assault/Assault005_x264.mp4@t=19.0s"
+              ],
+              "start_time": 17.067,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9966,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e8",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=17.067s-19.067s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9966,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0014,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0006,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0004,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0003,
+                      "label": "Explosion"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 4,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.9966,
+              "end_time": 21.2,
+              "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f9",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1354,
+                  "label": "driving car",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:a9",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=19.2s-21.2s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1354,
+                      "label": "driving car"
+                    },
+                    {
+                      "confidence": 0.1078,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.0921,
+                      "label": "unloading truck"
+                    },
+                    {
+                      "confidence": 0.0503,
+                      "label": "pumping gas"
+                    },
+                    {
+                      "confidence": 0.0461,
+                      "label": "pushing car"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.9966,
+                  "confidence": 0.9944,
+                  "end_time": 21.2,
+                  "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f9",
+                  "matched_id": "anomaly/Assault/Assault005_x264.mp4:e9",
+                  "matched_label": "Assault",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "assault",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=19.2s-21.2s",
+                  "start_time": 19.2,
+                  "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    98.9,
+                    30.0,
+                    151.9,
+                    120.8
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4333,
+                  "detection_id": "anomaly/Assault/Assault005_x264.mp4:f600:d12",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:f600",
+                  "timestamp_seconds": 20.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Assault/Assault005_x264.mp4@t=19.2s-21.2s",
+                "anomaly/Assault/Assault005_x264.mp4@t=20.0s"
+              ],
+              "start_time": 19.2,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.9944,
+                  "label": "Assault",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Assault/Assault005_x264.mp4:e9",
+                  "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=19.2s-21.2s",
+                  "top_k": [
+                    {
+                      "confidence": 0.9944,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0024,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0009,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0007,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0005,
+                      "label": "Vandalism"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Assault/Assault005_x264.mp4"
+            }
+          ],
+          "video_id": "anomaly/Assault/Assault005_x264.mp4"
+        }
+      ],
+      "unmapped_hits": []
+    },
+    "plan": {
+      "end_time": 20,
+      "intent": "investigate_incident",
+      "needs_cross_evidence": false,
+      "needs_timeline": false,
+      "queries": [
+        {
+          "query": "assault",
+          "source": "surveillance_event"
+        }
+      ],
+      "schema_version": "phase3c/v1",
+      "start_time": 2,
+      "temporal_context_seconds": 0,
+      "video_id": "anomaly/Assault/Assault005_x264.mp4"
+    },
+    "query_errors": [],
+    "query_results": [
+      {
+        "groups": [
+          {
+            "contextual_evidence": [
+              {
+                "anomaly_score": 0.7573,
+                "end_time": 23.334,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f10",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2329,
+                    "label": "pumping gas",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a10",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=21.334s-23.334s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2329,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.2199,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0718,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0366,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0295,
+                        "label": "motorcycling"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=21.334s-23.334s"
+                ],
+                "start_time": 21.334,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9289,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e10",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=21.334s-23.334s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9289,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0541,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0057,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0044,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0023,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9858,
+                "end_time": 25.467,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f11",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2164,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a11",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=23.467s-25.467s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2164,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1053,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.1024,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0536,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.043,
+                        "label": "headbutting"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      207.8,
+                      28.8,
+                      237.2,
+                      84.0
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.6241,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f720:d13",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f720",
+                    "timestamp_seconds": 24.0
+                  },
+                  {
+                    "bounding_box": [
+                      132.7,
+                      30.4,
+                      190.1,
+                      113.8
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.5952,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f720:d14",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f720",
+                    "timestamp_seconds": 24.0
+                  },
+                  {
+                    "bounding_box": [
+                      106.8,
+                      32.7,
+                      137.8,
+                      95.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4026,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f720:d15",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f720",
+                    "timestamp_seconds": 24.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=23.467s-25.467s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=24.0s"
+                ],
+                "start_time": 23.467,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9764,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e11",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=23.467s-25.467s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9764,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0143,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0034,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0022,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0014,
+                        "label": "Vandalism"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 5,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7385,
+                "end_time": 27.6,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f12",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2347,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a12",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=25.6s-27.6s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2347,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0991,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0634,
+                        "label": "drop kicking"
+                      },
+                      {
+                        "confidence": 0.0619,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0508,
+                        "label": "headbutting"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=25.6s-27.6s"
+                ],
+                "start_time": 25.6,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.8975,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e12",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=25.6s-27.6s",
+                    "top_k": [
+                      {
+                        "confidence": 0.8975,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0812,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0098,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0045,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0022,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9245,
+                "end_time": 29.734,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f13",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.3447,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a13",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=27.734s-29.734s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3447,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0925,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.064,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0335,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0315,
+                        "label": "feeding birds"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      116.8,
+                      31.7,
+                      177.8,
+                      104.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4908,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f840:d16",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f840",
+                    "timestamp_seconds": 28.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=27.734s-29.734s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=28.0s"
+                ],
+                "start_time": 27.734,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.8742,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e13",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=27.734s-29.734s",
+                    "top_k": [
+                      {
+                        "confidence": 0.8742,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0646,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.033,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0121,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0072,
+                        "label": "Shooting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9819,
+                "end_time": 31.867,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f14",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1876,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a14",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=29.867s-31.867s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1876,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.1416,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0369,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0285,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0236,
+                        "label": "headbutting"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      115.9,
+                      30.5,
+                      177.8,
+                      103.8
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.5019,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f900:d17",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f900",
+                    "timestamp_seconds": 30.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=29.867s-31.867s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=30.0s"
+                ],
+                "start_time": 29.867,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9698,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e14",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=29.867s-31.867s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9698,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0134,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0067,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0056,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0024,
+                        "label": "Shooting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9578,
+                "end_time": 34.0,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f15",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2446,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a15",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=32.0s-34.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2446,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0791,
+                        "label": "drop kicking"
+                      },
+                      {
+                        "confidence": 0.0696,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0581,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.0261,
+                        "label": "driving car"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      120.8,
+                      30.2,
+                      183.4,
+                      113.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.6955,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f1020:d19",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f1020",
+                    "timestamp_seconds": 34.0
+                  },
+                  {
+                    "bounding_box": [
+                      164.2,
+                      35.0,
+                      242.7,
+                      148.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4629,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f960:d18",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f960",
+                    "timestamp_seconds": 32.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=32.0s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=32.0s-34.0s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=34.0s"
+                ],
+                "start_time": 32.0,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9296,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e15",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=32.0s-34.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9296,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0501,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.008,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0071,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0024,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9944,
+                "end_time": 36.134,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f16",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.275,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a16",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=34.134s-36.134s",
+                    "top_k": [
+                      {
+                        "confidence": 0.275,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.1716,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.0967,
+                        "label": "drop kicking"
+                      },
+                      {
+                        "confidence": 0.0326,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0255,
+                        "label": "pumping gas"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      127.5,
+                      105.9,
+                      224.3,
+                      183.5
+                    ],
+                    "class_name": "umbrella",
+                    "confidence": 0.4737,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f1080:d20",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f1080",
+                    "timestamp_seconds": 36.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=34.134s-36.134s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=36.0s"
+                ],
+                "start_time": 34.134,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9906,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e16",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=34.134s-36.134s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9906,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0039,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0016,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0015,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0011,
+                        "label": "Vandalism"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7935,
+                "end_time": 38.267,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f17",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2693,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a17",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=36.267s-38.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2693,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.2496,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1036,
+                        "label": "building shed"
+                      },
+                      {
+                        "confidence": 0.0207,
+                        "label": "moving furniture"
+                      },
+                      {
+                        "confidence": 0.0202,
+                        "label": "pumping gas"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=36.267s-38.267s"
+                ],
+                "start_time": 36.267,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9892,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e17",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=36.267s-38.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9892,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0071,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0019,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0005,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6009,
+                "end_time": 40.4,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f18",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.3849,
+                    "label": "building shed",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a18",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=38.4s-40.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3849,
+                        "label": "building shed"
+                      },
+                      {
+                        "confidence": 0.1781,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0429,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.022,
+                        "label": "building cabinet"
+                      },
+                      {
+                        "confidence": 0.0128,
+                        "label": "moving furniture"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=38.4s-40.4s"
+                ],
+                "start_time": 38.4,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.6681,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e18",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=38.4s-40.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.6681,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.2952,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0156,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0085,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0043,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7218,
+                "end_time": 40.534,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f19",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.3842,
+                    "label": "pumping gas",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a19",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=40.534s-40.534s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3842,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0587,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0435,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0249,
+                        "label": "motorcycling"
+                      },
+                      {
+                        "confidence": 0.0138,
+                        "label": "riding unicycle"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=40.534s-40.534s"
+                ],
+                "start_time": 40.534,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.8696,
+                    "label": "Vandalism",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e19",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=40.534s-40.534s",
+                    "top_k": [
+                      {
+                        "confidence": 0.8696,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.1206,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0051,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0019,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0006,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 0.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              }
+            ],
+            "event_hypotheses": [
+              "Assault",
+              "Vandalism"
+            ],
+            "incident_end_time": 40.534,
+            "incident_id": "anomaly/Assault/Assault005_x264.mp4:i0",
+            "incident_start_time": 0.0,
+            "matched_evidence": [
+              {
+                "anomaly_score": 0.6783,
+                "end_time": 2.0,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f0",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2537,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a0",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=0.0s-2.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2537,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0988,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0687,
+                        "label": "building shed"
+                      },
+                      {
+                        "confidence": 0.041,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0373,
+                        "label": "spraying"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.6783,
+                    "confidence": 0.4413,
+                    "end_time": 2.0,
+                    "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f0",
+                    "matched_id": "anomaly/Assault/Assault005_x264.mp4:e0",
+                    "matched_label": "Assault",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=0.0s-2.0s",
+                    "start_time": 0.0,
+                    "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      127.0,
+                      105.1,
+                      262.8,
+                      207.7
+                    ],
+                    "class_name": "umbrella",
+                    "confidence": 0.5578,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f0:d0",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f0",
+                    "timestamp_seconds": 0.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=0.0s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=0.0s-2.0s"
+                ],
+                "start_time": 0.0,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4638,
+                    "label": "Vandalism",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e0",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=0.0s-2.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4638,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.4413,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0586,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0114,
+                        "label": "Explosion"
+                      },
+                      {
+                        "confidence": 0.0101,
+                        "label": "Shooting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9956,
+                "end_time": 4.133,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f1",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1918,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a1",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=2.133s-4.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1918,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.1834,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0931,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0638,
+                        "label": "moving furniture"
+                      },
+                      {
+                        "confidence": 0.029,
+                        "label": "garbage collecting"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9956,
+                    "confidence": 0.9926,
+                    "end_time": 4.133,
+                    "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f1",
+                    "matched_id": "anomaly/Assault/Assault005_x264.mp4:e1",
+                    "matched_label": "Assault",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=2.133s-4.133s",
+                    "start_time": 2.133,
+                    "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      254.4,
+                      39.6,
+                      319.8,
+                      132.7
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.402,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f120:d1",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f120",
+                    "timestamp_seconds": 4.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=2.133s-4.133s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=4.0s"
+                ],
+                "start_time": 2.133,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9926,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e1",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=2.133s-4.133s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9926,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0038,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.002,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0005,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Shooting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9939,
+                "end_time": 6.267,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f2",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.3301,
+                    "label": "moving furniture",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a2",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=4.267s-6.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3301,
+                        "label": "moving furniture"
+                      },
+                      {
+                        "confidence": 0.1818,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0346,
+                        "label": "building shed"
+                      },
+                      {
+                        "confidence": 0.0249,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0129,
+                        "label": "headbutting"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9939,
+                    "confidence": 0.9898,
+                    "end_time": 6.267,
+                    "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f2",
+                    "matched_id": "anomaly/Assault/Assault005_x264.mp4:e2",
+                    "matched_label": "Assault",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=4.267s-6.267s",
+                    "start_time": 4.267,
+                    "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      123.7,
+                      29.8,
+                      153.4,
+                      105.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4622,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f150:d2",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f150",
+                    "timestamp_seconds": 5.0
+                  },
+                  {
+                    "bounding_box": [
+                      66.4,
+                      32.6,
+                      112.5,
+                      115.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.6543,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f180:d3",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f180",
+                    "timestamp_seconds": 6.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=4.267s-6.267s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=5.0s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=6.0s"
+                ],
+                "start_time": 4.267,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9898,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e2",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=4.267s-6.267s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9898,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.006,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0017,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0007,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0005,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.7413,
+                "end_time": 8.4,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f3",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.359,
+                    "label": "pumping gas",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a3",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=6.4s-8.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.359,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.1698,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0591,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.026,
+                        "label": "moving furniture"
+                      },
+                      {
+                        "confidence": 0.0129,
+                        "label": "pushing car"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.7413,
+                    "confidence": 0.9022,
+                    "end_time": 8.4,
+                    "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f3",
+                    "matched_id": "anomaly/Assault/Assault005_x264.mp4:e3",
+                    "matched_label": "Assault",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=6.4s-8.4s",
+                    "start_time": 6.4,
+                    "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=6.4s-8.4s"
+                ],
+                "start_time": 6.4,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9022,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e3",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=6.4s-8.4s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9022,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0753,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0096,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0041,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0033,
+                        "label": "Shooting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9601,
+                "end_time": 10.533,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f4",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.7088,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a4",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=8.533s-10.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.7088,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0373,
+                        "label": "building shed"
+                      },
+                      {
+                        "confidence": 0.0309,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.0229,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0158,
+                        "label": "drop kicking"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9601,
+                    "confidence": 0.9335,
+                    "end_time": 10.533,
+                    "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f4",
+                    "matched_id": "anomaly/Assault/Assault005_x264.mp4:e4",
+                    "matched_label": "Assault",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=8.533s-10.533s",
+                    "start_time": 8.533,
+                    "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      106.4,
+                      134.0,
+                      211.1,
+                      208.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4353,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f270:d4",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f270",
+                    "timestamp_seconds": 9.0
+                  },
+                  {
+                    "bounding_box": [
+                      80.7,
+                      49.6,
+                      144.0,
+                      157.1
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7589,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f300:d5",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f300",
+                    "timestamp_seconds": 10.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=10.0s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=8.533s-10.533s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=9.0s"
+                ],
+                "start_time": 8.533,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9335,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e4",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=8.533s-10.533s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9335,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0433,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0088,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0045,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.004,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9959,
+                "end_time": 12.667,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f5",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1918,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a5",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=10.667s-12.667s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1918,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.143,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.1365,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0793,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.037,
+                        "label": "headbutting"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9959,
+                    "confidence": 0.9932,
+                    "end_time": 12.667,
+                    "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f5",
+                    "matched_id": "anomaly/Assault/Assault005_x264.mp4:e5",
+                    "matched_label": "Assault",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=10.667s-12.667s",
+                    "start_time": 10.667,
+                    "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      73.0,
+                      31.5,
+                      109.9,
+                      131.3
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.5159,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f330:d6",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f330",
+                    "timestamp_seconds": 11.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=10.667s-12.667s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=11.0s"
+                ],
+                "start_time": 10.667,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9932,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e5",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=10.667s-12.667s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9932,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0034,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0011,
+                        "label": "Vandalism"
+                      },
+                      {
+                        "confidence": 0.0008,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0005,
+                        "label": "Shooting"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9951,
+                "end_time": 14.8,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f6",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1978,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a6",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=12.8s-14.8s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1978,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.1247,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1223,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.1058,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.026,
+                        "label": "motorcycling"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9951,
+                    "confidence": 0.9918,
+                    "end_time": 14.8,
+                    "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f6",
+                    "matched_id": "anomaly/Assault/Assault005_x264.mp4:e6",
+                    "matched_label": "Assault",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=12.8s-14.8s",
+                    "start_time": 12.8,
+                    "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      91.2,
+                      41.8,
+                      131.0,
+                      141.0
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.6767,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f420:d7",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f420",
+                    "timestamp_seconds": 14.0
+                  },
+                  {
+                    "bounding_box": [
+                      122.4,
+                      29.9,
+                      159.2,
+                      116.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.5573,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f420:d8",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f420",
+                    "timestamp_seconds": 14.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=12.8s-14.8s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=14.0s"
+                ],
+                "start_time": 12.8,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9918,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e6",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=12.8s-14.8s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9918,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0059,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0007,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Vandalism"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.979,
+                "end_time": 16.933,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f7",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2018,
+                    "label": "unloading truck",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a7",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=14.933s-16.933s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2018,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.1499,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.0976,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.0824,
+                        "label": "drop kicking"
+                      },
+                      {
+                        "confidence": 0.0303,
+                        "label": "pumping gas"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.979,
+                    "confidence": 0.965,
+                    "end_time": 16.933,
+                    "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f7",
+                    "matched_id": "anomaly/Assault/Assault005_x264.mp4:e7",
+                    "matched_label": "Assault",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=14.933s-16.933s",
+                    "start_time": 14.933,
+                    "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      102.6,
+                      34.6,
+                      157.6,
+                      124.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.6528,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f480:d9",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f480",
+                    "timestamp_seconds": 16.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=14.933s-16.933s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=16.0s"
+                ],
+                "start_time": 14.933,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.965,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e7",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=14.933s-16.933s",
+                    "top_k": [
+                      {
+                        "confidence": 0.965,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0222,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0054,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0027,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0015,
+                        "label": "Vandalism"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.998,
+                "end_time": 19.067,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f8",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2086,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a8",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=17.067s-19.067s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2086,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1761,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0764,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0542,
+                        "label": "pushing car"
+                      },
+                      {
+                        "confidence": 0.0483,
+                        "label": "headbutting"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.998,
+                    "confidence": 0.9966,
+                    "end_time": 19.067,
+                    "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f8",
+                    "matched_id": "anomaly/Assault/Assault005_x264.mp4:e8",
+                    "matched_label": "Assault",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=17.067s-19.067s",
+                    "start_time": 17.067,
+                    "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      100.9,
+                      41.7,
+                      177.4,
+                      128.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7712,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f540:d10",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f540",
+                    "timestamp_seconds": 18.0
+                  },
+                  {
+                    "bounding_box": [
+                      102.8,
+                      31.0,
+                      136.2,
+                      121.0
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.6191,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f570:d11",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f570",
+                    "timestamp_seconds": 19.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=17.067s-19.067s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=18.0s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=19.0s"
+                ],
+                "start_time": 17.067,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9966,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e8",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=17.067s-19.067s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9966,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0014,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0006,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0004,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0003,
+                        "label": "Explosion"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.9966,
+                "end_time": 21.2,
+                "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f9",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1354,
+                    "label": "driving car",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:a9",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=19.2s-21.2s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1354,
+                        "label": "driving car"
+                      },
+                      {
+                        "confidence": 0.1078,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.0921,
+                        "label": "unloading truck"
+                      },
+                      {
+                        "confidence": 0.0503,
+                        "label": "pumping gas"
+                      },
+                      {
+                        "confidence": 0.0461,
+                        "label": "pushing car"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.9966,
+                    "confidence": 0.9944,
+                    "end_time": 21.2,
+                    "evidence_id": "anomaly/Assault/Assault005_x264.mp4:f9",
+                    "matched_id": "anomaly/Assault/Assault005_x264.mp4:e9",
+                    "matched_label": "Assault",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=19.2s-21.2s",
+                    "start_time": 19.2,
+                    "video_id": "anomaly/Assault/Assault005_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      98.9,
+                      30.0,
+                      151.9,
+                      120.8
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4333,
+                    "detection_id": "anomaly/Assault/Assault005_x264.mp4:f600:d12",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:f600",
+                    "timestamp_seconds": 20.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Assault/Assault005_x264.mp4@t=19.2s-21.2s",
+                  "anomaly/Assault/Assault005_x264.mp4@t=20.0s"
+                ],
+                "start_time": 19.2,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.9944,
+                    "label": "Assault",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Assault/Assault005_x264.mp4:e9",
+                    "source_reference": "anomaly/Assault/Assault005_x264.mp4@t=19.2s-21.2s",
+                    "top_k": [
+                      {
+                        "confidence": 0.9944,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0024,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0009,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0007,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0005,
+                        "label": "Vandalism"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Assault/Assault005_x264.mp4"
+              }
+            ],
+            "video_id": "anomaly/Assault/Assault005_x264.mp4"
+          }
+        ],
+        "planner_query_index": 0,
+        "query": "assault",
+        "source": "surveillance_event",
+        "summary": {
+          "context_records": 10,
+          "incident_groups": 1,
+          "matched_hits": 10,
+          "matched_records": 10,
+          "unmapped_hits": 0
+        },
+        "unmapped_hits": []
+      }
+    ],
+    "schema_version": "phase3d/v1",
+    "summary": {
+      "context_records": 10,
+      "incident_groups": 1,
+      "matched_hits": 10,
+      "planner_queries": 1,
+      "query_errors": 0,
+      "unmapped_hits": 0
+    }
+  },
+  "result_3e": null,
+  "result_3f": null,
+  "run_utc": "2026-09-15T11:17:10.783225+00:00",
+  "schema_version": "phase4/v1",
+  "settings": {
+    "model": "meta/muse-spark-1.3",
+    "provider": "openrouter",
+    "temperature": 0.0
+  },
+  "timings": {
+    "3c": 15.374,
+    "3d": 0.001,
+    "3e": 40.53,
+    "total": 55.906
+  },
+  "validator_verdicts": {
+    "3c": "pass",
+    "3d": "pass",
+    "3e": "error"
+  }
+}

@@ -1,0 +1,1056 @@
+[
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1020:d18",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1020",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 34.0,
+    "class_name": "car",
+    "confidence": 0.6242,
+    "bounding_box": [
+      228.2,
+      132.5,
+      319.7,
+      213.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1020:d19",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1020",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 34.0,
+    "class_name": "car",
+    "confidence": 0.5058,
+    "bounding_box": [
+      162.0,
+      164.4,
+      192.6,
+      187.2
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1050:d20",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1050",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 35.0,
+    "class_name": "car",
+    "confidence": 0.6824,
+    "bounding_box": [
+      227.3,
+      132.3,
+      319.8,
+      213.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1080:d21",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1080",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 36.0,
+    "class_name": "car",
+    "confidence": 0.6696,
+    "bounding_box": [
+      227.1,
+      132.1,
+      319.8,
+      213.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1110:d22",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1110",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 37.0,
+    "class_name": "person",
+    "confidence": 0.7812,
+    "bounding_box": [
+      162.9,
+      164.4,
+      231.7,
+      224.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1110:d23",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1110",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 37.0,
+    "class_name": "car",
+    "confidence": 0.6372,
+    "bounding_box": [
+      227.8,
+      131.7,
+      319.8,
+      213.8
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1140:d24",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1140",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 38.0,
+    "class_name": "car",
+    "confidence": 0.5245,
+    "bounding_box": [
+      225.5,
+      132.0,
+      319.7,
+      213.9
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1140:d25",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1140",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 38.0,
+    "class_name": "person",
+    "confidence": 0.4427,
+    "bounding_box": [
+      164.7,
+      164.5,
+      232.8,
+      224.6
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1200:d26",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1200",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 40.0,
+    "class_name": "car",
+    "confidence": 0.4791,
+    "bounding_box": [
+      225.5,
+      132.2,
+      319.8,
+      213.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1230:d27",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1230",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 41.0,
+    "class_name": "horse",
+    "confidence": 0.4417,
+    "bounding_box": [
+      6.4,
+      15.0,
+      161.9,
+      224.6
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1230:d28",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1230",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 41.0,
+    "class_name": "car",
+    "confidence": 0.4415,
+    "bounding_box": [
+      228.4,
+      134.8,
+      319.8,
+      214.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1290:d29",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1290",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 43.0,
+    "class_name": "fire hydrant",
+    "confidence": 0.4121,
+    "bounding_box": [
+      0.1,
+      83.6,
+      38.4,
+      224.3
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1350:d30",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1350",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 45.0,
+    "class_name": "cup",
+    "confidence": 0.522,
+    "bounding_box": [
+      0.1,
+      84.8,
+      37.6,
+      224.2
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1380:d31",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1380",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 46.0,
+    "class_name": "bottle",
+    "confidence": 0.4244,
+    "bounding_box": [
+      0.1,
+      85.7,
+      37.4,
+      224.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1590:d32",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1590",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 53.0,
+    "class_name": "person",
+    "confidence": 0.7852,
+    "bounding_box": [
+      156.0,
+      112.8,
+      219.2,
+      219.1
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1590:d33",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1590",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 53.0,
+    "class_name": "car",
+    "confidence": 0.6113,
+    "bounding_box": [
+      226.1,
+      134.2,
+      319.8,
+      213.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1620:d34",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1620",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 54.0,
+    "class_name": "car",
+    "confidence": 0.7348,
+    "bounding_box": [
+      224.0,
+      135.7,
+      319.9,
+      213.9
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1620:d35",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1620",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 54.0,
+    "class_name": "person",
+    "confidence": 0.5497,
+    "bounding_box": [
+      142.1,
+      91.4,
+      191.5,
+      157.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1650:d36",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1650",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 55.0,
+    "class_name": "boat",
+    "confidence": 0.5734,
+    "bounding_box": [
+      227.3,
+      134.0,
+      319.8,
+      213.8
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1770:d37",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1770",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 59.0,
+    "class_name": "tennis racket",
+    "confidence": 0.4746,
+    "bounding_box": [
+      228.6,
+      135.3,
+      319.8,
+      213.9
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f180:d1",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f180",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 6.0,
+    "class_name": "tennis racket",
+    "confidence": 0.585,
+    "bounding_box": [
+      228.8,
+      134.4,
+      319.8,
+      214.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1860:d38",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1860",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 62.0,
+    "class_name": "bicycle",
+    "confidence": 0.6666,
+    "bounding_box": [
+      11.5,
+      13.9,
+      313.5,
+      224.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1890:d39",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1890",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 63.0,
+    "class_name": "bicycle",
+    "confidence": 0.5816,
+    "bounding_box": [
+      11.4,
+      14.7,
+      315.2,
+      224.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1920:d40",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1920",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 64.0,
+    "class_name": "tennis racket",
+    "confidence": 0.4725,
+    "bounding_box": [
+      228.5,
+      132.5,
+      319.8,
+      213.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1920:d41",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1920",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 64.0,
+    "class_name": "bicycle",
+    "confidence": 0.4354,
+    "bounding_box": [
+      18.7,
+      15.7,
+      315.1,
+      224.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1950:d42",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1950",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 65.0,
+    "class_name": "bicycle",
+    "confidence": 0.5166,
+    "bounding_box": [
+      13.7,
+      15.7,
+      317.8,
+      224.6
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f1980:d43",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f1980",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 66.0,
+    "class_name": "bicycle",
+    "confidence": 0.609,
+    "bounding_box": [
+      18.1,
+      15.0,
+      318.0,
+      224.5
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2040:d44",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2040",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 68.0,
+    "class_name": "bicycle",
+    "confidence": 0.4338,
+    "bounding_box": [
+      27.6,
+      16.4,
+      305.9,
+      224.3
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2040:d45",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2040",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 68.0,
+    "class_name": "tennis racket",
+    "confidence": 0.415,
+    "bounding_box": [
+      228.3,
+      133.9,
+      319.8,
+      213.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2070:d46",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2070",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 69.0,
+    "class_name": "bicycle",
+    "confidence": 0.5158,
+    "bounding_box": [
+      30.0,
+      15.5,
+      317.5,
+      224.3
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2070:d47",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2070",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 69.0,
+    "class_name": "tennis racket",
+    "confidence": 0.4752,
+    "bounding_box": [
+      228.5,
+      134.2,
+      319.8,
+      213.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2130:d48",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2130",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 71.0,
+    "class_name": "suitcase",
+    "confidence": 0.6057,
+    "bounding_box": [
+      0.1,
+      85.8,
+      36.8,
+      224.1
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2160:d49",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2160",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 72.0,
+    "class_name": "tennis racket",
+    "confidence": 0.5762,
+    "bounding_box": [
+      228.4,
+      133.3,
+      319.8,
+      213.6
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2160:d50",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2160",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 72.0,
+    "class_name": "bicycle",
+    "confidence": 0.5506,
+    "bounding_box": [
+      29.1,
+      27.2,
+      183.0,
+      224.2
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2160:d51",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2160",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 72.0,
+    "class_name": "suitcase",
+    "confidence": 0.5325,
+    "bounding_box": [
+      0.1,
+      86.1,
+      36.7,
+      224.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2190:d52",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2190",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 73.0,
+    "class_name": "bicycle",
+    "confidence": 0.6961,
+    "bounding_box": [
+      13.3,
+      13.9,
+      315.3,
+      224.5
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2310:d53",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2310",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 77.0,
+    "class_name": "suitcase",
+    "confidence": 0.4162,
+    "bounding_box": [
+      0.0,
+      87.5,
+      36.5,
+      220.3
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2310:d54",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2310",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 77.0,
+    "class_name": "bicycle",
+    "confidence": 0.4141,
+    "bounding_box": [
+      5.2,
+      26.0,
+      181.4,
+      223.8
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2370:d55",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2370",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 79.0,
+    "class_name": "bicycle",
+    "confidence": 0.573,
+    "bounding_box": [
+      8.3,
+      15.3,
+      314.8,
+      225.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2370:d56",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2370",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 79.0,
+    "class_name": "tennis racket",
+    "confidence": 0.4208,
+    "bounding_box": [
+      227.4,
+      132.3,
+      319.8,
+      213.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f240:d2",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f240",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 8.0,
+    "class_name": "tennis racket",
+    "confidence": 0.562,
+    "bounding_box": [
+      228.5,
+      135.3,
+      319.8,
+      213.9
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2520:d57",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2520",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 84.0,
+    "class_name": "bicycle",
+    "confidence": 0.574,
+    "bounding_box": [
+      11.6,
+      16.0,
+      317.7,
+      224.1
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2610:d58",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2610",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 87.0,
+    "class_name": "train",
+    "confidence": 0.6384,
+    "bounding_box": [
+      139.0,
+      138.8,
+      316.5,
+      195.6
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f2640:d59",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f2640",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 88.0,
+    "class_name": "suitcase",
+    "confidence": 0.5129,
+    "bounding_box": [
+      143.8,
+      139.8,
+      303.0,
+      199.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f3240:d60",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3240",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 108.0,
+    "class_name": "car",
+    "confidence": 0.4307,
+    "bounding_box": [
+      284.4,
+      188.0,
+      306.7,
+      206.4
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f3270:d61",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f3270",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 109.0,
+    "class_name": "car",
+    "confidence": 0.443,
+    "bounding_box": [
+      173.3,
+      81.1,
+      212.4,
+      100.7
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f450:d3",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f450",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 15.0,
+    "class_name": "car",
+    "confidence": 0.6728,
+    "bounding_box": [
+      227.5,
+      133.1,
+      319.8,
+      214.0
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f480:d4",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f480",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 16.0,
+    "class_name": "person",
+    "confidence": 0.5199,
+    "bounding_box": [
+      142.4,
+      148.8,
+      226.6,
+      225.2
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f540:d5",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f540",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 18.0,
+    "class_name": "person",
+    "confidence": 0.4594,
+    "bounding_box": [
+      242.7,
+      103.2,
+      300.3,
+      194.6
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f570:d6",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f570",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 19.0,
+    "class_name": "motorcycle",
+    "confidence": 0.5531,
+    "bounding_box": [
+      228.4,
+      135.0,
+      319.8,
+      214.2
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f600:d7",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f600",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 20.0,
+    "class_name": "motorcycle",
+    "confidence": 0.8375,
+    "bounding_box": [
+      227.6,
+      134.8,
+      319.6,
+      215.1
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f600:d8",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f600",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 20.0,
+    "class_name": "person",
+    "confidence": 0.6749,
+    "bounding_box": [
+      227.4,
+      87.5,
+      303.0,
+      194.5
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f630:d10",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f630",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 21.0,
+    "class_name": "person",
+    "confidence": 0.53,
+    "bounding_box": [
+      224.3,
+      88.2,
+      305.1,
+      197.2
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f630:d9",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f630",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 21.0,
+    "class_name": "motorcycle",
+    "confidence": 0.5835,
+    "bounding_box": [
+      227.5,
+      134.4,
+      319.6,
+      214.1
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f660:d11",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f660",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 22.0,
+    "class_name": "motorcycle",
+    "confidence": 0.6801,
+    "bounding_box": [
+      224.2,
+      133.4,
+      319.6,
+      213.8
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f660:d12",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f660",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 22.0,
+    "class_name": "person",
+    "confidence": 0.4617,
+    "bounding_box": [
+      233.4,
+      88.2,
+      304.4,
+      187.9
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f690:d13",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f690",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 23.0,
+    "class_name": "bicycle",
+    "confidence": 0.425,
+    "bounding_box": [
+      226.9,
+      134.9,
+      319.8,
+      213.8
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f810:d14",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f810",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 27.0,
+    "class_name": "person",
+    "confidence": 0.4941,
+    "bounding_box": [
+      155.1,
+      176.0,
+      222.3,
+      225.2
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f870:d15",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f870",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 29.0,
+    "class_name": "car",
+    "confidence": 0.5036,
+    "bounding_box": [
+      228.8,
+      135.3,
+      319.8,
+      213.9
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f900:d16",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f900",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 30.0,
+    "class_name": "car",
+    "confidence": 0.5364,
+    "bounding_box": [
+      227.8,
+      135.1,
+      319.8,
+      213.8
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f90:d0",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f90",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 3.0,
+    "class_name": "tennis racket",
+    "confidence": 0.4143,
+    "bounding_box": [
+      227.8,
+      134.1,
+      319.8,
+      213.9
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  },
+  {
+    "detection_id": "anomaly/Explosion/Explosion013_x264.mp4:f930:d17",
+    "observation_id": "anomaly/Explosion/Explosion013_x264.mp4:f930",
+    "video_id": "anomaly/Explosion/Explosion013_x264.mp4",
+    "timestamp_seconds": 31.0,
+    "class_name": "car",
+    "confidence": 0.5569,
+    "bounding_box": [
+      228.6,
+      132.8,
+      319.8,
+      213.8
+    ],
+    "model_name": "yolo11n",
+    "model_conf_threshold": 0.4,
+    "schema_version": "phase2a/v1"
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "total_videos": 899,
+  "anomaly_videos": 849,
+  "normal_videos": 50,
+  "by_category": {
+    "Abuse": {
+      "count": 50,
+      "total_duration_seconds": 6449.901
+    },
+    "Arrest": {
+      "count": 50,
+      "total_duration_seconds": 9913.399
+    },
+    "Arson": {
+      "count": 48,
+      "total_duration_seconds": 4557.001
+    },
+    "Assault": {
+      "count": 50,
+      "total_duration_seconds": 4331.534
+    },
+    "Burglary": {
+      "count": 100,
+      "total_duration_seconds": 15706.867
+    },
+    "Explosion": {
+      "count": 50,
+      "total_duration_seconds": 8413.47
+    },
+    "Fighting": {
+      "count": 50,
+      "total_duration_seconds": 8629.837
+    },
+    "Normal": {
+      "count": 50,
+      "total_duration_seconds": 4865.135
+    },
+    "RoadAccidents": {
+      "count": 51,
+      "total_duration_seconds": 2335.937
+    },
+    "Robbery": {
+      "count": 150,
+      "total_duration_seconds": 14086.471
+    },
+    "Shooting": {
+      "count": 50,
+      "total_duration_seconds": 4915.773
+    },
+    "Shoplifting": {
+      "count": 50,
+      "total_duration_seconds": 10812.234
+    },
+    "Stealing": {
+      "count": 100,
+      "total_duration_seconds": 15580.536
+    },
+    "Vandalism": {
+      "count": 50,
+      "total_duration_seconds": 4905.403
+    }
+  },
+  "by_format": {
+    "mp4": 899
+  },
+  "unreadable_count": 0,
+  "unreadable": []
+}

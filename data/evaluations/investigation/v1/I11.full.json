@@ -1,0 +1,3180 @@
+{
+  "arm": "full",
+  "baseline_report": null,
+  "failure": null,
+  "git_hash": "8ad1ce8",
+  "integrity_audit": {
+    "base_records": 7927,
+    "cross_video_violations": 0,
+    "input_unchanged": true,
+    "overall_pass": true,
+    "stages": {
+      "3d": {
+        "duplicates": false,
+        "evidence_ids": 10,
+        "pass": true,
+        "refs_preserved": true,
+        "unknown_ids": 0
+      },
+      "3e": {
+        "cross_video": 0,
+        "duplicates": false,
+        "evidence_ids": 10,
+        "pass": true,
+        "refs_preserved": true,
+        "uncontained_ranges": 0,
+        "unknown_ids": 0
+      },
+      "3f": {
+        "cross_video": 0,
+        "duplicates": false,
+        "evidence_ids": 10,
+        "pass": true,
+        "refs_preserved": true,
+        "uncontained_ranges": 0,
+        "unknown_ids": 0
+      }
+    }
+  },
+  "mode": "real",
+  "model": "muse-spark-1.3-contributor",
+  "pattern": "temporal",
+  "plan": {
+    "end_time": 32,
+    "intent": "investigate_incident",
+    "needs_cross_evidence": false,
+    "needs_timeline": true,
+    "queries": [
+      {
+        "query": "robbery",
+        "source": "surveillance_event"
+      }
+    ],
+    "schema_version": "phase3c/v1",
+    "start_time": 14,
+    "temporal_context_seconds": 0,
+    "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+  },
+  "query_id": "I11",
+  "question": "Reconstruct the event order in anomaly/Robbery/Robbery048_x264.mp4 between 14 and 32 seconds.",
+  "result_3d": {
+    "merged_results": {
+      "groups": [
+        {
+          "contextual_evidence": [
+            {
+              "anomaly_score": 0.6294,
+              "end_time": 16.933,
+              "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f7",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0682,
+                  "label": "eating chips",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a7",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=14.933s-16.933s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0682,
+                      "label": "eating chips"
+                    },
+                    {
+                      "confidence": 0.0472,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0442,
+                      "label": "slapping"
+                    },
+                    {
+                      "confidence": 0.0422,
+                      "label": "texting"
+                    },
+                    {
+                      "confidence": 0.0272,
+                      "label": "shaving head"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    84.7,
+                    69.8,
+                    138.0,
+                    197.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8628,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f450:d8",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f450",
+                  "timestamp_seconds": 15.0
+                },
+                {
+                  "bounding_box": [
+                    208.6,
+                    22.7,
+                    241.1,
+                    94.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4634,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f480:d10",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f480",
+                  "timestamp_seconds": 16.0
+                },
+                {
+                  "bounding_box": [
+                    68.0,
+                    68.9,
+                    138.9,
+                    187.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8591,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f480:d9",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f480",
+                  "timestamp_seconds": 16.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Robbery/Robbery048_x264.mp4@t=14.933s-16.933s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=15.0s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=16.0s"
+              ],
+              "start_time": 14.933,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.3823,
+                  "label": "Shooting",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e7",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=14.933s-16.933s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3823,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.3213,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0837,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0684,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0664,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 5,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6644,
+              "end_time": 19.067,
+              "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f8",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0427,
+                  "label": "eating chips",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a8",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=17.067s-19.067s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0427,
+                      "label": "eating chips"
+                    },
+                    {
+                      "confidence": 0.0343,
+                      "label": "arm wrestling"
+                    },
+                    {
+                      "confidence": 0.0324,
+                      "label": "cleaning windows"
+                    },
+                    {
+                      "confidence": 0.0273,
+                      "label": "slapping"
+                    },
+                    {
+                      "confidence": 0.0248,
+                      "label": "headbutting"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    68.2,
+                    75.8,
+                    140.2,
+                    168.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.6819,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f540:d12",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f540",
+                  "timestamp_seconds": 18.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Robbery/Robbery048_x264.mp4@t=17.067s-19.067s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=18.0s"
+              ],
+              "start_time": 17.067,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4406,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e8",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=17.067s-19.067s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4406,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.246,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.091,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0769,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0441,
+                      "label": "Burglary"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 3,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.5839,
+              "end_time": 21.2,
+              "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f9",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0356,
+                  "label": "cleaning floor",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a9",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=19.2s-21.2s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0356,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0312,
+                      "label": "mopping floor"
+                    },
+                    {
+                      "confidence": 0.0203,
+                      "label": "shaving head"
+                    },
+                    {
+                      "confidence": 0.0195,
+                      "label": "sweeping floor"
+                    },
+                    {
+                      "confidence": 0.0173,
+                      "label": "slapping"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    116.3,
+                    75.6,
+                    185.1,
+                    169.6
+                  ],
+                  "class_name": "toilet",
+                  "confidence": 0.768,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f600:d13",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f600",
+                  "timestamp_seconds": 20.0
+                },
+                {
+                  "bounding_box": [
+                    89.9,
+                    77.3,
+                    157.9,
+                    197.7
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8621,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f630:d14",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f630",
+                  "timestamp_seconds": 21.0
+                },
+                {
+                  "bounding_box": [
+                    265.5,
+                    109.4,
+                    319.9,
+                    159.3
+                  ],
+                  "class_name": "suitcase",
+                  "confidence": 0.4758,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f630:d15",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f630",
+                  "timestamp_seconds": 21.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Robbery/Robbery048_x264.mp4@t=19.2s-21.2s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=20.0s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=21.0s"
+              ],
+              "start_time": 19.2,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.3065,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e9",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=19.2s-21.2s",
+                  "top_k": [
+                    {
+                      "confidence": 0.3065,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.2738,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.1548,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0611,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.0605,
+                      "label": "Burglary"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 5,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6533,
+              "end_time": 23.333,
+              "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f10",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1873,
+                  "label": "cleaning floor",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a10",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=21.333s-23.333s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1873,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0596,
+                      "label": "mopping floor"
+                    },
+                    {
+                      "confidence": 0.0439,
+                      "label": "sweeping floor"
+                    },
+                    {
+                      "confidence": 0.0192,
+                      "label": "climbing ladder"
+                    },
+                    {
+                      "confidence": 0.0181,
+                      "label": "eating chips"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    83.3,
+                    91.1,
+                    156.6,
+                    198.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7447,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f660:d16",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f660",
+                  "timestamp_seconds": 22.0
+                },
+                {
+                  "bounding_box": [
+                    54.6,
+                    94.1,
+                    137.7,
+                    208.7
+                  ],
+                  "class_name": "toilet",
+                  "confidence": 0.7174,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f690:d17",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f690",
+                  "timestamp_seconds": 23.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Robbery/Robbery048_x264.mp4@t=21.333s-23.333s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=22.0s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=23.0s"
+              ],
+              "start_time": 21.333,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4221,
+                  "label": "Shooting",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e10",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=21.333s-23.333s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4221,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.3188,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0676,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0566,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.037,
+                      "label": "Burglary"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 4,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6509,
+              "end_time": 25.467,
+              "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f11",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.2508,
+                  "label": "cleaning floor",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a11",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=23.467s-25.467s",
+                  "top_k": [
+                    {
+                      "confidence": 0.2508,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.1627,
+                      "label": "mopping floor"
+                    },
+                    {
+                      "confidence": 0.0445,
+                      "label": "sweeping floor"
+                    },
+                    {
+                      "confidence": 0.0281,
+                      "label": "breakdancing"
+                    },
+                    {
+                      "confidence": 0.0183,
+                      "label": "texting"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    14.2,
+                    90.7,
+                    105.5,
+                    213.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8856,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f720:d18",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f720",
+                  "timestamp_seconds": 24.0
+                },
+                {
+                  "bounding_box": [
+                    0.1,
+                    89.9,
+                    102.3,
+                    192.0
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.5751,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f750:d19",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f750",
+                  "timestamp_seconds": 25.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Robbery/Robbery048_x264.mp4@t=23.467s-25.467s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=24.0s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=25.0s"
+              ],
+              "start_time": 23.467,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4181,
+                  "label": "Shooting",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e11",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=23.467s-25.467s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4181,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.3234,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.0603,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0476,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0441,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 4,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.4452,
+              "end_time": 27.6,
+              "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f12",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1688,
+                  "label": "cleaning floor",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a12",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=25.6s-27.6s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1688,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0878,
+                      "label": "cleaning windows"
+                    },
+                    {
+                      "confidence": 0.0579,
+                      "label": "mopping floor"
+                    },
+                    {
+                      "confidence": 0.0185,
+                      "label": "trimming or shaving beard"
+                    },
+                    {
+                      "confidence": 0.0184,
+                      "label": "shaving head"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Robbery/Robbery048_x264.mp4@t=25.6s-27.6s"
+              ],
+              "start_time": 25.6,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4087,
+                  "label": "Shooting",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e12",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=25.6s-27.6s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4087,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.2446,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.1647,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0581,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0335,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 2,
+                "num_source_types": 2,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6837,
+              "end_time": 29.734,
+              "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f13",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.1656,
+                  "label": "cleaning floor",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a13",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=27.734s-29.734s",
+                  "top_k": [
+                    {
+                      "confidence": 0.1656,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.069,
+                      "label": "mopping floor"
+                    },
+                    {
+                      "confidence": 0.0424,
+                      "label": "cleaning windows"
+                    },
+                    {
+                      "confidence": 0.0348,
+                      "label": "breakdancing"
+                    },
+                    {
+                      "confidence": 0.0237,
+                      "label": "sweeping floor"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    4.5,
+                    82.9,
+                    104.8,
+                    196.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7052,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f840:d20",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f840",
+                  "timestamp_seconds": 28.0
+                },
+                {
+                  "bounding_box": [
+                    20.5,
+                    78.7,
+                    105.2,
+                    186.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8488,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f870:d21",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f870",
+                  "timestamp_seconds": 29.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Robbery/Robbery048_x264.mp4@t=27.734s-29.734s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=28.0s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=29.0s"
+              ],
+              "start_time": 27.734,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4728,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e13",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=27.734s-29.734s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4728,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.19,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.1299,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0575,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0516,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 4,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.711,
+              "end_time": 31.867,
+              "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f14",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.051,
+                  "label": "cleaning floor",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a14",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=29.867s-31.867s",
+                  "top_k": [
+                    {
+                      "confidence": 0.051,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0369,
+                      "label": "mopping floor"
+                    },
+                    {
+                      "confidence": 0.0244,
+                      "label": "headbutting"
+                    },
+                    {
+                      "confidence": 0.0206,
+                      "label": "sweeping floor"
+                    },
+                    {
+                      "confidence": 0.0203,
+                      "label": "cleaning windows"
+                    }
+                  ]
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    46.6,
+                    75.8,
+                    114.4,
+                    192.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8342,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f900:d22",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f900",
+                  "timestamp_seconds": 30.0
+                },
+                {
+                  "bounding_box": [
+                    37.1,
+                    73.5,
+                    108.8,
+                    193.0
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8914,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f930:d23",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f930",
+                  "timestamp_seconds": 31.0
+                },
+                {
+                  "bounding_box": [
+                    115.0,
+                    48.1,
+                    159.8,
+                    139.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8688,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f930:d24",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f930",
+                  "timestamp_seconds": 31.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Robbery/Robbery048_x264.mp4@t=29.867s-31.867s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=30.0s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=31.0s"
+              ],
+              "start_time": 29.867,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.5184,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e14",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=29.867s-31.867s",
+                  "top_k": [
+                    {
+                      "confidence": 0.5184,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.1614,
+                      "label": "Arrest"
+                    },
+                    {
+                      "confidence": 0.1546,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.0495,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0438,
+                      "label": "Burglary"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 5,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+            }
+          ],
+          "event_hypotheses": [
+            "Burglary",
+            "RoadAccidents",
+            "Shooting"
+          ],
+          "incident_end_time": 46.934,
+          "incident_id": "anomaly/Robbery/Robbery048_x264.mp4:i0",
+          "incident_start_time": 0.0,
+          "matched_evidence": [
+            {
+              "anomaly_score": 0.6422,
+              "end_time": 14.8,
+              "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f6",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0781,
+                  "label": "cleaning floor",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a6",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=12.8s-14.8s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0781,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0736,
+                      "label": "golf driving"
+                    },
+                    {
+                      "confidence": 0.0609,
+                      "label": "mopping floor"
+                    },
+                    {
+                      "confidence": 0.0267,
+                      "label": "trimming or shaving beard"
+                    },
+                    {
+                      "confidence": 0.0265,
+                      "label": "golf chipping"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.6422,
+                  "confidence": 0.0379,
+                  "end_time": 14.8,
+                  "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f6",
+                  "matched_id": "anomaly/Robbery/Robbery048_x264.mp4:e6",
+                  "matched_label": "Robbery",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "robbery",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=12.8s-14.8s",
+                  "start_time": 12.8,
+                  "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    92.0,
+                    55.3,
+                    161.5,
+                    167.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4615,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f390:d6",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f390",
+                  "timestamp_seconds": 13.0
+                },
+                {
+                  "bounding_box": [
+                    104.2,
+                    65.8,
+                    175.9,
+                    176.2
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.7491,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f420:d7",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f420",
+                  "timestamp_seconds": 14.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Robbery/Robbery048_x264.mp4@t=12.8s-14.8s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=13.0s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=14.0s"
+              ],
+              "start_time": 12.8,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4036,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e6",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=12.8s-14.8s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4036,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.1925,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.1501,
+                      "label": "Shoplifting"
+                    },
+                    {
+                      "confidence": 0.0603,
+                      "label": "Burglary"
+                    },
+                    {
+                      "confidence": 0.0379,
+                      "label": "Robbery"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 4,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+            },
+            {
+              "anomaly_score": 0.6495,
+              "end_time": 34.0,
+              "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f15",
+              "generic_action_evidence": [
+                {
+                  "confidence": 0.0305,
+                  "label": "slapping",
+                  "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                  "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a15",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=32.0s-34.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.0305,
+                      "label": "slapping"
+                    },
+                    {
+                      "confidence": 0.0281,
+                      "label": "trimming or shaving beard"
+                    },
+                    {
+                      "confidence": 0.0239,
+                      "label": "cleaning floor"
+                    },
+                    {
+                      "confidence": 0.0209,
+                      "label": "shaving head"
+                    },
+                    {
+                      "confidence": 0.0202,
+                      "label": "tai chi"
+                    }
+                  ]
+                }
+              ],
+              "matched_hits": [
+                {
+                  "anomaly_score": 0.6495,
+                  "confidence": 0.0829,
+                  "end_time": 34.0,
+                  "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f15",
+                  "matched_id": "anomaly/Robbery/Robbery048_x264.mp4:e15",
+                  "matched_label": "Robbery",
+                  "matched_source": "surveillance_event",
+                  "planner_query": "robbery",
+                  "planner_query_index": 0,
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=32.0s-34.0s",
+                  "start_time": 32.0,
+                  "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+                }
+              ],
+              "object_evidence": [
+                {
+                  "bounding_box": [
+                    155.4,
+                    64.2,
+                    227.2,
+                    176.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8699,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020:d31",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020",
+                  "timestamp_seconds": 34.0
+                },
+                {
+                  "bounding_box": [
+                    81.1,
+                    84.0,
+                    184.5,
+                    222.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8294,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020:d32",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020",
+                  "timestamp_seconds": 34.0
+                },
+                {
+                  "bounding_box": [
+                    42.2,
+                    67.9,
+                    109.4,
+                    192.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8217,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020:d33",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020",
+                  "timestamp_seconds": 34.0
+                },
+                {
+                  "bounding_box": [
+                    29.8,
+                    75.8,
+                    105.5,
+                    191.9
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8189,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f960:d25",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f960",
+                  "timestamp_seconds": 32.0
+                },
+                {
+                  "bounding_box": [
+                    111.1,
+                    100.3,
+                    184.3,
+                    222.6
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.758,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f960:d26",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f960",
+                  "timestamp_seconds": 32.0
+                },
+                {
+                  "bounding_box": [
+                    108.2,
+                    80.0,
+                    185.2,
+                    141.5
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.4983,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f960:d27",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f960",
+                  "timestamp_seconds": 32.0
+                },
+                {
+                  "bounding_box": [
+                    185.9,
+                    92.6,
+                    268.4,
+                    223.4
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.9125,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f990:d28",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f990",
+                  "timestamp_seconds": 33.0
+                },
+                {
+                  "bounding_box": [
+                    124.6,
+                    78.0,
+                    204.0,
+                    214.1
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.885,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f990:d29",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f990",
+                  "timestamp_seconds": 33.0
+                },
+                {
+                  "bounding_box": [
+                    26.9,
+                    80.1,
+                    111.4,
+                    200.8
+                  ],
+                  "class_name": "person",
+                  "confidence": 0.8598,
+                  "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f990:d30",
+                  "model_name": "yolo11n",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f990",
+                  "timestamp_seconds": 33.0
+                }
+              ],
+              "schema_version": "phase2d/v1",
+              "source_references": [
+                "anomaly/Robbery/Robbery048_x264.mp4@t=32.0s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=32.0s-34.0s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=33.0s",
+                "anomaly/Robbery/Robbery048_x264.mp4@t=34.0s"
+              ],
+              "start_time": 32.0,
+              "surveillance_event_evidence": [
+                {
+                  "confidence": 0.4158,
+                  "label": "RoadAccidents",
+                  "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                  "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                  "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e15",
+                  "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=32.0s-34.0s",
+                  "top_k": [
+                    {
+                      "confidence": 0.4158,
+                      "label": "RoadAccidents"
+                    },
+                    {
+                      "confidence": 0.2129,
+                      "label": "Shooting"
+                    },
+                    {
+                      "confidence": 0.103,
+                      "label": "Assault"
+                    },
+                    {
+                      "confidence": 0.0829,
+                      "label": "Robbery"
+                    },
+                    {
+                      "confidence": 0.0634,
+                      "label": "Arrest"
+                    }
+                  ]
+                }
+              ],
+              "temporal_support": {
+                "num_observations": 11,
+                "num_source_types": 3,
+                "span_seconds": 2.0
+              },
+              "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+            }
+          ],
+          "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+        }
+      ],
+      "unmapped_hits": []
+    },
+    "plan": {
+      "end_time": 32,
+      "intent": "investigate_incident",
+      "needs_cross_evidence": false,
+      "needs_timeline": true,
+      "queries": [
+        {
+          "query": "robbery",
+          "source": "surveillance_event"
+        }
+      ],
+      "schema_version": "phase3c/v1",
+      "start_time": 14,
+      "temporal_context_seconds": 0,
+      "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+    },
+    "query_errors": [],
+    "query_results": [
+      {
+        "groups": [
+          {
+            "contextual_evidence": [
+              {
+                "anomaly_score": 0.6294,
+                "end_time": 16.933,
+                "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f7",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0682,
+                    "label": "eating chips",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a7",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=14.933s-16.933s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0682,
+                        "label": "eating chips"
+                      },
+                      {
+                        "confidence": 0.0472,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0442,
+                        "label": "slapping"
+                      },
+                      {
+                        "confidence": 0.0422,
+                        "label": "texting"
+                      },
+                      {
+                        "confidence": 0.0272,
+                        "label": "shaving head"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      84.7,
+                      69.8,
+                      138.0,
+                      197.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8628,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f450:d8",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f450",
+                    "timestamp_seconds": 15.0
+                  },
+                  {
+                    "bounding_box": [
+                      208.6,
+                      22.7,
+                      241.1,
+                      94.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4634,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f480:d10",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f480",
+                    "timestamp_seconds": 16.0
+                  },
+                  {
+                    "bounding_box": [
+                      68.0,
+                      68.9,
+                      138.9,
+                      187.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8591,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f480:d9",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f480",
+                    "timestamp_seconds": 16.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=14.933s-16.933s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=15.0s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=16.0s"
+                ],
+                "start_time": 14.933,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.3823,
+                    "label": "Shooting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e7",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=14.933s-16.933s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3823,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.3213,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0837,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0684,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0664,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 5,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6644,
+                "end_time": 19.067,
+                "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f8",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0427,
+                    "label": "eating chips",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a8",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=17.067s-19.067s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0427,
+                        "label": "eating chips"
+                      },
+                      {
+                        "confidence": 0.0343,
+                        "label": "arm wrestling"
+                      },
+                      {
+                        "confidence": 0.0324,
+                        "label": "cleaning windows"
+                      },
+                      {
+                        "confidence": 0.0273,
+                        "label": "slapping"
+                      },
+                      {
+                        "confidence": 0.0248,
+                        "label": "headbutting"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      68.2,
+                      75.8,
+                      140.2,
+                      168.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.6819,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f540:d12",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f540",
+                    "timestamp_seconds": 18.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=17.067s-19.067s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=18.0s"
+                ],
+                "start_time": 17.067,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4406,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e8",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=17.067s-19.067s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4406,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.246,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.091,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0769,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0441,
+                        "label": "Burglary"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 3,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.5839,
+                "end_time": 21.2,
+                "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f9",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0356,
+                    "label": "cleaning floor",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a9",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=19.2s-21.2s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0356,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0312,
+                        "label": "mopping floor"
+                      },
+                      {
+                        "confidence": 0.0203,
+                        "label": "shaving head"
+                      },
+                      {
+                        "confidence": 0.0195,
+                        "label": "sweeping floor"
+                      },
+                      {
+                        "confidence": 0.0173,
+                        "label": "slapping"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      116.3,
+                      75.6,
+                      185.1,
+                      169.6
+                    ],
+                    "class_name": "toilet",
+                    "confidence": 0.768,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f600:d13",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f600",
+                    "timestamp_seconds": 20.0
+                  },
+                  {
+                    "bounding_box": [
+                      89.9,
+                      77.3,
+                      157.9,
+                      197.7
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8621,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f630:d14",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f630",
+                    "timestamp_seconds": 21.0
+                  },
+                  {
+                    "bounding_box": [
+                      265.5,
+                      109.4,
+                      319.9,
+                      159.3
+                    ],
+                    "class_name": "suitcase",
+                    "confidence": 0.4758,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f630:d15",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f630",
+                    "timestamp_seconds": 21.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=19.2s-21.2s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=20.0s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=21.0s"
+                ],
+                "start_time": 19.2,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.3065,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e9",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=19.2s-21.2s",
+                    "top_k": [
+                      {
+                        "confidence": 0.3065,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.2738,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.1548,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0611,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.0605,
+                        "label": "Burglary"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 5,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6533,
+                "end_time": 23.333,
+                "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f10",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1873,
+                    "label": "cleaning floor",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a10",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=21.333s-23.333s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1873,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0596,
+                        "label": "mopping floor"
+                      },
+                      {
+                        "confidence": 0.0439,
+                        "label": "sweeping floor"
+                      },
+                      {
+                        "confidence": 0.0192,
+                        "label": "climbing ladder"
+                      },
+                      {
+                        "confidence": 0.0181,
+                        "label": "eating chips"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      83.3,
+                      91.1,
+                      156.6,
+                      198.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7447,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f660:d16",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f660",
+                    "timestamp_seconds": 22.0
+                  },
+                  {
+                    "bounding_box": [
+                      54.6,
+                      94.1,
+                      137.7,
+                      208.7
+                    ],
+                    "class_name": "toilet",
+                    "confidence": 0.7174,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f690:d17",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f690",
+                    "timestamp_seconds": 23.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=21.333s-23.333s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=22.0s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=23.0s"
+                ],
+                "start_time": 21.333,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4221,
+                    "label": "Shooting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e10",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=21.333s-23.333s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4221,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.3188,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0676,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0566,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.037,
+                        "label": "Burglary"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6509,
+                "end_time": 25.467,
+                "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f11",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.2508,
+                    "label": "cleaning floor",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a11",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=23.467s-25.467s",
+                    "top_k": [
+                      {
+                        "confidence": 0.2508,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.1627,
+                        "label": "mopping floor"
+                      },
+                      {
+                        "confidence": 0.0445,
+                        "label": "sweeping floor"
+                      },
+                      {
+                        "confidence": 0.0281,
+                        "label": "breakdancing"
+                      },
+                      {
+                        "confidence": 0.0183,
+                        "label": "texting"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      14.2,
+                      90.7,
+                      105.5,
+                      213.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8856,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f720:d18",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f720",
+                    "timestamp_seconds": 24.0
+                  },
+                  {
+                    "bounding_box": [
+                      0.1,
+                      89.9,
+                      102.3,
+                      192.0
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.5751,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f750:d19",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f750",
+                    "timestamp_seconds": 25.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=23.467s-25.467s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=24.0s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=25.0s"
+                ],
+                "start_time": 23.467,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4181,
+                    "label": "Shooting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e11",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=23.467s-25.467s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4181,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.3234,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.0603,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0476,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0441,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.4452,
+                "end_time": 27.6,
+                "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f12",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1688,
+                    "label": "cleaning floor",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a12",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=25.6s-27.6s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1688,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0878,
+                        "label": "cleaning windows"
+                      },
+                      {
+                        "confidence": 0.0579,
+                        "label": "mopping floor"
+                      },
+                      {
+                        "confidence": 0.0185,
+                        "label": "trimming or shaving beard"
+                      },
+                      {
+                        "confidence": 0.0184,
+                        "label": "shaving head"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=25.6s-27.6s"
+                ],
+                "start_time": 25.6,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4087,
+                    "label": "Shooting",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e12",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=25.6s-27.6s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4087,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.2446,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.1647,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0581,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0335,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 2,
+                  "num_source_types": 2,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6837,
+                "end_time": 29.734,
+                "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f13",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.1656,
+                    "label": "cleaning floor",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a13",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=27.734s-29.734s",
+                    "top_k": [
+                      {
+                        "confidence": 0.1656,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.069,
+                        "label": "mopping floor"
+                      },
+                      {
+                        "confidence": 0.0424,
+                        "label": "cleaning windows"
+                      },
+                      {
+                        "confidence": 0.0348,
+                        "label": "breakdancing"
+                      },
+                      {
+                        "confidence": 0.0237,
+                        "label": "sweeping floor"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      4.5,
+                      82.9,
+                      104.8,
+                      196.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7052,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f840:d20",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f840",
+                    "timestamp_seconds": 28.0
+                  },
+                  {
+                    "bounding_box": [
+                      20.5,
+                      78.7,
+                      105.2,
+                      186.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8488,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f870:d21",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f870",
+                    "timestamp_seconds": 29.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=27.734s-29.734s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=28.0s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=29.0s"
+                ],
+                "start_time": 27.734,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4728,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e13",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=27.734s-29.734s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4728,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.19,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.1299,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0575,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0516,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.711,
+                "end_time": 31.867,
+                "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f14",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.051,
+                    "label": "cleaning floor",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a14",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=29.867s-31.867s",
+                    "top_k": [
+                      {
+                        "confidence": 0.051,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0369,
+                        "label": "mopping floor"
+                      },
+                      {
+                        "confidence": 0.0244,
+                        "label": "headbutting"
+                      },
+                      {
+                        "confidence": 0.0206,
+                        "label": "sweeping floor"
+                      },
+                      {
+                        "confidence": 0.0203,
+                        "label": "cleaning windows"
+                      }
+                    ]
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      46.6,
+                      75.8,
+                      114.4,
+                      192.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8342,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f900:d22",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f900",
+                    "timestamp_seconds": 30.0
+                  },
+                  {
+                    "bounding_box": [
+                      37.1,
+                      73.5,
+                      108.8,
+                      193.0
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8914,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f930:d23",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f930",
+                    "timestamp_seconds": 31.0
+                  },
+                  {
+                    "bounding_box": [
+                      115.0,
+                      48.1,
+                      159.8,
+                      139.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8688,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f930:d24",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f930",
+                    "timestamp_seconds": 31.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=29.867s-31.867s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=30.0s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=31.0s"
+                ],
+                "start_time": 29.867,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.5184,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e14",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=29.867s-31.867s",
+                    "top_k": [
+                      {
+                        "confidence": 0.5184,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.1614,
+                        "label": "Arrest"
+                      },
+                      {
+                        "confidence": 0.1546,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.0495,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0438,
+                        "label": "Burglary"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 5,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+              }
+            ],
+            "event_hypotheses": [
+              "Burglary",
+              "RoadAccidents",
+              "Shooting"
+            ],
+            "incident_end_time": 46.934,
+            "incident_id": "anomaly/Robbery/Robbery048_x264.mp4:i0",
+            "incident_start_time": 0.0,
+            "matched_evidence": [
+              {
+                "anomaly_score": 0.6422,
+                "end_time": 14.8,
+                "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f6",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0781,
+                    "label": "cleaning floor",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a6",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=12.8s-14.8s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0781,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0736,
+                        "label": "golf driving"
+                      },
+                      {
+                        "confidence": 0.0609,
+                        "label": "mopping floor"
+                      },
+                      {
+                        "confidence": 0.0267,
+                        "label": "trimming or shaving beard"
+                      },
+                      {
+                        "confidence": 0.0265,
+                        "label": "golf chipping"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.6422,
+                    "confidence": 0.0379,
+                    "end_time": 14.8,
+                    "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f6",
+                    "matched_id": "anomaly/Robbery/Robbery048_x264.mp4:e6",
+                    "matched_label": "Robbery",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=12.8s-14.8s",
+                    "start_time": 12.8,
+                    "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      92.0,
+                      55.3,
+                      161.5,
+                      167.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4615,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f390:d6",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f390",
+                    "timestamp_seconds": 13.0
+                  },
+                  {
+                    "bounding_box": [
+                      104.2,
+                      65.8,
+                      175.9,
+                      176.2
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.7491,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f420:d7",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f420",
+                    "timestamp_seconds": 14.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=12.8s-14.8s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=13.0s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=14.0s"
+                ],
+                "start_time": 12.8,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4036,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e6",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=12.8s-14.8s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4036,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.1925,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.1501,
+                        "label": "Shoplifting"
+                      },
+                      {
+                        "confidence": 0.0603,
+                        "label": "Burglary"
+                      },
+                      {
+                        "confidence": 0.0379,
+                        "label": "Robbery"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 4,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+              },
+              {
+                "anomaly_score": 0.6495,
+                "end_time": 34.0,
+                "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f15",
+                "generic_action_evidence": [
+                  {
+                    "confidence": 0.0305,
+                    "label": "slapping",
+                    "model_name": "MCG-NJU/videomae-base-finetuned-kinetics",
+                    "model_version": "488eb9a0565f257b32866000305c8178965eb9f6",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:a15",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=32.0s-34.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.0305,
+                        "label": "slapping"
+                      },
+                      {
+                        "confidence": 0.0281,
+                        "label": "trimming or shaving beard"
+                      },
+                      {
+                        "confidence": 0.0239,
+                        "label": "cleaning floor"
+                      },
+                      {
+                        "confidence": 0.0209,
+                        "label": "shaving head"
+                      },
+                      {
+                        "confidence": 0.0202,
+                        "label": "tai chi"
+                      }
+                    ]
+                  }
+                ],
+                "matched_hits": [
+                  {
+                    "anomaly_score": 0.6495,
+                    "confidence": 0.0829,
+                    "end_time": 34.0,
+                    "evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f15",
+                    "matched_id": "anomaly/Robbery/Robbery048_x264.mp4:e15",
+                    "matched_label": "Robbery",
+                    "matched_source": "surveillance_event",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=32.0s-34.0s",
+                    "start_time": 32.0,
+                    "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+                  }
+                ],
+                "object_evidence": [
+                  {
+                    "bounding_box": [
+                      155.4,
+                      64.2,
+                      227.2,
+                      176.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8699,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020:d31",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020",
+                    "timestamp_seconds": 34.0
+                  },
+                  {
+                    "bounding_box": [
+                      81.1,
+                      84.0,
+                      184.5,
+                      222.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8294,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020:d32",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020",
+                    "timestamp_seconds": 34.0
+                  },
+                  {
+                    "bounding_box": [
+                      42.2,
+                      67.9,
+                      109.4,
+                      192.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8217,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020:d33",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f1020",
+                    "timestamp_seconds": 34.0
+                  },
+                  {
+                    "bounding_box": [
+                      29.8,
+                      75.8,
+                      105.5,
+                      191.9
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8189,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f960:d25",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f960",
+                    "timestamp_seconds": 32.0
+                  },
+                  {
+                    "bounding_box": [
+                      111.1,
+                      100.3,
+                      184.3,
+                      222.6
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.758,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f960:d26",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f960",
+                    "timestamp_seconds": 32.0
+                  },
+                  {
+                    "bounding_box": [
+                      108.2,
+                      80.0,
+                      185.2,
+                      141.5
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.4983,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f960:d27",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f960",
+                    "timestamp_seconds": 32.0
+                  },
+                  {
+                    "bounding_box": [
+                      185.9,
+                      92.6,
+                      268.4,
+                      223.4
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.9125,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f990:d28",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f990",
+                    "timestamp_seconds": 33.0
+                  },
+                  {
+                    "bounding_box": [
+                      124.6,
+                      78.0,
+                      204.0,
+                      214.1
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.885,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f990:d29",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f990",
+                    "timestamp_seconds": 33.0
+                  },
+                  {
+                    "bounding_box": [
+                      26.9,
+                      80.1,
+                      111.4,
+                      200.8
+                    ],
+                    "class_name": "person",
+                    "confidence": 0.8598,
+                    "detection_id": "anomaly/Robbery/Robbery048_x264.mp4:f990:d30",
+                    "model_name": "yolo11n",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:f990",
+                    "timestamp_seconds": 33.0
+                  }
+                ],
+                "schema_version": "phase2d/v1",
+                "source_references": [
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=32.0s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=32.0s-34.0s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=33.0s",
+                  "anomaly/Robbery/Robbery048_x264.mp4@t=34.0s"
+                ],
+                "start_time": 32.0,
+                "surveillance_event_evidence": [
+                  {
+                    "confidence": 0.4158,
+                    "label": "RoadAccidents",
+                    "model_name": "OPear/videomae-large-finetuned-UCF-Crime",
+                    "model_version": "bc5f1c1058158a05f8710de2b7c7c372fe69062b",
+                    "observation_id": "anomaly/Robbery/Robbery048_x264.mp4:e15",
+                    "source_reference": "anomaly/Robbery/Robbery048_x264.mp4@t=32.0s-34.0s",
+                    "top_k": [
+                      {
+                        "confidence": 0.4158,
+                        "label": "RoadAccidents"
+                      },
+                      {
+                        "confidence": 0.2129,
+                        "label": "Shooting"
+                      },
+                      {
+                        "confidence": 0.103,
+                        "label": "Assault"
+                      },
+                      {
+                        "confidence": 0.0829,
+                        "label": "Robbery"
+                      },
+                      {
+                        "confidence": 0.0634,
+                        "label": "Arrest"
+                      }
+                    ]
+                  }
+                ],
+                "temporal_support": {
+                  "num_observations": 11,
+                  "num_source_types": 3,
+                  "span_seconds": 2.0
+                },
+                "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+              }
+            ],
+            "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+          }
+        ],
+        "planner_query_index": 0,
+        "query": "robbery",
+        "source": "surveillance_event",
+        "summary": {
+          "context_records": 8,
+          "incident_groups": 1,
+          "matched_hits": 2,
+          "matched_records": 2,
+          "unmapped_hits": 0
+        },
+        "unmapped_hits": []
+      }
+    ],
+    "schema_version": "phase3d/v1",
+    "summary": {
+      "context_records": 8,
+      "incident_groups": 1,
+      "matched_hits": 2,
+      "planner_queries": 1,
+      "query_errors": 0,
+      "unmapped_hits": 0
+    }
+  },
+  "result_3e": {
+    "correlations": [
+      {
+        "description": "All cited windows belong to the same Phase 2D incident anomaly/Robbery/Robbery048_x264.mp4:i0 in the same video.",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f6",
+          "anomaly/Robbery/Robbery048_x264.mp4:f7",
+          "anomaly/Robbery/Robbery048_x264.mp4:f8",
+          "anomaly/Robbery/Robbery048_x264.mp4:f9",
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11",
+          "anomaly/Robbery/Robbery048_x264.mp4:f12",
+          "anomaly/Robbery/Robbery048_x264.mp4:f13",
+          "anomaly/Robbery/Robbery048_x264.mp4:f14",
+          "anomaly/Robbery/Robbery048_x264.mp4:f15"
+        ],
+        "type": "same_incident"
+      },
+      {
+        "description": "The interval for f7 occurs before f8-f9, which occur before f10-f12, which occur before f13-f14, which occur before f15.",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f7",
+          "anomaly/Robbery/Robbery048_x264.mp4:f8",
+          "anomaly/Robbery/Robbery048_x264.mp4:f9",
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11",
+          "anomaly/Robbery/Robbery048_x264.mp4:f12",
+          "anomaly/Robbery/Robbery048_x264.mp4:f13",
+          "anomaly/Robbery/Robbery048_x264.mp4:f14",
+          "anomaly/Robbery/Robbery048_x264.mp4:f15"
+        ],
+        "type": "temporal_sequence"
+      },
+      {
+        "description": "Compatible RoadAccidents hypotheses persist across adjacent windows f8 to f9.",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f8",
+          "anomaly/Robbery/Robbery048_x264.mp4:f9"
+        ],
+        "type": "persistent_event"
+      },
+      {
+        "description": "Compatible Shooting hypotheses persist across adjacent windows f10 to f12.",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11",
+          "anomaly/Robbery/Robbery048_x264.mp4:f12"
+        ],
+        "type": "persistent_event"
+      },
+      {
+        "description": "Compatible RoadAccidents hypotheses persist across adjacent windows f13 to f14.",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f13",
+          "anomaly/Robbery/Robbery048_x264.mp4:f14"
+        ],
+        "type": "persistent_event"
+      },
+      {
+        "description": "Person detections from the object source temporally overlap Shooting hypotheses from the surveillance_event source in the same windows; this indicates source co-occurrence only and does not confirm involvement or a crime.",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11"
+        ],
+        "type": "cross_source_support"
+      }
+    ],
+    "inferences": [
+      {
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f7",
+          "anomaly/Robbery/Robbery048_x264.mp4:f8",
+          "anomaly/Robbery/Robbery048_x264.mp4:f9",
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11",
+          "anomaly/Robbery/Robbery048_x264.mp4:f12",
+          "anomaly/Robbery/Robbery048_x264.mp4:f13",
+          "anomaly/Robbery/Robbery048_x264.mp4:f14"
+        ],
+        "text": "The available evidence suggests the model-produced order between ~14.9s and ~31.9s was: Shooting hypothesis with 3 persons, then RoadAccidents hypothesis with 1 person, then Shooting hypothesis with 1 to 2 to 0 persons, then RoadAccidents hypothesis with 2 to 3 persons."
+      },
+      {
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f14",
+          "anomaly/Robbery/Robbery048_x264.mp4:f15"
+        ],
+        "text": "The evidence indicates an increase from 3 person detections to 9 person detections at ~32s overlapping a continued RoadAccidents hypothesis, which is consistent with a change in scene density but insufficient to determine cause or roles."
+      }
+    ],
+    "limitations": [
+      "Surveillance_event labels are model hypotheses with modest confidence (RoadAccidents 0.3065-0.5184, Shooting 0.3823-0.4221) and generic_action confidences are low (0.0305-0.2508); they must not be treated as confirmed crimes.",
+      "Person detections temporally overlapping an event hypothesis do not mean the detected persons were involved.",
+      "Small gaps exist between evidence windows and there is no access to footage, so continuity between windows cannot be verified.",
+      "Evidence is insufficient to identify suspects, victims, or causation."
+    ],
+    "schema_version": "phase3e/v1",
+    "timeline": [
+      {
+        "end_time": 14.8,
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f6"
+        ],
+        "observation": {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f6"
+          ],
+          "text": "The evidence indicates 2 person detections (max 0.7491) overlapping a RoadAccidents hypothesis (0.4036) and cleaning floor (0.0781)."
+        },
+        "start_time": 12.8
+      },
+      {
+        "end_time": 16.933,
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f7"
+        ],
+        "observation": {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f7"
+          ],
+          "text": "The evidence indicates 3 person detections (max 0.8628) overlapping a Shooting hypothesis (0.3823) and eating chips (0.0682)."
+        },
+        "start_time": 14.933
+      },
+      {
+        "end_time": 21.2,
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f8",
+          "anomaly/Robbery/Robbery048_x264.mp4:f9"
+        ],
+        "observation": {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9"
+          ],
+          "text": "The evidence indicates persistent 1-person detections overlapping RoadAccidents hypotheses (0.4406 then 0.3065), with suitcase (0.4758) and toilet (0.768) detections and cleaning floor/eating chips at low confidence in the later window."
+        },
+        "start_time": 17.067
+      },
+      {
+        "end_time": 27.6,
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11",
+          "anomaly/Robbery/Robbery048_x264.mp4:f12"
+        ],
+        "observation": {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f11",
+            "anomaly/Robbery/Robbery048_x264.mp4:f12"
+          ],
+          "text": "The evidence indicates persistent Shooting hypotheses (0.4221, 0.4181, 0.4087) with cleaning floor at low confidence, while person detections change from 1 to 2 to 0 and a toilet detection appears in the first window."
+        },
+        "start_time": 21.333
+      },
+      {
+        "end_time": 31.867,
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f13",
+          "anomaly/Robbery/Robbery048_x264.mp4:f14"
+        ],
+        "observation": {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f13",
+            "anomaly/Robbery/Robbery048_x264.mp4:f14"
+          ],
+          "text": "The evidence indicates persistent RoadAccidents hypotheses (0.4728 then 0.5184) overlapping 2 then 3 person detections and cleaning floor at low confidence."
+        },
+        "start_time": 27.734
+      },
+      {
+        "end_time": 34.0,
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f15"
+        ],
+        "observation": {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f15"
+          ],
+          "text": "The evidence indicates 9 person detections (max 0.9125) overlapping a RoadAccidents hypothesis (0.4158) and slapping (0.0305) at the 32s boundary."
+        },
+        "start_time": 32.0
+      }
+    ]
+  },
+  "result_3f": {
+    "report": {
+      "findings": [
+        {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f7",
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f11",
+            "anomaly/Robbery/Robbery048_x264.mp4:f12",
+            "anomaly/Robbery/Robbery048_x264.mp4:f13",
+            "anomaly/Robbery/Robbery048_x264.mp4:f14"
+          ],
+          "text": "The retrieved evidence supports the following model-produced order: Shooting hypothesis with 3 persons, then RoadAccidents hypotheses with 1 person, then Shooting hypotheses with 1 to 2 to 0 persons, then RoadAccidents hypotheses with 2 to 3 persons. The surveillance-event model produced these hypotheses; the available evidence is consistent with this sequence but does not establish crimes, involvement, or causality."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f13",
+            "anomaly/Robbery/Robbery048_x264.mp4:f14"
+          ],
+          "text": "The retrieved evidence supports persistent 1-person detections overlapping RoadAccidents hypotheses (0.4406 then 0.3065) and persistent 2- then 3-person detections overlapping RoadAccidents hypotheses (0.4728 then 0.5184). In the 19.2s-21.2s window the evidence indicates suitcase (0.4758), toilet (0.768) and cleaning floor (0.0356) detections; eating chips (0.0427) is indicated only in the earlier 17.067s-19.067s window, not in the later window."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f11",
+            "anomaly/Robbery/Robbery048_x264.mp4:f12"
+          ],
+          "text": "The retrieved evidence supports persistent Shooting hypotheses (0.4221, 0.4181, 0.4087) with cleaning floor at low confidence, while person detections change from 1 to 2 to 0 and a toilet detection (0.7174) appears in the first window of this group."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f11"
+          ],
+          "text": "Person detections from the object source temporally overlap Shooting hypotheses from the surveillance-event source in the same windows. The available evidence indicates source co-occurrence only and does not establish involvement or a crime."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f14",
+            "anomaly/Robbery/Robbery048_x264.mp4:f15"
+          ],
+          "text": "The retrieved evidence supports an increase from 3 person detections to 9 person detections (max 0.9125) at the 32s boundary overlapping a continued RoadAccidents hypothesis (0.5184 then 0.4158) with slapping at low confidence (0.0305). The available evidence is consistent with a change in scene density but is insufficient to determine cause or roles."
+        },
+        {
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f7",
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f11",
+            "anomaly/Robbery/Robbery048_x264.mp4:f12",
+            "anomaly/Robbery/Robbery048_x264.mp4:f13",
+            "anomaly/Robbery/Robbery048_x264.mp4:f14",
+            "anomaly/Robbery/Robbery048_x264.mp4:f15"
+          ],
+          "text": "All cited windows belong to the same incident anomaly/Robbery/Robbery048_x264.mp4:i0 in the same video, and their intervals occur in the order f7 before f8-f9 before f10-f12 before f13-f14 before f15."
+        }
+      ],
+      "limitations": [
+        "Surveillance-event labels are model hypotheses with modest confidence (RoadAccidents 0.3065-0.5184, Shooting 0.3823-0.4221) and generic_action confidences are low (0.0305-0.2508); they must not be treated as confirmed crimes.",
+        "Person detections temporally overlapping an event hypothesis do not mean the detected persons were involved.",
+        "Small gaps exist between evidence windows and there is no access to footage, so continuity between windows cannot be verified.",
+        "Evidence is insufficient to identify suspects, victims, or causation."
+      ],
+      "summary": "Between the 14-32 second interval, the retrieved evidence supports alternating Shooting and RoadAccidents model hypotheses with varying person counts and low-confidence generic actions, ending with an increase in person detections at the 32s boundary. All labels are model hypotheses and do not establish crimes, roles, or causality.",
+      "timeline": [
+        {
+          "description": "The retrieved evidence supports 3 person detections (max 0.8628) overlapping a Shooting hypothesis (0.3823) and eating chips (0.0682).",
+          "end_time": 16.933,
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f7"
+          ],
+          "start_time": 14.933
+        },
+        {
+          "description": "The retrieved evidence supports 1 person detection overlapping a RoadAccidents hypothesis (0.4406) and eating chips (0.0427).",
+          "end_time": 19.067,
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f8"
+          ],
+          "start_time": 17.067
+        },
+        {
+          "description": "The retrieved evidence supports 1 person detection overlapping a RoadAccidents hypothesis (0.3065), with suitcase (0.4758), toilet (0.768) and cleaning floor (0.0356) detections.",
+          "end_time": 21.2,
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f9"
+          ],
+          "start_time": 19.2
+        },
+        {
+          "description": "The retrieved evidence supports 1 person detection and toilet detection (0.7174) overlapping a Shooting hypothesis (0.4221) and cleaning floor (0.1873).",
+          "end_time": 23.333,
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f10"
+          ],
+          "start_time": 21.333
+        },
+        {
+          "description": "The retrieved evidence supports 2 person detections overlapping a Shooting hypothesis (0.4181) and cleaning floor (0.2508).",
+          "end_time": 25.467,
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f11"
+          ],
+          "start_time": 23.467
+        },
+        {
+          "description": "The retrieved evidence supports a Shooting hypothesis (0.4087) with cleaning floor (0.1688) and no object detections in this window.",
+          "end_time": 27.6,
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f12"
+          ],
+          "start_time": 25.6
+        },
+        {
+          "description": "The retrieved evidence supports 2 person detections overlapping a RoadAccidents hypothesis (0.4728) and cleaning floor (0.1656).",
+          "end_time": 29.734,
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f13"
+          ],
+          "start_time": 27.734
+        },
+        {
+          "description": "The retrieved evidence supports 3 person detections overlapping a RoadAccidents hypothesis (0.5184) and cleaning floor (0.051).",
+          "end_time": 31.867,
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f14"
+          ],
+          "start_time": 29.867
+        },
+        {
+          "description": "The retrieved evidence supports 9 person detections (max 0.9125) overlapping a RoadAccidents hypothesis (0.4158) and slapping (0.0305) at the 32s boundary.",
+          "end_time": 34.0,
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f15"
+          ],
+          "start_time": 32.0
+        }
+      ],
+      "title": "Event order reconstruction \u2013 anomaly/Robbery/Robbery048_x264.mp4 14-32s"
+    },
+    "schema_version": "phase3f/v1",
+    "verification": [
+      {
+        "claim": "The evidence indicates 2 person detections (max 0.7491) overlapping a RoadAccidents hypothesis (0.4036) and cleaning floor (0.0781).",
+        "claim_id": "claim_001",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f6"
+        ],
+        "reason": "Evidence f6 directly lists person count 2 max 0.7491, RoadAccidents 0.4036, and cleaning floor 0.0781.",
+        "status": "supported"
+      },
+      {
+        "claim": "The evidence indicates 3 person detections (max 0.8628) overlapping a Shooting hypothesis (0.3823) and eating chips (0.0682).",
+        "claim_id": "claim_002",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f7"
+        ],
+        "reason": "Evidence f7 directly lists person count 3 max 0.8628, Shooting 0.3823, and eating chips 0.0682.",
+        "status": "supported"
+      },
+      {
+        "claim": "The evidence indicates persistent 1-person detections overlapping RoadAccidents hypotheses (0.4406 then 0.3065), with suitcase (0.4758) and toilet (0.768) detections and cleaning floor/eating chips at low confidence in the later window.",
+        "claim_id": "claim_003",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f8",
+          "anomaly/Robbery/Robbery048_x264.mp4:f9"
+        ],
+        "reason": "f8 supports 1 person, RoadAccidents 0.4406 and eating chips 0.0427; f9 supports 1 person, RoadAccidents 0.3065, suitcase 0.4758, toilet 0.768 and cleaning floor 0.0356, but f9 does not contain eating chips, so the part claiming eating chips in the later window is unsupported.",
+        "status": "partially_supported"
+      },
+      {
+        "claim": "The evidence indicates persistent Shooting hypotheses (0.4221, 0.4181, 0.4087) with cleaning floor at low confidence, while person detections change from 1 to 2 to 0 and a toilet detection appears in the first window.",
+        "claim_id": "claim_004",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11",
+          "anomaly/Robbery/Robbery048_x264.mp4:f12"
+        ],
+        "reason": "f10-f12 list Shooting 0.4221, 0.4181, 0.4087 with cleaning floor low, person counts 1, 2, and empty object list, and f10 lists toilet 0.7174.",
+        "status": "supported"
+      },
+      {
+        "claim": "The evidence indicates persistent RoadAccidents hypotheses (0.4728 then 0.5184) overlapping 2 then 3 person detections and cleaning floor at low confidence.",
+        "claim_id": "claim_005",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f13",
+          "anomaly/Robbery/Robbery048_x264.mp4:f14"
+        ],
+        "reason": "f13 lists RoadAccidents 0.4728 with 2 persons and cleaning floor 0.1656; f14 lists RoadAccidents 0.5184 with 3 persons and cleaning floor 0.051.",
+        "status": "supported"
+      },
+      {
+        "claim": "The evidence indicates 9 person detections (max 0.9125) overlapping a RoadAccidents hypothesis (0.4158) and slapping (0.0305) at the 32s boundary.",
+        "claim_id": "claim_006",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f15"
+        ],
+        "reason": "Evidence f15 (32.0-34.0s) directly lists person count 9 max 0.9125, RoadAccidents 0.4158, and slapping 0.0305.",
+        "status": "supported"
+      },
+      {
+        "claim": "same_incident: All cited windows belong to the same Phase 2D incident anomaly/Robbery/Robbery048_x264.mp4:i0 in the same video.",
+        "claim_id": "claim_007",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f6",
+          "anomaly/Robbery/Robbery048_x264.mp4:f7",
+          "anomaly/Robbery/Robbery048_x264.mp4:f8",
+          "anomaly/Robbery/Robbery048_x264.mp4:f9",
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11",
+          "anomaly/Robbery/Robbery048_x264.mp4:f12",
+          "anomaly/Robbery/Robbery048_x264.mp4:f13",
+          "anomaly/Robbery/Robbery048_x264.mp4:f14",
+          "anomaly/Robbery/Robbery048_x264.mp4:f15"
+        ],
+        "reason": "All cited evidence IDs are listed under incident anomaly/Robbery/Robbery048_x264.mp4:i0 in the same video.",
+        "status": "supported"
+      },
+      {
+        "claim": "temporal_sequence: The interval for f7 occurs before f8-f9, which occur before f10-f12, which occur before f13-f14, which occur before f15.",
+        "claim_id": "claim_008",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f7",
+          "anomaly/Robbery/Robbery048_x264.mp4:f8",
+          "anomaly/Robbery/Robbery048_x264.mp4:f9",
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11",
+          "anomaly/Robbery/Robbery048_x264.mp4:f12",
+          "anomaly/Robbery/Robbery048_x264.mp4:f13",
+          "anomaly/Robbery/Robbery048_x264.mp4:f14",
+          "anomaly/Robbery/Robbery048_x264.mp4:f15"
+        ],
+        "reason": "Start/end times increase monotonically from f7 (14.933-16.933) through f8, f9, f10, f11, f12, f13, f14 to f15 (32.0-34.0).",
+        "status": "supported"
+      },
+      {
+        "claim": "persistent_event: Compatible RoadAccidents hypotheses persist across adjacent windows f8 to f9.",
+        "claim_id": "claim_009",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f8",
+          "anomaly/Robbery/Robbery048_x264.mp4:f9"
+        ],
+        "reason": "Both f8 and f9 list RoadAccidents hypotheses in adjacent intervals 17.067-19.067 and 19.2-21.2.",
+        "status": "supported"
+      },
+      {
+        "claim": "persistent_event: Compatible Shooting hypotheses persist across adjacent windows f10 to f12.",
+        "claim_id": "claim_010",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11",
+          "anomaly/Robbery/Robbery048_x264.mp4:f12"
+        ],
+        "reason": "f10, f11 and f12 all list Shooting hypotheses in adjacent intervals 21.333-23.333, 23.467-25.467 and 25.6-27.6.",
+        "status": "supported"
+      },
+      {
+        "claim": "persistent_event: Compatible RoadAccidents hypotheses persist across adjacent windows f13 to f14.",
+        "claim_id": "claim_011",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f13",
+          "anomaly/Robbery/Robbery048_x264.mp4:f14"
+        ],
+        "reason": "Both f13 and f14 list RoadAccidents hypotheses in adjacent intervals 27.734-29.734 and 29.867-31.867.",
+        "status": "supported"
+      },
+      {
+        "claim": "cross_source_support: Person detections from the object source temporally overlap Shooting hypotheses from the surveillance_event source in the same windows; this indicates source co-occurrence only and does not confirm involvement or a crime.",
+        "claim_id": "claim_012",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11"
+        ],
+        "reason": "f10 contains person detection with Shooting hypothesis and f11 contains 2 person detections with Shooting hypothesis in the same windows; the claim correctly qualifies this as co-occurrence only.",
+        "status": "supported"
+      },
+      {
+        "claim": "The available evidence suggests the model-produced order between ~14.9s and ~31.9s was: Shooting hypothesis with 3 persons, then RoadAccidents hypothesis with 1 person, then Shooting hypothesis with 1 to 2 to 0 persons, then RoadAccidents hypothesis with 2 to 3 persons.",
+        "claim_id": "claim_013",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f7",
+          "anomaly/Robbery/Robbery048_x264.mp4:f8",
+          "anomaly/Robbery/Robbery048_x264.mp4:f9",
+          "anomaly/Robbery/Robbery048_x264.mp4:f10",
+          "anomaly/Robbery/Robbery048_x264.mp4:f11",
+          "anomaly/Robbery/Robbery048_x264.mp4:f12",
+          "anomaly/Robbery/Robbery048_x264.mp4:f13",
+          "anomaly/Robbery/Robbery048_x264.mp4:f14"
+        ],
+        "reason": "The cited windows directly support this sequence of event hypotheses and person counts in temporal order, appropriately qualified as model-produced.",
+        "status": "supported"
+      },
+      {
+        "claim": "The evidence indicates an increase from 3 person detections to 9 person detections at ~32s overlapping a continued RoadAccidents hypothesis, which is consistent with a change in scene density but insufficient to determine cause or roles.",
+        "claim_id": "claim_014",
+        "evidence_ids": [
+          "anomaly/Robbery/Robbery048_x264.mp4:f14",
+          "anomaly/Robbery/Robbery048_x264.mp4:f15"
+        ],
+        "reason": "f14 lists 3 persons with RoadAccidents 0.5184 and f15 lists 9 persons with RoadAccidents 0.4158, supporting an increase with continued hypothesis and appropriately qualified interpretation.",
+        "status": "supported"
+      }
+    ]
+  },
+  "retrieval": {
+    "constant": 60,
+    "method": "hybrid-rrf",
+    "top_k": 10
+  },
+  "retrieved_evidence_ids": [
+    "anomaly/Robbery/Robbery048_x264.mp4:f6",
+    "anomaly/Robbery/Robbery048_x264.mp4:f15",
+    "anomaly/Robbery/Robbery048_x264.mp4:f14",
+    "anomaly/Robbery/Robbery048_x264.mp4:f8",
+    "anomaly/Robbery/Robbery048_x264.mp4:f13",
+    "anomaly/Robbery/Robbery048_x264.mp4:f9",
+    "anomaly/Robbery/Robbery048_x264.mp4:f10",
+    "anomaly/Robbery/Robbery048_x264.mp4:f11",
+    "anomaly/Robbery/Robbery048_x264.mp4:f7",
+    "anomaly/Robbery/Robbery048_x264.mp4:f12"
+  ],
+  "run_utc": "2026-09-17T11:14:02.241614+00:00",
+  "schema_version": "investigation-eval/v1",
+  "settings": {
+    "model": "muse-spark-1.3-contributor",
+    "provider": "meta",
+    "temperature": 0.0
+  },
+  "timings": {
+    "3c": 14.826,
+    "3d": 0.001,
+    "3e": 36.151,
+    "3f": 48.751,
+    "retr": 0.178,
+    "total": 99.907
+  },
+  "token_usage": {
+    "3c": {
+      "input_tokens": 451,
+      "output_tokens": 1737,
+      "total_tokens": 2188
+    },
+    "3e": {
+      "input_tokens": 3051,
+      "output_tokens": 5453,
+      "total_tokens": 8504
+    },
+    "3f": {
+      "input_tokens": 5032,
+      "output_tokens": 10108,
+      "total_tokens": 15140
+    }
+  },
+  "validator_verdicts": {
+    "3c": "pass",
+    "3d": "pass",
+    "3e": "pass",
+    "3f": "pass",
+    "retr": "pass"
+  }
+}

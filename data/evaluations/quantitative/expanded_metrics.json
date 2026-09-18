@@ -1,0 +1,2171 @@
+{
+  "expanded_temporal_localization": {
+    "anomaly_videos": 112,
+    "max_tiou": 0.8531,
+    "mean_observations_per_video": 51.1419,
+    "mean_tiou": 0.1728,
+    "median_tiou": 0.1318,
+    "min_tiou": 0.0097,
+    "non_zero_overlap_videos": 112,
+    "normal_control_incidence": {
+      "controls": 43,
+      "per_video": [
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Abuse",
+            "Assault",
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Abuse",
+            "Assault",
+            "Shoplifting"
+          ],
+          "observations": 79,
+          "video_id": "normal/Normal_Videos_246_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Burglary",
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Burglary",
+            "Shoplifting"
+          ],
+          "observations": 129,
+          "video_id": "normal/Normal_Videos_247_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Burglary",
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "Burglary",
+            "RoadAccidents"
+          ],
+          "observations": 18,
+          "video_id": "normal/Normal_Videos_248_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 7,
+          "video_id": "normal/Normal_Videos_251_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Abuse",
+            "RoadAccidents",
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Abuse",
+            "RoadAccidents",
+            "Shoplifting"
+          ],
+          "observations": 14,
+          "video_id": "normal/Normal_Videos_289_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 40,
+          "video_id": "normal/Normal_Videos_310_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 20,
+          "video_id": "normal/Normal_Videos_312_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Burglary",
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "Burglary",
+            "RoadAccidents"
+          ],
+          "observations": 15,
+          "video_id": "normal/Normal_Videos_317_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Abuse",
+            "Burglary",
+            "Vandalism"
+          ],
+          "non_normal_hypotheses": [
+            "Abuse",
+            "Burglary",
+            "Vandalism"
+          ],
+          "observations": 4,
+          "video_id": "normal/Normal_Videos_345_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 85,
+          "video_id": "normal/Normal_Videos_352_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Burglary",
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Burglary",
+            "Shoplifting"
+          ],
+          "observations": 16,
+          "video_id": "normal/Normal_Videos_360_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Abuse",
+            "Burglary",
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Abuse",
+            "Burglary",
+            "Shoplifting"
+          ],
+          "observations": 104,
+          "video_id": "normal/Normal_Videos_365_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Abuse",
+            "RoadAccidents",
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Abuse",
+            "RoadAccidents",
+            "Shoplifting"
+          ],
+          "observations": 26,
+          "video_id": "normal/Normal_Videos_401_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Arrest"
+          ],
+          "non_normal_hypotheses": [
+            "Arrest"
+          ],
+          "observations": 17,
+          "video_id": "normal/Normal_Videos_417_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Burglary",
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Burglary",
+            "Shoplifting"
+          ],
+          "observations": 67,
+          "video_id": "normal/Normal_Videos_439_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Abuse",
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "Abuse",
+            "RoadAccidents"
+          ],
+          "observations": 7,
+          "video_id": "normal/Normal_Videos_452_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Arrest",
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Arrest",
+            "Shoplifting"
+          ],
+          "observations": 84,
+          "video_id": "normal/Normal_Videos_453_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 71,
+          "video_id": "normal/Normal_Videos_478_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 177,
+          "video_id": "normal/Normal_Videos_576_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Shoplifting"
+          ],
+          "observations": 35,
+          "video_id": "normal/Normal_Videos_597_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 52,
+          "video_id": "normal/Normal_Videos_603_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 20,
+          "video_id": "normal/Normal_Videos_606_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 76,
+          "video_id": "normal/Normal_Videos_621_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 211,
+          "video_id": "normal/Normal_Videos_634_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Abuse",
+            "RoadAccidents",
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Abuse",
+            "RoadAccidents",
+            "Shoplifting"
+          ],
+          "observations": 57,
+          "video_id": "normal/Normal_Videos_641_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 29,
+          "video_id": "normal/Normal_Videos_656_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 57,
+          "video_id": "normal/Normal_Videos_696_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Abuse"
+          ],
+          "non_normal_hypotheses": [
+            "Abuse"
+          ],
+          "observations": 27,
+          "video_id": "normal/Normal_Videos_704_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Abuse",
+            "RoadAccidents",
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Abuse",
+            "RoadAccidents",
+            "Shoplifting"
+          ],
+          "observations": 137,
+          "video_id": "normal/Normal_Videos_722_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Arrest"
+          ],
+          "non_normal_hypotheses": [
+            "Arrest"
+          ],
+          "observations": 5,
+          "video_id": "normal/Normal_Videos_745_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 25,
+          "video_id": "normal/Normal_Videos_758_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 63,
+          "video_id": "normal/Normal_Videos_781_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Abuse",
+            "Explosion",
+            "RoadAccidents",
+            "Robbery",
+            "Vandalism"
+          ],
+          "non_normal_hypotheses": [
+            "Abuse",
+            "Explosion",
+            "RoadAccidents",
+            "Robbery",
+            "Vandalism"
+          ],
+          "observations": 94,
+          "video_id": "normal/Normal_Videos_798_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Shoplifting"
+          ],
+          "non_normal_hypotheses": [
+            "Shoplifting"
+          ],
+          "observations": 43,
+          "video_id": "normal/Normal_Videos_801_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 15,
+          "video_id": "normal/Normal_Videos_828_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 7,
+          "video_id": "normal/Normal_Videos_831_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 157,
+          "video_id": "normal/Normal_Videos_877_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Vandalism"
+          ],
+          "non_normal_hypotheses": [
+            "Vandalism"
+          ],
+          "observations": 4,
+          "video_id": "normal/Normal_Videos_881_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Burglary"
+          ],
+          "non_normal_hypotheses": [
+            "Burglary"
+          ],
+          "observations": 8,
+          "video_id": "normal/Normal_Videos_885_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Burglary",
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "Burglary",
+            "RoadAccidents"
+          ],
+          "observations": 28,
+          "video_id": "normal/Normal_Videos_892_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 19,
+          "video_id": "normal/Normal_Videos_905_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "RoadAccidents"
+          ],
+          "observations": 12,
+          "video_id": "normal/Normal_Videos_912_x264.mp4"
+        },
+        {
+          "annotation": "-1/-1 (no anomaly interval)",
+          "has_non_normal_span": true,
+          "hypothesis_labels": [
+            "Explosion",
+            "RoadAccidents"
+          ],
+          "non_normal_hypotheses": [
+            "Explosion",
+            "RoadAccidents"
+          ],
+          "observations": 10,
+          "video_id": "normal/Normal_Videos_913_x264.mp4"
+        }
+      ],
+      "with_non_normal_span": 43
+    },
+    "normal_controls": 43,
+    "per_video": [
+      {
+        "annotation_label": "Abuse",
+        "annotation_seconds": [
+          5.5,
+          8.0
+        ],
+        "observations": 23,
+        "predicted_span_seconds": [
+          0.0,
+          46.934
+        ],
+        "tiou": 0.0533,
+        "video_id": "anomaly/Abuse/Abuse028_x264.mp4"
+      },
+      {
+        "annotation_label": "Abuse",
+        "annotation_seconds": [
+          42.5,
+          45.3333
+        ],
+        "observations": 25,
+        "predicted_span_seconds": [
+          0.0,
+          51.334
+        ],
+        "tiou": 0.0552,
+        "video_id": "anomaly/Abuse/Abuse030_x264.mp4"
+      },
+      {
+        "annotation_label": "Arrest",
+        "annotation_seconds": [
+          39.5,
+          49.5
+        ],
+        "observations": 38,
+        "predicted_span_seconds": [
+          0.0,
+          79.066
+        ],
+        "tiou": 0.1265,
+        "video_id": "anomaly/Arrest/Arrest001_x264.mp4"
+      },
+      {
+        "annotation_label": "Arrest",
+        "annotation_seconds": [
+          51.0,
+          72.0
+        ],
+        "observations": 50,
+        "predicted_span_seconds": [
+          0.0,
+          104.667
+        ],
+        "tiou": 0.2006,
+        "video_id": "anomaly/Arrest/Arrest007_x264.mp4"
+      },
+      {
+        "annotation_label": "Arrest",
+        "annotation_seconds": [
+          33.5,
+          103.5
+        ],
+        "observations": 57,
+        "predicted_span_seconds": [
+          0.0,
+          120.934
+        ],
+        "tiou": 0.5788,
+        "video_id": "anomaly/Arrest/Arrest024_x264.mp4"
+      },
+      {
+        "annotation_label": "Arrest",
+        "annotation_seconds": [
+          184.5,
+          240.0
+        ],
+        "observations": 136,
+        "predicted_span_seconds": [
+          0.0,
+          288.0
+        ],
+        "tiou": 0.1927,
+        "video_id": "anomaly/Arrest/Arrest030_x264.mp4"
+      },
+      {
+        "annotation_label": "Arrest",
+        "annotation_seconds": [
+          240.5,
+          344.5
+        ],
+        "observations": 248,
+        "predicted_span_seconds": [
+          0.0,
+          527.733
+        ],
+        "tiou": 0.1971,
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4"
+      },
+      {
+        "annotation_label": "Arson",
+        "annotation_seconds": [
+          75.0,
+          190.0
+        ],
+        "observations": 98,
+        "predicted_span_seconds": [
+          0.0,
+          208.267
+        ],
+        "tiou": 0.5522,
+        "video_id": "anomaly/Arson/Arson007_x264.mp4"
+      },
+      {
+        "annotation_label": "Arson",
+        "annotation_seconds": [
+          7.3333,
+          10.5
+        ],
+        "observations": 12,
+        "predicted_span_seconds": [
+          0.0,
+          24.667
+        ],
+        "tiou": 0.1284,
+        "video_id": "anomaly/Arson/Arson009_x264.mp4"
+      },
+      {
+        "annotation_label": "Arson",
+        "annotation_seconds": [
+          29.5,
+          41.0
+        ],
+        "observations": 50,
+        "predicted_span_seconds": [
+          0.0,
+          105.2
+        ],
+        "tiou": 0.1093,
+        "video_id": "anomaly/Arson/Arson010_x264.mp4"
+      },
+      {
+        "annotation_label": "Arson",
+        "annotation_seconds": [
+          5.0,
+          14.0
+        ],
+        "observations": 20,
+        "predicted_span_seconds": [
+          0.0,
+          42.133
+        ],
+        "tiou": 0.2136,
+        "video_id": "anomaly/Arson/Arson011_x264.mp4"
+      },
+      {
+        "annotation_label": "Arson",
+        "annotation_seconds": [
+          33.3333,
+          59.8667
+        ],
+        "observations": 29,
+        "predicted_span_seconds": [
+          0.0,
+          59.733
+        ],
+        "tiou": 0.441,
+        "video_id": "anomaly/Arson/Arson016_x264.mp4"
+      },
+      {
+        "annotation_label": "Arson",
+        "annotation_seconds": [
+          9.0,
+          20.0
+        ],
+        "observations": 14,
+        "predicted_span_seconds": [
+          0.0,
+          28.0
+        ],
+        "tiou": 0.3929,
+        "video_id": "anomaly/Arson/Arson018_x264.mp4"
+      },
+      {
+        "annotation_label": "Arson",
+        "annotation_seconds": [
+          20.0,
+          30.0
+        ],
+        "observations": 23,
+        "predicted_span_seconds": [
+          0.0,
+          47.867
+        ],
+        "tiou": 0.2089,
+        "video_id": "anomaly/Arson/Arson035_x264.mp4"
+      },
+      {
+        "annotation_label": "Arson",
+        "annotation_seconds": [
+          71.0,
+          120.5
+        ],
+        "observations": 59,
+        "predicted_span_seconds": [
+          0.0,
+          125.066
+        ],
+        "tiou": 0.3958,
+        "video_id": "anomaly/Arson/Arson041_x264.mp4"
+      },
+      {
+        "annotation_label": "Assault",
+        "annotation_seconds": [
+          39.5,
+          269.8667
+        ],
+        "observations": 127,
+        "predicted_span_seconds": [
+          0.0,
+          269.734
+        ],
+        "tiou": 0.8531,
+        "video_id": "anomaly/Assault/Assault006_x264.mp4"
+      },
+      {
+        "annotation_label": "Assault",
+        "annotation_seconds": [
+          377.6667,
+          389.3333
+        ],
+        "observations": 253,
+        "predicted_span_seconds": [
+          0.0,
+          539.2
+        ],
+        "tiou": 0.0216,
+        "video_id": "anomaly/Assault/Assault010_x264.mp4"
+      },
+      {
+        "annotation_label": "Assault",
+        "annotation_seconds": [
+          12.5,
+          32.0
+        ],
+        "observations": 36,
+        "predicted_span_seconds": [
+          0.0,
+          76.134
+        ],
+        "tiou": 0.2561,
+        "video_id": "anomaly/Assault/Assault011_x264.mp4"
+      },
+      {
+        "annotation_label": "Burglary",
+        "annotation_seconds": [
+          157.0,
+          168.0
+        ],
+        "observations": 121,
+        "predicted_span_seconds": [
+          0.0,
+          257.6
+        ],
+        "tiou": 0.0427,
+        "video_id": "anomaly/Burglary/Burglary005_x264.mp4"
+      },
+      {
+        "annotation_label": "Burglary",
+        "annotation_seconds": [
+          5.0,
+          20.0
+        ],
+        "observations": 34,
+        "predicted_span_seconds": [
+          0.0,
+          70.4
+        ],
+        "tiou": 0.2131,
+        "video_id": "anomaly/Burglary/Burglary017_x264.mp4"
+      },
+      {
+        "annotation_label": "Burglary",
+        "annotation_seconds": [
+          24.0,
+          35.0
+        ],
+        "observations": 18,
+        "predicted_span_seconds": [
+          0.0,
+          37.467
+        ],
+        "tiou": 0.2936,
+        "video_id": "anomaly/Burglary/Burglary018_x264.mp4"
+      },
+      {
+        "annotation_label": "Burglary",
+        "annotation_seconds": [
+          2.0,
+          6.6667
+        ],
+        "observations": 25,
+        "predicted_span_seconds": [
+          0.0,
+          51.2
+        ],
+        "tiou": 0.0911,
+        "video_id": "anomaly/Burglary/Burglary021_x264.mp4"
+      },
+      {
+        "annotation_label": "Burglary",
+        "annotation_seconds": [
+          2.0,
+          41.0
+        ],
+        "observations": 57,
+        "predicted_span_seconds": [
+          0.0,
+          120.134
+        ],
+        "tiou": 0.3246,
+        "video_id": "anomaly/Burglary/Burglary024_x264.mp4"
+      },
+      {
+        "annotation_label": "Burglary",
+        "annotation_seconds": [
+          43.0,
+          123.0
+        ],
+        "observations": 247,
+        "predicted_span_seconds": [
+          0.0,
+          526.4
+        ],
+        "tiou": 0.152,
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4"
+      },
+      {
+        "annotation_label": "Burglary",
+        "annotation_seconds": [
+          2.0,
+          11.0
+        ],
+        "observations": 20,
+        "predicted_span_seconds": [
+          0.0,
+          41.867
+        ],
+        "tiou": 0.215,
+        "video_id": "anomaly/Burglary/Burglary033_x264.mp4"
+      },
+      {
+        "annotation_label": "Burglary",
+        "annotation_seconds": [
+          0.0333,
+          58.0
+        ],
+        "observations": 64,
+        "predicted_span_seconds": [
+          0.0,
+          134.933
+        ],
+        "tiou": 0.4296,
+        "video_id": "anomaly/Burglary/Burglary035_x264.mp4"
+      },
+      {
+        "annotation_label": "Burglary",
+        "annotation_seconds": [
+          8.0,
+          13.0
+        ],
+        "observations": 30,
+        "predicted_span_seconds": [
+          0.0,
+          63.867
+        ],
+        "tiou": 0.0783,
+        "video_id": "anomaly/Burglary/Burglary037_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          50.0,
+          70.0
+        ],
+        "observations": 63,
+        "predicted_span_seconds": [
+          0.0,
+          133.734
+        ],
+        "tiou": 0.1496,
+        "video_id": "anomaly/Explosion/Explosion002_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          2.5,
+          7.5
+        ],
+        "observations": 30,
+        "predicted_span_seconds": [
+          0.0,
+          63.333
+        ],
+        "tiou": 0.0789,
+        "video_id": "anomaly/Explosion/Explosion004_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          53.0,
+          76.0
+        ],
+        "observations": 255,
+        "predicted_span_seconds": [
+          0.0,
+          542.934
+        ],
+        "tiou": 0.0424,
+        "video_id": "anomaly/Explosion/Explosion007_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          33.5,
+          41.5
+        ],
+        "observations": 28,
+        "predicted_span_seconds": [
+          0.0,
+          58.134
+        ],
+        "tiou": 0.1376,
+        "video_id": "anomaly/Explosion/Explosion008_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          9.5,
+          36.0
+        ],
+        "observations": 40,
+        "predicted_span_seconds": [
+          0.0,
+          83.2
+        ],
+        "tiou": 0.3185,
+        "video_id": "anomaly/Explosion/Explosion010_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          26.5,
+          31.5
+        ],
+        "observations": 25,
+        "predicted_span_seconds": [
+          0.0,
+          52.267
+        ],
+        "tiou": 0.0957,
+        "video_id": "anomaly/Explosion/Explosion011_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          84.0,
+          99.0
+        ],
+        "observations": 52,
+        "predicted_span_seconds": [
+          0.0,
+          110.534
+        ],
+        "tiou": 0.1357,
+        "video_id": "anomaly/Explosion/Explosion013_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          6.0,
+          15.0
+        ],
+        "observations": 16,
+        "predicted_span_seconds": [
+          0.0,
+          32.0
+        ],
+        "tiou": 0.2812,
+        "video_id": "anomaly/Explosion/Explosion016_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          33.0,
+          48.0
+        ],
+        "observations": 26,
+        "predicted_span_seconds": [
+          0.0,
+          54.667
+        ],
+        "tiou": 0.2744,
+        "video_id": "anomaly/Explosion/Explosion017_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          2.0,
+          9.0
+        ],
+        "observations": 21,
+        "predicted_span_seconds": [
+          0.0,
+          42.933
+        ],
+        "tiou": 0.163,
+        "video_id": "anomaly/Explosion/Explosion020_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          4.5,
+          9.0
+        ],
+        "observations": 13,
+        "predicted_span_seconds": [
+          0.0,
+          26.0
+        ],
+        "tiou": 0.1731,
+        "video_id": "anomaly/Explosion/Explosion021_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          74.3333,
+          80.6667
+        ],
+        "observations": 57,
+        "predicted_span_seconds": [
+          0.0,
+          119.733
+        ],
+        "tiou": 0.0529,
+        "video_id": "anomaly/Explosion/Explosion022_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          8.6667,
+          14.0
+        ],
+        "observations": 8,
+        "predicted_span_seconds": [
+          0.0,
+          16.8
+        ],
+        "tiou": 0.3175,
+        "video_id": "anomaly/Explosion/Explosion025_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          3.5,
+          6.0
+        ],
+        "observations": 13,
+        "predicted_span_seconds": [
+          0.0,
+          25.734
+        ],
+        "tiou": 0.0971,
+        "video_id": "anomaly/Explosion/Explosion027_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          9.3333,
+          23.3333
+        ],
+        "observations": 27,
+        "predicted_span_seconds": [
+          0.0,
+          56.8
+        ],
+        "tiou": 0.2465,
+        "video_id": "anomaly/Explosion/Explosion028_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          61.0,
+          67.3333
+        ],
+        "observations": 38,
+        "predicted_span_seconds": [
+          0.0,
+          80.266
+        ],
+        "tiou": 0.0789,
+        "video_id": "anomaly/Explosion/Explosion029_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          32.3333,
+          45.0
+        ],
+        "observations": 50,
+        "predicted_span_seconds": [
+          0.0,
+          105.066
+        ],
+        "tiou": 0.1206,
+        "video_id": "anomaly/Explosion/Explosion033_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          8.3333,
+          11.6667
+        ],
+        "observations": 45,
+        "predicted_span_seconds": [
+          0.0,
+          95.467
+        ],
+        "tiou": 0.0349,
+        "video_id": "anomaly/Explosion/Explosion035_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          65.0,
+          69.0
+        ],
+        "observations": 84,
+        "predicted_span_seconds": [
+          0.0,
+          177.467
+        ],
+        "tiou": 0.0225,
+        "video_id": "anomaly/Explosion/Explosion036_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          2.0,
+          5.0
+        ],
+        "observations": 16,
+        "predicted_span_seconds": [
+          0.0,
+          33.2
+        ],
+        "tiou": 0.0904,
+        "video_id": "anomaly/Explosion/Explosion039_x264.mp4"
+      },
+      {
+        "annotation_label": "Explosion",
+        "annotation_seconds": [
+          148.6667,
+          153.3333
+        ],
+        "observations": 120,
+        "predicted_span_seconds": [
+          0.0,
+          254.8
+        ],
+        "tiou": 0.0183,
+        "video_id": "anomaly/Explosion/Explosion043_x264.mp4"
+      },
+      {
+        "annotation_label": "Fighting",
+        "annotation_seconds": [
+          2.6667,
+          14.0
+        ],
+        "observations": 22,
+        "predicted_span_seconds": [
+          0.0,
+          46.267
+        ],
+        "tiou": 0.245,
+        "video_id": "anomaly/Fighting/Fighting018_x264.mp4"
+      },
+      {
+        "annotation_label": "Fighting",
+        "annotation_seconds": [
+          19.0,
+          28.0
+        ],
+        "observations": 18,
+        "predicted_span_seconds": [
+          0.0,
+          36.8
+        ],
+        "tiou": 0.2446,
+        "video_id": "anomaly/Fighting/Fighting033_x264.mp4"
+      },
+      {
+        "annotation_label": "Fighting",
+        "annotation_seconds": [
+          9.6667,
+          40.0
+        ],
+        "observations": 35,
+        "predicted_span_seconds": [
+          0.0,
+          74.534
+        ],
+        "tiou": 0.407,
+        "video_id": "anomaly/Fighting/Fighting042_x264.mp4"
+      },
+      {
+        "annotation_label": "Fighting",
+        "annotation_seconds": [
+          6.6667,
+          61.0
+        ],
+        "observations": 70,
+        "predicted_span_seconds": [
+          0.0,
+          148.533
+        ],
+        "tiou": 0.3658,
+        "video_id": "anomaly/Fighting/Fighting047_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          7.0,
+          10.0
+        ],
+        "observations": 22,
+        "predicted_span_seconds": [
+          0.0,
+          45.466
+        ],
+        "tiou": 0.066,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          8.0,
+          10.0
+        ],
+        "observations": 6,
+        "predicted_span_seconds": [
+          0.0,
+          11.467
+        ],
+        "tiou": 0.1744,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents002_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          4.6667,
+          6.3
+        ],
+        "observations": 7,
+        "predicted_span_seconds": [
+          0.0,
+          12.934
+        ],
+        "tiou": 0.1263,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents004_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          7.0,
+          8.0
+        ],
+        "observations": 15,
+        "predicted_span_seconds": [
+          0.0,
+          30.533
+        ],
+        "tiou": 0.0328,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents009_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          7.6667,
+          9.0
+        ],
+        "observations": 9,
+        "predicted_span_seconds": [
+          0.0,
+          17.467
+        ],
+        "tiou": 0.0763,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents010_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          8.6667,
+          10.0
+        ],
+        "observations": 34,
+        "predicted_span_seconds": [
+          0.0,
+          71.867
+        ],
+        "tiou": 0.0186,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents011_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          8.3333,
+          13.0
+        ],
+        "observations": 8,
+        "predicted_span_seconds": [
+          0.0,
+          15.467
+        ],
+        "tiou": 0.3017,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents012_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          17.6667,
+          24.0
+        ],
+        "observations": 35,
+        "predicted_span_seconds": [
+          0.0,
+          72.934
+        ],
+        "tiou": 0.0868,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents016_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          2.0,
+          4.3333
+        ],
+        "observations": 4,
+        "predicted_span_seconds": [
+          0.0,
+          8.0
+        ],
+        "tiou": 0.2917,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents017_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          25.0,
+          30.0
+        ],
+        "observations": 21,
+        "predicted_span_seconds": [
+          0.0,
+          43.733
+        ],
+        "tiou": 0.1143,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents019_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          20.3333,
+          24.3333
+        ],
+        "observations": 28,
+        "predicted_span_seconds": [
+          0.0,
+          59.067
+        ],
+        "tiou": 0.0677,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents020_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          1.0,
+          3.0
+        ],
+        "observations": 3,
+        "predicted_span_seconds": [
+          0.0,
+          5.067
+        ],
+        "tiou": 0.3947,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents021_x264.mp4"
+      },
+      {
+        "annotation_label": "RoadAccidents",
+        "annotation_seconds": [
+          4.0,
+          7.3333
+        ],
+        "observations": 12,
+        "predicted_span_seconds": [
+          0.0,
+          23.734
+        ],
+        "tiou": 0.1404,
+        "video_id": "anomaly/RoadAccidents/RoadAccidents022_x264.mp4"
+      },
+      {
+        "annotation_label": "Robbery",
+        "annotation_seconds": [
+          15.0,
+          31.0
+        ],
+        "observations": 23,
+        "predicted_span_seconds": [
+          0.0,
+          46.934
+        ],
+        "tiou": 0.3409,
+        "video_id": "anomaly/Robbery/Robbery048_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          1.5,
+          5.5
+        ],
+        "observations": 23,
+        "predicted_span_seconds": [
+          0.0,
+          47.6
+        ],
+        "tiou": 0.084,
+        "video_id": "anomaly/Shooting/Shooting007_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          2.5,
+          10.5
+        ],
+        "observations": 26,
+        "predicted_span_seconds": [
+          0.0,
+          54.134
+        ],
+        "tiou": 0.1478,
+        "video_id": "anomaly/Shooting/Shooting008_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          36.5,
+          42.0
+        ],
+        "observations": 42,
+        "predicted_span_seconds": [
+          0.0,
+          88.0
+        ],
+        "tiou": 0.0625,
+        "video_id": "anomaly/Shooting/Shooting010_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          49.3333,
+          58.3333
+        ],
+        "observations": 63,
+        "predicted_span_seconds": [
+          0.0,
+          133.333
+        ],
+        "tiou": 0.0675,
+        "video_id": "anomaly/Shooting/Shooting011_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          28.6667,
+          31.5
+        ],
+        "observations": 17,
+        "predicted_span_seconds": [
+          0.0,
+          35.734
+        ],
+        "tiou": 0.0793,
+        "video_id": "anomaly/Shooting/Shooting013_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          28.5,
+          57.1667
+        ],
+        "observations": 27,
+        "predicted_span_seconds": [
+          0.0,
+          57.067
+        ],
+        "tiou": 0.4997,
+        "video_id": "anomaly/Shooting/Shooting015_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          10.5,
+          16.0
+        ],
+        "observations": 29,
+        "predicted_span_seconds": [
+          0.0,
+          59.867
+        ],
+        "tiou": 0.0919,
+        "video_id": "anomaly/Shooting/Shooting018_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          34.0,
+          48.5
+        ],
+        "observations": 44,
+        "predicted_span_seconds": [
+          0.0,
+          91.734
+        ],
+        "tiou": 0.1581,
+        "video_id": "anomaly/Shooting/Shooting019_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          16.0,
+          21.0
+        ],
+        "observations": 20,
+        "predicted_span_seconds": [
+          0.0,
+          42.4
+        ],
+        "tiou": 0.1179,
+        "video_id": "anomaly/Shooting/Shooting021_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          95.0,
+          110.0
+        ],
+        "observations": 72,
+        "predicted_span_seconds": [
+          0.0,
+          151.733
+        ],
+        "tiou": 0.0989,
+        "video_id": "anomaly/Shooting/Shooting022_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          24.0,
+          43.5
+        ],
+        "observations": 32,
+        "predicted_span_seconds": [
+          0.0,
+          66.667
+        ],
+        "tiou": 0.2925,
+        "video_id": "anomaly/Shooting/Shooting024_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          6.5,
+          20.0
+        ],
+        "observations": 22,
+        "predicted_span_seconds": [
+          0.0,
+          46.667
+        ],
+        "tiou": 0.2893,
+        "video_id": "anomaly/Shooting/Shooting026_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          9.5,
+          18.5
+        ],
+        "observations": 30,
+        "predicted_span_seconds": [
+          0.0,
+          63.2
+        ],
+        "tiou": 0.1424,
+        "video_id": "anomaly/Shooting/Shooting028_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          266.5,
+          273.5
+        ],
+        "observations": 339,
+        "predicted_span_seconds": [
+          0.0,
+          722.667
+        ],
+        "tiou": 0.0097,
+        "video_id": "anomaly/Shooting/Shooting032_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          56.0,
+          66.6667
+        ],
+        "observations": 57,
+        "predicted_span_seconds": [
+          0.0,
+          120.933
+        ],
+        "tiou": 0.0882,
+        "video_id": "anomaly/Shooting/Shooting033_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          32.0,
+          35.0
+        ],
+        "observations": 23,
+        "predicted_span_seconds": [
+          0.0,
+          46.934
+        ],
+        "tiou": 0.0639,
+        "video_id": "anomaly/Shooting/Shooting034_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          4.6667,
+          8.6667
+        ],
+        "observations": 5,
+        "predicted_span_seconds": [
+          0.0,
+          10.134
+        ],
+        "tiou": 0.3947,
+        "video_id": "anomaly/Shooting/Shooting037_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          31.5,
+          41.0
+        ],
+        "observations": 30,
+        "predicted_span_seconds": [
+          0.0,
+          62.4
+        ],
+        "tiou": 0.1522,
+        "video_id": "anomaly/Shooting/Shooting043_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          133.5,
+          141.0
+        ],
+        "observations": 80,
+        "predicted_span_seconds": [
+          0.0,
+          169.467
+        ],
+        "tiou": 0.0443,
+        "video_id": "anomaly/Shooting/Shooting046_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          72.0,
+          130.0
+        ],
+        "observations": 130,
+        "predicted_span_seconds": [
+          0.0,
+          276.133
+        ],
+        "tiou": 0.21,
+        "video_id": "anomaly/Shooting/Shooting047_x264.mp4"
+      },
+      {
+        "annotation_label": "Shooting",
+        "annotation_seconds": [
+          47.0,
+          57.6667
+        ],
+        "observations": 43,
+        "predicted_span_seconds": [
+          0.0,
+          91.334
+        ],
+        "tiou": 0.1168,
+        "video_id": "anomaly/Shooting/Shooting048_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          18.3333,
+          25.3333
+        ],
+        "observations": 81,
+        "predicted_span_seconds": [
+          0.0,
+          170.667
+        ],
+        "tiou": 0.041,
+        "video_id": "anomaly/Shoplifting/Shoplifting007_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          25.0,
+          30.6667
+        ],
+        "observations": 43,
+        "predicted_span_seconds": [
+          0.0,
+          91.067
+        ],
+        "tiou": 0.0622,
+        "video_id": "anomaly/Shoplifting/Shoplifting010_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          67.0,
+          72.0
+        ],
+        "observations": 36,
+        "predicted_span_seconds": [
+          0.0,
+          75.067
+        ],
+        "tiou": 0.0666,
+        "video_id": "anomaly/Shoplifting/Shoplifting015_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          21.0,
+          24.0
+        ],
+        "observations": 24,
+        "predicted_span_seconds": [
+          0.0,
+          49.333
+        ],
+        "tiou": 0.0608,
+        "video_id": "anomaly/Shoplifting/Shoplifting016_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          12.0,
+          14.0
+        ],
+        "observations": 8,
+        "predicted_span_seconds": [
+          0.0,
+          15.2
+        ],
+        "tiou": 0.1316,
+        "video_id": "anomaly/Shoplifting/Shoplifting017_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          78.0,
+          82.0
+        ],
+        "observations": 91,
+        "predicted_span_seconds": [
+          0.0,
+          192.266
+        ],
+        "tiou": 0.0208,
+        "video_id": "anomaly/Shoplifting/Shoplifting020_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          69.0,
+          74.0
+        ],
+        "observations": 56,
+        "predicted_span_seconds": [
+          0.0,
+          118.267
+        ],
+        "tiou": 0.0423,
+        "video_id": "anomaly/Shoplifting/Shoplifting021_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          9.0,
+          14.0
+        ],
+        "observations": 35,
+        "predicted_span_seconds": [
+          0.0,
+          72.933
+        ],
+        "tiou": 0.0686,
+        "video_id": "anomaly/Shoplifting/Shoplifting022_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          36.0,
+          38.6667
+        ],
+        "observations": 30,
+        "predicted_span_seconds": [
+          0.0,
+          62.4
+        ],
+        "tiou": 0.0427,
+        "video_id": "anomaly/Shoplifting/Shoplifting027_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          19.0,
+          28.0
+        ],
+        "observations": 22,
+        "predicted_span_seconds": [
+          0.0,
+          45.2
+        ],
+        "tiou": 0.1991,
+        "video_id": "anomaly/Shoplifting/Shoplifting028_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          34.0,
+          49.0
+        ],
+        "observations": 34,
+        "predicted_span_seconds": [
+          0.0,
+          72.4
+        ],
+        "tiou": 0.2072,
+        "video_id": "anomaly/Shoplifting/Shoplifting029_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          4.0,
+          11.0
+        ],
+        "observations": 7,
+        "predicted_span_seconds": [
+          0.0,
+          14.8
+        ],
+        "tiou": 0.473,
+        "video_id": "anomaly/Shoplifting/Shoplifting031_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          21.0,
+          25.0
+        ],
+        "observations": 15,
+        "predicted_span_seconds": [
+          0.0,
+          29.867
+        ],
+        "tiou": 0.1339,
+        "video_id": "anomaly/Shoplifting/Shoplifting033_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          245.0,
+          249.0
+        ],
+        "observations": 187,
+        "predicted_span_seconds": [
+          0.0,
+          397.867
+        ],
+        "tiou": 0.0101,
+        "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          38.0,
+          40.0
+        ],
+        "observations": 22,
+        "predicted_span_seconds": [
+          0.0,
+          46.133
+        ],
+        "tiou": 0.0434,
+        "video_id": "anomaly/Shoplifting/Shoplifting037_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          73.0,
+          78.0
+        ],
+        "observations": 44,
+        "predicted_span_seconds": [
+          0.0,
+          93.333
+        ],
+        "tiou": 0.0536,
+        "video_id": "anomaly/Shoplifting/Shoplifting039_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          369.0,
+          375.0
+        ],
+        "observations": 228,
+        "predicted_span_seconds": [
+          0.0,
+          485.067
+        ],
+        "tiou": 0.0124,
+        "video_id": "anomaly/Shoplifting/Shoplifting044_x264.mp4"
+      },
+      {
+        "annotation_label": "Shoplifting",
+        "annotation_seconds": [
+          34.0,
+          45.0
+        ],
+        "observations": 34,
+        "predicted_span_seconds": [
+          0.0,
+          71.6
+        ],
+        "tiou": 0.1536,
+        "video_id": "anomaly/Shoplifting/Shoplifting049_x264.mp4"
+      },
+      {
+        "annotation_label": "Stealing",
+        "annotation_seconds": [
+          91.0,
+          93.0
+        ],
+        "observations": 77,
+        "predicted_span_seconds": [
+          0.0,
+          163.6
+        ],
+        "tiou": 0.0122,
+        "video_id": "anomaly/Stealing/Stealing019_x264.mp4"
+      },
+      {
+        "annotation_label": "Stealing",
+        "annotation_seconds": [
+          42.0,
+          53.0
+        ],
+        "observations": 40,
+        "predicted_span_seconds": [
+          0.0,
+          83.333
+        ],
+        "tiou": 0.132,
+        "video_id": "anomaly/Stealing/Stealing036_x264.mp4"
+      },
+      {
+        "annotation_label": "Vandalism",
+        "annotation_seconds": [
+          8.0,
+          25.0
+        ],
+        "observations": 18,
+        "predicted_span_seconds": [
+          0.0,
+          38.133
+        ],
+        "tiou": 0.4458,
+        "video_id": "anomaly/Vandalism/Vandalism007_x264.mp4"
+      },
+      {
+        "annotation_label": "Vandalism",
+        "annotation_seconds": [
+          67.0,
+          90.0
+        ],
+        "observations": 47,
+        "predicted_span_seconds": [
+          0.0,
+          99.333
+        ],
+        "tiou": 0.2315,
+        "video_id": "anomaly/Vandalism/Vandalism015_x264.mp4"
+      },
+      {
+        "annotation_label": "Vandalism",
+        "annotation_seconds": [
+          9.0,
+          11.0
+        ],
+        "observations": 16,
+        "predicted_span_seconds": [
+          0.0,
+          33.6
+        ],
+        "tiou": 0.0595,
+        "video_id": "anomaly/Vandalism/Vandalism017_x264.mp4"
+      },
+      {
+        "annotation_label": "Vandalism",
+        "annotation_seconds": [
+          61.0,
+          66.0
+        ],
+        "observations": 71,
+        "predicted_span_seconds": [
+          0.0,
+          149.733
+        ],
+        "tiou": 0.0334,
+        "video_id": "anomaly/Vandalism/Vandalism028_x264.mp4"
+      },
+      {
+        "annotation_label": "Vandalism",
+        "annotation_seconds": [
+          18.0,
+          26.0
+        ],
+        "observations": 23,
+        "predicted_span_seconds": [
+          0.0,
+          48.0
+        ],
+        "tiou": 0.1667,
+        "video_id": "anomaly/Vandalism/Vandalism036_x264.mp4"
+      }
+    ],
+    "prediction_span_seconds": {
+      "max": 722.667,
+      "mean": 108.4085,
+      "median": 63.6,
+      "min": 5.067
+    },
+    "skipped_no_fps": [],
+    "total_observations": 7927
+  },
+  "schema_version": "phase4b-expanded/v1",
+  "scope": {
+    "note": "Expanded UCF-window population; predicted spans are unions of non-normal-hypothesis windows, never detections of confirmed crime.",
+    "videos": 155
+  }
+}
