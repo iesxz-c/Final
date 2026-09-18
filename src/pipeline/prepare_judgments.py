@@ -54,27 +54,6 @@ def _labels(record: dict, field: str) -> set:
 _BARE_LABEL = re.compile(r"'(?P<label>.+?)'")
 
 
-def _eval_atom(atom: str, record: dict, default_field: str | None = None) -> bool:
-    """Evaluate one atomic condition against stored fields (pure)."""
-    atom = atom.strip()
-    match = _LABEL_ATOM.fullmatch(atom)
-    if match:
-        return match.group("label") in _labels(record, match.group("field"))
-    if default_field is not None:
-        bare = _BARE_LABEL.fullmatch(atom)
-        if bare:
-            return bare.group("label") in _labels(record, default_field)
-    match = _OVERLAP_ATOM.fullmatch(atom)
-    if match:
-        lo, hi = float(match.group("lo")), float(match.group("hi"))
-        return float(record.get("start_time", 0)) <= hi \
-            and float(record.get("end_time", 0)) >= lo
-    match = _END_AFTER_ATOM.fullmatch(atom)
-    if match:
-        return float(record.get("end_time", 0)) >= float(match.group("lo"))
-    raise ValueError(f"unsupported rule atom (refusing to guess): {atom!r}")
-
-
 def _split_top(rule: str) -> tuple:
     """Split a rule body into (operator, atoms); fail closed on mixing."""
     if " OR " in rule and " AND " in rule:
@@ -86,32 +65,78 @@ def _split_top(rule: str) -> tuple:
     return "SINGLE", [rule.strip()]
 
 
-def rule_matches(relevance_rule: str, record: dict) -> bool:
-    """Apply a frozen benchmark rule to one record (pure, deterministic)."""
+def parse_rule(relevance_rule: str) -> dict:
+    """Parse a frozen benchmark rule into structured atoms (pure).
+
+    Returns {"operator": SINGLE|AND|OR, "terms": [...]} where each term is
+    {"kind": "label", "field": ..., "label": ...},
+    {"kind": "overlap", "lo": ..., "hi": ...}, or
+    {"kind": "end_after", "lo": ...}. Elided OR labels ('A' OR 'B' is
+    present in F) inherit the single sibling field. Anything else raises
+    instead of guessing.
+    """
     body = relevance_rule.strip()
     prefix = "relevant iff "
     if not body.startswith(prefix):
         raise ValueError(f"rule must start with {prefix!r}")
     operator, atoms = _split_top(body[len(prefix):])
-    if operator == "OR":
-        # Elided form "'A' OR 'B' is present in F": bare labels inherit the
-        # single field used by the complete siblings. Complete atoms may use
-        # different fields (e.g. event OR action); bare labels with no
-        # field to inherit, or conflicting inheritances, fail closed.
-        fields = set()
-        for atom in atoms:
-            match = _LABEL_ATOM.fullmatch(atom.strip())
-            if match:
-                fields.add(match.group("field"))
-        bare = [a for a in atoms if _BARE_LABEL.fullmatch(a.strip())
-                and not _LABEL_ATOM.fullmatch(a.strip())]
-        if bare and len(fields) != 1:
-            raise ValueError("bare OR label with no unique field to inherit")
-        default = next(iter(fields), None)
-        results = [_eval_atom(atom, record, default) for atom in atoms]
+    fields = set()
+    for atom in atoms:
+        match = _LABEL_ATOM.fullmatch(atom.strip())
+        if match:
+            fields.add(match.group("field"))
+    bare = [a for a in atoms if _BARE_LABEL.fullmatch(a.strip())
+            and not _LABEL_ATOM.fullmatch(a.strip())]
+    if operator == "OR" and bare and len(fields) != 1:
+        raise ValueError("bare OR label with no unique field to inherit")
+    default = next(iter(fields), None)
+    terms = []
+    for atom in atoms:
+        text = atom.strip()
+        match = _LABEL_ATOM.fullmatch(text)
+        if match:
+            terms.append({"kind": "label", "field": match.group("field"),
+                          "label": match.group("label")})
+            continue
+        if default is not None:
+            bare_match = _BARE_LABEL.fullmatch(text)
+            if bare_match:
+                terms.append({"kind": "label", "field": default,
+                              "label": bare_match.group("label")})
+                continue
+        match = _OVERLAP_ATOM.fullmatch(text)
+        if match:
+            terms.append({"kind": "overlap", "lo": float(match.group("lo")),
+                          "hi": float(match.group("hi"))})
+            continue
+        match = _END_AFTER_ATOM.fullmatch(text)
+        if match:
+            terms.append({"kind": "end_after", "lo": float(match.group("lo"))})
+            continue
+        raise ValueError(f"unsupported rule atom (refusing to guess): {text!r}")
+    return {"operator": operator, "terms": terms}
+
+
+def rule_matches(relevance_rule: str, record: dict) -> bool:
+    """Apply a frozen benchmark rule to one record (pure, deterministic)."""
+    parsed = parse_rule(relevance_rule)
+    results = [_term_matches(term, record) for term in parsed["terms"]]
+    if parsed["operator"] == "OR":
         return any(results)
-    results = [_eval_atom(atom, record) for atom in atoms]
     return all(results)
+
+
+def _term_matches(term: dict, record: dict) -> bool:
+    """Evaluate one parsed term against stored fields (pure)."""
+    kind = term["kind"]
+    if kind == "label":
+        return term["label"] in _labels(record, term["field"])
+    if kind == "overlap":
+        return float(record.get("start_time", 0)) <= term["hi"] \
+            and float(record.get("end_time", 0)) >= term["lo"]
+    if kind == "end_after":
+        return float(record.get("end_time", 0)) >= term["lo"]
+    raise ValueError(f"unknown term kind: {kind!r}")
 
 
 def candidates_for(entry: dict, records: list) -> list:

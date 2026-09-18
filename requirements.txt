@@ -11,3 +11,10 @@ ultralytics>=8.2
 # The Kinetics-400 checkpoint (~350MB) is fetched once from Hugging Face
 # into the HF cache (external, never committed) on first use.
 transformers>=4.40
+
+# Phase 5A: vector retrieval baseline (fully local, CPU by default).
+# all-MiniLM-L6-v2 (~90MB) is fetched once from Hugging Face into the HF
+# cache (external, never committed) on first index build. Qdrant runs in
+# local file mode under data/vector_155/ (gitignored); no server needed.
+sentence-transformers==5.6.0
+qdrant-client

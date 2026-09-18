@@ -573,5 +573,262 @@ class JudgmentAssistantTest(unittest.TestCase):
             self.assertEqual(bench.read_bytes(), before)
 
 
+class LexicalJudgmentAdapterTest(unittest.TestCase):
+    def _rec(self, eid, video=None, start=0.0, end=2.0, obj=None, action=None,
+             event=None):
+        video = video if video is not None else eid.split(":")[0]
+        return {"evidence_id": eid, "video_id": video, "start_time": start,
+                "end_time": end,
+                "object_evidence": [{"class_name": obj, "confidence": 0.9,
+                                     "detection_id": "d", "observation_id": "o",
+                                     "timestamp_seconds": start}] if obj else [],
+                "generic_action_evidence": [{"label": action, "confidence": 0.7,
+                                             "observation_id": "a",
+                                             "source_reference": "a",
+                                             "top_k": []}] if action else [],
+                "surveillance_event_evidence": [{"label": event, "confidence": 0.8,
+                                                 "observation_id": "e",
+                                                 "source_reference": "e",
+                                                 "top_k": []}] if event else [],
+                "source_references": [f"{video}@t={start}s-{end}s"],
+                "anomaly_score": 0.5}
+
+    def _entry(self, rule, video="v", start=None, end=None):
+        return {"query_id": "Q", "query": "q", "relevance_rule": rule,
+                "scope": {"video_id": video, "start_time": start, "end_time": end}}
+
+    def test_single_object_term(self):
+        recs = [self._rec("v:f0", obj="person"), self._rec("v:f1", obj="car")]
+        out = E.lexical_search_for_judgment(
+            recs, self._entry("relevant iff 'person' is present in "
+                              "object_evidence class names"), top_k=10)
+        self.assertEqual([r.evidence_id for r in out], ["v:f0"])
+        self.assertEqual(out[0].retrieval_method, "lexical")
+
+    def test_single_action_term(self):
+        recs = [self._rec("v:f0", action="running"),
+                self._rec("v:f1", action="walking")]
+        out = E.lexical_search_for_judgment(
+            recs, self._entry("relevant iff 'running' is present in "
+                              "generic_action_evidence labels"), top_k=10)
+        self.assertEqual([r.evidence_id for r in out], ["v:f0"])
+
+    def test_single_event_term(self):
+        recs = [self._rec("v:f0", event="Arson"),
+                self._rec("v:f1", event="Burglary")]
+        out = E.lexical_search_for_judgment(
+            recs, self._entry("relevant iff 'Arson' is present in "
+                              "surveillance_event_evidence labels"), top_k=10)
+        self.assertEqual([r.evidence_id for r in out], ["v:f0"])
+
+    def test_and_object_event(self):
+        recs = [self._rec("v:f0", obj="person", event="Shooting"),
+                self._rec("v:f1", obj="person", event="Burglary"),
+                self._rec("v:f2", obj="car", event="Shooting")]
+        out = E.lexical_search_for_judgment(
+            recs, self._entry("relevant iff 'person' is present in "
+                              "object_evidence class names AND 'Shooting' is present in "
+                              "surveillance_event_evidence labels"), top_k=10)
+        self.assertEqual([r.evidence_id for r in out], ["v:f0"])
+
+    def test_or_object_terms(self):
+        recs = [self._rec("v:f0", obj="bus"),
+                self._rec("v:f1", obj="car"),
+                self._rec("v:f2", obj="motorcycle")]
+        out = E.lexical_search_for_judgment(
+            recs, self._entry("relevant iff 'car' OR 'motorcycle' is present in "
+                              "object_evidence class names"), top_k=10)
+        self.assertEqual([r.evidence_id for r in out], ["v:f1", "v:f2"])
+
+    def test_temporal_only_returns_empty(self):
+        recs = [self._rec("v:f0", start=81.0, end=83.0)]
+        out = E.lexical_search_for_judgment(
+            recs, self._entry("relevant iff the evidence interval overlaps "
+                              "[80, 88] seconds"), top_k=10)
+        self.assertEqual(out, [])
+
+    def test_temporal_plus_content_applies_window(self):
+        recs = [self._rec("v:f0", event="Burglary", start=95.0, end=97.0),
+                self._rec("v:f1", event="Burglary", start=0.0, end=2.0)]
+        out = E.lexical_search_for_judgment(
+            recs, self._entry("relevant iff the evidence interval overlaps "
+                              "[90, 110] seconds AND 'Burglary' is present in "
+                              "surveillance_event_evidence labels"), top_k=10)
+        self.assertEqual([r.evidence_id for r in out], ["v:f0"])
+
+    def test_scope_video_preserved(self):
+        recs = [self._rec("v:f0", video="v", obj="person"),
+                self._rec("w:f0", video="w", obj="person")]
+        out = E.lexical_search_for_judgment(
+            recs, self._entry("relevant iff 'person' is present in "
+                              "object_evidence class names", video="v"), top_k=10)
+        self.assertEqual([r.evidence_id for r in out], ["v:f0"])
+
+    def test_unknown_rule_raises(self):
+        with self.assertRaises(ValueError):
+            E.lexical_search_for_judgment(
+                [self._rec("v:f0")], self._entry("relevant iff vibes are good"))
+
+    def test_build_lexical_queries_terms(self):
+        spec = E.build_lexical_queries(
+            "relevant iff 'person' is present in object_evidence class names "
+            "AND 'Shooting' is present in surveillance_event_evidence labels")
+        self.assertEqual(spec["operator"], "AND")
+        self.assertEqual([t[0] for t in spec["terms"]], ["person", "Shooting"])
+        self.assertIsNone(spec["window"])
+        temporal = E.build_lexical_queries(
+            "relevant iff the evidence interval overlaps [80, 88] seconds")
+        self.assertEqual(temporal["terms"], [])
+        self.assertEqual(temporal["window"], (80.0, 88.0))
+
+
+class ComparisonTest(unittest.TestCase):
+    def _results(self, values, nulls=()):
+        per = {}
+        for i in range(1, 4):
+            q = f"Q{i:02d}"
+            if q in nulls:
+                per[q] = {"recall@5": None, "recall@10": None, "mrr": None}
+            else:
+                per[q] = {"recall@5": values[0], "recall@10": values[1],
+                          "mrr": values[2]}
+        agg = {}
+        for j, metric in enumerate(("recall@5", "recall@10", "mrr")):
+            scored = [q for q in per if q not in nulls]
+            agg[metric] = {"value": values[j], "n": len(scored), "n_queries": 3}
+        return {"aggregate": agg, "per_query": per}
+
+    def _bench(self):
+        return {"queries": [{"query_id": f"Q{i:02d}"} for i in range(1, 4)]}
+
+    def test_comparability_and_winners(self):
+        from src.pipeline import compare_retrieval as C
+
+        lex = self._results((0.5, 0.6, 1.0), nulls={"Q03"})
+        vec = self._results((0.7, 0.6, 0.5), nulls={"Q03"})
+        info = C.verify_comparable(lex, vec, self._bench())
+        self.assertEqual(info, {"queries": 3, "positive": 2, "empty": 1})
+        artifact = C.build_artifact(lex, vec, self._bench())
+        self.assertEqual(artifact["vector_minus_lexical"],
+                         {"recall@5": 0.2, "recall@10": 0.0, "mrr": -0.5})
+        self.assertEqual(artifact["per_query"]["Q01"]["winner"],
+                         {"recall@5": "vector", "recall@10": "tie", "mrr": "lexical"})
+        self.assertEqual(artifact["per_query"]["Q03"]["winner"],
+                         {"recall@5": "n/a", "recall@10": "n/a", "mrr": "n/a"})
+
+    def test_mismatched_partitions_rejected(self):
+        from src.pipeline import compare_retrieval as C
+
+        lex = self._results((0.5, 0.6, 1.0), nulls={"Q03"})
+        vec = self._results((0.7, 0.6, 0.5))
+        with self.assertRaises(ValueError):
+            C.verify_comparable(lex, vec, self._bench())
+
+    def test_expected_values_check(self):
+        from src.pipeline import compare_retrieval as C
+
+        artifact = {"lexical": {"aggregate": {
+            "recall@5": {"value": 0.4315}, "recall@10": {"value": 0.6045},
+            "mrr": {"value": 0.8182}}},
+            "vector": {"aggregate": {
+                "recall@5": {"value": 0.4743}, "recall@10": {"value": 0.6917},
+                "mrr": {"value": 0.8565}}}}
+        self.assertEqual(C.verify_expected(artifact), [])
+        artifact["vector"]["aggregate"]["mrr"]["value"] = 0.5
+        self.assertEqual(len(C.verify_expected(artifact)), 1)
+
+    def test_hybrid_artifact(self):
+        from src.pipeline import compare_retrieval as C
+
+        def _res(values):
+            per = {f"Q{i:02d}": {"recall@5": values[0], "recall@10": values[1],
+                                 "mrr": values[2]} for i in (1, 2)}
+            agg = {m: {"value": v, "n": 2, "n_queries": 2}
+                   for m, v in zip(("recall@5", "recall@10", "mrr"), values)}
+            return {"aggregate": agg, "per_query": per,
+                    "latency_seconds": {"mean": 0.1}}
+
+        bench = {"queries": [{"query_id": "Q01"}, {"query_id": "Q02"}]}
+        artifact = C.build_hybrid_artifact(_res((0.5, 0.6, 1.0)),
+                                           _res((0.7, 0.6, 0.5)),
+                                           _res((0.6, 0.8, 1.0)), bench)
+        self.assertEqual(artifact["pairwise_differences"]["hybrid_minus_lexical"],
+                         {"recall@5": 0.1, "recall@10": 0.2, "mrr": 0.0})
+        self.assertEqual(artifact["fusion"]["constant"], 60)
+        self.assertIn("RRF", C.render_hybrid_markdown(artifact))
+
+
+class HybridAdapterTest(unittest.TestCase):
+    def _rec(self, eid, obj=None, event=None):
+        return {"evidence_id": eid, "video_id": "v", "start_time": 0.0,
+                "end_time": 2.0,
+                "object_evidence": [{"class_name": obj, "confidence": 0.9,
+                                     "detection_id": "d", "observation_id": "o",
+                                     "timestamp_seconds": 0.0}] if obj else [],
+                "generic_action_evidence": [],
+                "surveillance_event_evidence": [{"label": event, "confidence": 0.8,
+                                                 "observation_id": "e",
+                                                 "source_reference": "e",
+                                                 "top_k": []}] if event else [],
+                "source_references": [], "anomaly_score": 0.5}
+
+    class _FakeRetriever:
+        def __init__(self, order):
+            self.order = order
+
+        def search(self, query, top_k=10):
+            return [E.RetrievalResult(evidence_id=e, rank=i, score=1.0 / i,
+                                      retrieval_method="vector")
+                    for i, e in enumerate(self.order[:max(0, top_k)], 1)]
+
+    def _entry(self, rule):
+        return {"query_id": "Q", "query": "q", "relevance_rule": rule,
+                "scope": {"video_id": "v", "start_time": None, "end_time": None}}
+
+    def test_rrf_score_calculation(self):
+        fused = E.rrf_fuse([[E.RetrievalResult("a", 1, 0.9, "lexical"),
+                             E.RetrievalResult("b", 2, 0.1, "lexical")],
+                            [E.RetrievalResult("b", 1, 0.9, "vector")]])
+        by_id = {r.evidence_id: r for r in fused}
+        self.assertAlmostEqual(by_id["a"].score, 1 / 61)
+        self.assertAlmostEqual(by_id["b"].score, 1 / 62 + 1 / 61)
+        self.assertEqual([r.evidence_id for r in fused], ["b", "a"])
+
+    def test_fusion_combines_branches(self):
+        recs = [self._rec("v:f0", obj="person", event="Shooting"),
+                self._rec("v:f1", obj="person", event="Burglary")]
+        retr = self._FakeRetriever(["v:f1", "v:f0"])
+        out = E.hybrid_search_for_judgment(
+            recs, self._entry("relevant iff 'person' is present in "
+                              "object_evidence class names"), retr, top_k=10)
+        self.assertEqual({r.evidence_id for r in out}, {"v:f0", "v:f1"})
+        self.assertTrue(all(r.retrieval_method == "hybrid" for r in out))
+        self.assertEqual([r.rank for r in out], [1, 2])
+
+    def test_missing_branch_result(self):
+        recs = [self._rec("v:f0", obj="person")]
+        retr = self._FakeRetriever([])
+        out = E.hybrid_search_for_judgment(
+            recs, self._entry("relevant iff 'person' is present in "
+                              "object_evidence class names"), retr, top_k=10)
+        self.assertEqual([r.evidence_id for r in out], ["v:f0"])
+
+    def test_top_k_and_scope(self):
+        recs = [self._rec("v:f0", obj="person"), self._rec("v:f1", obj="person"),
+                self._rec("w:f0", obj="person")]
+        retr = self._FakeRetriever(["w:f0", "v:f1", "v:f0"])
+        entry = {"query_id": "Q", "query": "q",
+                 "relevance_rule": "relevant iff 'person' is present in "
+                                   "object_evidence class names",
+                 "scope": {"video_id": "v", "start_time": None, "end_time": None}}
+        out = E.hybrid_search_for_judgment(recs, entry, retr, top_k=1)
+        self.assertEqual(len(out), 1)
+        self.assertNotIn("w:f0", [r.evidence_id for r in out])
+
+    def test_empty_relevance_stays_null(self):
+        metrics = E.evaluate_query(["v:f0"], [])
+        self.assertEqual(metrics, {"recall@5": None, "recall@10": None, "mrr": None})
+
+
 if __name__ == "__main__":
     unittest.main()

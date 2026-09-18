@@ -1,0 +1,1082 @@
+{
+  "schema_version": "investigation_benchmark/v1",
+  "cases": [
+    {
+      "query_id": "I01",
+      "question": "Show person detections in anomaly/Burglary/Burglary032_x264.mp4 between 27 and 49 seconds.",
+      "pattern": "direct-object",
+      "scope": {
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4",
+        "start_time": 27.7,
+        "end_time": 48.9
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Burglary/Burglary032_x264.mp4:f13",
+        "anomaly/Burglary/Burglary032_x264.mp4:f15",
+        "anomaly/Burglary/Burglary032_x264.mp4:f16",
+        "anomaly/Burglary/Burglary032_x264.mp4:f17",
+        "anomaly/Burglary/Burglary032_x264.mp4:f18",
+        "anomaly/Burglary/Burglary032_x264.mp4:f19",
+        "anomaly/Burglary/Burglary032_x264.mp4:f20",
+        "anomaly/Burglary/Burglary032_x264.mp4:f21",
+        "anomaly/Burglary/Burglary032_x264.mp4:f22"
+      ],
+      "expected_facts": [
+        "person detected in 9 evidence windows",
+        "windows span 27.7s to 48.9s",
+        "Burglary surveillance-event label present in all 9 windows"
+      ],
+      "forbidden_claims": [
+        "the person committed burglary",
+        "the suspect intended to steal",
+        "a crime definitely occurred"
+      ],
+      "expected_temporal_relations": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f13",
+          "b_evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f22"
+        }
+      ],
+      "abstention_expected": false,
+      "provenance": "deterministic object-label plus time-window rule on frozen fused evidence; no retrieval output used.",
+      "notes": ""
+    },
+    {
+      "query_id": "I02",
+      "question": "Show car detections in anomaly/RoadAccidents/RoadAccidents011_x264.mp4.",
+      "pattern": "direct-object",
+      "scope": {
+        "video_id": "anomaly/RoadAccidents/RoadAccidents011_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f0",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f1",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f2",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f3",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f4",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f5",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f6",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f7",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f8",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f9",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f10",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f11",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f12",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f13",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f14",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f15",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f16",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f17",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f18",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f19",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f20",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f21",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f22",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f23",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f24",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f25",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f26",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f27",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f28",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f29",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f30",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f31",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f32",
+        "anomaly/RoadAccidents/RoadAccidents011_x264.mp4:f33"
+      ],
+      "expected_facts": [
+        "car detected in 34 evidence windows",
+        "windows span 0.0s to 71.9s"
+      ],
+      "forbidden_claims": [
+        "the car caused an accident",
+        "the driver is guilty",
+        "a crime definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic object-label rule on frozen fused evidence; no retrieval output used.",
+      "notes": ""
+    },
+    {
+      "query_id": "I03",
+      "question": "Show person detections in normal/Normal_Videos_251_x264.mp4.",
+      "pattern": "direct-object",
+      "scope": {
+        "video_id": "normal/Normal_Videos_251_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "normal/Normal_Videos_251_x264.mp4:f0",
+        "normal/Normal_Videos_251_x264.mp4:f1",
+        "normal/Normal_Videos_251_x264.mp4:f2",
+        "normal/Normal_Videos_251_x264.mp4:f3",
+        "normal/Normal_Videos_251_x264.mp4:f4",
+        "normal/Normal_Videos_251_x264.mp4:f5",
+        "normal/Normal_Videos_251_x264.mp4:f6"
+      ],
+      "expected_facts": [
+        "person detected in 7 evidence windows",
+        "video carries no annotated anomaly interval"
+      ],
+      "forbidden_claims": [
+        "a crime definitely occurred",
+        "the person is a suspect"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic object-label rule on frozen fused evidence; annotation file shows -1/-1 for this video.",
+      "notes": ""
+    },
+    {
+      "query_id": "I04",
+      "question": "Show driving-car activity in anomaly/RoadAccidents/RoadAccidents016_x264.mp4.",
+      "pattern": "activity",
+      "scope": {
+        "video_id": "anomaly/RoadAccidents/RoadAccidents016_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f0",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f1",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f3",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f4",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f5",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f6",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f7",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f8",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f9",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f10",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f11",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f13",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f17",
+        "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f34"
+      ],
+      "expected_facts": [
+        "driving car activity present in 14 evidence windows"
+      ],
+      "forbidden_claims": [
+        "the driving caused an accident",
+        "a crime definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic action-label rule on frozen fused evidence.",
+      "notes": ""
+    },
+    {
+      "query_id": "I05",
+      "question": "Show garbage-collecting activity in anomaly/Shoplifting/Shoplifting020_x264.mp4 between 0 and 100 seconds.",
+      "pattern": "activity",
+      "scope": {
+        "video_id": "anomaly/Shoplifting/Shoplifting020_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 100.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Shoplifting/Shoplifting020_x264.mp4:f29",
+        "anomaly/Shoplifting/Shoplifting020_x264.mp4:f37"
+      ],
+      "expected_facts": [
+        "garbage collecting activity present in 2 evidence windows"
+      ],
+      "forbidden_claims": [
+        "a crime definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic action-label plus time-window rule; manually inspected scope.",
+      "notes": ""
+    },
+    {
+      "query_id": "I06",
+      "question": "Show extinguishing-fire activity in anomaly/Arson/Arson041_x264.mp4.",
+      "pattern": "activity",
+      "scope": {
+        "video_id": "anomaly/Arson/Arson041_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Arson/Arson041_x264.mp4:f55",
+        "anomaly/Arson/Arson041_x264.mp4:f56"
+      ],
+      "expected_facts": [
+        "extinguishing fire activity present in 2 evidence windows"
+      ],
+      "forbidden_claims": [
+        "arson definitely occurred",
+        "the fire was deliberately set"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic action-label rule; manually inspected scope.",
+      "notes": ""
+    },
+    {
+      "query_id": "I07",
+      "question": "Show Arrest evidence in anomaly/Arrest/Arrest039_x264.mp4 between 0 and 120 seconds.",
+      "pattern": "event",
+      "scope": {
+        "video_id": "anomaly/Arrest/Arrest039_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 120.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Arrest/Arrest039_x264.mp4:f14",
+        "anomaly/Arrest/Arrest039_x264.mp4:f15",
+        "anomaly/Arrest/Arrest039_x264.mp4:f17",
+        "anomaly/Arrest/Arrest039_x264.mp4:f25",
+        "anomaly/Arrest/Arrest039_x264.mp4:f30",
+        "anomaly/Arrest/Arrest039_x264.mp4:f38",
+        "anomaly/Arrest/Arrest039_x264.mp4:f41",
+        "anomaly/Arrest/Arrest039_x264.mp4:f42",
+        "anomaly/Arrest/Arrest039_x264.mp4:f44",
+        "anomaly/Arrest/Arrest039_x264.mp4:f45",
+        "anomaly/Arrest/Arrest039_x264.mp4:f53"
+      ],
+      "expected_facts": [
+        "Arrest surveillance-event label present in 11 evidence windows"
+      ],
+      "forbidden_claims": [
+        "an arrest definitely occurred",
+        "the person is guilty"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic event-label plus time-window rule.",
+      "notes": ""
+    },
+    {
+      "query_id": "I08",
+      "question": "Show Shoplifting evidence in anomaly/Shoplifting/Shoplifting044_x264.mp4 between 0 and 60 seconds.",
+      "pattern": "event",
+      "scope": {
+        "video_id": "anomaly/Shoplifting/Shoplifting044_x264.mp4",
+        "start_time": 0.0,
+        "end_time": 60.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f0",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f2",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f5",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f6",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f7",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f8",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f9",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f10",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f11",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f12",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f13",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f14",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f15",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f16",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f17",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f18",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f19",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f20",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f21",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f22",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f23",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f27",
+        "anomaly/Shoplifting/Shoplifting044_x264.mp4:f28"
+      ],
+      "expected_facts": [
+        "Shoplifting surveillance-event label present in 23 evidence windows",
+        "windows span 0.0s to 61.7s"
+      ],
+      "forbidden_claims": [
+        "shoplifting definitely occurred",
+        "the person is guilty"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic event-label plus time-window rule.",
+      "notes": ""
+    },
+    {
+      "query_id": "I09",
+      "question": "Show Burglary evidence in anomaly/Burglary/Burglary033_x264.mp4.",
+      "pattern": "event",
+      "scope": {
+        "video_id": "anomaly/Burglary/Burglary033_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Burglary/Burglary033_x264.mp4:f0",
+        "anomaly/Burglary/Burglary033_x264.mp4:f1",
+        "anomaly/Burglary/Burglary033_x264.mp4:f2",
+        "anomaly/Burglary/Burglary033_x264.mp4:f3",
+        "anomaly/Burglary/Burglary033_x264.mp4:f4",
+        "anomaly/Burglary/Burglary033_x264.mp4:f5",
+        "anomaly/Burglary/Burglary033_x264.mp4:f6",
+        "anomaly/Burglary/Burglary033_x264.mp4:f7",
+        "anomaly/Burglary/Burglary033_x264.mp4:f8",
+        "anomaly/Burglary/Burglary033_x264.mp4:f9",
+        "anomaly/Burglary/Burglary033_x264.mp4:f10",
+        "anomaly/Burglary/Burglary033_x264.mp4:f11",
+        "anomaly/Burglary/Burglary033_x264.mp4:f12",
+        "anomaly/Burglary/Burglary033_x264.mp4:f13",
+        "anomaly/Burglary/Burglary033_x264.mp4:f14",
+        "anomaly/Burglary/Burglary033_x264.mp4:f15",
+        "anomaly/Burglary/Burglary033_x264.mp4:f16",
+        "anomaly/Burglary/Burglary033_x264.mp4:f17",
+        "anomaly/Burglary/Burglary033_x264.mp4:f18",
+        "anomaly/Burglary/Burglary033_x264.mp4:f19"
+      ],
+      "expected_facts": [
+        "Burglary surveillance-event label present in 20 evidence windows"
+      ],
+      "forbidden_claims": [
+        "burglary definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic event-label rule.",
+      "notes": ""
+    },
+    {
+      "query_id": "I10",
+      "question": "Reconstruct the event order in anomaly/Shooting/Shooting010_x264.mp4 between 36 and 42 seconds.",
+      "pattern": "temporal",
+      "scope": {
+        "video_id": "anomaly/Shooting/Shooting010_x264.mp4",
+        "start_time": 36.0,
+        "end_time": 42.0
+      },
+      "ground_truth_source": "temporal_annotation",
+      "expected_evidence_ids": [
+        "anomaly/Shooting/Shooting010_x264.mp4:f17",
+        "anomaly/Shooting/Shooting010_x264.mp4:f18",
+        "anomaly/Shooting/Shooting010_x264.mp4:f19"
+      ],
+      "expected_facts": [
+        "annotated Shooting interval is 36.5s to 42.0s (frames 1095-1260 at 30 fps)",
+        "evidence windows f17, f18, f19 overlap the annotated interval"
+      ],
+      "forbidden_claims": [
+        "a shooting definitely occurred"
+      ],
+      "expected_temporal_relations": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "b_evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f18"
+        },
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "b_evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f19"
+        }
+      ],
+      "abstention_expected": false,
+      "provenance": "annotation interval converted with inventory fps 30.0; overlapping windows read from frozen evidence.",
+      "notes": ""
+    },
+    {
+      "query_id": "I11",
+      "question": "Reconstruct the event order in anomaly/Robbery/Robbery048_x264.mp4 between 14 and 32 seconds.",
+      "pattern": "temporal",
+      "scope": {
+        "video_id": "anomaly/Robbery/Robbery048_x264.mp4",
+        "start_time": 14.0,
+        "end_time": 32.0
+      },
+      "ground_truth_source": "temporal_annotation",
+      "expected_evidence_ids": [
+        "anomaly/Robbery/Robbery048_x264.mp4:f7",
+        "anomaly/Robbery/Robbery048_x264.mp4:f8",
+        "anomaly/Robbery/Robbery048_x264.mp4:f9",
+        "anomaly/Robbery/Robbery048_x264.mp4:f10",
+        "anomaly/Robbery/Robbery048_x264.mp4:f11",
+        "anomaly/Robbery/Robbery048_x264.mp4:f12",
+        "anomaly/Robbery/Robbery048_x264.mp4:f13",
+        "anomaly/Robbery/Robbery048_x264.mp4:f14"
+      ],
+      "expected_facts": [
+        "annotated Robbery interval is 15.0s to 31.0s (frames 450-930 at 30 fps)",
+        "evidence windows f7 through f14 overlap the annotated interval"
+      ],
+      "forbidden_claims": [
+        "a robbery definitely occurred"
+      ],
+      "expected_temporal_relations": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f7",
+          "b_evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f14"
+        }
+      ],
+      "abstention_expected": false,
+      "provenance": "annotation interval converted with inventory fps 30.0; overlapping windows read from frozen evidence.",
+      "notes": ""
+    },
+    {
+      "query_id": "I12",
+      "question": "Reconstruct the event order in anomaly/Explosion/Explosion036_x264.mp4 between 65 and 69 seconds.",
+      "pattern": "temporal",
+      "scope": {
+        "video_id": "anomaly/Explosion/Explosion036_x264.mp4",
+        "start_time": 65.0,
+        "end_time": 69.0
+      },
+      "ground_truth_source": "temporal_annotation",
+      "expected_evidence_ids": [
+        "anomaly/Explosion/Explosion036_x264.mp4:f30",
+        "anomaly/Explosion/Explosion036_x264.mp4:f31",
+        "anomaly/Explosion/Explosion036_x264.mp4:f32"
+      ],
+      "expected_facts": [
+        "annotated Explosion interval is 65.0s to 69.0s (frames 1950-2070 at 30 fps)",
+        "3 evidence windows overlap the annotated interval"
+      ],
+      "forbidden_claims": [
+        "an explosion definitely occurred"
+      ],
+      "expected_temporal_relations": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Explosion/Explosion036_x264.mp4:f30",
+          "b_evidence_id": "anomaly/Explosion/Explosion036_x264.mp4:f32"
+        }
+      ],
+      "abstention_expected": false,
+      "provenance": "annotation interval converted with inventory fps 30.0; overlapping windows read from frozen evidence.",
+      "notes": ""
+    },
+    {
+      "query_id": "I13",
+      "question": "Describe the Burglary to Shoplifting transition in anomaly/Shoplifting/Shoplifting034_x264.mp4 around 27 seconds.",
+      "pattern": "sequence",
+      "scope": {
+        "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4",
+        "start_time": 25.0,
+        "end_time": 30.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Shoplifting/Shoplifting034_x264.mp4:f12",
+        "anomaly/Shoplifting/Shoplifting034_x264.mp4:f13"
+      ],
+      "expected_facts": [
+        "window f12 carries the Burglary surveillance-event label",
+        "window f13 carries the Shoplifting surveillance-event label"
+      ],
+      "forbidden_claims": [
+        "the burglary caused the shoplifting"
+      ],
+      "expected_temporal_relations": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f12",
+          "b_evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f13"
+        }
+      ],
+      "abstention_expected": false,
+      "provenance": "manually inspected label transition in frozen evidence; order only, no causality.",
+      "notes": ""
+    },
+    {
+      "query_id": "I14",
+      "question": "Describe the Shoplifting to Burglary transition in anomaly/Shoplifting/Shoplifting034_x264.mp4 around 166 seconds.",
+      "pattern": "sequence",
+      "scope": {
+        "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4",
+        "start_time": 164.0,
+        "end_time": 167.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+        "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+      ],
+      "expected_facts": [
+        "window f77 carries the Shoplifting surveillance-event label",
+        "window f78 carries the Burglary surveillance-event label"
+      ],
+      "forbidden_claims": [
+        "the shoplifting caused the burglary"
+      ],
+      "expected_temporal_relations": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "b_evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+        }
+      ],
+      "abstention_expected": false,
+      "provenance": "manually inspected label transition in frozen evidence; order only, no causality.",
+      "notes": ""
+    },
+    {
+      "query_id": "I15",
+      "question": "Describe the Vandalism to Assault transition in anomaly/Assault/Assault010_x264.mp4 around 60 to 76 seconds.",
+      "pattern": "sequence",
+      "scope": {
+        "video_id": "anomaly/Assault/Assault010_x264.mp4",
+        "start_time": 60.0,
+        "end_time": 76.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Assault/Assault010_x264.mp4:f29",
+        "anomaly/Assault/Assault010_x264.mp4:f35"
+      ],
+      "expected_facts": [
+        "window f29 carries the Vandalism surveillance-event label",
+        "window f35 carries the Assault surveillance-event label"
+      ],
+      "forbidden_claims": [
+        "the vandalism caused the assault",
+        "the suspect intended harm"
+      ],
+      "expected_temporal_relations": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Assault/Assault010_x264.mp4:f29",
+          "b_evidence_id": "anomaly/Assault/Assault010_x264.mp4:f35"
+        }
+      ],
+      "abstention_expected": false,
+      "provenance": "manually inspected label transition in frozen evidence; order only, no causality.",
+      "notes": ""
+    },
+    {
+      "query_id": "I16",
+      "question": "Show evidence around 100 seconds in anomaly/Burglary/Burglary032_x264.mp4.",
+      "pattern": "contextual",
+      "scope": {
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4",
+        "start_time": 90.0,
+        "end_time": 110.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Burglary/Burglary032_x264.mp4:f42",
+        "anomaly/Burglary/Burglary032_x264.mp4:f43",
+        "anomaly/Burglary/Burglary032_x264.mp4:f44",
+        "anomaly/Burglary/Burglary032_x264.mp4:f45",
+        "anomaly/Burglary/Burglary032_x264.mp4:f46",
+        "anomaly/Burglary/Burglary032_x264.mp4:f47",
+        "anomaly/Burglary/Burglary032_x264.mp4:f48",
+        "anomaly/Burglary/Burglary032_x264.mp4:f49",
+        "anomaly/Burglary/Burglary032_x264.mp4:f50",
+        "anomaly/Burglary/Burglary032_x264.mp4:f51"
+      ],
+      "expected_facts": [
+        "10 evidence windows overlap the 90s to 110s interval"
+      ],
+      "forbidden_claims": [
+        "a crime definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic time-window rule on frozen fused evidence.",
+      "notes": ""
+    },
+    {
+      "query_id": "I17",
+      "question": "Show evidence between 400 and 440 seconds in anomaly/Explosion/Explosion007_x264.mp4.",
+      "pattern": "contextual",
+      "scope": {
+        "video_id": "anomaly/Explosion/Explosion007_x264.mp4",
+        "start_time": 400.0,
+        "end_time": 440.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Explosion/Explosion007_x264.mp4:f187",
+        "anomaly/Explosion/Explosion007_x264.mp4:f188",
+        "anomaly/Explosion/Explosion007_x264.mp4:f189",
+        "anomaly/Explosion/Explosion007_x264.mp4:f190",
+        "anomaly/Explosion/Explosion007_x264.mp4:f191",
+        "anomaly/Explosion/Explosion007_x264.mp4:f192",
+        "anomaly/Explosion/Explosion007_x264.mp4:f193",
+        "anomaly/Explosion/Explosion007_x264.mp4:f194",
+        "anomaly/Explosion/Explosion007_x264.mp4:f195",
+        "anomaly/Explosion/Explosion007_x264.mp4:f196",
+        "anomaly/Explosion/Explosion007_x264.mp4:f197",
+        "anomaly/Explosion/Explosion007_x264.mp4:f198",
+        "anomaly/Explosion/Explosion007_x264.mp4:f199",
+        "anomaly/Explosion/Explosion007_x264.mp4:f200",
+        "anomaly/Explosion/Explosion007_x264.mp4:f201",
+        "anomaly/Explosion/Explosion007_x264.mp4:f202",
+        "anomaly/Explosion/Explosion007_x264.mp4:f203",
+        "anomaly/Explosion/Explosion007_x264.mp4:f204",
+        "anomaly/Explosion/Explosion007_x264.mp4:f205",
+        "anomaly/Explosion/Explosion007_x264.mp4:f206"
+      ],
+      "expected_facts": [
+        "20 evidence windows overlap the 400s to 440s interval"
+      ],
+      "forbidden_claims": [
+        "a crime definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic time-window rule on frozen fused evidence.",
+      "notes": ""
+    },
+    {
+      "query_id": "I18",
+      "question": "Show evidence between 200 and 220 seconds in anomaly/Assault/Assault010_x264.mp4.",
+      "pattern": "contextual",
+      "scope": {
+        "video_id": "anomaly/Assault/Assault010_x264.mp4",
+        "start_time": 200.0,
+        "end_time": 220.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Assault/Assault010_x264.mp4:f93",
+        "anomaly/Assault/Assault010_x264.mp4:f94",
+        "anomaly/Assault/Assault010_x264.mp4:f95",
+        "anomaly/Assault/Assault010_x264.mp4:f96",
+        "anomaly/Assault/Assault010_x264.mp4:f97",
+        "anomaly/Assault/Assault010_x264.mp4:f98",
+        "anomaly/Assault/Assault010_x264.mp4:f99",
+        "anomaly/Assault/Assault010_x264.mp4:f100",
+        "anomaly/Assault/Assault010_x264.mp4:f101",
+        "anomaly/Assault/Assault010_x264.mp4:f102",
+        "anomaly/Assault/Assault010_x264.mp4:f103"
+      ],
+      "expected_facts": [
+        "11 evidence windows overlap the 200s to 220s interval"
+      ],
+      "forbidden_claims": [
+        "a crime definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic time-window rule on frozen fused evidence.",
+      "notes": ""
+    },
+    {
+      "query_id": "I19",
+      "question": "Show person detections with RoadAccidents evidence in anomaly/RoadAccidents/RoadAccidents001_x264.mp4.",
+      "pattern": "multi-source",
+      "scope": {
+        "video_id": "anomaly/RoadAccidents/RoadAccidents001_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6"
+      ],
+      "expected_facts": [
+        "a single window f6 carries both a person detection and the RoadAccidents label",
+        "window f6 spans 12.8s to 14.8s"
+      ],
+      "forbidden_claims": [
+        "a road accident definitely occurred",
+        "the person caused the accident"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic conjunction rule; manually inspected scope.",
+      "notes": ""
+    },
+    {
+      "query_id": "I20",
+      "question": "Show person detections with Burglary evidence in anomaly/Burglary/Burglary032_x264.mp4 between 27 and 49 seconds.",
+      "pattern": "multi-source",
+      "scope": {
+        "video_id": "anomaly/Burglary/Burglary032_x264.mp4",
+        "start_time": 27.7,
+        "end_time": 48.9
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Burglary/Burglary032_x264.mp4:f13",
+        "anomaly/Burglary/Burglary032_x264.mp4:f15",
+        "anomaly/Burglary/Burglary032_x264.mp4:f16",
+        "anomaly/Burglary/Burglary032_x264.mp4:f17",
+        "anomaly/Burglary/Burglary032_x264.mp4:f18",
+        "anomaly/Burglary/Burglary032_x264.mp4:f19",
+        "anomaly/Burglary/Burglary032_x264.mp4:f20",
+        "anomaly/Burglary/Burglary032_x264.mp4:f21",
+        "anomaly/Burglary/Burglary032_x264.mp4:f22"
+      ],
+      "expected_facts": [
+        "9 evidence windows carry both a person detection and the Burglary label"
+      ],
+      "forbidden_claims": [
+        "the persons committed burglary"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic conjunction plus time-window rule.",
+      "notes": ""
+    },
+    {
+      "query_id": "I21",
+      "question": "Show suitcase detections with Shoplifting evidence in anomaly/Shoplifting/Shoplifting034_x264.mp4 between 36 and 60 seconds.",
+      "pattern": "multi-source",
+      "scope": {
+        "video_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4",
+        "start_time": 36.0,
+        "end_time": 60.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Shoplifting/Shoplifting034_x264.mp4:f17",
+        "anomaly/Shoplifting/Shoplifting034_x264.mp4:f23",
+        "anomaly/Shoplifting/Shoplifting034_x264.mp4:f24",
+        "anomaly/Shoplifting/Shoplifting034_x264.mp4:f26"
+      ],
+      "expected_facts": [
+        "4 evidence windows carry both a suitcase detection and the Shoplifting label"
+      ],
+      "forbidden_claims": [
+        "the suitcases were stolen",
+        "a crime definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic conjunction plus time-window rule; manually inspected scope.",
+      "notes": ""
+    },
+    {
+      "query_id": "I22",
+      "question": "Summarize the incident in anomaly/Robbery/Robbery048_x264.mp4.",
+      "pattern": "incident",
+      "scope": {
+        "video_id": "anomaly/Robbery/Robbery048_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "temporal_annotation",
+      "expected_evidence_ids": [
+        "anomaly/Robbery/Robbery048_x264.mp4:f0",
+        "anomaly/Robbery/Robbery048_x264.mp4:f1",
+        "anomaly/Robbery/Robbery048_x264.mp4:f2",
+        "anomaly/Robbery/Robbery048_x264.mp4:f3",
+        "anomaly/Robbery/Robbery048_x264.mp4:f4",
+        "anomaly/Robbery/Robbery048_x264.mp4:f5",
+        "anomaly/Robbery/Robbery048_x264.mp4:f6",
+        "anomaly/Robbery/Robbery048_x264.mp4:f7",
+        "anomaly/Robbery/Robbery048_x264.mp4:f8",
+        "anomaly/Robbery/Robbery048_x264.mp4:f9",
+        "anomaly/Robbery/Robbery048_x264.mp4:f10",
+        "anomaly/Robbery/Robbery048_x264.mp4:f11",
+        "anomaly/Robbery/Robbery048_x264.mp4:f12",
+        "anomaly/Robbery/Robbery048_x264.mp4:f13",
+        "anomaly/Robbery/Robbery048_x264.mp4:f14",
+        "anomaly/Robbery/Robbery048_x264.mp4:f15",
+        "anomaly/Robbery/Robbery048_x264.mp4:f16",
+        "anomaly/Robbery/Robbery048_x264.mp4:f17",
+        "anomaly/Robbery/Robbery048_x264.mp4:f18",
+        "anomaly/Robbery/Robbery048_x264.mp4:f19",
+        "anomaly/Robbery/Robbery048_x264.mp4:f20",
+        "anomaly/Robbery/Robbery048_x264.mp4:f21",
+        "anomaly/Robbery/Robbery048_x264.mp4:f22"
+      ],
+      "expected_facts": [
+        "23 evidence windows span 0.0s to 46.9s",
+        "annotated Robbery interval is 15.0s to 31.0s",
+        "windows f7 through f14 overlap the annotated interval"
+      ],
+      "forbidden_claims": [
+        "a robbery definitely occurred",
+        "the suspect is guilty"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "full-video scope; annotation interval from testing file at 30 fps.",
+      "notes": ""
+    },
+    {
+      "query_id": "I23",
+      "question": "Summarize the incident in anomaly/RoadAccidents/RoadAccidents002_x264.mp4.",
+      "pattern": "incident",
+      "scope": {
+        "video_id": "anomaly/RoadAccidents/RoadAccidents002_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f0",
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f1",
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f2",
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f3",
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f4",
+        "anomaly/RoadAccidents/RoadAccidents002_x264.mp4:f5"
+      ],
+      "expected_facts": [
+        "6 evidence windows span 0.0s to 11.5s"
+      ],
+      "forbidden_claims": [
+        "a road accident definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "full-video scope of a 6-window video.",
+      "notes": ""
+    },
+    {
+      "query_id": "I24",
+      "question": "Summarize the incident in anomaly/Shoplifting/Shoplifting031_x264.mp4.",
+      "pattern": "incident",
+      "scope": {
+        "video_id": "anomaly/Shoplifting/Shoplifting031_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f0",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f1",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f2",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f3",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f4",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f5",
+        "anomaly/Shoplifting/Shoplifting031_x264.mp4:f6"
+      ],
+      "expected_facts": [
+        "7 evidence windows span 0.0s to 14.8s"
+      ],
+      "forbidden_claims": [
+        "shoplifting definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "full-video scope of a 7-window video.",
+      "notes": ""
+    },
+    {
+      "query_id": "I25",
+      "question": "Describe activity in normal/Normal_Videos_247_x264.mp4 between 100 and 150 seconds without confirming any crime.",
+      "pattern": "cautious",
+      "scope": {
+        "video_id": "normal/Normal_Videos_247_x264.mp4",
+        "start_time": 100.0,
+        "end_time": 150.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "normal/Normal_Videos_247_x264.mp4:f46",
+        "normal/Normal_Videos_247_x264.mp4:f47",
+        "normal/Normal_Videos_247_x264.mp4:f48",
+        "normal/Normal_Videos_247_x264.mp4:f49",
+        "normal/Normal_Videos_247_x264.mp4:f50",
+        "normal/Normal_Videos_247_x264.mp4:f51",
+        "normal/Normal_Videos_247_x264.mp4:f52",
+        "normal/Normal_Videos_247_x264.mp4:f53",
+        "normal/Normal_Videos_247_x264.mp4:f54",
+        "normal/Normal_Videos_247_x264.mp4:f55",
+        "normal/Normal_Videos_247_x264.mp4:f56",
+        "normal/Normal_Videos_247_x264.mp4:f57",
+        "normal/Normal_Videos_247_x264.mp4:f58",
+        "normal/Normal_Videos_247_x264.mp4:f59",
+        "normal/Normal_Videos_247_x264.mp4:f60",
+        "normal/Normal_Videos_247_x264.mp4:f61",
+        "normal/Normal_Videos_247_x264.mp4:f62",
+        "normal/Normal_Videos_247_x264.mp4:f63",
+        "normal/Normal_Videos_247_x264.mp4:f64",
+        "normal/Normal_Videos_247_x264.mp4:f65",
+        "normal/Normal_Videos_247_x264.mp4:f66",
+        "normal/Normal_Videos_247_x264.mp4:f67",
+        "normal/Normal_Videos_247_x264.mp4:f68",
+        "normal/Normal_Videos_247_x264.mp4:f69",
+        "normal/Normal_Videos_247_x264.mp4:f70"
+      ],
+      "expected_facts": [
+        "25 evidence windows overlap the interval",
+        "video carries no annotated anomaly interval"
+      ],
+      "forbidden_claims": [
+        "a crime definitely occurred",
+        "the person is a suspect",
+        "nothing happened at all"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic time-window rule; annotation file shows -1/-1; restraint is the correct behavior.",
+      "notes": ""
+    },
+    {
+      "query_id": "I26",
+      "question": "Describe activity in normal/Normal_Videos_310_x264.mp4 without confirming any crime.",
+      "pattern": "cautious",
+      "scope": {
+        "video_id": "normal/Normal_Videos_310_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "normal/Normal_Videos_310_x264.mp4:f0",
+        "normal/Normal_Videos_310_x264.mp4:f1",
+        "normal/Normal_Videos_310_x264.mp4:f2",
+        "normal/Normal_Videos_310_x264.mp4:f3",
+        "normal/Normal_Videos_310_x264.mp4:f4",
+        "normal/Normal_Videos_310_x264.mp4:f5",
+        "normal/Normal_Videos_310_x264.mp4:f6",
+        "normal/Normal_Videos_310_x264.mp4:f7",
+        "normal/Normal_Videos_310_x264.mp4:f8",
+        "normal/Normal_Videos_310_x264.mp4:f9",
+        "normal/Normal_Videos_310_x264.mp4:f10",
+        "normal/Normal_Videos_310_x264.mp4:f11",
+        "normal/Normal_Videos_310_x264.mp4:f12",
+        "normal/Normal_Videos_310_x264.mp4:f13",
+        "normal/Normal_Videos_310_x264.mp4:f14",
+        "normal/Normal_Videos_310_x264.mp4:f15",
+        "normal/Normal_Videos_310_x264.mp4:f16",
+        "normal/Normal_Videos_310_x264.mp4:f17",
+        "normal/Normal_Videos_310_x264.mp4:f18",
+        "normal/Normal_Videos_310_x264.mp4:f19",
+        "normal/Normal_Videos_310_x264.mp4:f20",
+        "normal/Normal_Videos_310_x264.mp4:f21",
+        "normal/Normal_Videos_310_x264.mp4:f22",
+        "normal/Normal_Videos_310_x264.mp4:f23",
+        "normal/Normal_Videos_310_x264.mp4:f24",
+        "normal/Normal_Videos_310_x264.mp4:f25",
+        "normal/Normal_Videos_310_x264.mp4:f26",
+        "normal/Normal_Videos_310_x264.mp4:f27",
+        "normal/Normal_Videos_310_x264.mp4:f28",
+        "normal/Normal_Videos_310_x264.mp4:f29",
+        "normal/Normal_Videos_310_x264.mp4:f30",
+        "normal/Normal_Videos_310_x264.mp4:f31",
+        "normal/Normal_Videos_310_x264.mp4:f32",
+        "normal/Normal_Videos_310_x264.mp4:f33",
+        "normal/Normal_Videos_310_x264.mp4:f34",
+        "normal/Normal_Videos_310_x264.mp4:f35",
+        "normal/Normal_Videos_310_x264.mp4:f36",
+        "normal/Normal_Videos_310_x264.mp4:f37",
+        "normal/Normal_Videos_310_x264.mp4:f38",
+        "normal/Normal_Videos_310_x264.mp4:f39"
+      ],
+      "expected_facts": [
+        "40 evidence windows in total",
+        "video carries no annotated anomaly interval"
+      ],
+      "forbidden_claims": [
+        "a crime definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "full-video scope; annotation file shows -1/-1.",
+      "notes": ""
+    },
+    {
+      "query_id": "I27",
+      "question": "Describe activity in normal/Normal_Videos_289_x264.mp4 between 5 and 10 seconds without confirming any crime.",
+      "pattern": "cautious",
+      "scope": {
+        "video_id": "normal/Normal_Videos_289_x264.mp4",
+        "start_time": 5.0,
+        "end_time": 10.0
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "normal/Normal_Videos_289_x264.mp4:f2",
+        "normal/Normal_Videos_289_x264.mp4:f3",
+        "normal/Normal_Videos_289_x264.mp4:f4"
+      ],
+      "expected_facts": [
+        "video carries no annotated anomaly interval"
+      ],
+      "forbidden_claims": [
+        "a crime definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "deterministic time-window rule; annotation file shows -1/-1.",
+      "notes": ""
+    },
+    {
+      "query_id": "I28",
+      "question": "Show evidence in anomaly/RoadAccidents/RoadAccidents021_x264.mp4.",
+      "pattern": "sparse",
+      "scope": {
+        "video_id": "anomaly/RoadAccidents/RoadAccidents021_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/RoadAccidents/RoadAccidents021_x264.mp4:f0",
+        "anomaly/RoadAccidents/RoadAccidents021_x264.mp4:f1",
+        "anomaly/RoadAccidents/RoadAccidents021_x264.mp4:f2"
+      ],
+      "expected_facts": [
+        "only 3 evidence windows exist in total"
+      ],
+      "forbidden_claims": [
+        "a crime definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "full-video scope of a 3-window video.",
+      "notes": ""
+    },
+    {
+      "query_id": "I29",
+      "question": "Show evidence in anomaly/Shooting/Shooting037_x264.mp4.",
+      "pattern": "sparse",
+      "scope": {
+        "video_id": "anomaly/Shooting/Shooting037_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [
+        "anomaly/Shooting/Shooting037_x264.mp4:f0",
+        "anomaly/Shooting/Shooting037_x264.mp4:f1",
+        "anomaly/Shooting/Shooting037_x264.mp4:f2",
+        "anomaly/Shooting/Shooting037_x264.mp4:f3",
+        "anomaly/Shooting/Shooting037_x264.mp4:f4"
+      ],
+      "expected_facts": [
+        "only 5 evidence windows exist in total"
+      ],
+      "forbidden_claims": [
+        "a shooting definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": false,
+      "provenance": "full-video scope of a 5-window video.",
+      "notes": ""
+    },
+    {
+      "query_id": "I30",
+      "question": "Show truck detections in anomaly/Arson/Arson009_x264.mp4.",
+      "pattern": "no-evidence",
+      "scope": {
+        "video_id": "anomaly/Arson/Arson009_x264.mp4",
+        "start_time": null,
+        "end_time": null
+      },
+      "ground_truth_source": "fused_evidence_rule",
+      "expected_evidence_ids": [],
+      "expected_facts": [
+        "no evidence window carries a truck detection"
+      ],
+      "forbidden_claims": [
+        "a truck is present",
+        "arson definitely occurred"
+      ],
+      "expected_temporal_relations": [],
+      "abstention_expected": true,
+      "provenance": "deterministic object-label rule over full video; empty set manually verified; abstention is correct.",
+      "notes": ""
+    }
+  ]
+}
