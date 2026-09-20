@@ -226,6 +226,81 @@ class FrozenConfigTest(unittest.TestCase):
         self.assertEqual(IE.RETRIEVAL_TOP_K, 10)
 
 
+class AblationArmTest(unittest.TestCase):
+    def test_no_temporal_reaches_3f_empty(self):
+        records, incidents = _mini()
+        bundle = IE.run_case(_case(), records, incidents, "mock",
+                             lambda: None, _settings(), "mock", "no-temporal")
+        self.assertEqual(bundle.get("adapter"), "empty-timeline")
+        self.assertEqual(bundle["result_3e"]["timeline"], [])
+        self.assertEqual(bundle["result_3e"]["correlations"], [])
+        self.assertEqual(bundle["result_3e"]["inferences"], [])
+        # No retrieval groups become timeline events.
+        self.assertNotIn("matched_evidence", json.dumps(bundle["result_3e"]))
+
+    def test_no_verification_stops_after_3e(self):
+        records, incidents = _mini()
+        bundle = IE.run_case(_case(), records, incidents, "mock",
+                             lambda: None, _settings(), "mock", "no-verification")
+        self.assertIsNotNone(bundle["result_3e"])
+        self.assertIsNone(bundle["result_3f"])
+        evaluation = IE.evaluate_case(_case(), bundle)
+        self.assertEqual(evaluation["claims"],
+                         {"supported": None, "partially_supported": None,
+                          "unsupported": None})
+        self.assertEqual(evaluation["citation"],
+                         {"cited": None, "total": None})
+
+    def test_no_planning_uses_fixed_plan(self):
+        records, incidents = _mini()
+        with mock.patch.object(IE.Q, "plan_query",
+                               side_effect=AssertionError("planner called")):
+            bundle = IE.run_case(_case(), records, incidents, "mock",
+                                 lambda: None, _settings(), "mock", "no-planning")
+        plan = bundle["plan"]
+        self.assertEqual(plan["intent"], "search_evidence")
+        self.assertEqual(plan["queries"],
+                         [{"query": "Fighting", "source": None}])
+        self.assertIsNone(plan["video_id"])
+        self.assertIsNone(plan["start_time"])
+        self.assertIsNone(plan["end_time"])
+        self.assertEqual(plan["temporal_context_seconds"], 0)
+        self.assertTrue(plan["needs_timeline"])
+        self.assertFalse(plan["needs_cross_evidence"])
+
+    def test_no_planning_skips_planner_in_real_mode(self):
+        from src.pipeline.retrieval_eval import RetrievalResult
+
+        records, incidents = _mini()
+
+        class _FakeRetriever:
+            def search(self, query, top_k=10):
+                return [RetrievalResult(f"{VA}:f0", 1, 0.9, "vector")]
+
+        from src.agents.llm_client import MockLLMClient
+        with mock.patch.object(IE.Q, "plan_query",
+                               side_effect=AssertionError("planner called")):
+            bundle = IE.run_case(
+                _case(), records, incidents, "real",
+                lambda: MockLLMClient("{}"), _settings(), "mock",
+                "no-planning", retriever=_FakeRetriever())
+        self.assertEqual(bundle["plan"]["queries"],
+                         [{"query": "Fighting", "source": None}])
+        # 3D ran over hybrid subset; planner was never consulted.
+        self.assertIn(bundle["validator_verdicts"].get("3d"), ("pass", "error"))
+
+    def test_full_baseline_paths_unchanged(self):
+        records, incidents = _mini()
+        full = IE.run_case(_case(), records, incidents, "mock",
+                           lambda: None, _settings(), "mock", "full")
+        self.assertNotIn("adapter", full)
+        self.assertIsNotNone(full["result_3f"])
+        baseline = IE.run_case(_case(), records, incidents, "mock",
+                               lambda: None, _settings(), "mock", "baseline")
+        self.assertIsNone(baseline["result_3e"])
+        self.assertNotIn("adapter", baseline)
+
+
 class HumanWorksheetTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):

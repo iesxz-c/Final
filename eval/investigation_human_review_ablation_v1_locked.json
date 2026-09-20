@@ -1,0 +1,803 @@
+{
+  "schema_version": "human-review-ablation-locked/v1",
+  "provenance": {
+    "source": "AEGIS_Ablation_Human_Grading_Sheet.xlsx (read-only, unmodified)",
+    "grade_columns": [
+      "NT - Your POV",
+      "NV - Your POV",
+      "NP - Your POV"
+    ],
+    "grades": "transcribed exactly; Supported/Partial/Unsupported preserved",
+    "full_reference": "eval/investigation_human_review_v1_locked.json (34/8/4, reproduced verbatim as reference)",
+    "benchmark": "eval/investigation_benchmark_v1.json (not modified)",
+    "reviewer_identity": "not recorded",
+    "review_date": "not recorded"
+  },
+  "cases": [
+    {
+      "query_id": "I01",
+      "question": "Show person detections in anomaly/Burglary/Burglary032_x264.mp4 between 27 and 49 seconds.",
+      "pattern": "direct-object",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "person detected in 9 evidence windows",
+          "full_reference_grade": "Partial",
+          "nt_grade": "Partial",
+          "nv_grade": "Supported",
+          "np_grade": "Supported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "windows span 27.7s to 48.9s",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Supported",
+          "nv_grade": "Supported",
+          "np_grade": "Supported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F03",
+          "fact_text": "Burglary surveillance-event label present in all 9 windows",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Supported",
+          "np_grade": "Supported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I02",
+      "question": "Show car detections in anomaly/RoadAccidents/RoadAccidents011_x264.mp4.",
+      "pattern": "direct-object",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "car detected in 34 evidence windows",
+          "full_reference_grade": "Partial",
+          "nt_grade": "Partial",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "windows span 0.0s to 71.9s",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Partial",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I03",
+      "question": "Show person detections in normal/Normal_Videos_251_x264.mp4.",
+      "pattern": "direct-object",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "person detected in 7 evidence windows",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Partial",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "video carries no annotated anomaly interval",
+          "full_reference_grade": "Unsupported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I04",
+      "question": "Show driving-car activity in anomaly/RoadAccidents/RoadAccidents016_x264.mp4.",
+      "pattern": "activity",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "driving car activity present in 14 evidence windows",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Partial",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I05",
+      "question": "Show garbage-collecting activity in anomaly/Shoplifting/Shoplifting020_x264.mp4 between 0 and 100 seconds.",
+      "pattern": "activity",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "garbage collecting activity present in 2 evidence windows",
+          "full_reference_grade": "Unsupported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I06",
+      "question": "Show extinguishing-fire activity in anomaly/Arson/Arson041_x264.mp4.",
+      "pattern": "activity",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "extinguishing fire activity present in 2 evidence windows",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I07",
+      "question": "Show Arrest evidence in anomaly/Arrest/Arrest039_x264.mp4 between 0 and 120 seconds.",
+      "pattern": "event",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "Arrest surveillance-event label present in 11 evidence windows",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I08",
+      "question": "Show Shoplifting evidence in anomaly/Shoplifting/Shoplifting044_x264.mp4 between 0 and 60 seconds.",
+      "pattern": "event",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "Shoplifting surveillance-event label present in 23 evidence windows",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Partial",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "windows span 0.0s to 61.7s",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I09",
+      "question": "Show Burglary evidence in anomaly/Burglary/Burglary033_x264.mp4.",
+      "pattern": "event",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "Burglary surveillance-event label present in 20 evidence windows",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Partial",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I10",
+      "question": "Reconstruct the event order in anomaly/Shooting/Shooting010_x264.mp4 between 36 and 42 seconds.",
+      "pattern": "temporal",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "annotated Shooting interval is 36.5s to 42.0s (frames 1095-1260 at 30 fps)",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Partial",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "evidence windows f17, f18, f19 overlap the annotated interval",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Supported",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I11",
+      "question": "Reconstruct the event order in anomaly/Robbery/Robbery048_x264.mp4 between 14 and 32 seconds.",
+      "pattern": "temporal",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "annotated Robbery interval is 15.0s to 31.0s (frames 450-930 at 30 fps)",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "evidence windows f7 through f14 overlap the annotated interval",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I12",
+      "question": "Reconstruct the event order in anomaly/Explosion/Explosion036_x264.mp4 between 65 and 69 seconds.",
+      "pattern": "temporal",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "annotated Explosion interval is 65.0s to 69.0s (frames 1950-2070 at 30 fps)",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Supported",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "3 evidence windows overlap the annotated interval",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Supported",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I13",
+      "question": "Describe the Burglary to Shoplifting transition in anomaly/Shoplifting/Shoplifting034_x264.mp4 around 27 seconds.",
+      "pattern": "sequence",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "window f12 carries the Burglary surveillance-event label",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Partial",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "window f13 carries the Shoplifting surveillance-event label",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Partial",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I14",
+      "question": "Describe the Shoplifting to Burglary transition in anomaly/Shoplifting/Shoplifting034_x264.mp4 around 166 seconds.",
+      "pattern": "sequence",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "window f77 carries the Shoplifting surveillance-event label",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Supported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "window f78 carries the Burglary surveillance-event label",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Supported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I15",
+      "question": "Describe the Vandalism to Assault transition in anomaly/Assault/Assault010_x264.mp4 around 60 to 76 seconds.",
+      "pattern": "sequence",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "window f29 carries the Vandalism surveillance-event label",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Partial",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "window f35 carries the Assault surveillance-event label",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Supported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I16",
+      "question": "Show evidence around 100 seconds in anomaly/Burglary/Burglary032_x264.mp4.",
+      "pattern": "contextual",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "10 evidence windows overlap the 90s to 110s interval",
+          "full_reference_grade": "Partial",
+          "nt_grade": "Partial",
+          "nv_grade": "Partial",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I17",
+      "question": "Show evidence between 400 and 440 seconds in anomaly/Explosion/Explosion007_x264.mp4.",
+      "pattern": "contextual",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "20 evidence windows overlap the 400s to 440s interval",
+          "full_reference_grade": "Unsupported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I18",
+      "question": "Show evidence between 200 and 220 seconds in anomaly/Assault/Assault010_x264.mp4.",
+      "pattern": "contextual",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "11 evidence windows overlap the 200s to 220s interval",
+          "full_reference_grade": "Partial",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Partial",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I19",
+      "question": "Show person detections with RoadAccidents evidence in anomaly/RoadAccidents/RoadAccidents001_x264.mp4.",
+      "pattern": "multi-source",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "a single window f6 carries both a person detection and the RoadAccidents label",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Partial",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "window f6 spans 12.8s to 14.8s",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Supported",
+          "nv_grade": "Supported",
+          "np_grade": "Supported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I20",
+      "question": "Show person detections with Burglary evidence in anomaly/Burglary/Burglary032_x264.mp4 between 27 and 49 seconds.",
+      "pattern": "multi-source",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "9 evidence windows carry both a person detection and the Burglary label",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Partial",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I21",
+      "question": "Show suitcase detections with Shoplifting evidence in anomaly/Shoplifting/Shoplifting034_x264.mp4 between 36 and 60 seconds.",
+      "pattern": "multi-source",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "4 evidence windows carry both a suitcase detection and the Shoplifting label",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Partial",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I22",
+      "question": "Summarize the incident in anomaly/Robbery/Robbery048_x264.mp4.",
+      "pattern": "incident",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "23 evidence windows span 0.0s to 46.9s",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Partial",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "annotated Robbery interval is 15.0s to 31.0s",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Unsupported",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F03",
+          "fact_text": "windows f7 through f14 overlap the annotated interval",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Unsupported",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I23",
+      "question": "Summarize the incident in anomaly/RoadAccidents/RoadAccidents002_x264.mp4.",
+      "pattern": "incident",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "6 evidence windows span 0.0s to 11.5s",
+          "full_reference_grade": "Partial",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I24",
+      "question": "Summarize the incident in anomaly/Shoplifting/Shoplifting031_x264.mp4.",
+      "pattern": "incident",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "7 evidence windows span 0.0s to 14.8s",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Partial",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I25",
+      "question": "Describe activity in normal/Normal_Videos_247_x264.mp4 between 100 and 150 seconds without confirming any crime.",
+      "pattern": "cautious",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "25 evidence windows overlap the interval",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Unsupported",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "video carries no annotated anomaly interval",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Supported",
+          "nv_grade": "Supported",
+          "np_grade": "Supported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I26",
+      "question": "Describe activity in normal/Normal_Videos_310_x264.mp4 without confirming any crime.",
+      "pattern": "cautious",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "40 evidence windows in total",
+          "full_reference_grade": "Partial",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "video carries no annotated anomaly interval",
+          "full_reference_grade": "Partial",
+          "nt_grade": "Supported",
+          "nv_grade": "Supported",
+          "np_grade": "Supported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I27",
+      "question": "Describe activity in normal/Normal_Videos_289_x264.mp4 between 5 and 10 seconds without confirming any crime.",
+      "pattern": "cautious",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "video carries no annotated anomaly interval",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Partial",
+          "nv_grade": "Partial",
+          "np_grade": "Partial",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I28",
+      "question": "Show evidence in anomaly/RoadAccidents/RoadAccidents021_x264.mp4.",
+      "pattern": "sparse",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "only 3 evidence windows exist in total",
+          "full_reference_grade": "Partial",
+          "nt_grade": "Unsupported",
+          "nv_grade": "Unsupported",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I29",
+      "question": "Show evidence in anomaly/Shooting/Shooting037_x264.mp4.",
+      "pattern": "sparse",
+      "abstention_expected": false,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "only 5 evidence windows exist in total",
+          "full_reference_grade": "Unsupported",
+          "nt_grade": "Partial",
+          "nv_grade": "Partial",
+          "np_grade": "Unsupported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    },
+    {
+      "query_id": "I30",
+      "question": "Show truck detections in anomaly/Arson/Arson009_x264.mp4.",
+      "pattern": "no-evidence",
+      "abstention_expected": true,
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "no evidence window carries a truck detection",
+          "full_reference_grade": "Supported",
+          "nt_grade": "Supported",
+          "nv_grade": "Supported",
+          "np_grade": "Supported",
+          "grader_notes": "",
+          "study_note": "If this ablated arm drops from Supported to Partial/Unsupported compared with Full, that is evidence that the removed component contributed to this capability. Otherwise, record the result as neutral/no clear contribution."
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "full": {
+      "supported": 34,
+      "partial": 8,
+      "unsupported": 4,
+      "total": 46,
+      "supported_pct": 73.91,
+      "partial_pct": 17.39,
+      "unsupported_pct": 8.7
+    },
+    "no_temporal": {
+      "supported": 5,
+      "partial": 20,
+      "unsupported": 21,
+      "total": 46,
+      "supported_pct": 10.87,
+      "partial_pct": 43.48,
+      "unsupported_pct": 45.65,
+      "delta_vs_full_pp": -63.04
+    },
+    "no_verification": {
+      "supported": 13,
+      "partial": 18,
+      "unsupported": 15,
+      "total": 46,
+      "supported_pct": 28.26,
+      "partial_pct": 39.13,
+      "unsupported_pct": 32.61,
+      "delta_vs_full_pp": -45.65
+    },
+    "no_planning": {
+      "supported": 7,
+      "partial": 14,
+      "unsupported": 25,
+      "total": 46,
+      "supported_pct": 15.22,
+      "partial_pct": 30.43,
+      "unsupported_pct": 54.35,
+      "delta_vs_full_pp": -58.69
+    },
+    "claims": {
+      "supported": 155,
+      "partial": 3,
+      "unsupported": 0,
+      "total": 158,
+      "supported_pct": 98.1
+    },
+    "temporal_subset": {
+      "cases": [
+        "I10",
+        "I11",
+        "I12",
+        "I13",
+        "I14",
+        "I15"
+      ],
+      "facts": 12
+    },
+    "temporal_subset_stats": {
+      "full": {
+        "supported": 12,
+        "partial": 0,
+        "unsupported": 0,
+        "supported_pct": 100.0
+      },
+      "no_temporal": {
+        "supported": 0,
+        "partial": 4,
+        "unsupported": 8,
+        "supported_pct": 0.0
+      },
+      "no_verification": {
+        "supported": 6,
+        "partial": 4,
+        "unsupported": 2,
+        "supported_pct": 50.0
+      },
+      "no_planning": {
+        "supported": 0,
+        "partial": 3,
+        "unsupported": 9,
+        "supported_pct": 0.0
+      }
+    }
+  }
+}

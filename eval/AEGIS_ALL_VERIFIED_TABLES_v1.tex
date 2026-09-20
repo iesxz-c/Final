@@ -1,0 +1,113 @@
+% AEGIS verified table pack v1 — paste-ready IEEEtran snippets.
+% Every value verified against repo artifacts 2026-09-18. booktabs required.
+% No "accuracy" claims; support/grounding/recall/tIoU terminology only.
+
+% TABLE F — Retrieval
+\begin{table}[!t]
+\centering
+\caption{Retrieval over 155 videos and 7,927 fused records (30 queries, 293 judgments, 22 scored).}
+\label{tab:retrieval}
+\begin{tabular}{lrrr}
+\toprule
+Method & Recall@5 & Recall@10 & MRR \\
+\midrule
+Lexical (substring) & 0.4315 & 0.6045 & 0.8182 \\
+Vector (MiniLM-L6-v2 + Qdrant) & 0.4743 & 0.6917 & 0.8565 \\
+Hybrid (RRF, $k=60$) & 0.5686 & 0.7449 & 0.9659 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% TABLE C — Temporal grounding (tIoU = span overlap)
+\begin{table}[!t]
+\centering
+\caption{Temporal span overlap between predicted spans and annotated anomaly intervals.}
+\label{tab:tiou}
+\begin{tabular}{lrrr}
+\toprule
+Experiment & $n$ & Mean tIoU & Median tIoU \\
+\midrule
+Pilot & 6 & 0.1973 & --- \\
+155-video expansion & 112 & 0.1728 & 0.1318 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% TABLE K — Baseline vs Full (human expected-fact support, n=46)
+\begin{table}[!t]
+\centering
+\caption{Human evaluation of expected-fact support for the baseline and full investigation systems.}
+\label{tab:fact-support-v2}
+\begin{tabular}{lrrrr}
+\toprule
+Configuration & Supported & Partial & Unsupported & Total \\
+\midrule
+Baseline & 28 & 10 & 8 & 46 \\
+Full & 34 & 8 & 4 & 46 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% TABLE M — Ablation (human expected-fact support, n=46 each)
+\begin{table}[!t]
+\centering
+\caption{Ablation results based on human-judged expected-fact support.}
+\label{tab:ablation-v2}
+\begin{tabular}{lrrrrr}
+\toprule
+Configuration & Supported & Partial & Unsupported & Supported (\%) & $\Delta$ vs.\ Full (pp) \\
+\midrule
+Full & 34 & 8 & 4 & 73.91 & --- \\
+No Temporal & 5 & 20 & 21 & 10.87 & $-63.04$ \\
+No Verification & 13 & 18 & 15 & 28.26 & $-45.65$ \\
+No Planning & 7 & 14 & 25 & 15.22 & $-58.69$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% TABLE L — Claim grounding (Full, n=158)
+\begin{table}[!t]
+\centering
+\caption{Claim-level evidence-grounding results for the full investigation system.}
+\label{tab:claim-grounding-v2}
+\begin{tabular}{lrrrrr}
+\toprule
+Configuration & Claims Reviewed & Supported & Partial & Unsupported & Fully Supported (\%) \\
+\midrule
+Full & 158 & 155 & 3 & 0 & 98.10 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% TABLE O (condensed) — Runtime
+\begin{table}[!t]
+\centering
+\caption{Execution and latency characteristics of the full and ablated investigation pipelines.}
+\label{tab:runtime-v2}
+\begin{tabular}{lrrrrr}
+\toprule
+Configuration & Cases & Completed & Validation Failures & Mean Latency (s) & Claims \\
+\midrule
+Full & 30 & 28 & 2 & 52.7 & 158 \\
+No Temporal & 30 & 30 & 0 & 14.8 & 0 \\
+No Verification & 30 & 28 & 2 & 34.6 & N/A \\
+No Planning & 30 & 30 & 0 & 0.3 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% TABLE B (condensed) — Scale
+\begin{table}[!t]
+\centering
+\caption{Evidence-processing scale across populations.}
+\label{tab:scale}
+\begin{tabular}{lrrrr}
+\toprule
+Population & Videos & Observations & Fused records & Phase 2 runtime (s) \\
+\midrule
+40-video subset & 40 & 4,094 & 1,931 / 40 incidents & 102.1 / 339.7 / 982.9 / 2.0 \\
+155-video corpus & 155 & 16,807 & 7,927 / 155 incidents & 823.1 / 1439.0 / 3721.3 / 48.1 \\
+702-video run & 702 & 44,716 & --- & merged 2026-09-16 \\
+\bottomrule
+\end{tabular}
+\end{table}

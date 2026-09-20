@@ -5,10 +5,23 @@ terms + verbatim-question vector, RRF-60) -> frozen 3D -> 3E -> 3F.
 ARM 2 (baseline): same through frozen 3D, then a deterministic templated
 evidence report. No 3E/3F/LLM beyond 3C planning in arm 2.
 
+Controlled arms (retrieval-interface experiment only): full-lexical
+(frozen lexical ranking, top-10) and full-hybrid (frozen lexical + vector
+fused with frozen RRF-60, top-10) assembled directly into phase3d/v1 via
+assemble_fused_evidence with no second lexical gate, then shared 3E -> 3F.
+The locked full arm path is unchanged.
+
 Ground truth is used ONLY by this evaluation layer, never supplied to
 agents, retrieval, or prompts. Expected-fact coverage requires later
 human grading: output carries mechanical_metrics plus
 human_evaluation_pending=true, with every claim preserved for review.
+
+Ablation arms: no-temporal (empty-timeline adapter into unmodified 3F),
+no-verification (3E timeline IS the answer; claim metrics stay null),
+no-planning (fixed validated plan, no LLM planning call).
+Grading mapping for no-verification: grade timeline observation /
+correlation / inference texts against expected facts exactly as report
+findings would be graded; claim-status metrics do not apply.
 
 Usage:
     python -m src.pipeline.investigation_eval --mock --output /tmp/inv.json
@@ -34,6 +47,7 @@ from src.agents import query_planner as Q
 from src.agents import timeline_correlation as E
 from src.agents import verification_report as F
 from src.pipeline import retrieve_evidence as R3A
+from src.pipeline import retrieve_temporal as R3B
 from src.pipeline import run_investigation as R
 from src.pipeline.api_eval import RecordingClient, SAFETY_BUCKETS
 from src.pipeline.retrieve_evidence import load_evidence
@@ -127,6 +141,293 @@ def vector_branch(records: list, question: str, retriever, scope: dict,
     return kept[:max(0, top_k)]
 
 
+class AssemblyError(ValueError):
+    """Direct-evidence assembly failed (fail closed, never fabricate)."""
+
+
+def lexical_ranking_for_plan(records: list, plan: dict, scope: dict) -> list:
+    """Full deduped lexical ranking for one plan (no cut).
+
+    Same frozen 3A calls and plan/scope intersection as the lexical branch
+    of hybrid_retrieve_for_case, so the FULL-LEXICAL arm measures the same
+    lexical behavior. Ranks are 0-based positions, deduplicated across plan
+    queries keeping the best rank, sorted by (rank, evidence_id).
+    """
+    scope_video = (scope or {}).get("video_id")
+    lexical_lists = []
+    for pq in plan.get("queries", []) or []:
+        text = (pq.get("query") or "").strip()
+        if not text:
+            continue
+        start = pq.get("start_time")
+        end = pq.get("end_time")
+        if (scope or {}).get("start_time") is not None:
+            start = max([s for s in (start, scope["start_time"]) if s is not None],
+                        default=None)
+        if (scope or {}).get("end_time") is not None:
+            end = min([e for e in (end, scope["end_time"]) if e is not None],
+                      default=None)
+        video = pq.get("video_id") or scope_video
+        sources = [pq["source"]] if pq.get("source") else None
+        hits = R3A.retrieve(records, text, video_id=video, start_time=start,
+                            end_time=end, sources=sources, limit=None)
+        lexical_lists.append([
+            RetrievalResult(h["evidence_id"], pos, float(h["confidence"]), "lexical")
+            for pos, h in enumerate(hits)])
+    lexical: dict = {}
+    for table in lexical_lists:
+        for item in table:
+            if item.evidence_id not in lexical \
+                    or item.rank < lexical[item.evidence_id].rank:
+                lexical[item.evidence_id] = item
+    return sorted(lexical.values(), key=lambda r: (r.rank, r.evidence_id))
+
+
+def ranking_for_arm(arm: str, records: list, question: str, plan: dict,
+                    retriever, scope: dict) -> list:
+    """Branch ranking for the controlled arms (full ranking, no cut).
+
+    full-lexical: frozen lexical ranking only. full-hybrid: frozen lexical
+    plus verbatim-question vector ranking fused with frozen RRF-60. The
+    top-K cut happens in assemble_fused_evidence so both arms share it.
+    """
+    lex_ranked = lexical_ranking_for_plan(records, plan, scope)
+    if arm == "full-lexical":
+        return lex_ranked
+    if arm != "full-hybrid":
+        raise AssemblyError(f"unknown controlled arm: {arm!r}")
+    if retriever is None:
+        raise AssemblyError("full-hybrid needs a vector retriever; none supplied")
+    vec_ranked = vector_branch(records, question, retriever, scope, top_k=None)
+    return rrf_fuse([lex_ranked, vec_ranked], constant=RRF_CONSTANT)
+
+
+def _require_record_identity(record: dict) -> None:
+    if not isinstance(record, dict) or not isinstance(
+            record.get("evidence_id"), str) or not record["evidence_id"]:
+        raise AssemblyError("assembled record needs a non-empty evidence_id")
+    if not isinstance(record.get("video_id"), str) or not record["video_id"]:
+        raise AssemblyError("assembled record needs a non-empty video_id")
+    for field in ("start_time", "end_time"):
+        value = record.get(field)
+        if isinstance(value, bool) or not isinstance(value, (int, float)) \
+                or value < 0:
+            raise AssemblyError(f"assembled record needs numeric {field} >= 0")
+    if float(record["end_time"]) < float(record["start_time"]):
+        raise AssemblyError("assembled record needs end_time >= start_time")
+
+
+def direct_records_for_ranking(ranking: list, records: list,
+                               top_k: int = 10) -> tuple:
+    """Dedupe ranking IDs in ranking order, cut to top_k, map verbatim.
+
+    Returns (ordered_ids, record_list) with original record dicts passed
+    through unmodified. Fail closed on unknown IDs or malformed records.
+    """
+    ordered: list = []
+    for item in ranking:
+        if item.evidence_id not in ordered:
+            ordered.append(item.evidence_id)
+    wanted = ordered[:max(0, top_k)]
+    by_id = {r.get("evidence_id"): r for r in records}
+    missing = [e for e in wanted if e not in by_id]
+    if missing:
+        raise AssemblyError(
+            f"ranking cites unknown evidence: {missing[:5]}")
+    picked = [by_id[e] for e in wanted]
+    for record in picked:
+        _require_record_identity(record)
+    return wanted, picked
+
+
+def _synthesized_hit(record: dict, matched_source: str, matched_id: str,
+                     matched_label: str, confidence: float,
+                     source_reference: str, provenance: dict) -> dict:
+    hit = {
+        "video_id": record.get("video_id", ""),
+        "evidence_id": record.get("evidence_id", ""),
+        "start_time": record.get("start_time"),
+        "end_time": record.get("end_time"),
+        "matched_source": matched_source,
+        "matched_id": matched_id,
+        "matched_label": matched_label,
+        "confidence": confidence,
+        "source_reference": source_reference,
+        "anomaly_score": record.get("anomaly_score", 0.0),
+    }
+    for key in ("retrieval_method", "rank", "score"):
+        if provenance.get(key) is not None:
+            hit[key] = provenance[key]
+    return hit
+
+
+def synthesize_matched_hits(record: dict, provenance: dict | None = None) -> list:
+    """One matched_hit per non-empty evidence stream plus a record fallback.
+
+    matched_source keeps WHAT-matched semantics only (object /
+    generic_action / surveillance_event / record); retrieval provenance
+    travels in separate retrieval_method/rank/score fields that validators
+    never read as source types.
+    """
+    provenance = dict(provenance or {})
+    hits = []
+    streams = (
+        ("object", record.get("object_evidence") or []),
+        ("generic_action", record.get("generic_action_evidence") or []),
+        ("surveillance_event",
+         record.get("surveillance_event_evidence") or []),
+    )
+    for source, entries in streams:
+        if not entries:
+            continue
+        first = entries[0] if isinstance(entries[0], dict) else {}
+        if source == "object":
+            matched_id = str(first.get("detection_id", ""))
+            matched_label = str(first.get("class_name", ""))
+            confidence = float(first.get("confidence", 0.0))
+            stamp = first.get("timestamp_seconds", record.get("start_time"))
+            reference = f"{record.get('video_id', '')}@t={stamp}s"
+        else:
+            matched_id = str(first.get("observation_id", ""))
+            matched_label = str(first.get("label", ""))
+            confidence = float(first.get("confidence", 0.0))
+            reference = str(first.get("source_reference", ""))
+        hits.append(_synthesized_hit(record, source, matched_id, matched_label,
+                                     confidence, reference, provenance))
+    refs = record.get("source_references", []) or []
+    hits.append(_synthesized_hit(
+        record, "record", str(record.get("evidence_id", "")),
+        str(record.get("evidence_id", "")), float(record.get("anomaly_score", 0.0)),
+        str(refs[0] if refs else ""), provenance))
+    return hits
+
+
+def _within_window(record: dict, anchor: dict, context_seconds: float) -> bool:
+    if record.get("video_id") != anchor.get("video_id"):
+        return False
+    return (float(record.get("start_time", 0)) <= float(anchor.get("end_time", 0))
+            + context_seconds
+            and float(record.get("end_time", 0)) >= float(anchor.get("start_time", 0))
+            - context_seconds)
+
+
+def assemble_fused_evidence(plan: dict, fused_ranking: list, records: list,
+                            incidents: list, context_seconds,
+                            top_k: int = RETRIEVAL_TOP_K) -> dict:
+    """Direct phase3d/v1 assembly from an already-fused ranking (no lexical gate).
+
+    Direct evidence is exactly the top-K ranking IDs mapped to verbatim
+    corpus records in ranking order. Incident mates of direct evidence
+    become contextual evidence; with context_seconds > 0, same-video
+    records inside the window around direct evidence are added too. No
+    corpus record outside those rules is introduced. Records are never
+    re-searched lexically, so vector-only evidence survives as direct
+    (matched) evidence with synthesized matched_hits.
+    """
+    norm_plan = D3.validate_plan(plan)
+    if context_seconds is None:
+        context_seconds = 0.0
+    if context_seconds < 0:
+        raise AssemblyError(f"context_seconds must be >= 0: {context_seconds}")
+    wanted_ids, _ = direct_records_for_ranking(fused_ranking, records, top_k)
+    provenance: dict = {}
+    for item in fused_ranking:
+        provenance.setdefault(item.evidence_id,
+                              {"retrieval_method": item.retrieval_method,
+                               "rank": item.rank, "score": item.score})
+    by_id = {r.get("evidence_id"): r for r in records}
+    membership = R3B.build_membership(incidents)
+    direct_ids = set(wanted_ids)
+
+    matched: dict = {}
+    order: list = []
+    unmapped_ids: list = []
+    for eid in wanted_ids:
+        incident = membership.get(eid)
+        if incident is None:
+            unmapped_ids.append(eid)
+            continue
+        iid = incident.get("incident_id", "")
+        if iid not in matched:
+            matched[iid] = {"incident": incident, "ids": []}
+            order.append(iid)
+        matched[iid]["ids"].append(eid)
+
+    used_context: set = set()
+    groups = []
+    for iid in sorted(
+            order, key=lambda i: (float(matched[i]["incident"].get("start_time", 0)),
+                                  i)):
+        incident = matched[iid]["incident"]
+        anchors = [by_id[e] for e in matched[iid]["ids"]]
+        context_ids = [e for e in incident.get("evidence_ids", []) or []
+                       if e not in direct_ids and e in by_id]
+        context_ids = list(dict.fromkeys(context_ids))
+        if context_seconds > 0:
+            extra = [r.get("evidence_id") for r in records
+                     if r.get("evidence_id") not in direct_ids
+                     and r.get("evidence_id") not in context_ids
+                     and r.get("evidence_id") not in used_context
+                     and any(_within_window(r, a, context_seconds)
+                             for a in anchors)]
+            context_ids.extend(sorted(set(extra)))
+        fresh = [e for e in context_ids if e not in used_context]
+        used_context.update(fresh)
+        matched_evidence = []
+        for eid in sorted(matched[iid]["ids"],
+                          key=lambda e: (float(by_id[e].get("start_time", 0)), e)):
+            record = dict(by_id[eid])
+            record["matched_hits"] = synthesize_matched_hits(
+                by_id[eid], provenance.get(eid, {}))
+            matched_evidence.append(record)
+        contextual_evidence = [
+            by_id[e] for e in sorted(
+                fresh, key=lambda e: (float(by_id[e].get("start_time", 0)), e))]
+        groups.append({
+            "incident_id": iid,
+            "video_id": incident.get("video_id", ""),
+            "incident_start_time": incident.get("start_time"),
+            "incident_end_time": incident.get("end_time"),
+            "event_hypotheses": list(incident.get("event_hypotheses", []) or []),
+            "matched_evidence": matched_evidence,
+            "contextual_evidence": contextual_evidence,
+        })
+
+    unmapped = []
+    for eid in unmapped_ids:
+        unmapped.extend(synthesize_matched_hits(by_id[eid],
+                                                provenance.get(eid, {})))
+    unmapped.sort(key=lambda h: (str(h["video_id"]), float(h["start_time"]),
+                                 str(h["evidence_id"]),
+                                 str(h["matched_source"])))
+    query_results = [{"query": item["query"], "source": item["source"],
+                      "planner_query_index": index, "groups": [],
+                      "unmapped_hits": [],
+                      "summary": {"matched_hits": 0, "matched_records": 0,
+                                  "incident_groups": 0, "context_records": 0,
+                                  "unmapped_hits": 0}}
+                     for index, item in enumerate(norm_plan["queries"])]
+    matched_hit_count = (sum(len(r.get("matched_hits", []))
+                             for g in groups for r in g["matched_evidence"])
+                         + len(unmapped))
+    return {
+        "schema_version": D3.SCHEMA_VERSION,
+        "plan": norm_plan,
+        "query_results": query_results,
+        "query_errors": [],
+        "merged_results": {"groups": groups, "unmapped_hits": unmapped},
+        "summary": {"planner_queries": len(norm_plan["queries"]),
+                    "matched_hits": matched_hit_count,
+                    "incident_groups": len(groups),
+                    "context_records": sum(len(g["contextual_evidence"])
+                                           for g in groups),
+                    "unmapped_hits": len(unmapped),
+                    "query_errors": 0},
+        "assembly": {"mode": "direct", "direct_ids": list(wanted_ids),
+                     "context_seconds": context_seconds},
+    }
+
+
 def templated_report(question: str, result_3d: dict) -> dict:
     """Deterministic evidence report for the baseline arm (no LLM)."""
     groups = ((result_3d.get("merged_results", {}) or {}).get("groups", []) or [])
@@ -193,7 +494,10 @@ def run_case(case: dict, records: list, incidents: list, mode: str,
     recording = RecordingClient(client) if mode == "real" and client is not None else None
     llm = recording if recording is not None else client
 
-    if mode == "mock":
+    if arm == "no-planning":
+        plan, failure = _timed(bundle["timings"], bundle["validator_verdicts"],
+                               "3c", fixed_plan, question)
+    elif mode == "mock":
         plan, failure = _timed(bundle["timings"], bundle["validator_verdicts"],
                                "3c", R._mock_plan, question)
     else:
@@ -203,24 +507,47 @@ def run_case(case: dict, records: list, incidents: list, mode: str,
         bundle["failure"] = failure
         return _finish(bundle, snapshot, records, total_start)
     bundle["plan"] = plan
-    subset, failure = _timed(
-        bundle["timings"], bundle["validator_verdicts"], "retr",
-        hybrid_retrieve_for_case, records, question, plan, retriever,
-        case.get("scope") or {}, RETRIEVAL_TOP_K) \
-        if mode == "real" else _timed(
-        bundle["timings"], bundle["validator_verdicts"], "retr",
-        _mock_subset, records)
-    if failure:
-        bundle["failure"] = failure
-        return _finish(bundle, snapshot, records, total_start, recording)
-    bundle["retrieved_evidence_ids"] = [r.get("evidence_id") for r in subset]
-
-    if mode == "mock":
-        result_3d, failure = _timed(bundle["timings"], bundle["validator_verdicts"],
-                                    "3d", D3.execute_plan, plan, list(subset), incidents)
+    if arm in ("full-lexical", "full-hybrid"):
+        ranking, failure = _timed(
+            bundle["timings"], bundle["validator_verdicts"], "retr",
+            ranking_for_arm, arm, records, question, plan, retriever,
+            case.get("scope") or {})
+        if failure:
+            bundle["failure"] = failure
+            return _finish(bundle, snapshot, records, total_start, recording)
+        bundle["retrieval"] = ({"method": "lexical", "top_k": RETRIEVAL_TOP_K}
+                               if arm == "full-lexical" else
+                               {"method": "hybrid-rrf", "constant": RRF_CONSTANT,
+                                "top_k": RETRIEVAL_TOP_K})
+        result_3d, failure = _timed(
+            bundle["timings"], bundle["validator_verdicts"], "3d",
+            assemble_fused_evidence, plan, ranking, records, incidents,
+            plan.get("temporal_context_seconds", 0))
     else:
-        result_3d, failure = _timed(bundle["timings"], bundle["validator_verdicts"],
-                                    "3d", D3.execute_plan, plan, list(subset), incidents)
+        subset, failure = _timed(
+            bundle["timings"], bundle["validator_verdicts"], "retr",
+            hybrid_retrieve_for_case, records, question, plan, retriever,
+            case.get("scope") or {}, RETRIEVAL_TOP_K) \
+            if mode == "real" else _timed(
+            bundle["timings"], bundle["validator_verdicts"], "retr",
+            _mock_subset, records)
+        if failure:
+            bundle["failure"] = failure
+            return _finish(bundle, snapshot, records, total_start, recording)
+        bundle["retrieved_evidence_ids"] = [r.get("evidence_id") for r in subset]
+
+        if mode == "mock":
+            result_3d, failure = _timed(bundle["timings"], bundle["validator_verdicts"],
+                                        "3d", D3.execute_plan, plan, list(subset), incidents)
+        else:
+            result_3d, failure = _timed(bundle["timings"], bundle["validator_verdicts"],
+                                        "3d", D3.execute_plan, plan, list(subset), incidents)
+    if arm in ("full-lexical", "full-hybrid"):
+        if failure:
+            bundle["failure"] = failure
+            return _finish(bundle, snapshot, records, total_start, recording)
+        bundle["retrieved_evidence_ids"] = list(
+            (result_3d.get("assembly") or {}).get("direct_ids", []))
     if failure:
         bundle["failure"] = failure
         return _finish(bundle, snapshot, records, total_start, recording)
@@ -237,7 +564,11 @@ def run_case(case: dict, records: list, incidents: list, mode: str,
             templated_report, question, result_3d)
         return _finish(bundle, snapshot, records, total_start, recording)
 
-    if mode == "mock":
+    if arm == "no-temporal":
+        result_3e, failure = _timed(bundle["timings"], bundle["validator_verdicts"],
+                                    "3e", empty_timeline_adapter, result_3d)
+        bundle["adapter"] = "empty-timeline"
+    elif mode == "mock":
         result_3e, failure = _timed(bundle["timings"], bundle["validator_verdicts"],
                                     "3e", R._mock_timeline, result_3d, question)
     else:
@@ -248,6 +579,10 @@ def run_case(case: dict, records: list, incidents: list, mode: str,
         bundle["failure"] = failure
         return _finish(bundle, snapshot, records, total_start, recording)
     bundle["result_3e"] = result_3e
+    if arm == "no-verification":
+        # Timeline/correlation/inference output IS this arm's answer; 3F
+        # never runs, so claim-level verification metrics stay null.
+        return _finish(bundle, snapshot, records, total_start, recording)
     if mode == "mock":
         result_3f, failure = _timed(bundle["timings"], bundle["validator_verdicts"],
                                     "3f", R._mock_report, result_3e, result_3d,
@@ -267,6 +602,38 @@ def run_case(case: dict, records: list, incidents: list, mode: str,
 def _mock_subset(records):
     """Mock-mode evidence subset (no retrieval; exercises downstream)."""
     return list(records)
+
+
+def fixed_plan(question: str) -> dict:
+    """Question-independent plan for the no-planning arm (validated).
+
+    Single query carrying the verbatim question, no source, no video or
+    time bounds: intent classification, source selection, and question
+    decomposition are all removed. Validated through the EXISTING
+    parse_and_validate_plan unchanged.
+    """
+    return Q.parse_and_validate_plan(json.dumps({
+        "schema_version": Q.SCHEMA_VERSION,
+        "intent": "search_evidence",
+        "queries": [{"query": question.strip(), "source": None}],
+        "video_id": None, "start_time": None, "end_time": None,
+        "temporal_context_seconds": 0,
+        "needs_timeline": True, "needs_cross_evidence": False}))
+
+
+def empty_timeline_adapter(result_3d: dict) -> dict:
+    """Stand-in 3E output for the no-temporal arm (deterministic).
+
+    Returns exactly the empty-timeline shape run_timeline itself returns
+    for empty evidence (same schema, same list fields); the limitations
+    text honestly states temporal reasoning was ablated. No retrieval
+    groups are converted into timeline events.
+    """
+    _ = result_3d
+    return {"schema_version": E.SCHEMA_VERSION, "timeline": [],
+            "correlations": [], "inferences": [],
+            "limitations": ["Temporal reasoning ablated: no timeline or "
+                            "correlations were constructed."]}
 
 
 def _finish(bundle, snapshot, records, total_start, recording=None):
@@ -355,10 +722,23 @@ def evaluate_case(case: dict, bundle: dict) -> dict:
     abstention_correct = (no_claims if abstention_expected else None)
     timings = bundle.get("timings", {}) or {}
     failure = bundle.get("failure")
-    claim_counts = {"supported": statuses.count("supported"),
-                    "partially_supported": statuses.count("partially_supported"),
-                    "unsupported": statuses.count("unsupported")}
-    cited_count = sum(1 for v in verification if v.get("evidence_ids"))
+    if bundle.get("arm") == "no-verification":
+        # 3F never ran: claim-level verification metrics are N/A, never zero.
+        claim_counts = {"supported": None, "partially_supported": None,
+                        "unsupported": None}
+        supported_list: list = []
+        cited_count = None
+        cited_total = None
+    else:
+        claim_counts = {"supported": statuses.count("supported"),
+                        "partially_supported": statuses.count("partially_supported"),
+                        "unsupported": statuses.count("unsupported")}
+        supported_list = [
+            {"claim_id": v.get("claim_id"),
+             "evidence_ids": list(v.get("evidence_ids", []) or [])}
+            for v in verification if v.get("status") == "supported"]
+        cited_count = sum(1 for v in verification if v.get("evidence_ids"))
+        cited_total = len(verification)
     return {
         "query_id": case["query_id"], "arm": bundle.get("arm"),
         "pattern": case.get("pattern"),
@@ -373,11 +753,8 @@ def evaluate_case(case: dict, bundle: dict) -> dict:
             v == "pass" for k, v in bundle["validator_verdicts"].items()
             if k in ("3c", "3e", "3f", "report")),
         "claims": claim_counts,
-        "supported_claims": [
-            {"claim_id": v.get("claim_id"),
-             "evidence_ids": list(v.get("evidence_ids", []) or [])}
-            for v in verification if v.get("status") == "supported"],
-        "citation": {"cited": cited_count, "total": len(verification)},
+        "supported_claims": supported_list,
+        "citation": {"cited": cited_count, "total": cited_total},
         "audit_pass": audit.get("overall_pass"),
         "temporal_uncontained": uncontained,
         "relations_supported": supported_relations,
@@ -425,11 +802,22 @@ def aggregate_arm(evaluations: list) -> dict:
     """Aggregate one arm's per-case evaluations (pure, no composites)."""
     total = len(evaluations)
     ok = sum(1 for e in evaluations if e["failure"] is None)
-    claims = {k: sum(e["claims"][k] for e in evaluations)
+    scored = [e for e in evaluations if e["claims"]["supported"] is not None]
+    claims = {k: sum(e["claims"][k] for e in scored)
               for k in ("supported", "partially_supported", "unsupported")}
     total_claims = sum(claims.values())
-    cited = sum(e["citation"]["cited"] for e in evaluations)
-    cited_total = sum(e["citation"]["total"] for e in evaluations)
+    cited = sum(e["citation"]["cited"] for e in scored)
+    cited_total = sum(e["citation"]["total"] for e in scored)
+    if not scored:
+        claims = {k: None for k in claims}
+        cited = cited_total = None
+    total_claims = sum(claims.values()) if scored else None
+    claim_rates = ({"supported_claim_rate": _rate(claims["supported"], total_claims),
+                    "unsupported_claim_rate": _rate(claims["unsupported"], total_claims),
+                    "citation_coverage": _rate(cited, cited_total)}
+                   if scored else
+                   {"supported_claim_rate": None, "unsupported_claim_rate": None,
+                    "citation_coverage": None})
     abstention_cases = [e for e in evaluations if e["abstention_expected"]]
     safety = {}
     for e in evaluations:
@@ -452,9 +840,9 @@ def aggregate_arm(evaluations: list) -> dict:
         "completion_rate": _rate(ok, total),
         "failure_taxonomy": taxonomy,
         "claims": claims,
-        "supported_claim_rate": _rate(claims["supported"], total_claims),
-        "unsupported_claim_rate": _rate(claims["unsupported"], total_claims),
-        "citation_coverage": _rate(cited, cited_total),
+        "supported_claim_rate": claim_rates["supported_claim_rate"],
+        "unsupported_claim_rate": claim_rates["unsupported_claim_rate"],
+        "citation_coverage": claim_rates["citation_coverage"],
         "audit_pass_rate": _rate(sum(1 for e in evaluations if e["audit_pass"]),
                                  total),
         "temporal_uncontained_total": sum(e["temporal_uncontained"]
@@ -519,7 +907,9 @@ def main(argv=None):
     parser.add_argument("--output", default=None)
     parser.add_argument("--mock", action="store_true")
     parser.add_argument("--arm", default="both",
-                        choices=("full", "baseline", "both"))
+                        choices=("full", "baseline", "no-temporal",
+                                 "no-verification", "no-planning", "full-lexical",
+                                 "full-hybrid", "both"))
     parser.add_argument("--only", default=None)
     parser.add_argument("--timeout", type=float, default=None,
                         help="per-call overall LLM seconds (default: frozen 60s)")

@@ -1,0 +1,89 @@
+% IEEE-paper results tables — AEGIS CCTV investigation evaluation.
+% Paste-ready snippets for IEEEtran (two-column). Source values verified
+% against eval/investigation_human_review_ablation_v1_locked.json and the
+% frozen execution logs. Requires \usepackage{booktabs} in the preamble.
+% Labels: tab:fact-support, tab:ablation, tab:claim-grounding, tab:runtime.
+% Terminology note: expected-fact support rates are NEVER called accuracy;
+% 98.10% is a claim-support/evidence-grounding rate.
+
+% ---------------- TABLE 1: Baseline vs Full ----------------
+\begin{table}[!t]
+\centering
+\caption{Human evaluation of expected-fact support for the baseline and full investigation systems.}
+\label{tab:fact-support}
+\begin{tabular}{lrrrr}
+\toprule
+Configuration & Supported & Partial & Unsupported & Total \\
+\midrule
+Baseline & 28 & 10 & 8 & 46 \\
+Full & 34 & 8 & 4 & 46 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ---------------- TABLE 2: Ablation study ----------------
+\begin{table}[!t]
+\centering
+\caption{Ablation results based on human-judged expected-fact support.}
+\label{tab:ablation}
+\begin{tabular}{lrrrrr}
+\toprule
+Configuration & Supported & Partial & Unsupported & Supported (\%) & $\Delta$ vs.\ Full (pp) \\
+\midrule
+Full & 34 & 8 & 4 & 73.91 & --- \\
+No Temporal & 5 & 20 & 21 & 10.87 & $-63.04$ \\
+No Verification & 13 & 18 & 15 & 28.26 & $-45.65$ \\
+No Planning & 7 & 14 & 25 & 15.22 & $-58.69$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ---------------- TABLE 3: Claim-level grounding ----------------
+\begin{table}[!t]
+\centering
+\caption{Claim-level evidence-grounding results for the full investigation system.}
+\label{tab:claim-grounding}
+\begin{tabular}{lrrrrr}
+\toprule
+Configuration & Claims Reviewed & Supported & Partial & Unsupported & Fully Supported (\%) \\
+\midrule
+Full & 158 & 155 & 3 & 0 & 98.10 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ---------------- TABLE 4: Runtime / execution ----------------
+\begin{table}[!t]
+\centering
+\caption{Execution and latency characteristics of the full and ablated investigation pipelines.}
+\label{tab:runtime}
+\begin{tabular}{lrrrrr}
+\toprule
+Configuration & Cases & Completed & Validation Failures & Mean Latency (s) & Claims \\
+\midrule
+Full & 30 & 28 & 2 & 52.7 & 158 \\
+No Temporal & 30 & 30 & 0 & 14.8 & 0 \\
+No Verification & 30 & 28 & 2 & 34.6 & N/A \\
+No Planning & 30 & 30 & 0 & 0.3 & 0 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+% ---------------- TABLE 5 (SUPPLEMENTARY ONLY) ----------------
+% Temporal subset I10--I15 (12 expected facts). Prefer Figure~3 + text in
+% the main paper; move this table to supplementary/appendix if needed.
+% \begin{table}[!t]
+% \centering
+% \caption{Temporal-subset results (cases I10--I15, 12 expected facts).}
+% \label{tab:temporal-subset}
+% \begin{tabular}{lrrrr}
+% \toprule
+% Configuration & Supported & Partial & Unsupported & Supported (\%) \\
+% \midrule
+% Full & 12 & 0 & 0 & 100.00 \\
+% No Temporal & 0 & 4 & 8 & 0.00 \\
+% No Verification & 6 & 4 & 2 & 50.00 \\
+% No Planning & 0 & 3 & 9 & 0.00 \\
+% \bottomrule
+% \end{tabular}
+% \end{table}

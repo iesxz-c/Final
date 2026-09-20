@@ -1,0 +1,2871 @@
+{
+  "schema_version": "human-review-locked/v1",
+  "provenance": {
+    "source_worksheet": "eval/investigation_human_review_v1.json (preserved as-is)",
+    "benchmark": "eval/investigation_benchmark_v1.json (not modified)",
+    "grading": "manual human review conducted outside the repository; grades transcribed authoritatively, never recalculated",
+    "mechanical_status_note": "mechanical validator statuses are preserved as context only and did not determine grades",
+    "reviewer_identity": "not recorded",
+    "review_date": "not recorded",
+    "temporal_note": "only relations in I11,I12,I13,I14,I15 were explicitly human graded; I01/I10 relations remain not yet human graded and must not enter percentage calculations"
+  },
+  "cases": [
+    {
+      "query_id": "I01",
+      "question": "Show person detections in anomaly/Burglary/Burglary032_x264.mp4 between 27 and 49 seconds.",
+      "pattern": "direct-object",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "person detected in 9 evidence windows",
+          "baseline_grade": "Unsupported",
+          "full_grade": "Partial",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "windows span 27.7s to 48.9s",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F03",
+          "fact_text": "Burglary surveillance-event label present in all 9 windows",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The available evidence suggests between 27.733s and 48.933s the surveillance-event model produced a Burglary hypothesis in each window, while the object model reported person detections in nine windows with counts of 1 to 3 and no person in one window, with low to moderate generic-action labels. A person detection overlapping a Burglary hypothesis does not mean the detected person was involved.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f13",
+            "anomaly/Burglary/Burglary032_x264.mp4:f14",
+            "anomaly/Burglary/Burglary032_x264.mp4:f15",
+            "anomaly/Burglary/Burglary032_x264.mp4:f16",
+            "anomaly/Burglary/Burglary032_x264.mp4:f17",
+            "anomaly/Burglary/Burglary032_x264.mp4:f18",
+            "anomaly/Burglary/Burglary032_x264.mp4:f19",
+            "anomaly/Burglary/Burglary032_x264.mp4:f20",
+            "anomaly/Burglary/Burglary032_x264.mp4:f21",
+            "anomaly/Burglary/Burglary032_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "persistent_event: The evidence indicates a compatible Burglary hypothesis produced by the surveillance-event model persisted across adjacent windows from 27.733s to 48.933s.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f13",
+            "anomaly/Burglary/Burglary032_x264.mp4:f14",
+            "anomaly/Burglary/Burglary032_x264.mp4:f15",
+            "anomaly/Burglary/Burglary032_x264.mp4:f16",
+            "anomaly/Burglary/Burglary032_x264.mp4:f17",
+            "anomaly/Burglary/Burglary032_x264.mp4:f18",
+            "anomaly/Burglary/Burglary032_x264.mp4:f19",
+            "anomaly/Burglary/Burglary032_x264.mp4:f20",
+            "anomaly/Burglary/Burglary032_x264.mp4:f21",
+            "anomaly/Burglary/Burglary032_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "same_incident: The evidence indicates records f13 through f22 belong to the same Phase 2D incident anomaly/Burglary/Burglary032_x264.mp4:i0.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f13",
+            "anomaly/Burglary/Burglary032_x264.mp4:f14",
+            "anomaly/Burglary/Burglary032_x264.mp4:f15",
+            "anomaly/Burglary/Burglary032_x264.mp4:f16",
+            "anomaly/Burglary/Burglary032_x264.mp4:f17",
+            "anomaly/Burglary/Burglary032_x264.mp4:f18",
+            "anomaly/Burglary/Burglary032_x264.mp4:f19",
+            "anomaly/Burglary/Burglary032_x264.mp4:f20",
+            "anomaly/Burglary/Burglary032_x264.mp4:f21",
+            "anomaly/Burglary/Burglary032_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "cross_source_support: The available evidence suggests person detections and Burglary hypotheses temporally co-occurred in the same windows; this co-occurrence is source agreement only and does not confirm involvement or that a crime occurred.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f13",
+            "anomaly/Burglary/Burglary032_x264.mp4:f15",
+            "anomaly/Burglary/Burglary032_x264.mp4:f16",
+            "anomaly/Burglary/Burglary032_x264.mp4:f17",
+            "anomaly/Burglary/Burglary032_x264.mp4:f18",
+            "anomaly/Burglary/Burglary032_x264.mp4:f19",
+            "anomaly/Burglary/Burglary032_x264.mp4:f20",
+            "anomaly/Burglary/Burglary032_x264.mp4:f21",
+            "anomaly/Burglary/Burglary032_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "The available evidence suggests intermittent person presence between 27.733s and 48.933s, with counts of 1 in f13, f15 and f22, 2 in f16, f17, f19, f20 and f21, 3 in f18, and no detection in f14; overlap with the Burglary hypothesis does not indicate participation.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f13",
+            "anomaly/Burglary/Burglary032_x264.mp4:f14",
+            "anomaly/Burglary/Burglary032_x264.mp4:f15",
+            "anomaly/Burglary/Burglary032_x264.mp4:f16",
+            "anomaly/Burglary/Burglary032_x264.mp4:f17",
+            "anomaly/Burglary/Burglary032_x264.mp4:f18",
+            "anomaly/Burglary/Burglary032_x264.mp4:f19",
+            "anomaly/Burglary/Burglary032_x264.mp4:f20",
+            "anomaly/Burglary/Burglary032_x264.mp4:f21",
+            "anomaly/Burglary/Burglary032_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "The available evidence suggests activity characterization is limited, as generic-action confidences were low to moderate across the segment.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f13",
+            "anomaly/Burglary/Burglary032_x264.mp4:f14",
+            "anomaly/Burglary/Burglary032_x264.mp4:f15",
+            "anomaly/Burglary/Burglary032_x264.mp4:f16",
+            "anomaly/Burglary/Burglary032_x264.mp4:f17",
+            "anomaly/Burglary/Burglary032_x264.mp4:f18",
+            "anomaly/Burglary/Burglary032_x264.mp4:f19",
+            "anomaly/Burglary/Burglary032_x264.mp4:f20",
+            "anomaly/Burglary/Burglary032_x264.mp4:f21",
+            "anomaly/Burglary/Burglary032_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Partial",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f13",
+          "b_evidence_id": "anomaly/Burglary/Burglary032_x264.mp4:f22",
+          "baseline_grade": "not yet human graded",
+          "full_grade": "not yet human graded"
+        }
+      ]
+    },
+    {
+      "query_id": "I02",
+      "question": "Show car detections in anomaly/RoadAccidents/RoadAccidents011_x264.mp4.",
+      "pattern": "direct-object",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "car detected in 34 evidence windows",
+          "baseline_grade": "Partial",
+          "full_grade": "Partial",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "windows span 0.0s to 71.9s",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I03",
+      "question": "Show person detections in normal/Normal_Videos_251_x264.mp4.",
+      "pattern": "direct-object",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "person detected in 7 evidence windows",
+          "baseline_grade": "Unsupported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "video carries no annotated anomaly interval",
+          "baseline_grade": "Unsupported",
+          "full_grade": "Unsupported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates person detections in every window from 0.0s to 13.467s with 1-2 persons per window and max confidences 0.4069 to 0.9315; the model also produced car and truck detections and RoadAccidents hypotheses in the same windows.",
+          "evidence_ids": [
+            "normal/Normal_Videos_251_x264.mp4:f0",
+            "normal/Normal_Videos_251_x264.mp4:f1",
+            "normal/Normal_Videos_251_x264.mp4:f2",
+            "normal/Normal_Videos_251_x264.mp4:f3",
+            "normal/Normal_Videos_251_x264.mp4:f4",
+            "normal/Normal_Videos_251_x264.mp4:f5",
+            "normal/Normal_Videos_251_x264.mp4:f6"
+          ],
+          "mechanical_status": "partially_supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "persistent_event: The evidence indicates compatible person detections persist across adjacent windows from 0.0s to 13.467s.",
+          "evidence_ids": [
+            "normal/Normal_Videos_251_x264.mp4:f0",
+            "normal/Normal_Videos_251_x264.mp4:f1",
+            "normal/Normal_Videos_251_x264.mp4:f2",
+            "normal/Normal_Videos_251_x264.mp4:f3",
+            "normal/Normal_Videos_251_x264.mp4:f4",
+            "normal/Normal_Videos_251_x264.mp4:f5",
+            "normal/Normal_Videos_251_x264.mp4:f6"
+          ],
+          "mechanical_status": "partially_supported",
+          "human_support_grade": "Partial",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "same_incident: The evidence indicates f0 through f6 belong to the same Phase 2D incident normal/Normal_Videos_251_x264.mp4:i0.",
+          "evidence_ids": [
+            "normal/Normal_Videos_251_x264.mp4:f0",
+            "normal/Normal_Videos_251_x264.mp4:f1",
+            "normal/Normal_Videos_251_x264.mp4:f2",
+            "normal/Normal_Videos_251_x264.mp4:f3",
+            "normal/Normal_Videos_251_x264.mp4:f4",
+            "normal/Normal_Videos_251_x264.mp4:f5",
+            "normal/Normal_Videos_251_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "cross_source_support: The evidence indicates object detections including person co-occur with surveillance_event RoadAccidents hypotheses in the same windows; this is source agreement only and does not confirm an event.",
+          "evidence_ids": [
+            "normal/Normal_Videos_251_x264.mp4:f0",
+            "normal/Normal_Videos_251_x264.mp4:f1",
+            "normal/Normal_Videos_251_x264.mp4:f2",
+            "normal/Normal_Videos_251_x264.mp4:f3",
+            "normal/Normal_Videos_251_x264.mp4:f4",
+            "normal/Normal_Videos_251_x264.mp4:f5",
+            "normal/Normal_Videos_251_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "The available evidence suggests person presence persisted throughout the segment, but the evidence does not indicate identity, role, or involvement in any event.",
+          "evidence_ids": [
+            "normal/Normal_Videos_251_x264.mp4:f0",
+            "normal/Normal_Videos_251_x264.mp4:f1",
+            "normal/Normal_Videos_251_x264.mp4:f2",
+            "normal/Normal_Videos_251_x264.mp4:f3",
+            "normal/Normal_Videos_251_x264.mp4:f4",
+            "normal/Normal_Videos_251_x264.mp4:f5",
+            "normal/Normal_Videos_251_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Partial",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "The model produced RoadAccidents hypotheses alongside person and vehicle detections, but the evidence is consistent with co-occurrence only and does not confirm that a road accident occurred.",
+          "evidence_ids": [
+            "normal/Normal_Videos_251_x264.mp4:f0",
+            "normal/Normal_Videos_251_x264.mp4:f1",
+            "normal/Normal_Videos_251_x264.mp4:f2",
+            "normal/Normal_Videos_251_x264.mp4:f3",
+            "normal/Normal_Videos_251_x264.mp4:f4",
+            "normal/Normal_Videos_251_x264.mp4:f5",
+            "normal/Normal_Videos_251_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I04",
+      "question": "Show driving-car activity in anomaly/RoadAccidents/RoadAccidents016_x264.mp4.",
+      "pattern": "activity",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "driving car activity present in 14 evidence windows",
+          "baseline_grade": "Unsupported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates car and person detections with model-produced driving-car and RoadAccidents hypotheses persisting across adjacent windows.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f0",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f1"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "The evidence indicates car and person detections with model-produced driving-car and RoadAccidents hypotheses persisting across adjacent windows.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f3",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f4"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "The evidence indicates car and person detections with model-produced driving-car and RoadAccidents hypotheses persisting across adjacent windows.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f8",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f9",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f10",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f11"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "The evidence indicates car and person detections with model-produced motorcycling and RoadAccidents hypotheses.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f12"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "The evidence indicates model-produced driving-car and RoadAccidents hypotheses with no object detections reported.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f34"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "persistent_event: The model-produced RoadAccidents hypothesis with driving-car hypothesis persists across adjacent windows covering 0.0-4.133s.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f0",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f1"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "persistent_event: The model-produced RoadAccidents hypothesis with driving-car hypothesis persists across adjacent windows covering 6.4-10.533s.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f3",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f4"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_008",
+          "claim_text": "persistent_event: The model-produced RoadAccidents hypothesis with driving-car hypothesis persists across adjacent windows covering 17.067-25.467s.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f8",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f9",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f10",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f11"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_009",
+          "claim_text": "persistent_event: The model-produced RoadAccidents hypothesis persists across adjacent windows covering 17.067-27.6s, with driving-car in earlier windows and motorcycling in the last window.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f8",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f9",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f10",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f11",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f12"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_010",
+          "claim_text": "cross_source_support: Within the cited windows, object car and person detections co-occur with driving-car and RoadAccidents hypotheses from different source types, indicating source agreement only, not confirmation.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f0",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f1",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f3",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f4",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f8",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f9",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f10",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f11"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_011",
+          "claim_text": "temporal_sequence: The evidence in 0.0-4.133s occurs before the evidence in 6.4-10.533s, which occurs before the evidence in 17.067-27.6s, which occurs before the evidence in 72.534-72.934s.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f0",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f4",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f8",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f34"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_012",
+          "claim_text": "same_incident: All cited evidence records belong to the same Phase 2D incident anomaly/RoadAccidents/RoadAccidents016_x264.mp4:i0.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f0",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f1",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f3",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f4",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f8",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f9",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f10",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f11",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f12",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f34"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_013",
+          "claim_text": "The available evidence suggests driving-car activity hypotheses repeatedly co-occur with car/person detections and RoadAccidents hypotheses from 0.0-25.467s, consistent with persistent traffic activity, but does not establish that an accident occurred or who was involved.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f0",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f1",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f3",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f4",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f8",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f9",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f10",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f11"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_014",
+          "claim_text": "The evidence indicates a motorcycling hypothesis at 25.6-27.6s and an isolated driving-car with RoadAccidents hypothesis at 72.534-72.934s without object detections, suggesting continued vehicle-related hypotheses but with limited support for interpretation.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f12",
+            "anomaly/RoadAccidents/RoadAccidents016_x264.mp4:f34"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I05",
+      "question": "Show garbage-collecting activity in anomaly/Shoplifting/Shoplifting020_x264.mp4 between 0 and 100 seconds.",
+      "pattern": "activity",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "garbage collecting activity present in 2 evidence windows",
+          "baseline_grade": "Unsupported",
+          "full_grade": "Unsupported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I06",
+      "question": "Show extinguishing-fire activity in anomaly/Arson/Arson041_x264.mp4.",
+      "pattern": "activity",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "extinguishing fire activity present in 2 evidence windows",
+          "baseline_grade": "Partial",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I07",
+      "question": "Show Arrest evidence in anomaly/Arrest/Arrest039_x264.mp4 between 0 and 120 seconds.",
+      "pattern": "event",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "Arrest surveillance-event label present in 11 evidence windows",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates person detections (1-3, max confidence 0.6882-0.9106) with chair detections (5-9) from 29.867s to 38.267s. The model produced Arrest hypotheses in three windows (confidence 0.3581-0.4906) and a RoadAccidents hypothesis in one window (confidence 0.4991), with low-confidence generic actions.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f14",
+            "anomaly/Arrest/Arrest039_x264.mp4:f15",
+            "anomaly/Arrest/Arrest039_x264.mp4:f16",
+            "anomaly/Arrest/Arrest039_x264.mp4:f17"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "The evidence indicates 2 person detections (max confidence 0.9097) with 5 chair detections from 53.333s to 55.333s. The model produced an Arrest hypothesis (confidence 0.3735) with low-confidence high kick.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f25"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "The evidence indicates 3 person detections (max confidence 0.8994) with 12 chair detections from 64.0s to 66.0s. The model produced an Arrest hypothesis (confidence 0.4844) with low-confidence side kick.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f30"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "The evidence indicates 3 person detections (max confidence 0.7596) with 6 chair detections from 81.067s to 83.067s. The model produced an Arrest hypothesis (confidence 0.5051) with low-confidence headbutting.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f38"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "The evidence indicates 2 person detections (max confidence 0.8823) with 6 chair detections from 87.467s to 89.467s. The model produced an Arrest hypothesis (confidence 0.49) with low-confidence drop kicking.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f41"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "The evidence indicates person detections (2-3, max confidence 0.8588-0.8673) with chair detections (6-9) from 93.867s to 98.0s. The model produced Arrest hypotheses (confidence 0.4232-0.4638) with low-confidence side kick and unloading truck.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f44",
+            "anomaly/Arrest/Arrest039_x264.mp4:f45"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "same_incident: The evidence records belong to the same Phase 2D incident anomaly/Arrest/Arrest039_x264.mp4:i0 in the same video.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f14",
+            "anomaly/Arrest/Arrest039_x264.mp4:f15",
+            "anomaly/Arrest/Arrest039_x264.mp4:f16",
+            "anomaly/Arrest/Arrest039_x264.mp4:f17",
+            "anomaly/Arrest/Arrest039_x264.mp4:f25",
+            "anomaly/Arrest/Arrest039_x264.mp4:f30",
+            "anomaly/Arrest/Arrest039_x264.mp4:f38",
+            "anomaly/Arrest/Arrest039_x264.mp4:f41",
+            "anomaly/Arrest/Arrest039_x264.mp4:f44",
+            "anomaly/Arrest/Arrest039_x264.mp4:f45"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_008",
+          "claim_text": "persistent_event: The evidence indicates compatible Arrest hypotheses persist across adjacent windows from 29.867s to 34.0s; this suggests continued model output only, not confirmation.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f14",
+            "anomaly/Arrest/Arrest039_x264.mp4:f15"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_009",
+          "claim_text": "persistent_event: The evidence indicates compatible Arrest hypotheses persist across nearby windows from 93.867s to 98.0s; this suggests continued model output only, not confirmation.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f44",
+            "anomaly/Arrest/Arrest039_x264.mp4:f45"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_010",
+          "claim_text": "cross_source_support: The evidence indicates person and chair detections temporally overlap surveillance-event hypotheses within the same windows; this is source agreement only and does not confirm involvement or that a crime occurred.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f14",
+            "anomaly/Arrest/Arrest039_x264.mp4:f15",
+            "anomaly/Arrest/Arrest039_x264.mp4:f16",
+            "anomaly/Arrest/Arrest039_x264.mp4:f17",
+            "anomaly/Arrest/Arrest039_x264.mp4:f25",
+            "anomaly/Arrest/Arrest039_x264.mp4:f30",
+            "anomaly/Arrest/Arrest039_x264.mp4:f38",
+            "anomaly/Arrest/Arrest039_x264.mp4:f41",
+            "anomaly/Arrest/Arrest039_x264.mp4:f44",
+            "anomaly/Arrest/Arrest039_x264.mp4:f45"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_011",
+          "claim_text": "temporal_sequence: The evidence interval 36.267s-38.267s occurs before the evidence interval 53.333s-55.333s.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f17",
+            "anomaly/Arrest/Arrest039_x264.mp4:f25"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_012",
+          "claim_text": "The available evidence suggests repeated Arrest model hypotheses between 29.867s and 98.0s with persistent person and chair detections, which is consistent with ongoing monitored activity but does not confirm that an arrest occurred or who was involved.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f14",
+            "anomaly/Arrest/Arrest039_x264.mp4:f15",
+            "anomaly/Arrest/Arrest039_x264.mp4:f17",
+            "anomaly/Arrest/Arrest039_x264.mp4:f25",
+            "anomaly/Arrest/Arrest039_x264.mp4:f30",
+            "anomaly/Arrest/Arrest039_x264.mp4:f38",
+            "anomaly/Arrest/Arrest039_x264.mp4:f41",
+            "anomaly/Arrest/Arrest039_x264.mp4:f44",
+            "anomaly/Arrest/Arrest039_x264.mp4:f45"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_013",
+          "claim_text": "The available evidence suggests generic-action labels remain low-confidence and variable, providing limited support for characterizing behavior.",
+          "evidence_ids": [
+            "anomaly/Arrest/Arrest039_x264.mp4:f14",
+            "anomaly/Arrest/Arrest039_x264.mp4:f15",
+            "anomaly/Arrest/Arrest039_x264.mp4:f16",
+            "anomaly/Arrest/Arrest039_x264.mp4:f17",
+            "anomaly/Arrest/Arrest039_x264.mp4:f25",
+            "anomaly/Arrest/Arrest039_x264.mp4:f30",
+            "anomaly/Arrest/Arrest039_x264.mp4:f38",
+            "anomaly/Arrest/Arrest039_x264.mp4:f41",
+            "anomaly/Arrest/Arrest039_x264.mp4:f44",
+            "anomaly/Arrest/Arrest039_x264.mp4:f45"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I08",
+      "question": "Show Shoplifting evidence in anomaly/Shoplifting/Shoplifting044_x264.mp4 between 0 and 60 seconds.",
+      "pattern": "event",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "Shoplifting surveillance-event label present in 23 evidence windows",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "windows span 0.0s to 61.7s",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates 2 person detections in each window with Shoplifting model hypotheses at 0.72-0.93 confidence. One window includes 1 suitcase detection. Generic action hypotheses were low confidence. The evidence is consistent with co-location only and does not show involvement.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f7",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f8",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f10",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f11"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "The evidence indicates 1 to 3 person detections with Shoplifting model hypotheses at 0.86-0.93 confidence. One window includes 3 suitcase detections. Generic action hypotheses were low confidence. The evidence is consistent with co-location only.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f13",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f15",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f17"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "The evidence indicates 2 person detections in each window with Shoplifting model hypotheses at 0.96-0.98 confidence. Two windows include 1-2 suitcase detections. Generic action hypotheses were low confidence. The evidence is consistent with co-location only.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f20",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f21",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "same_incident: All ten evidence records belong to the same Phase 2D incident anomaly/Shoplifting/Shoplifting044_x264.mp4:i0 in the same video.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f7",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f8",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f10",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f11",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f13",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f15",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f17",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f20",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f21",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "persistent_event: Compatible Shoplifting model hypotheses with person detections persist across adjacent and nearby windows from about 14.9s to about 48.9s, consistent with a persistent model event only.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f7",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f8",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f10",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f11",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f13",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f15",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f17",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f20",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f21",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "temporal_sequence: The evidence window at 14.933s-16.933s occurs before the evidence window at 46.933s-48.933s.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f7",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "cross_source_support: Object detections of person and suitcase co-occur in the same windows as Shoplifting model hypotheses, indicating source agreement only and not confirmation, and not showing person involvement.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f8",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f15",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f21",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_008",
+          "claim_text": "The available evidence suggests persistent Shoplifting model hypotheses co-located with person detections between about 14.9s and 48.9s, but does not establish that any crime occurred or that any detected person was involved.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f7",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f8",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f10",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f11",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f13",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f15",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f17",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f20",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f21",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_009",
+          "claim_text": "The evidence indicates suitcase detections in some windows alongside person detections and Shoplifting hypotheses, which is consistent with co-location only and does not indicate use or involvement.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f8",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f15",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f21",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_010",
+          "claim_text": "The model produced only very low-confidence generic action labels, suggesting limited interpretive value from that source type for these windows.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f7",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f8",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f10",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f11",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f13",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f15",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f17",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f20",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f21",
+            "anomaly/Shoplifting/Shoplifting044_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I09",
+      "question": "Show Burglary evidence in anomaly/Burglary/Burglary033_x264.mp4.",
+      "pattern": "event",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "Burglary surveillance-event label present in 20 evidence windows",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates person detections (counts 2-3) co-occurring with Burglary model hypotheses (confidence 0.9655-0.9781) and low-confidence generic actions; overlap does not indicate involvement.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary033_x264.mp4:f0",
+            "anomaly/Burglary/Burglary033_x264.mp4:f2",
+            "anomaly/Burglary/Burglary033_x264.mp4:f4"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "The evidence indicates persistent Burglary model hypotheses (confidence 0.9756-0.9804) with no object detections and generic playing organ labels.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary033_x264.mp4:f8",
+            "anomaly/Burglary/Burglary033_x264.mp4:f9",
+            "anomaly/Burglary/Burglary033_x264.mp4:f10"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "The evidence indicates persistent Burglary model hypotheses (confidence 0.9768-0.9797) co-occurring with potted plant detections and generic playing organ labels.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary033_x264.mp4:f12",
+            "anomaly/Burglary/Burglary033_x264.mp4:f14",
+            "anomaly/Burglary/Burglary033_x264.mp4:f15",
+            "anomaly/Burglary/Burglary033_x264.mp4:f16"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "persistent_event: The evidence indicates compatible Burglary hypotheses persist across early windows 0.0s-10.533s.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary033_x264.mp4:f0",
+            "anomaly/Burglary/Burglary033_x264.mp4:f2",
+            "anomaly/Burglary/Burglary033_x264.mp4:f4"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "persistent_event: The evidence indicates compatible Burglary hypotheses persist across adjacent windows 17.067s-23.334s.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary033_x264.mp4:f8",
+            "anomaly/Burglary/Burglary033_x264.mp4:f9",
+            "anomaly/Burglary/Burglary033_x264.mp4:f10"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "persistent_event: The evidence indicates compatible Burglary hypotheses persist across nearby windows 25.6s-36.134s.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary033_x264.mp4:f12",
+            "anomaly/Burglary/Burglary033_x264.mp4:f14",
+            "anomaly/Burglary/Burglary033_x264.mp4:f15",
+            "anomaly/Burglary/Burglary033_x264.mp4:f16"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "cross_source_support: Person object detections and Burglary surveillance-event hypotheses overlap in time; source agreement only, never confirmation of involvement.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary033_x264.mp4:f0",
+            "anomaly/Burglary/Burglary033_x264.mp4:f2",
+            "anomaly/Burglary/Burglary033_x264.mp4:f4"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_008",
+          "claim_text": "same_incident: All cited evidence records belong to the same Phase 2D incident anomaly/Burglary/Burglary033_x264.mp4:i0.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary033_x264.mp4:f0",
+            "anomaly/Burglary/Burglary033_x264.mp4:f2",
+            "anomaly/Burglary/Burglary033_x264.mp4:f4",
+            "anomaly/Burglary/Burglary033_x264.mp4:f8",
+            "anomaly/Burglary/Burglary033_x264.mp4:f9",
+            "anomaly/Burglary/Burglary033_x264.mp4:f10",
+            "anomaly/Burglary/Burglary033_x264.mp4:f12",
+            "anomaly/Burglary/Burglary033_x264.mp4:f14",
+            "anomaly/Burglary/Burglary033_x264.mp4:f15",
+            "anomaly/Burglary/Burglary033_x264.mp4:f16"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_009",
+          "claim_text": "temporal_sequence: The early interval 0.0s-2.0s occurs before the late interval 34.134s-36.134s in the same video.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary033_x264.mp4:f0",
+            "anomaly/Burglary/Burglary033_x264.mp4:f16"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_010",
+          "claim_text": "The available evidence suggests the model produced recurring Burglary hypotheses across 0.0s-36.134s, which is consistent with a persistent model hypothesis but does not confirm that a burglary occurred.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary033_x264.mp4:f0",
+            "anomaly/Burglary/Burglary033_x264.mp4:f2",
+            "anomaly/Burglary/Burglary033_x264.mp4:f4",
+            "anomaly/Burglary/Burglary033_x264.mp4:f8",
+            "anomaly/Burglary/Burglary033_x264.mp4:f9",
+            "anomaly/Burglary/Burglary033_x264.mp4:f10",
+            "anomaly/Burglary/Burglary033_x264.mp4:f12",
+            "anomaly/Burglary/Burglary033_x264.mp4:f14",
+            "anomaly/Burglary/Burglary033_x264.mp4:f15",
+            "anomaly/Burglary/Burglary033_x264.mp4:f16"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_011",
+          "claim_text": "The evidence indicates person detections overlapping Burglary hypotheses in early windows; temporal overlap does not mean the detected persons were involved.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary033_x264.mp4:f0",
+            "anomaly/Burglary/Burglary033_x264.mp4:f2",
+            "anomaly/Burglary/Burglary033_x264.mp4:f4"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I10",
+      "question": "Reconstruct the event order in anomaly/Shooting/Shooting010_x264.mp4 between 36 and 42 seconds.",
+      "pattern": "temporal",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "annotated Shooting interval is 36.5s to 42.0s (frames 1095-1260 at 30 fps)",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "evidence windows f17, f18, f19 overlap the annotated interval",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The available evidence suggests a persistent RoadAccidents model hypothesis (confidences 0.9954 to 0.9527) from 34.133s to 42.533s with 4 cars in each window, trucks in each window (2,1,1,2), persons detected in 34.133s-40.4s (2,1,2 persons) and no person detection in 40.533s-42.533s, with varying low-confidence generic actions (driving car, pumping gas, pushing car).",
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f16",
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "persistent_event: The model-produced RoadAccidents hypothesis persists across adjacent windows from 34.133s to 42.533s with 4 cars detected in each window, consistent with a persistent event.",
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f16",
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "same_incident: All four records belong to the same Phase 2D incident anomaly/Shooting/Shooting010_x264.mp4:i0.",
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f16",
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "temporal_sequence: The f17 interval 36.267s-38.267s occurs before f18 38.4s-40.4s which occurs before f19 40.533s-42.533s, establishing order between 36 and 42 seconds.",
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "cross_source_support: Object detections of cars and trucks temporally coincide with RoadAccidents hypotheses in the same windows, indicating source agreement only and not confirmation.",
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f16",
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "The available evidence suggests the order between 36 and 42 seconds was f17 (36.267s-38.267s) then f18 (38.4s-40.4s) then f19 (40.533s-42.533s).",
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "The evidence indicates continued presence of 4 cars and 1-2 trucks across the period, with person detections in 34.133s-40.4s and no person detection in 40.533s-42.533s; person overlap with a RoadAccidents hypothesis does not mean the persons were involved.",
+          "evidence_ids": [
+            "anomaly/Shooting/Shooting010_x264.mp4:f16",
+            "anomaly/Shooting/Shooting010_x264.mp4:f17",
+            "anomaly/Shooting/Shooting010_x264.mp4:f18",
+            "anomaly/Shooting/Shooting010_x264.mp4:f19"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f17",
+          "b_evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "baseline_grade": "not yet human graded",
+          "full_grade": "not yet human graded"
+        },
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f18",
+          "b_evidence_id": "anomaly/Shooting/Shooting010_x264.mp4:f19",
+          "baseline_grade": "not yet human graded",
+          "full_grade": "not yet human graded"
+        }
+      ]
+    },
+    {
+      "query_id": "I11",
+      "question": "Reconstruct the event order in anomaly/Robbery/Robbery048_x264.mp4 between 14 and 32 seconds.",
+      "pattern": "temporal",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "annotated Robbery interval is 15.0s to 31.0s (frames 450-930 at 30 fps)",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "evidence windows f7 through f14 overlap the annotated interval",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates 2 person detections (max 0.7491) overlapping a RoadAccidents hypothesis (0.4036) and cleaning floor (0.0781).",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "The evidence indicates 3 person detections (max 0.8628) overlapping a Shooting hypothesis (0.3823) and eating chips (0.0682).",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f7"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "The evidence indicates persistent 1-person detections overlapping RoadAccidents hypotheses (0.4406 then 0.3065), with suitcase (0.4758) and toilet (0.768) detections and cleaning floor/eating chips at low confidence in the later window.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9"
+          ],
+          "mechanical_status": "partially_supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "The evidence indicates persistent Shooting hypotheses (0.4221, 0.4181, 0.4087) with cleaning floor at low confidence, while person detections change from 1 to 2 to 0 and a toilet detection appears in the first window.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f11",
+            "anomaly/Robbery/Robbery048_x264.mp4:f12"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "The evidence indicates persistent RoadAccidents hypotheses (0.4728 then 0.5184) overlapping 2 then 3 person detections and cleaning floor at low confidence.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f13",
+            "anomaly/Robbery/Robbery048_x264.mp4:f14"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "The evidence indicates 9 person detections (max 0.9125) overlapping a RoadAccidents hypothesis (0.4158) and slapping (0.0305) at the 32s boundary.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f15"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "same_incident: All cited windows belong to the same Phase 2D incident anomaly/Robbery/Robbery048_x264.mp4:i0 in the same video.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f6",
+            "anomaly/Robbery/Robbery048_x264.mp4:f7",
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f11",
+            "anomaly/Robbery/Robbery048_x264.mp4:f12",
+            "anomaly/Robbery/Robbery048_x264.mp4:f13",
+            "anomaly/Robbery/Robbery048_x264.mp4:f14",
+            "anomaly/Robbery/Robbery048_x264.mp4:f15"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_008",
+          "claim_text": "temporal_sequence: The interval for f7 occurs before f8-f9, which occur before f10-f12, which occur before f13-f14, which occur before f15.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f7",
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f11",
+            "anomaly/Robbery/Robbery048_x264.mp4:f12",
+            "anomaly/Robbery/Robbery048_x264.mp4:f13",
+            "anomaly/Robbery/Robbery048_x264.mp4:f14",
+            "anomaly/Robbery/Robbery048_x264.mp4:f15"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_009",
+          "claim_text": "persistent_event: Compatible RoadAccidents hypotheses persist across adjacent windows f8 to f9.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_010",
+          "claim_text": "persistent_event: Compatible Shooting hypotheses persist across adjacent windows f10 to f12.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f11",
+            "anomaly/Robbery/Robbery048_x264.mp4:f12"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_011",
+          "claim_text": "persistent_event: Compatible RoadAccidents hypotheses persist across adjacent windows f13 to f14.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f13",
+            "anomaly/Robbery/Robbery048_x264.mp4:f14"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_012",
+          "claim_text": "cross_source_support: Person detections from the object source temporally overlap Shooting hypotheses from the surveillance_event source in the same windows; this indicates source co-occurrence only and does not confirm involvement or a crime.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f11"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_013",
+          "claim_text": "The available evidence suggests the model-produced order between ~14.9s and ~31.9s was: Shooting hypothesis with 3 persons, then RoadAccidents hypothesis with 1 person, then Shooting hypothesis with 1 to 2 to 0 persons, then RoadAccidents hypothesis with 2 to 3 persons.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f7",
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f11",
+            "anomaly/Robbery/Robbery048_x264.mp4:f12",
+            "anomaly/Robbery/Robbery048_x264.mp4:f13",
+            "anomaly/Robbery/Robbery048_x264.mp4:f14"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_014",
+          "claim_text": "The evidence indicates an increase from 3 person detections to 9 person detections at ~32s overlapping a continued RoadAccidents hypothesis, which is consistent with a change in scene density but insufficient to determine cause or roles.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f14",
+            "anomaly/Robbery/Robbery048_x264.mp4:f15"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f7",
+          "b_evidence_id": "anomaly/Robbery/Robbery048_x264.mp4:f14",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported"
+        }
+      ]
+    },
+    {
+      "query_id": "I12",
+      "question": "Reconstruct the event order in anomaly/Explosion/Explosion036_x264.mp4 between 65 and 69 seconds.",
+      "pattern": "temporal",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "annotated Explosion interval is 65.0s to 69.0s (frames 1950-2070 at 30 fps)",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "3 evidence windows overlap the annotated interval",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates persistent surveillance-event hypotheses labeled Explosion across three adjacent windows from 64.0s to 70.267s, covering the queried 65-69s interval. The earliest window includes an object detection of 22 persons and a low-confidence generic-action label of extinguishing fire, followed by extinguishing fire at low confidence and then spraying at low confidence.",
+          "evidence_ids": [
+            "anomaly/Explosion/Explosion036_x264.mp4:f30",
+            "anomaly/Explosion/Explosion036_x264.mp4:f31",
+            "anomaly/Explosion/Explosion036_x264.mp4:f32"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "persistent_event: Compatible surveillance-event hypotheses labeled Explosion persist across three adjacent windows from 64.0s to 70.267s.",
+          "evidence_ids": [
+            "anomaly/Explosion/Explosion036_x264.mp4:f30",
+            "anomaly/Explosion/Explosion036_x264.mp4:f31",
+            "anomaly/Explosion/Explosion036_x264.mp4:f32"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "temporal_sequence: Evidence window 64.0-66.0s occurs before 66.133-68.133s, which occurs before 68.267-70.267s, providing order for the queried 65-69s interval.",
+          "evidence_ids": [
+            "anomaly/Explosion/Explosion036_x264.mp4:f30",
+            "anomaly/Explosion/Explosion036_x264.mp4:f31",
+            "anomaly/Explosion/Explosion036_x264.mp4:f32"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "same_incident: All three evidence records belong to the same Phase 2D incident anomaly/Explosion/Explosion036_x264.mp4:i0.",
+          "evidence_ids": [
+            "anomaly/Explosion/Explosion036_x264.mp4:f30",
+            "anomaly/Explosion/Explosion036_x264.mp4:f31",
+            "anomaly/Explosion/Explosion036_x264.mp4:f32"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "cross_source_support: Object source in the earliest window overlaps temporally with surveillance-event and generic-action sources across the interval, indicating source co-occurrence only and not confirmation of involvement.",
+          "evidence_ids": [
+            "anomaly/Explosion/Explosion036_x264.mp4:f30",
+            "anomaly/Explosion/Explosion036_x264.mp4:f31",
+            "anomaly/Explosion/Explosion036_x264.mp4:f32"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "The available evidence suggests the queried 65-69s interval falls within a persistent period of Explosion hypotheses spanning 64.0-70.267s, with person detections limited to the earliest portion and not indicating involvement in the hypothesized event.",
+          "evidence_ids": [
+            "anomaly/Explosion/Explosion036_x264.mp4:f30",
+            "anomaly/Explosion/Explosion036_x264.mp4:f31",
+            "anomaly/Explosion/Explosion036_x264.mp4:f32"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "The model produced low-confidence generic-action labels of extinguishing fire followed by spraying, which is consistent with fire-related activity but the low confidence values preclude firm interpretation beyond window sequence.",
+          "evidence_ids": [
+            "anomaly/Explosion/Explosion036_x264.mp4:f30",
+            "anomaly/Explosion/Explosion036_x264.mp4:f31",
+            "anomaly/Explosion/Explosion036_x264.mp4:f32"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Explosion/Explosion036_x264.mp4:f30",
+          "b_evidence_id": "anomaly/Explosion/Explosion036_x264.mp4:f32",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported"
+        }
+      ]
+    },
+    {
+      "query_id": "I13",
+      "question": "Describe the Burglary to Shoplifting transition in anomaly/Shoplifting/Shoplifting034_x264.mp4 around 27 seconds.",
+      "pattern": "sequence",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "window f12 carries the Burglary surveillance-event label",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "window f13 carries the Shoplifting surveillance-event label",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates person detections with model-produced Burglary hypotheses and garbage collecting action hypotheses in this segment.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f11",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f12"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "The evidence indicates person detections with model-produced Shoplifting hypotheses and garbage collecting action hypotheses in this segment.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f13",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f14"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "same_incident: All four records belong to the same Phase 2D incident anomaly/Shoplifting/Shoplifting034_x264.mp4:i0.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f11",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f12",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f13",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f14"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "temporal_sequence: The Burglary-hypothesis evidence occurs before the Shoplifting-hypothesis evidence.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f12",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f13"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "persistent_event: Compatible Burglary hypotheses persist across adjacent windows.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f11",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f12"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "persistent_event: Compatible Shoplifting hypotheses persist across adjacent windows.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f13",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f14"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "cross_source_support: Person object detections overlap in time with Burglary and Shoplifting hypotheses from a different source type, indicating source co-occurrence only.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f11",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f12",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f13",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f14"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_008",
+          "claim_text": "The available evidence suggests a transition in model hypotheses from Burglary to Shoplifting between the earlier and later intervals.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f12",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f13"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_009",
+          "claim_text": "The evidence is consistent with continued person detections across the transition, but does not indicate roles or involvement.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f11",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f12",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f13",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f14"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f12",
+          "b_evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f13",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported"
+        }
+      ]
+    },
+    {
+      "query_id": "I14",
+      "question": "Describe the Shoplifting to Burglary transition in anomaly/Shoplifting/Shoplifting034_x264.mp4 around 166 seconds.",
+      "pattern": "sequence",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "window f77 carries the Shoplifting surveillance-event label",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "window f78 carries the Burglary surveillance-event label",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates model-produced Shoplifting hypotheses (confidence 0.9701 and 0.9039) with generic action labeled garbage collecting and object detections including suitcase in both windows and 2 persons in the earlier window.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "The evidence indicates a model-produced Burglary hypothesis (confidence 0.6797) with generic action labeled garbage collecting (confidence 0.8296) and 3 person detections (max confidence 0.872).",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "persistent_event: Compatible Shoplifting hypotheses persist across adjacent windows from 162.133s-164.133s to 164.267s-166.267s with co-occurring suitcase detections and garbage collecting labels.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "temporal_sequence: The Shoplifting hypothesis window ending at 166.267s occurs before the Burglary hypothesis window starting at 166.4s.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "same_incident: All three evidence records belong to the same Phase 2D incident anomaly/Shoplifting/Shoplifting034_x264.mp4:i0.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "cross_source_support: Object detections for person and suitcase co-occur in the same windows as surveillance-event hypotheses and generic-action labels, indicating source co-occurrence only and not confirmation of involvement.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "The available evidence suggests a change in model output from Shoplifting hypotheses before 166.267s to a Burglary hypothesis starting at 166.4s, consistent with a transition in hypotheses around 166 seconds, without establishing that crimes occurred or that detected persons were involved.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_008",
+          "claim_text": "The evidence is consistent with persistent activity labeled as garbage collecting across the interval with confidence increasing from 0.3742 to 0.8296, but model agreement does not confirm the nature of the activity.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f76",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f77",
+          "b_evidence_id": "anomaly/Shoplifting/Shoplifting034_x264.mp4:f78",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported"
+        }
+      ]
+    },
+    {
+      "query_id": "I15",
+      "question": "Describe the Vandalism to Assault transition in anomaly/Assault/Assault010_x264.mp4 around 60 to 76 seconds.",
+      "pattern": "sequence",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "window f29 carries the Vandalism surveillance-event label",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "window f35 carries the Assault surveillance-event label",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates the model produced an Assault hypothesis with confidence 0.4572, with 2 person detections, 2 suitcase detections, and generic action sweeping floor.",
+          "evidence_ids": [
+            "anomaly/Assault/Assault010_x264.mp4:f28"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "The evidence indicates the model produced persistent Vandalism hypotheses with confidences 0.4952, 0.5445, 0.4054, 0.3645, and 0.5753, with generic action bookbinding throughout and person and suitcase detections only in the earlier part of the segment.",
+          "evidence_ids": [
+            "anomaly/Assault/Assault010_x264.mp4:f29",
+            "anomaly/Assault/Assault010_x264.mp4:f30",
+            "anomaly/Assault/Assault010_x264.mp4:f31",
+            "anomaly/Assault/Assault010_x264.mp4:f32",
+            "anomaly/Assault/Assault010_x264.mp4:f33"
+          ],
+          "mechanical_status": "partially_supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "The evidence indicates the model produced a RoadAccidents hypothesis with confidence 0.426 and generic action bookbinding, with no object detections reported.",
+          "evidence_ids": [
+            "anomaly/Assault/Assault010_x264.mp4:f34"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "The evidence indicates the model produced an Assault hypothesis with confidence 0.376 and generic action unloading truck, with no object detections reported.",
+          "evidence_ids": [
+            "anomaly/Assault/Assault010_x264.mp4:f35"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "persistent_event: The evidence indicates compatible Vandalism hypotheses persist across adjacent windows from 61.867s to 72.4s.",
+          "evidence_ids": [
+            "anomaly/Assault/Assault010_x264.mp4:f29",
+            "anomaly/Assault/Assault010_x264.mp4:f30",
+            "anomaly/Assault/Assault010_x264.mp4:f31",
+            "anomaly/Assault/Assault010_x264.mp4:f32",
+            "anomaly/Assault/Assault010_x264.mp4:f33"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "temporal_sequence: The evidence indicates an Assault hypothesis window precedes the persistent Vandalism segment, which precedes RoadAccidents and later Assault hypothesis windows in the same video.",
+          "evidence_ids": [
+            "anomaly/Assault/Assault010_x264.mp4:f28",
+            "anomaly/Assault/Assault010_x264.mp4:f29",
+            "anomaly/Assault/Assault010_x264.mp4:f33",
+            "anomaly/Assault/Assault010_x264.mp4:f34",
+            "anomaly/Assault/Assault010_x264.mp4:f35"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "same_incident: The evidence records belong to the same Phase 2D incident anomaly/Assault/Assault010_x264.mp4:i0.",
+          "evidence_ids": [
+            "anomaly/Assault/Assault010_x264.mp4:f28",
+            "anomaly/Assault/Assault010_x264.mp4:f29",
+            "anomaly/Assault/Assault010_x264.mp4:f30",
+            "anomaly/Assault/Assault010_x264.mp4:f31",
+            "anomaly/Assault/Assault010_x264.mp4:f32",
+            "anomaly/Assault/Assault010_x264.mp4:f33",
+            "anomaly/Assault/Assault010_x264.mp4:f34",
+            "anomaly/Assault/Assault010_x264.mp4:f35"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_008",
+          "claim_text": "cross_source_support: The evidence indicates object detections temporally overlap surveillance-event hypotheses and generic-action labels within the same windows, representing source agreement only and not confirmation.",
+          "evidence_ids": [
+            "anomaly/Assault/Assault010_x264.mp4:f28",
+            "anomaly/Assault/Assault010_x264.mp4:f29",
+            "anomaly/Assault/Assault010_x264.mp4:f30",
+            "anomaly/Assault/Assault010_x264.mp4:f32"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_009",
+          "claim_text": "The available evidence suggests a hypothesis sequence around 60-76s from Assault to persistent Vandalism to RoadAccidents to Assault, but the model produced hypotheses only and the evidence is insufficient to confirm that vandalism or assault occurred.",
+          "evidence_ids": [
+            "anomaly/Assault/Assault010_x264.mp4:f28",
+            "anomaly/Assault/Assault010_x264.mp4:f29",
+            "anomaly/Assault/Assault010_x264.mp4:f30",
+            "anomaly/Assault/Assault010_x264.mp4:f31",
+            "anomaly/Assault/Assault010_x264.mp4:f32",
+            "anomaly/Assault/Assault010_x264.mp4:f33",
+            "anomaly/Assault/Assault010_x264.mp4:f34",
+            "anomaly/Assault/Assault010_x264.mp4:f35"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_010",
+          "claim_text": "The evidence indicates person detections temporally overlapped early Assault and Vandalism hypotheses, which does not mean the detected persons were involved in the hypothesized events.",
+          "evidence_ids": [
+            "anomaly/Assault/Assault010_x264.mp4:f28",
+            "anomaly/Assault/Assault010_x264.mp4:f29"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": [
+        {
+          "relation": "before",
+          "a_evidence_id": "anomaly/Assault/Assault010_x264.mp4:f29",
+          "b_evidence_id": "anomaly/Assault/Assault010_x264.mp4:f35",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported"
+        }
+      ]
+    },
+    {
+      "query_id": "I16",
+      "question": "Show evidence around 100 seconds in anomaly/Burglary/Burglary032_x264.mp4.",
+      "pattern": "contextual",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "10 evidence windows overlap the 90s to 110s interval",
+          "baseline_grade": "Supported",
+          "full_grade": "Partial",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I17",
+      "question": "Show evidence between 400 and 440 seconds in anomaly/Explosion/Explosion007_x264.mp4.",
+      "pattern": "contextual",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "20 evidence windows overlap the 400s to 440s interval",
+          "baseline_grade": "Unsupported",
+          "full_grade": "Unsupported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I18",
+      "question": "Show evidence between 200 and 220 seconds in anomaly/Assault/Assault010_x264.mp4.",
+      "pattern": "contextual",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "11 evidence windows overlap the 200s to 220s interval",
+          "baseline_grade": "Unsupported",
+          "full_grade": "Partial",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I19",
+      "question": "Show person detections with RoadAccidents evidence in anomaly/RoadAccidents/RoadAccidents001_x264.mp4.",
+      "pattern": "multi-source",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "a single window f6 carries both a person detection and the RoadAccidents label",
+          "baseline_grade": "Partial",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "window f6 spans 12.8s to 14.8s",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates the models produced RoadAccidents hypotheses overlapping with driving car hypotheses in 6.4-10.533s, with no person or other object detections reported.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f3",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "The evidence indicates persistent RoadAccidents hypotheses overlapping driving car and one motorcycling hypothesis in 12.8-23.333s; a person detection (count 1) and backpack detection (count 1) were reported only in the 12.8-14.8s portion.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f7",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f8",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f9",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f10"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "The evidence indicates persistent RoadAccidents hypotheses overlapping driving car hypotheses in 25.6-34.0s, with no person or other object detections reported.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f12",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f14",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f15"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "same_incident: All ten windows belong to the same Phase 2D incident anomaly/RoadAccidents/RoadAccidents001_x264.mp4:i0.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f3",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f7",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f8",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f9",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f10",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f12",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f14",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f15"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "persistent_event: Compatible RoadAccidents model hypotheses persist across adjacent windows 6.4-10.533.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f3",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "persistent_event: Compatible RoadAccidents model hypotheses persist across adjacent windows 12.8-23.333 with overlapping driving car and motorcycling hypotheses.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f7",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f8",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f9",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f10"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "persistent_event: Compatible RoadAccidents model hypotheses persist across nearby windows 25.6-34.0 with overlapping driving car hypotheses.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f12",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f14",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f15"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_008",
+          "claim_text": "cross_source_support: In 12.8-14.8, person and backpack object detections overlap in time with RoadAccidents and driving car hypotheses from different source types, indicating temporal co-occurrence only.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_009",
+          "claim_text": "temporal_sequence: Window 8.533-10.533 occurs before window 12.8-14.8.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_010",
+          "claim_text": "The available evidence suggests persistent vehicle-related model hypotheses consistent with the RoadAccidents label across 6.4-34.0s, but the evidence is insufficient to confirm that a road accident occurred.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f3",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f4",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f7",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f8",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f9",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f10",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f12",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f14",
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f15"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_011",
+          "claim_text": "The available evidence suggests a person detection occurred only in 12.8-14.8s overlapping a RoadAccidents hypothesis; temporal overlap does not indicate the detected person was involved.",
+          "evidence_ids": [
+            "anomaly/RoadAccidents/RoadAccidents001_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I20",
+      "question": "Show person detections with Burglary evidence in anomaly/Burglary/Burglary032_x264.mp4 between 27 and 49 seconds.",
+      "pattern": "multi-source",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "9 evidence windows carry both a person detection and the Burglary label",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates the surveillance-event model produced Burglary hypotheses across 27.733s to 48.933s, with object-model person detections overlapping in 9 windows with counts of 1 to 3 and one window with no person detection; generic-action labels varied at low to moderate confidence.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f13",
+            "anomaly/Burglary/Burglary032_x264.mp4:f14",
+            "anomaly/Burglary/Burglary032_x264.mp4:f15",
+            "anomaly/Burglary/Burglary032_x264.mp4:f16",
+            "anomaly/Burglary/Burglary032_x264.mp4:f17",
+            "anomaly/Burglary/Burglary032_x264.mp4:f18",
+            "anomaly/Burglary/Burglary032_x264.mp4:f19",
+            "anomaly/Burglary/Burglary032_x264.mp4:f20",
+            "anomaly/Burglary/Burglary032_x264.mp4:f21",
+            "anomaly/Burglary/Burglary032_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "persistent_event: The evidence indicates compatible Burglary-model hypotheses persisted across adjacent windows from 27.733s to 48.933s.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f13",
+            "anomaly/Burglary/Burglary032_x264.mp4:f14",
+            "anomaly/Burglary/Burglary032_x264.mp4:f15",
+            "anomaly/Burglary/Burglary032_x264.mp4:f16",
+            "anomaly/Burglary/Burglary032_x264.mp4:f17",
+            "anomaly/Burglary/Burglary032_x264.mp4:f18",
+            "anomaly/Burglary/Burglary032_x264.mp4:f19",
+            "anomaly/Burglary/Burglary032_x264.mp4:f20",
+            "anomaly/Burglary/Burglary032_x264.mp4:f21",
+            "anomaly/Burglary/Burglary032_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "same_incident: The evidence indicates all listed windows belong to the same Phase 2D incident anomaly/Burglary/Burglary032_x264.mp4:i0.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f13",
+            "anomaly/Burglary/Burglary032_x264.mp4:f14",
+            "anomaly/Burglary/Burglary032_x264.mp4:f15",
+            "anomaly/Burglary/Burglary032_x264.mp4:f16",
+            "anomaly/Burglary/Burglary032_x264.mp4:f17",
+            "anomaly/Burglary/Burglary032_x264.mp4:f18",
+            "anomaly/Burglary/Burglary032_x264.mp4:f19",
+            "anomaly/Burglary/Burglary032_x264.mp4:f20",
+            "anomaly/Burglary/Burglary032_x264.mp4:f21",
+            "anomaly/Burglary/Burglary032_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "cross_source_support: The evidence indicates object-source person detections temporally overlapped surveillance-event Burglary hypotheses in the same windows; this is source agreement only and does not confirm involvement.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f13",
+            "anomaly/Burglary/Burglary032_x264.mp4:f15",
+            "anomaly/Burglary/Burglary032_x264.mp4:f16",
+            "anomaly/Burglary/Burglary032_x264.mp4:f17",
+            "anomaly/Burglary/Burglary032_x264.mp4:f18",
+            "anomaly/Burglary/Burglary032_x264.mp4:f19",
+            "anomaly/Burglary/Burglary032_x264.mp4:f20",
+            "anomaly/Burglary/Burglary032_x264.mp4:f21",
+            "anomaly/Burglary/Burglary032_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "The available evidence suggests persistent Burglary-model activity from 27.733s to 48.933s with frequent person-detection overlap, but the evidence is consistent with co-occurrence only and does not establish that any detected person was involved.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f13",
+            "anomaly/Burglary/Burglary032_x264.mp4:f14",
+            "anomaly/Burglary/Burglary032_x264.mp4:f15",
+            "anomaly/Burglary/Burglary032_x264.mp4:f16",
+            "anomaly/Burglary/Burglary032_x264.mp4:f17",
+            "anomaly/Burglary/Burglary032_x264.mp4:f18",
+            "anomaly/Burglary/Burglary032_x264.mp4:f19",
+            "anomaly/Burglary/Burglary032_x264.mp4:f20",
+            "anomaly/Burglary/Burglary032_x264.mp4:f21",
+            "anomaly/Burglary/Burglary032_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "The evidence indicates the model produced a Burglary hypothesis during 29.867s to 31.867s without a person detection, suggesting person presence was not continuous across the segment.",
+          "evidence_ids": [
+            "anomaly/Burglary/Burglary032_x264.mp4:f14"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I21",
+      "question": "Show suitcase detections with Shoplifting evidence in anomaly/Shoplifting/Shoplifting034_x264.mp4 between 36 and 60 seconds.",
+      "pattern": "multi-source",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "4 evidence windows carry both a suitcase detection and the Shoplifting label",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates person detections with garbage collecting hypotheses persisting from 34.133s to 42.533s. The models produced Shoplifting hypotheses in the first two windows and Burglary hypotheses in the later two, with suitcase detections in the windows starting at 36.267s, 38.4s and 40.533s.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f16",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f17",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f18",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f19"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "The evidence indicates a suitcase detection with garbage collecting and Burglary model hypotheses from 46.933s to 48.933s, with no person detection reported.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f22"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "The evidence indicates suitcase detections with Shoplifting and garbage collecting model hypotheses persisting from 49.067s to 53.2s, with person detection in the first window.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f23",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f24"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "The evidence indicates Shoplifting and garbage collecting hypotheses with 4-person detections persisting from 55.467s to 61.733s, with suitcase detection only in the window starting at 55.467s.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f26",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f27",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f28"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "cross_source_support: The available evidence suggests suitcase object detections temporally overlap Shoplifting model hypotheses in these windows between ~36s and ~57s; this is source agreement only and does not confirm an event or involvement.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f17",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f23",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f24",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f26"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "persistent_event: Compatible Shoplifting hypotheses with suitcase detections and garbage collecting hypotheses persist across adjacent windows from 49.067s to 53.2s.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f23",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f24"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "persistent_event: Compatible Shoplifting hypotheses with person detections persist across adjacent windows from 55.467s to 61.733s, with suitcase detection only in the first window.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f26",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f27",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f28"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_008",
+          "claim_text": "temporal_sequence: The window at 36.267s-38.267s occurs before the windows at 49.067s-53.2s and 55.467s-57.467s in the same video.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f17",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f23",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f24",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f26"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_009",
+          "claim_text": "The available evidence suggests suitcase detections with co-occurring Shoplifting model hypotheses between 36 and 60 seconds are indicated in these four windows.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f17",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f23",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f24",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f26"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_010",
+          "claim_text": "The evidence indicates other supplied windows do not meet both criteria: suitcase with Burglary hypothesis, or Shoplifting hypothesis without suitcase detection.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f16",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f18",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f19",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f22",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f27",
+            "anomaly/Shoplifting/Shoplifting034_x264.mp4:f28"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I22",
+      "question": "Summarize the incident in anomaly/Robbery/Robbery048_x264.mp4.",
+      "pattern": "incident",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "23 evidence windows span 0.0s to 46.9s",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "annotated Robbery interval is 15.0s to 31.0s",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F03",
+          "fact_text": "windows f7 through f14 overlap the annotated interval",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates 1 person detection (max confidence 0.6548) co-occurring with a low-confidence generic-action hypothesis of sweeping floor (0.0669) and a surveillance-event hypothesis of Shooting (0.3359). The evidence is consistent with model outputs only and does not confirm any crime or involvement of the detected person.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f2"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "The evidence indicates persistent person detections across adjacent windows (2, 3, 1, 1, 1 persons, max confidences 0.6819-0.8628) with suitcase and toilet objects in later windows. The model produced generic-action hypotheses of cleaning floor and eating chips at very low to low confidence (0.0356-0.1873) and alternating surveillance-event hypotheses of RoadAccidents (0.3065-0.4406) and Shooting (0.3823-0.4221). The evidence is consistent with continued presence but does not confirm any crime or link detections to hypotheses.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f6",
+            "anomaly/Robbery/Robbery048_x264.mp4:f7",
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "The evidence indicates persistent person detections across adjacent windows (9, 5, 4, 3 persons, max confidences 0.9007-0.9194). The model produced generic-action hypotheses of slapping, cleaning floor, tai chi and counting money at very low confidence (0.0305-0.1049) and surveillance-event hypotheses of RoadAccidents (0.2554-0.4295) and Shooting (0.4559). The evidence is consistent with continued presence but does not confirm any crime or involvement of detected persons.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f15",
+            "anomaly/Robbery/Robbery048_x264.mp4:f16",
+            "anomaly/Robbery/Robbery048_x264.mp4:f17",
+            "anomaly/Robbery/Robbery048_x264.mp4:f18"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "same_incident: The evidence indicates all cited records are assigned to the same Phase 2D incident anomaly/Robbery/Robbery048_x264.mp4:i0 in the same video.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f2",
+            "anomaly/Robbery/Robbery048_x264.mp4:f6",
+            "anomaly/Robbery/Robbery048_x264.mp4:f7",
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f15",
+            "anomaly/Robbery/Robbery048_x264.mp4:f16",
+            "anomaly/Robbery/Robbery048_x264.mp4:f17",
+            "anomaly/Robbery/Robbery048_x264.mp4:f18"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "persistent_event: The evidence indicates person detections persist across adjacent windows from 12.8s to 23.333s with recurring surveillance-event hypotheses, consistent with continued presence rather than isolated detections.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f6",
+            "anomaly/Robbery/Robbery048_x264.mp4:f7",
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_006",
+          "claim_text": "persistent_event: The evidence indicates person detections persist across adjacent windows from 32.0s to 40.4s with recurring RoadAccidents hypotheses and one Shooting hypothesis, consistent with continued presence.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f15",
+            "anomaly/Robbery/Robbery048_x264.mp4:f16",
+            "anomaly/Robbery/Robbery048_x264.mp4:f17",
+            "anomaly/Robbery/Robbery048_x264.mp4:f18"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_007",
+          "claim_text": "temporal_sequence: The available evidence suggests the f2 interval (4.267-6.267s) occurs before the mid-interval ending with f10 (21.333-23.333s), which occurs before the late-interval starting with f15 (32.0-34.0s).",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f2",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f15"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_008",
+          "claim_text": "cross_source_support: The evidence indicates object-source person detections temporally co-occur with different-source surveillance-event hypotheses in the same windows; this is source co-occurrence only and does not confirm involvement or a crime.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f15",
+            "anomaly/Robbery/Robbery048_x264.mp4:f16",
+            "anomaly/Robbery/Robbery048_x264.mp4:f17",
+            "anomaly/Robbery/Robbery048_x264.mp4:f18"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_009",
+          "claim_text": "The available evidence suggests two main periods of persistent person presence from 12.8s to 23.333s and from 32.0s to 40.4s, separated by a gap with no supplied evidence.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f6",
+            "anomaly/Robbery/Robbery048_x264.mp4:f7",
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f15",
+            "anomaly/Robbery/Robbery048_x264.mp4:f16",
+            "anomaly/Robbery/Robbery048_x264.mp4:f17",
+            "anomaly/Robbery/Robbery048_x264.mp4:f18"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_010",
+          "claim_text": "The model produced alternating RoadAccidents (0.2554-0.4406) and Shooting (0.3359-0.4559) hypotheses at modest confidences; the evidence is consistent with unstable hypotheses rather than confirmation of any crime.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f2",
+            "anomaly/Robbery/Robbery048_x264.mp4:f6",
+            "anomaly/Robbery/Robbery048_x264.mp4:f7",
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f15",
+            "anomaly/Robbery/Robbery048_x264.mp4:f16",
+            "anomaly/Robbery/Robbery048_x264.mp4:f17",
+            "anomaly/Robbery/Robbery048_x264.mp4:f18"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_011",
+          "claim_text": "The available evidence suggests generic-action labels vary and remain at very low to low confidence (0.0305-0.1873), which limits reliable interpretation of activities.",
+          "evidence_ids": [
+            "anomaly/Robbery/Robbery048_x264.mp4:f2",
+            "anomaly/Robbery/Robbery048_x264.mp4:f6",
+            "anomaly/Robbery/Robbery048_x264.mp4:f7",
+            "anomaly/Robbery/Robbery048_x264.mp4:f8",
+            "anomaly/Robbery/Robbery048_x264.mp4:f9",
+            "anomaly/Robbery/Robbery048_x264.mp4:f10",
+            "anomaly/Robbery/Robbery048_x264.mp4:f15",
+            "anomaly/Robbery/Robbery048_x264.mp4:f16",
+            "anomaly/Robbery/Robbery048_x264.mp4:f17",
+            "anomaly/Robbery/Robbery048_x264.mp4:f18"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I23",
+      "question": "Summarize the incident in anomaly/RoadAccidents/RoadAccidents002_x264.mp4.",
+      "pattern": "incident",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "6 evidence windows span 0.0s to 11.5s",
+          "baseline_grade": "Unsupported",
+          "full_grade": "Partial",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I24",
+      "question": "Summarize the incident in anomaly/Shoplifting/Shoplifting031_x264.mp4.",
+      "pattern": "incident",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "7 evidence windows span 0.0s to 14.8s",
+          "baseline_grade": "Supported",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [
+        {
+          "claim_id": "claim_001",
+          "claim_text": "The evidence indicates person detections (counts 1 to 3) temporally overlapped with Shoplifting surveillance-event hypotheses (confidence 0.9908-0.9988) and low-confidence 'garbage collecting' generic-action labels from 0.0s to 14.8s; the model produced these hypotheses and the evidence does not establish involvement.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f0",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f1",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f2",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f3",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f4",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f5",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_002",
+          "claim_text": "same_incident: The evidence indicates all seven records belong to the same Phase 2D incident anomaly/Shoplifting/Shoplifting031_x264.mp4:i0.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f0",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f1",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f2",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f3",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f4",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f5",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_003",
+          "claim_text": "persistent_event: The available evidence suggests compatible Shoplifting hypotheses persisted across adjacent windows from 0.0s to 14.8s.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f0",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f1",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f2",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f3",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f4",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f5",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_004",
+          "claim_text": "cross_source_support: The evidence indicates person object detections and Shoplifting surveillance-event hypotheses co-occurred in the same windows; this is source agreement only and does not confirm involvement.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f0",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f1",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f2",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f3",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f4",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f5",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        },
+        {
+          "claim_id": "claim_005",
+          "claim_text": "The available evidence is consistent with a persistent Shoplifting hypothesis coinciding with person presence throughout the segment, but low generic-action confidence provides limited context for determining activity or involvement.",
+          "evidence_ids": [
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f0",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f1",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f2",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f3",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f4",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f5",
+            "anomaly/Shoplifting/Shoplifting031_x264.mp4:f6"
+          ],
+          "mechanical_status": "supported",
+          "human_support_grade": "Supported",
+          "human_notes": ""
+        }
+      ],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I25",
+      "question": "Describe activity in normal/Normal_Videos_247_x264.mp4 between 100 and 150 seconds without confirming any crime.",
+      "pattern": "cautious",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "25 evidence windows overlap the interval",
+          "baseline_grade": "Partial",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "video carries no annotated anomaly interval",
+          "baseline_grade": "Partial",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I26",
+      "question": "Describe activity in normal/Normal_Videos_310_x264.mp4 without confirming any crime.",
+      "pattern": "cautious",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "40 evidence windows in total",
+          "baseline_grade": "Partial",
+          "full_grade": "Partial",
+          "grader_notes": ""
+        },
+        {
+          "fact_id": "F02",
+          "fact_text": "video carries no annotated anomaly interval",
+          "baseline_grade": "Partial",
+          "full_grade": "Partial",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I27",
+      "question": "Describe activity in normal/Normal_Videos_289_x264.mp4 between 5 and 10 seconds without confirming any crime.",
+      "pattern": "cautious",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "video carries no annotated anomaly interval",
+          "baseline_grade": "Partial",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I28",
+      "question": "Show evidence in anomaly/RoadAccidents/RoadAccidents021_x264.mp4.",
+      "pattern": "sparse",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "only 3 evidence windows exist in total",
+          "baseline_grade": "Partial",
+          "full_grade": "Partial",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I29",
+      "question": "Show evidence in anomaly/Shooting/Shooting037_x264.mp4.",
+      "pattern": "sparse",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "only 5 evidence windows exist in total",
+          "baseline_grade": "Supported",
+          "full_grade": "Unsupported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    },
+    {
+      "query_id": "I30",
+      "question": "Show truck detections in anomaly/Arson/Arson009_x264.mp4.",
+      "pattern": "no-evidence",
+      "fact_grades": [
+        {
+          "fact_id": "F01",
+          "fact_text": "no evidence window carries a truck detection",
+          "baseline_grade": "Partial",
+          "full_grade": "Supported",
+          "grader_notes": ""
+        }
+      ],
+      "claim_grades": [],
+      "temporal_grades": []
+    }
+  ],
+  "summary": {
+    "baseline": {
+      "supported": 28,
+      "partial": 10,
+      "unsupported": 8,
+      "total": 46
+    },
+    "full": {
+      "supported": 34,
+      "partial": 8,
+      "unsupported": 4,
+      "total": 46
+    },
+    "claims": {
+      "supported": 155,
+      "partial": 3,
+      "unsupported": 0,
+      "total": 158
+    },
+    "temporal_graded": {
+      "cases": [
+        "I11",
+        "I12",
+        "I13",
+        "I14",
+        "I15"
+      ],
+      "relations": 5,
+      "baseline": "Supported",
+      "full": "Supported"
+    },
+    "temporal_ungraded": {
+      "cases": [
+        "I01",
+        "I10"
+      ],
+      "relations": 3
+    }
+  }
+}
