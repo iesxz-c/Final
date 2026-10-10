@@ -1,0 +1,11 @@
+{
+  "schema_version": "phase3c/v1",
+  "intent": "search_evidence",
+  "queries": [{"query": "car detections", "source": "surveillance_event"}],
+  "video_id": "RoadAccidents011_x264.mp4",
+  "start_time": null,
+  "end_time": null,
+  "temporal_context_seconds": 0,
+  "needs_timeline": false,
+  "needs_cross_evidence": false
+}

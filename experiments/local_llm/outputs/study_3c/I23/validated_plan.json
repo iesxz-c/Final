@@ -1,0 +1,16 @@
+{
+  "schema_version": "phase3c/v1",
+  "intent": "investigate_incident",
+  "queries": [
+    {
+      "query": "incident summary anomaly/RoadAccidents/RoadAccidents002_x264.mp4",
+      "source": "surveillance_event"
+    }
+  ],
+  "video_id": "RoadAccidents002_x264.mp4",
+  "start_time": null,
+  "end_time": null,
+  "temporal_context_seconds": 0,
+  "needs_timeline": false,
+  "needs_cross_evidence": false
+}

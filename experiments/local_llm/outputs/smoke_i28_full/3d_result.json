@@ -1,0 +1,48 @@
+{
+  "schema_version": "phase3d/v1",
+  "plan": {
+    "schema_version": "phase3c/v1",
+    "intent": "search_evidence",
+    "queries": [
+      {
+        "query": "anomaly/RoadAccidents/RoadAccidents021_x264.mp4",
+        "source": "surveillance_event"
+      }
+    ],
+    "video_id": "RoadAccidents021_x264.mp4",
+    "start_time": null,
+    "end_time": null,
+    "temporal_context_seconds": 0,
+    "needs_timeline": false,
+    "needs_cross_evidence": false
+  },
+  "query_results": [
+    {
+      "query": "anomaly/RoadAccidents/RoadAccidents021_x264.mp4",
+      "source": "surveillance_event",
+      "planner_query_index": 0,
+      "groups": [],
+      "unmapped_hits": [],
+      "summary": {
+        "matched_hits": 0,
+        "matched_records": 0,
+        "incident_groups": 0,
+        "context_records": 0,
+        "unmapped_hits": 0
+      }
+    }
+  ],
+  "query_errors": [],
+  "merged_results": {
+    "groups": [],
+    "unmapped_hits": []
+  },
+  "summary": {
+    "planner_queries": 1,
+    "matched_hits": 0,
+    "incident_groups": 0,
+    "context_records": 0,
+    "unmapped_hits": 0,
+    "query_errors": 0
+  }
+}
