@@ -14,26 +14,28 @@ larger cases were excluded, see below), optional end-to-end on I28.
 ## Cell 0 — GPU runtime
 Runtime > Change runtime type > **T4 GPU**, then:
 ```
-nvidia-smi
-python3 -c "import torch; print(torch.__version__, torch.cuda.is_available())"
+!nvidia-smi
+!python3 -c "import torch; print(torch.__version__, torch.cuda.is_available())"
 ```
 Both must show CUDA. If no GPU, stop here.
 
 ## Cell 1 — clone this branch
 ```
-git clone --branch experiment/aegis-colab-gpu https://github.com/iesxz-c/Final.git aegis
+!git clone --branch experiment/aegis-colab-gpu https://github.com/iesxz-c/Final.git aegis
 cd aegis/experiments/local_llm/colab_gpu
 ```
 
 ## Cell 2 — setup (downloads pinned binary + model, verifies, starts server)
 ```
-export AEGIS_COLAB_WORK=/content/aegis-colab-gpu
-bash colab_setup.sh
+!export AEGIS_COLAB_WORK=/content/aegis-colab-gpu
+!bash colab_setup.sh
 ```
 This downloads llama.cpp b11541 (Ubuntu x64 **CUDA 12.8** build +
 cudart libs) and `qwen2.5-3b-instruct-q4_k_m.gguf` (~2.1 GB), verifies
 byte size + SHA256 (`626B4A66…5C62D`, recorded in the script), and
-starts `llama-server` on **127.0.0.1:8080** with native 32k context.
+starts `llama-server` on localhost with native 32k context (port
+auto-selected from 8080/8081/8082; the chosen port is printed and saved
+to `logs/server.port`, and later cells read it automatically).
 If `nvidia-smi` shows CUDA 13, replace the two URLs with the
 `cuda-13.4` assets from the same release tag and rerun. No `pip install`
 is required (runners are stdlib-only); `requirements-colab.txt` lists
@@ -41,7 +43,7 @@ only the optional `huggingface-hub` alternate download path.
 
 ## Cell 3 — preflight (proves GPU use, not just presence)
 ```
-python3 gpu_preflight.py --server-url http://127.0.0.1:8080 \
+!S=http://127.0.0.1:$(cat /content/aegis-colab-gpu/logs/server.port); python3 gpu_preflight.py --server-url $S \
   --server-log /content/aegis-colab-gpu/logs/server-colab.log \
   --out results/preflight.json
 ```
@@ -51,13 +53,13 @@ backend init. If either is missing, do not proceed.
 
 ## Cell 4 — 3C benchmark (10 cases, ~5 min)
 ```
-python3 run_3c_bench.py --server-url http://127.0.0.1:8080 \
+!S=http://127.0.0.1:$(cat /content/aegis-colab-gpu/logs/server.port); python3 run_3c_bench.py --server-url $S \
   --inputs inputs --results results/bench_3c
 ```
 
 ## Cell 5 — evidence-backed 3E (8 cases: I03 I19 I23 I24 I27 I28 I29 I30)
 ```
-python3 run_3e_evidence.py --server-url http://127.0.0.1:8080 \
+!S=http://127.0.0.1:$(cat /content/aegis-colab-gpu/logs/server.port); python3 run_3e_evidence.py --server-url $S \
   --inputs inputs --results results/stage_3e
 ```
 Excluded as oversized-for-design (documented, not run): every other
@@ -68,7 +70,7 @@ enforces `--max-prompt-chars 100000` and records oversize honestly.
 ```
 # upload data/data_155n/fused_155/evidence.json (35.9 MB) + incidents.json,
 # e.g. from Drive, then:
-python3 run_full.py --server-url http://127.0.0.1:8080 --inputs inputs \
+!S=http://127.0.0.1:$(cat /content/aegis-colab-gpu/logs/server.port); python3 run_full.py --server-url $S --inputs inputs \
   --results results/full --evidence /content/evidence.json \
   --incidents /content/incidents.json --cases I28
 ```
@@ -76,9 +78,9 @@ Without `--evidence/--incidents` the runner records an honest skip.
 
 ## Cell 7 — summarize + stop server
 ```
-python3 summarize.py --results results --report results/REPORT.md \
+!python3 summarize.py --results results --report results/REPORT.md \
   --out-csv results/summary.csv
-kill $(cat /content/aegis-colab-gpu/logs/server.pid)
+!kill $(cat /content/aegis-colab-gpu/logs/server.pid)
 ```
 
 ## Troubleshooting
