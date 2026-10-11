@@ -16,7 +16,7 @@ import time
 import urllib.request
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent.parent))
 
 
 def post(server_url: str, system: str, user: str, max_tokens: int,
@@ -105,7 +105,11 @@ class LOG_APPEND:
 
     def __enter__(self):
         self.fh = self.path.open("a", encoding="utf-8")
-        return self.fh.write
+
+        def _log(record: dict) -> None:
+            self.fh.write(json.dumps(record) + "\n")
+
+        return _log
 
     def __exit__(self, *exc):
         self.fh.close()
