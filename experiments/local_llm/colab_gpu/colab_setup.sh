@@ -46,16 +46,10 @@ test "${BYTES}" = "${MODEL_BYTES}" || { echo "SIZE MISMATCH: ${BYTES}"; exit 1; 
 echo "${MODEL_SHA256}  models/qwen2.5-3b-instruct-q4_k_m.gguf" | sha256sum -c -
 echo "model integrity OK"
 
-echo "== picking a free port (tries 8080, 8081, 8082) =="
-PORT=""
-for CANDIDATE in 8080 8081 8082; do
-  if ! curl -sf --max-time 3 "http://127.0.0.1:${CANDIDATE}/health" >/dev/null 2>&1; then
-    PORT="${CANDIDATE}"
-    break
-  fi
-  echo "port ${CANDIDATE} occupied, trying next"
-done
-test -n "${PORT}" || { echo "NO FREE PORT (8080-8082 all taken)"; exit 1; }
+# Colab squatters accept-and-reject on 8080, which defeats curl probes:
+# default to 8081 (override with AEGIS_PORT). The runner cells read the
+# effective port from logs/server.port, so no other change is needed.
+PORT="${AEGIS_PORT:-8081}"
 echo "${PORT}" > logs/server.port
 echo "selected port: ${PORT}"
 
