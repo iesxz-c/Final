@@ -1,0 +1,4 @@
+# Minimal Colab dependencies for the AEGIS local-GPU experiment.
+# Runners themselves are stdlib-only. huggingface-hub is an OPTIONAL
+# alternate verified-download path (curl is primary in colab_setup.sh).
+huggingface-hub>=0.24
